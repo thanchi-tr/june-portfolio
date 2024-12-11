@@ -42,18 +42,18 @@ const useMouseDisplacementTracker = (
         return { ...initState };
       }
       case "move": {
-        setLock(true);
-        setTimeout(() => setLock(false), 50);
         let displacement_ = action.payload.clientX - state.prevTriggerX;
         let direction_ =
           displacement_ < 0 ? LEFT : displacement_ > 0 ? RIGHT : STATION;
 
-        displacement_ = (Math.abs(displacement_) / window.innerWidth) * 300;
+        displacement_ = Math.floor(
+          (Math.abs(displacement_) / window.innerWidth) * 300
+        );
         return {
           ...initState,
           prevTriggerX: action.payload.clientX ?? state.prevTriggerX,
           direction: direction_,
-          displacement: Math.abs(displacement_),
+          displacement: Math.abs(5),
         };
       }
       default:
@@ -80,10 +80,6 @@ const useMouseDisplacementTracker = (
       actionTarget?.current?.contains(event.target as Node) &&
       event.type == "mouseup"
     ) {
-      if (lock) {
-        console.log("lock==");
-        return;
-      }
       dispatch({ type: "detrigger" });
       setLock(true);
     }
@@ -106,10 +102,6 @@ const useMouseDisplacementTracker = (
       event.type == "mousemove"
     ) {
       event.preventDefault;
-      if (lock) {
-        console.log("lock==");
-        return;
-      }
       dispatch({ type: "move", payload: event });
     }
   }, []);

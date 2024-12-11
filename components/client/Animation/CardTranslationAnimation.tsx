@@ -11,17 +11,18 @@ interface CardDisplacement {
 }
 
 const CardTranslationAnimation = (
-    { displayBlock, totalCount, contents = Array.from({ length: totalCount }, (_, index) => <div>{index}</div>) }: { displayBlock: number, totalCount: number, contents: ReactNode[] }
+    { displayBlock, totalCount, contents = Array.from({ length: totalCount }, (_, index) => <div>{index}</div>) }: { displayBlock: number, totalCount: number, contents?: ReactNode[] }
 
 ) => {
     const imageRef = useRef<HTMLDivElement>(null);
     const sliderWidth = Math.floor(100 / displayBlock) * totalCount;
     const cardWidth = Math.floor(100 / displayBlock)
     const { coordDetail } = useMouseDisplacementTracker(imageRef);
+    const [isLock, setIsLock] = useState(false);
     useEffect(
         () => {
             console.log(
-                `3 card width:${cardWidth * 3}, cardWidth: ${cardWidth}`
+                `3 card width:${cardWidth * 3}, cardWidth: ${cardWidth}, sliderWidth: ${sliderWidth}`
             )
         }
         , []
@@ -37,11 +38,14 @@ const CardTranslationAnimation = (
                 newState = newState.map(
                     (xCoords, index) => (
                         {
-                            currentX: xCoords.nextX
+                            currentX: xCoords.currentX + action.payload + index * 100 < (totalCount) * 100
+                                ? xCoords.nextX
+                                : -((index) * 100)
                             ,
-                            nextX: (xCoords.nextX + action.payload + (index + 0.5) * 100 > (totalCount + 1) * 100)
-                                ? -(index) * 100
-                                : xCoords.nextX + action.payload
+                            nextX:
+                                xCoords.currentX + action.payload + index * 100 < (totalCount) * 100
+                                    ? xCoords.nextX + action.payload
+                                    : -((index) * 100) + action.payload
                         }
                     )
                 )
@@ -50,17 +54,19 @@ const CardTranslationAnimation = (
             case `toRight`: {
                 newState = newState.map(
                     (xCoords, index) => {
-                        if (!(xCoords.currentX - action.payload > -((index + 1) * 100))) {
-                            console.log(`cardWidth: ${cardWidth}`)
-                            console.log(`updated location: ${((totalCount - index) * 100)}`)
-                        }
+
                         return (
                             {
-                                currentX: xCoords.nextX
+                                currentX: (xCoords.nextX - action.payload > -((index + 1) * 100))
+                                    ? xCoords.nextX
+                                    : (totalCount - 1 - index) * 100 + action.payload
                                 ,
-                                nextX: (xCoords.currentX - action.payload > -((index + 1) * 100))
+                                // nextX: xCoords.nextX - action.payload < -(totalCount) * 100
+                                //     ? (totalCount - 1 - index) * 100 // Reset to the front of the queue
+                                //     : xCoords.nextX - action.payload,
+                                nextX: (xCoords.nextX - action.payload > -((index + 1) * 100))
                                     ? xCoords.nextX - action.payload
-                                    : ((totalCount - index) * 100)
+                                    : (totalCount - 1 - index) * 100
 
                             }
                         )
@@ -76,7 +82,10 @@ const CardTranslationAnimation = (
     /**debug */
     useEffect(
         () => {
+
+
             if (coordDetail.direction != STATION) {
+
                 dispatch({
                     type: (coordDetail.direction == LEFT) ? 'toLeft' : 'toRight',
                     payload: coordDetail.displacement
@@ -89,6 +98,7 @@ const CardTranslationAnimation = (
     useEffect(
 
         () => {
+            // dispatch({ type: "toRight", payload: 100 })
             let scheduler = setInterval(
                 () => {
                     // dispatch({ type: "toLeft", payload: 1 })
@@ -110,6 +120,12 @@ const CardTranslationAnimation = (
                 opacity: [1, 0]
             }
         }
+        if (coord.currentX > totalCount * 100) {
+            return {
+                translateX: [`${coord.currentX}%`, `${coord.nextX}%`],
+                opacity: [1, 0]
+            }
+        }
         return {
             translateX: [`${coord.currentX}%`, `${coord.nextX}%`],
             opacity: 1
@@ -125,7 +141,7 @@ const CardTranslationAnimation = (
             <div className={` relative
                 h-full z-10
                 flex flex-row grow-0 shrink-0 
-                bg-foreground border-4 border-black pl-[2.5%] overflow-clip`}
+                bg-foreground border-black pl-[2.5%] overflow-clip`}
                 style={{
                     width: `${sliderWidth}%`,
                 }}
@@ -136,10 +152,10 @@ const CardTranslationAnimation = (
                         <motion.div
                             key={index}
                             className={`
-                                 h-full border-2
+                                 h-full box-border
                                  pointer-events-none
-                                 select-none border-blue-500
-                                 bg-black/30
+                                 select-none 
+                                ${index % 2 == 0 ? "  bg-black/30" : "bg-red-400"}
                                 
                                  
                                  `}

@@ -12,7 +12,7 @@ const Test = () => {
         >
             <div className={`w-full h-[200px] bg-white`}>
 
-                <CardTranslationAnimation displayBlock={1} totalCount={5} />
+                <CardTranslationAnimation displayBlock={2} totalCount={6} />
             </div>
 
         </div>
