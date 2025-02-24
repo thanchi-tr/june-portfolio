@@ -9,11 +9,16 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        descent: "var(--color-descent)",
+        background: "var(--color-background)",
+
         shadow: "#000000",
-        background: "#502f4c",
         midground: "#70587c",
         foregound: "#c8b8db",
-        highlight: "#f9f4f5",
+        highlight: "#cca62e",
       },
       height: {
         screen: "100vh",

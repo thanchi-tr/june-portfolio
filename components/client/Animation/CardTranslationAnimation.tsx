@@ -1,6 +1,7 @@
 'use client';
 
 import useMouseDisplacementTracker, { LEFT, RIGHT, STATION } from "@/hooks/useMouseDisplacementTracker";
+import { numberToGreekNumeral } from "@/utils/numeralHelper";
 
 import { motion } from "framer-motion";
 import { ReactNode, useEffect, useReducer, useRef, useState } from "react";
@@ -17,16 +18,9 @@ const CardTranslationAnimation = (
     const imageRef = useRef<HTMLDivElement>(null);
     const sliderWidth = Math.floor(100 / displayBlock) * totalCount;
     const cardWidth = Math.floor(100 / displayBlock)
-    const { coordDetail } = useMouseDisplacementTracker(imageRef);
+    const { coordDetail, isTracking } = useMouseDisplacementTracker(imageRef);
     const [isLock, setIsLock] = useState(false);
-    useEffect(
-        () => {
-            console.log(
-                `3 card width:${cardWidth * 3}, cardWidth: ${cardWidth}, sliderWidth: ${sliderWidth}`
-            )
-        }
-        , []
-    )
+
     const initializeCards = (): CardDisplacement[] =>
         Array.from({ length: totalCount }).map(() => ({ currentX: 0, nextX: 0 }));
 
@@ -74,56 +68,77 @@ const CardTranslationAnimation = (
                 )
                 return newState
             }
+
             default: return state;
         }
     }
 
     const [cardsDisplacement, dispatch] = useReducer(reducer, [], initializeCards);
-    /**debug */
+    // useEffect(
+    //     () => {
+    //         let timer = setInterval(() => dispatch({ type: `toRight`, payload: 0.1 })
+
+    //             , 10)
+    //         setTimeout(() => clearInterval(timer), 1500);
+    //     }
+    //     , []
+    // )
     useEffect(
         () => {
+            if (isTracking == false) {
 
+                // let target = Math.abs(cardsDisplacement[1].nextX % 100);
+                // if (target > 50) {
+                //     let timer = setInterval(() => dispatch({ type: `toLeft`, payload: 0.1 })
+
+                //         , 10)
+                //     setTimeout(() => clearInterval(timer), (100 - target) * 100);
+                //     dispatch({ type: 'toLeft', payload: 100 - target })
+                // }
+                // else {
+                //     dispatch({ type: 'toRight', payload: target })
+                //     let timer = setInterval(() => dispatch({ type: `toRight`, payload: 0.1 })
+
+                //         , 10)
+                //     setTimeout(() => clearInterval(timer), target * 100);
+                // }
+            }
 
             if (coordDetail.direction != STATION) {
 
                 dispatch({
-                    type: (coordDetail.direction == LEFT) ? 'toLeft' : 'toRight',
+                    type: (coordDetail.direction != LEFT) ? 'toLeft' : 'toRight',
                     payload: coordDetail.displacement
                 })
             }
         }
         , [coordDetail]
     )
-    /**debug */
-    useEffect(
 
-        () => {
-            // dispatch({ type: "toRight", payload: 100 })
-            let scheduler = setInterval(
-                () => {
-                    // dispatch({ type: "toLeft", payload: 1 })
-                    // dispatch({ type: "toRight", payload: 1 })
-                    // dispatch({ type: "toLeft", payload: 2 })
-                },
-                10
-            )
-            return () => clearInterval(scheduler);
-        }, []
-    );
 
     const getVariant = (index: number) => {
+
         let coord = cardsDisplacement[index]
 
-        if (coord.nextX < -(index + 0.2) * 100) {
+        if (isTracking == false) {
+            //determine if we want to
+            // console.log(coord)
+            // if (index == 0 &&
+            //     coord.nextX > totalCount * 100
+            // ) {
+            //     console.log("salfgkahsjkghasljkhsal=====")
+            // }
+        }
+        if (coord.nextX < -(index + 0.1) * 100) {
             return {
                 translateX: [`${coord.currentX}%`, `${coord.nextX}%`],
-                opacity: [1, 0]
+                opacity: (isTracking) ? 1 : [1, 0]
             }
         }
         if (coord.currentX > totalCount * 100) {
             return {
                 translateX: [`${coord.currentX}%`, `${coord.nextX}%`],
-                opacity: [1, 0]
+                opacity: (isTracking) ? 1 : [1, 0]
             }
         }
         return {
@@ -131,50 +146,109 @@ const CardTranslationAnimation = (
             opacity: 1
         }
     }
+
     return (
         <div
-            className={`relative h-full w-full overflow-clip z-10 `} //display port
-
+            className={`
+                relative h-full w-full 
+                z-[80] 
+                hover:cursor-pointer group
+                
+                `} //display port
+            style={{
+                width: `${displayBlock * cardWidth}%`,
+            }}
             ref={imageRef}
         >
             {/* actual slider */}
             <div className={` relative
                 h-full z-10
                 flex flex-row grow-0 shrink-0 
-                bg-foreground border-black pl-[2.5%] overflow-clip`}
+                bg-foreground border-black`}
                 style={{
                     width: `${sliderWidth}%`,
                 }}
             >
                 {/* actual card card */}
                 {
-                    Array.from({ length: totalCount }).map((_, index) => (
-                        <motion.div
-                            key={index}
-                            className={`
-                                 h-full box-border
-                                 pointer-events-none
-                                 select-none 
-                                ${index % 2 == 0 ? "  bg-black/30" : "bg-red-400"}
-                                
-                                 
+                    contents.map((node, index) => {
+
+                        return (
+                            <motion.div
+                                key={index}
+                                className={` overflow-clip
+                                 h-full box-border border-x-8 border-transparent
+                                 select-none pointer-events-none
+                                bg-transparent rounded-sm
                                  `}
 
-                            style={{
-                                width: `${cardWidth}%`,
-                                x: `-${100}%`
+                                style={{
+                                    width: `${cardWidth}%`,
+                                    x: `-${100}%`
 
-                            }}
-                            animate={getVariant(index)}
-                            transition={{ duration: 1 }}
-                        >
-                            {contents[index]}
-                        </motion.div>
-                    ))
+                                }}
+                                animate={getVariant(index)}
+                                transition={{ duration: 0.5 }}
+                            >
+                                {node}
+                            </motion.div>
+                        )
+                    })
                 }
-            </div>
+                <div className={`absolute 
+                    opacity-0
+                    group-hover:opacity-100
+                   bottom-0 pointer-events-none
+                   left-[25vw] lg:left-[30vw]
+                    w-[45vw] lg:w-[30vw]
+                    h-[10vw] sm:h-[7vw] md:h-[6vw] lg:h-[5.5vw]  xl:h-[4.5vw] 2xl:h-[60px]                
+                    `}>
+                    <div className={`h-full w-full flex flex-row shrink-0 flex-grow justify-center z-50 rounded-sm 
+                        
+                     `}>
+                        {contents.map(
+                            (content, index) => {
 
+                                return (
+                                    <div key={`s-${index}`} className={`h-full  text-gray-500 bg-foreground text-center 
+                                        font-bold
+                                        tracking-[0.15rem]`}
+                                        style={{
+                                            width: `${40 / (totalCount - 1)}%`
+                                        }}
+                                    >
+                                        {numberToGreekNumeral(index + 1)}
+                                    </div>
+                                )
+                            }
+                        )}
+                        <div className={`absolute 
+                            h-[0.8vw] 2xl:h-[70px] 
+                            w-[45vw] lg:w-[30vw] xl:
+                            pointer-events-none
+                            scale-x-110 md:scale-x-100`}
+
+                        >
+                            <motion.p
+                                className={`relative 
+                                    h-[6vw] sm:h-[4vw] lg:h-[3vw] 2xl:h-[40px]
+                                    border-2 border-background -scale-full rounded-2xl`}
+                                style={{
+                                    width: `${40 / (totalCount - 1)}%`,
+                                    x: `100%`
+                                }}
+                                animate={getVariant(0)}
+                            >
+
+                            </motion.p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
+
     )
 }
 

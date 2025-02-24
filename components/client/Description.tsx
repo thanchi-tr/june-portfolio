@@ -43,7 +43,7 @@ const Discription = () => {
     return (
         <>
 
-            <motion.div className={`absolute z-20 h-[8vh] w-1/2 text-2xl bg-white transition-all delay-75 duration-200 overflow-clip rounded-md
+            <motion.div className={`absolute z-20 h-[10vh] w-full text-xl bg-white transition-all delay-75 duration-200 overflow-clip rounded-md
             ${state == 4 ? "drop-shadow-sm shadow-highlight border-2 " : " border-2  "}
           `}
                 variants={variants}
@@ -68,13 +68,13 @@ const Discription = () => {
 
 
             </motion.div>
-            <motion.div className={`absolute z-0 h-[32vh] w-[115%] text-2xl
+            <motion.div className={`absolute z-0 h-[70vh] w-[115%] text-2xl
             
-            bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]
-                from-yellow-400/20  via-pink-400/0 to-pink/0 
+                bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]
+                from-yellow-400/25  via-pink-400/0 to-pink/0 
                 
                 transition-all delay-45 duration-200 overflow-clip rounded-md
-                ${state == 4 ? "drop-shadow-sm shadow-highlight " : " "}
+                ${state == 4 ? "drop-shadow-sm shadow-white " : " "}
                 `}
                 animate={
                     (state >= 4)

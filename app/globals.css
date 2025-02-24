@@ -4,8 +4,19 @@
 
 :root {
   --font-coda-caption: "CodaCaption", sans-serif;
+  --color-background: #fefdfd;
+  --color-primary: #ceb2bd;
+  --color-secondary: #482a41;
+  --color-accent: #8b3dff;
+  --color-descent: #ff00ff;
 }
-
+.dark {
+  --color-background: #3e3a37;
+  --color-primary: #ad9547;
+  --color-secondary: #432622;
+  --color-accent: #8b3dff;
+  --color-descent: #ff00ff;
+}
 @media (prefers-color-scheme: dark) {
   :root {
   }

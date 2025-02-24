@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { useMotionValueEvent, useScroll } from "framer-motion";
-import { NavButtonT } from "@/app/page";
+import { NavButtonT } from "@/app/page_";
 
 export interface SectionScrollDefition {
   lowerBound: number;

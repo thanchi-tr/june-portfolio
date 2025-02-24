@@ -1,140 +1,454 @@
 'use client';
 
-import Discription from "@/components/client/Description";
-import useCustomScroll from "@/hooks/useCustomScroll";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { ReactNode, useEffect, useState } from "react";
+import ToggleButton from "@/components/client/Animation/ToggleButton";
 import Image from "next/image";
-
+import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
+import { useThemeContext } from "@/hooks/context/useThemeContext";
+import Discription from "@/components/client/Description";
+import { ReactNode } from "react";
+import Avata from "@/components/client/Animation/Avata";
+import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery";
+import FizzBuzzProject from "@/components/pages/FizzBuzzProject";
+import MyToDoProject from "@/components/pages/MyToDoProject";
+import LittleBanhMiProject from "@/components/pages/LittleBanhMiProject";
 export type NavButtonT = { tag: string, data?: ReactNode, className_: string }[];
 
-const Home = () => {
-
-  const navs: NavButtonT = [
-    {
-      tag: "About", className_: `bg-background/0`
-    },
-    { tag: "Exp", className_: `bg-shadow/40` },
-    { tag: "Project", className_: `bg-pink-300/50` },
-    { tag: "Edu", className_: `bg-shadow/40` },
-    { tag: "Contact", className_: `bg-background` },
-  ]
-  const { scrollPercentage, scrollToPercentage, scrolToSection, getSectionDefition } = useCustomScroll(navs);
-  const variants = {
-    offView: { translateY: [`90vh`, `90vh`, `200vh`, `200vh`], translateX: [0, 0, `-200vw`] },
-    inView: {
-      translateY: [`-200vh`, `-200vh`, `90vh`, `90vh`],
-      translateX: [`-200vw`, 0, 0, 0],
-      transition: {
-        duration: 0.75,
-        ease: "easeIn"
-      }
-    }
-  }
-
-
-  // useEffect(() => { },)
-  useEffect(() => console.log(scrollPercentage), [scrollPercentage])
-  return (
-
-    <div className={`relative w-[screen] h-[1200vh] flex flex-col overflow-clip mt-[5vh]
-      
-    `}
-    >
-      <div className={`sticky flex flex-row top-0 h-[2vh] w-[100%] lg:w-[80%] xl:w-[75%] 2xl:w-[65%] z-50 gap-[5%] self-center`}>
-
-        <div className={`group
-            sticky  transform origin-top-left rotate-90 md:rotate-0
-            translate-x-10 md:overflow-clip
-            group flex bg-highlight
-            hover:cursor-pointer z-[100] rounded-full px-9
-            flex-shrink-0 flex-grow justify-between items-center
-            left-[15%] md:translate-x-0
-            w-[80vh] md:w-[1vw]
-            h-[7vw] md:h-[7vw] lg:h-[5vw] xl:h-[4vw] 2xl:h-[70px]
-            m-[5%] shadow-xl shadow-foreground
-             text-shadow/35 font-mainfont text-sm`}>
-          {
-            navs.map(
-              (nav, index) => <>
-                <div
-                  key={`navlink-scroll-${index}`}
-                  className={` hover:text-background/90  text-justify hover:underline transform origin-top-left
-                   [&:not(:hover)]:group-hover:text-background/15`}
-                  onClick={() => scrolToSection(index)}
-                >
-
-                  {nav.tag}
-                </div>
-
-              </>
-            )
-          }
-          <div className={`text-shadow/70
-                   absolute w-[10vw] aspect-square  -top-[25vh] -left-[2vw] text-2xl -rotate-90
-                  `}><p className={`uppercase text-yellow-600 -translate-x-[4vw]`}>June</p> portfolio</div>
-        </div>
-      </div>
-      <div className={`relative -top-[17vh] h-screen w-screen flex items-center justify-center
-      
-    `}>
-        <div className="relative w-screen 2xl:w-[3200vw] 2xl:translate-x-[0vw] h-[50vh]">
-          <Image
-            className={`object-cover`}
-            src={"/purpleForest.jpg"}
-            alt={"Source:https://www.freepik.com/free-vector/magic-forest-landscape-with-trees-bushes-night-vector-cartoon-illustration-fantastic-scene-woods-with-mystic-purple-light-fantasy-garden-with-plants-stones-path-glade_25978221.htm#fromView=keyword&page=1&position=0&uuid=ae2ccbc4-05a3-456b-8bc0-18937830b786"}
-            fill
-          />
-        </div>
-
-        <div className={`relative flex flex-col h-[100vw] w-[90%] `}>
-          <div className={`w-full h-[39.5vw] sm:h-[47.5vw] md:h-[37.5vw]`}></div>
-          <div className={`hidden md:block text-shadow/70 lg:hidden
-                    w-[10vw] aspect-square   text-3xl
-                  `}>
-            <p className="scale-y-90">portfolio</p>
-            <p className={`uppercase text-4xl text-yellow-600 font-extrabold -translate-x-[3.9vw] w-auto`}>June</p></div>
-          <div className=" 
-              h-[79%] w-[120%] rounded-tl-2xl border-l-white/75 border-l-[12px] 
-              xl:bg-background/0 xl:border-0 xl:shadow-none 
-              bg-background shadow-md" >
-
-
+let Introduction = () => {
+    let { isDark, toggleTheme } = useThemeContext();
+    const navs: NavButtonT = [
+        {
+            tag: "About", className_: `bg-background/0`
+        },
+        { tag: "Exp", className_: `bg-shadow/40` },
+        { tag: "Edu", className_: `bg-shadow/40` },
+        { tag: "Project", className_: `bg-pink-300/50` },
+        { tag: "Contact", className_: `bg-background` },
+    ]
+    return (
+        <div className="h-auto w-full box-border">
+            {/* nav bar */}
             {/* <div className={`
-              border-b-[8px] border-foregound/90 2xl:border-8
-              rounded-2xl md:rounded-full
-              translate-x-[50%] sm:opacity-0 lg:opacity-100 md:-translate-x-[120%]   lg:-translate-x-[180%]  xl:translate-x-[40%]  2xl:-translate-x-[70%]
-              -translate-y-[80%]  md:translate-y-[20%] xl:-translate-y-[5%] 
-              h-[45vw] 2xl:scale-[0.4] xl:scale-75  
-              w-[25vw] backdrop-blur-sm
-              overflow-clip xl:ov   aspect-auto z-100`}>
-               <Image src={"/avata_3_nobg.png"} alt={""} fill className={`object-cover grayscale-[20%]`}></Image> 
+                    absolute flex flex-col
+                    top-0  justify-end
+                    w-full h-[10vh] border-2
+                    text-black 
+                `}>
+                <div className={`
+                        flex flex-row 
+                        h-[10vh] -z-50
+                        border-2 border-red-500
+                    `}>
+
+                </div>
             </div> */}
+            <div
+                className={`
+                relative
+                transition-all duration-150
+                h-screen max-full 
+                bg-background`}
+
+            >
+
+                {/* Introduction page */}
+                <div className="
+                    relative flex flex-row
+                    h-full w-full 
+                    bg-background 
+                    ">
+                    <div className={`
+                        flex flex-col 
+                        w-7/12 h-full`}>
+                        <div className="
+                            relative flex
+                    ">
+                            <div className="
+                                scale-[40%] 
+                                self-start -translate-x-[25%] -translate-y-[20%]">
+
+                                <ToggleButton
+                                    onClick={toggleTheme}
+                                    isOn={isDark}
+                                />
+                            </div>
+
+                        </div>
+
+                        <div className="
+                                flex flex-wrap 
+                                items-center
+                                h-4/5 w-full">
+                            <div className="
+                                    flex flex-row 
+                                    flex-wrap justify-center
+                                    w-full h-3/5
+                                    
+                            ">
+                                {/* avatar + link */}
+                                <div className="
+                                    relative flex
+                                    w-3/5 h-full 
+                                    justify-center items-center text-3xl //@delete_line">
+                                    <Avata />
+
+                                    {/* Link holder */}
+                                    <div className="
+                                        absolute flex flex-row
+                                        top-0 w-full h-full 
+                                        pt-2
+                                    ">
+                                        <div className="w-1/2 flex flex-row justify-evenly
+                                                text-lg uppercase text-center
+                                    ">
+                                            {/* Linked In */}
+                                            <div className="aspect-square h-[20%] w-auto rounded-full  bg-white">
+                                                <ExternalCircularButton link={""} >
+                                                    <Image src="/icons/linkedin.png" alt="github" fill className="scale-75 object-fill" />
+                                                </ExternalCircularButton>
+                                            </div>
+                                            {/* GitHub */}
+                                            <div className="aspect-square h-[20%] w-auto rounded-full">
+                                                <ExternalCircularButton link={""} >
+                                                    <Image src="/icons/github.jpg" alt="github" fill className="object-fill" />
+                                                </ExternalCircularButton>
+                                            </div>
+                                        </div>
+                                        <div className="w-1/2 flex flex-row justify-end
+                                                text-lg uppercase text-center pr-2
+                                    ">
+                                            {/* Portfolio website */}
+                                            <div className=" aspect-square h-[20%] w-auto rounded-full">
+                                                <ExternalCircularButton link={"https://www.junetr.dev"} >
+                                                    <Image src="/icons/web.webp" alt="github" fill className="scale-125 object-fill translate-x-[2px]" />
+                                                </ExternalCircularButton>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`flex flex-col w-5/12 rounded-bl-[2.5rem] bg-primary`} >
+                        <div className="w-full h-1/3"></div>
+                        {/* description */}
+                        <div className="w-full h-2/3">
+                            <div className={`hidden
+                            h-[15vh] w-full
+                            lg:flex 
+                            lg:scale-75 2xl:top-[15vw] 
+                            left-[0vw]   items-center justify-center`}>
+
+                                <Discription />
+                            </div>
+                            <div className={`p-10 text-sm font-semibold tracking-wide
+                            
+                            `}>
+                                As
+                                {<span className="font-extrabold text-white"> FULL-STACK DEVELOPER </span>}
+                                with 3+ years of experience specializing with Dotnet Application
+                                and NEXTJs FrameWork. I am a
+                                {<span className="font-extrabold text-white">DEDICATE</span>},
+                                {<span className="font-extrabold text-white"> TIMELY</span>},
+                                INNOVATIVE,
+                                {<span className="font-extrabold text-white">SOLUTION-CENTRIC</span>}
+                                Developer,
+                                {<span className="font-extrabold text-white"> WHO </span>}
+                                ready to tackle any problem head first within the project's life cycle.
+
+                            </div>
+                        </div>
 
 
-          </div>
+                    </div>
+                </div>
+            </div>
 
-        </div>
+            {/* testing */}
+            {/*200vh for experience */}
+            <div className="h-[200vh] max-w-full bg-background overflow-x-hidden">
 
-        <div className={`hidden 
-          lg:flex 
-          lg:scale-75
-          absolute top-[35.5vw] 2xl:top-[5vw] left-[0vw] h-full w-full  items-center justify-center`}>
+                <div className={`
+                        flex items-end
+                        
+                        h-[40vh] w-full text-center tracking-widest`}>
+                    <span
+                        className="
+                        text-7xl tracking-wider font-bold 
+                        text-white w-full scale-x-125 scale-y-110
+                        translate-y-1/2 uppercase
+                       "
+                    >Experience</span>
 
-          <Discription >
+                </div>
+                <div className="
+                        flex flex-row
+                        h-[160vh] w-full 
+                        g-background">
+                    <div className="
+                            h-full w-1/3
+                            ml-3
+                           ">
+                        <div className="flex flex-col justify-evenly w-full h-full bg-secondary">
+
+                            <div className="flex flex-col h-2/6 w-full ">
+                                <div className="
+                                ml-[20%]
+                                w-3/5 text-3xl font-bold text-center 
+                                text-white
+                                ">  Full-Stack Engineer</div>
+                                <span className="border-t-8 border-black/20 w-4/5" />
+                            </div>
+                            <div className="h-[6%] w-full">
+                                <div className="
+                                        flex flex-row justify-evenly
+                                        h-full w-[85%] -translate-y-[28vh] ml-[8%]">
+                                    <div className="h-full rounded-full aspect-square bg-black"></div>
+                                    <div className="h-full rounded-full aspect-square bg-black"></div>
+                                    <div className="h-full rounded-full aspect-square bg-black"></div>
+                                    <div className="h-full rounded-full aspect-square bg-black"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className="
+                            h-full w-2/3
+                            ml-3
+                           ">
+                        <div className="flex flex-col justify-evenly w-full h-full">
+
+                            <div className="flex flex-col justify-between h-2/6 w-full -translate-x-[5%]">
+                                <div className="relative flex flex-row h-1/3 w-full ">
+                                    <div className="h-5/6 aspect-square bg-white rounded-full -translate-y-[15%] translate-x-[20%] z-20">
+                                        <ExternalCircularButton link={"https://www.junetr.dev"} >
+                                            <Image src="/icons/jungTalent.jpg" alt="Jung Talents Logo" fill className=" object-fill translate-x-[2px]" />
+                                        </ExternalCircularButton></div>
+                                    <div className="w-8/12 h-3/5 bg-primary text-center z-10">
+                                        <div className="h-full w-full -translate-y-2/3">
+                                            <div className="h-3/5 text-gray-400">Jan 2023 - Current</div>
+                                            <div className="relative flex items-center justify-center w-full h-[200%] bg-gold text-white">
+                                                <span className="text-6xl font-semibold">Jung Talents</span>
+                                            </div>
+                                        </div>
 
 
-          </Discription></div>
+                                    </div>
+                                    <div className="aspect-square h-3/5 bg-primary rounded-full -translate-x-[50%]"></div>
+                                </div>
+                                <ul className="pl-[20%] pr-[10%] translate-y-[55%] list-disc text-lg text-white/80">
+                                    <li>Modernise Landing page, help increase convertion rate by 22%</li>
+                                    <li>Build and deploy Dotnet application Fast under TDD.</li>
+                                    <li>Optimised Database, lead to an average increase speed by 32%</li>
+                                    <li>Maintain a run application.</li>
+                                </ul>
+                            </div>
+                            <div className="h-[6%] w-full">
 
 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            {/* 200vh for Skill */}
+            <div className="
+                    flex flex-row
+                    h-[200vh] w-full 
+                    bg-background
+            ">
+
+                <div className="
+                        h-full w-1/3
+                ">
+                    <div className="h-[10%] ">
+                    </div>
+                    <div className="h-[15%]  text-center uppercase font-bold text-4xl text-primary"> Framework</div>
+                    <div className="w-[70%] h-auto
+                            flex flex-col
+                            gap-y-6
+                             ml-[15%]
+                    "
+                    >
+                        <div className="
+                                flex flex-row justify-between
+                                w-full h-[10vh] 
+                                mt-[25%]
+                        ">
+
+                            <div className="w-1/8 aspect-square  rounded-full bg-secondary" ></div>
+                            <div className="
+                                    flex flex-col justify-evenly
+                                    w-5/8 h-full
+                                    uppercase text-white text-xl text-center font-bold
+                            ">
+                                .net core
+                            </div>
+                        </div>
+                        <div className="flex flex-row justify-between
+                                w-full h-[10vh] 
+                        ">
+                            <div className="w-1/8 aspect-square  rounded-full bg-secondary"></div>
+                            <div className="
+                                    flex flex-col justify-evenly
+                                    w-5/8 h-full
+                                    uppercase text-white text-xl text-center font-bold
+                            ">
+                                next.js
+                            </div>
+                        </div>
+                        <div className="flex flex-col justify-evenly
+                                w-full h-[10vh] 
+                                uppercase text-white text-2xl text-center font-bold
+                        ">
+                            Express.js
+                        </div>
+                    </div>
+                </div>
+                <div className="
+                        relative
+                        h-full w-2/3
+                        ml-3 bg-primary
+                ">
+                    <div className="h-[10%] ">
+                        <div className="text-white uppercase text-7xl font-bold -translate-y-[50%] -translate-x-[8%] tracking-[0.8rem]"
+                        >Skill</div>
+                    </div>
+                    <div className="h-[15%]  text-center uppercase font-bold text-4xl text-secondary"> tech-stack</div>
+
+                    {/* teck stack icon list */}
+                    <div className="
+                            flex flex-row 
+                            flex-wrap flex-shrink-0 flex-grow-0 
+                            gap-[8%] gap-y-5
+                            justify-evenly
+                            h-auto w-4/5 mx-[15%] 
+                            pt-[5%]
+                        ">
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+                        <div className="w-[15%] aspect-square rounded-full bg-white border-2"></div>
+
+                    </div>
+                </div>
+            </div>
+            {/* Project */}
+            <div className="flex flex-col h-[200vh] max-w-full bg-background">
+                <div className="flex flex-row h-screen w-full">
+
+                    <div className="h-screen w-1/3 bg-secondary ml-2"></div>
+                    <div className="h-screen w-2/3 ">
+                        <div className="
+                                -translate-x-1/4 -translate-y-1/2 
+                                uppercase
+                                text-white text-7xl font-bold
+                                tracking-widest 
+                        ">
+                            Project
+
+                        </div>
+                    </div>
+                </div>
+                <div className={`
+                        h-[150vh] 
+                        ml-[6%] 
+                        w-[84%] xl:w-[80%] 
+                        rounded-lg xl:rounded-xs 
+                        -translate-y-[54%]
+                `}>
+                    <CollapsibleGallery
+
+                        cards={
+                            [
+                                <div className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
+                                    <FizzBuzzProject />
+                                </div>,
+                                <div className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
+                                    <MyToDoProject />
+                                </div>,
+                                <div className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
+                                    <LittleBanhMiProject />
+                                </div>
+
+                            ]} />
+
+                </div>
+            </div>
+            {/* Education */}
+            <div className="flex flex-col items-center h-[80vh] max-w-full bg-background ">
+                <div className="
+                        w-full h-[30%]  text-center
+                        uppercase text-6xl text-white font-bold
+                        tracking-[0.2em]
+                ">education</div>
+                <div className="w-full h-[6%]  text-center text-bold text-white/80 translate-y-1/4">2018-2023</div>
+                <div className="w-full h-[20%]  text-center text-4xl text-primary font-semibold">The University of Melbourne</div>
+                <div className="
+                        flex flex-row justify-evenly
+                        w-full 
+                        -translate-y-[35%]
+                ">
+                    <div className="
+                            h-[20vh] aspect-square 
+                            rounded-full 
+                            bg-blue-950 border-white
+                    "></div>
+                </div>
+                <div className=" flex flex-row justify-evenly h-[20%] w-full self-end">
+
+                    <div className="
+                             flex flex-row
+                            h-full w-2/5">
+                        <div className="
+                                flex flex-col justify-end 
+                                h-full w-[68%]
+                                text-4xl tracking-widest
+                        "> June Trinh</div>
+                        <div className="flex flex-col justify-end ml-4"
+
+                        > @2025</div>
+                    </div>
+
+                </div>
+            </div>
+            <div className="flex flex-col h-[20vh] max-w-full bg-primary  font-semibold tracking-wider">
+
+                <div className="text-center text-xs my-3"> all right preserved</div>
+
+                <div className="flex flex-row justify-evenly gap-5 w-full ">
+                    <div className="flex  w-[35%]">www.junetr.dev</div>
+
+                    <div className="flex flex-col w-[35%]">
+                        <div className="flex flex-row justify-between">
+                            <div>phone:</div>
+                            <div>(+61) 432 002 486</div>
+                        </div>
+                        <div className="flex flex-row  justify-between">
+                            <div>Email:</div>
+                            <div>Thanchitr@outlook.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div >
 
 
-
-      </div>
-
-
-    </div >
-  )
+    )
 }
 
-export default Home;
+export default Introduction;

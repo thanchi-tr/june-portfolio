@@ -14,6 +14,7 @@ type ActionT =
   | { type: "trigger"; payload: MouseEvent }
   | { type: "detrigger" }
   | { type: "move"; payload: MouseEvent };
+
 type reducerT = (state: mouseCoordDetail, action: ActionT) => mouseCoordDetail;
 const useMouseDisplacementTracker = (
   actionTarget: React.RefObject<HTMLDivElement>
@@ -33,6 +34,7 @@ const useMouseDisplacementTracker = (
         setIsTracking(true);
         return {
           ...initState,
+          displacement: 0,
           initTriggerX: action.payload.clientX,
           prevTriggerX: action.payload.clientX,
         };
@@ -53,9 +55,10 @@ const useMouseDisplacementTracker = (
           ...initState,
           prevTriggerX: action.payload.clientX ?? state.prevTriggerX,
           direction: direction_,
-          displacement: Math.abs(5),
+          displacement: Math.abs(2),
         };
       }
+
       default:
         return state;
     }
@@ -127,7 +130,7 @@ const useMouseDisplacementTracker = (
 
   if (!window || !actionTarget) return { coordDetail };
 
-  return { coordDetail };
+  return { coordDetail, isTracking };
 };
 
 export default useMouseDisplacementTracker;
