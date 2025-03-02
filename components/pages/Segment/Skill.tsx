@@ -3,6 +3,25 @@ import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 const Skill = () => {
+    const containerVariants = {
+        show: {
+            transition: {
+                staggerChildren: 0.2, // Each child will animate 0.3s after the previous one
+                delayChildren: 0.6, // Delay before children start animating
+            }
+        },
+    };
+
+    const itemVariants = {
+        show: {
+            translateY: ["6px", "0"],
+            opacity: [0, 1],
+            transition: {
+                duration: 0.4,
+                repeatType: "reverse"
+            }
+        },
+    };
     return (
         <div className="h-full w-full bg-background">
             <div className="flex items-center justify-center h-0 w-full">
@@ -150,74 +169,116 @@ const Skill = () => {
                     </div>
 
                     {/* teck stack icon list */}
-                    <div className="
+                    <motion.div className="
                             flex flex-row 
                             flex-wrap flex-shrink-0 flex-grow-0 
-                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-6 md:gap-y-[2vh] 2xl:gap-y-6
+                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-6 md:gap-y-[6vh] 2xl:gap-y-6
                             justify-evenly
                             h-auto 
                             w-4/5 md:w-[65%] 2xl:w-3/5
                             mx-[15%] 2xl:mx-[10%]
                             pt-[5%] border-b-8 pb-10 border-white/40
-                        ">
-                        <div className="
-                                w-[15%] 2xl:w-[10%]
-                                aspect-square h-auto
-                                rounded-full bg-white 
-                                border-2">
-                            <PopUp img={"/icons/signalR.png"} >SignalR</PopUp>
-                        </div>
-                        <div className="
-                                w-[15%] 2xl:w-[10%]
-                                aspect-square h-auto
-                                rounded-full bg-white 
-                                border-2">
-                            <PopUp img={"/icons/open API.png"} >OpenAPI</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img={`/icons/postgres.png`}>Postgres</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/jest.png">JestJS</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/serilog.png">Serilog</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/Auth0.jpg">Auth0</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/redis.png">Redis</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/eks.jpg"> EKS</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/github.jpg">Github</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img={"/icons/docker.png"} >Docker</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/xunit.jpg">xUnit</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/efCore.png">EFCore</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/ec2.jpg">Ec2</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/s3.png">s3</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/framerMotion.png">Motion</PopUp>
-                        </div>
-                        <div className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
-                            <PopUp img="/icons/mongo db.png">MongoDB</PopUp>
-                        </div>
+                        "
+                        variants={containerVariants}
+                        whileInView={"show"}
+                        viewport={{ once: true }}
+                    >
+                        <div className="flex flex-row w-full h-auto justify-between">
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background ">Database💾:</motion.div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4">
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img={`/icons/postgres.png`}>Postgres</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/mongo db.png">MongoDB</PopUp>
+                                </motion.div>
+                            </div>
 
-                    </div>
+                        </div>
+                        <div className="flex flex-row w-full h-auto">
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background">Back⚙️:</motion.div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
+                                <motion.div variants={itemVariants} className="
+                                w-[15%] 2xl:w-[10%]
+                                aspect-square h-auto
+                                rounded-full bg-white 
+                                border-2">
+                                    <PopUp img={"/icons/signalR.png"} >SignalR</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="
+                                w-[15%] 2xl:w-[10%]
+                                aspect-square h-auto
+                                rounded-full bg-white 
+                                border-2">
+                                    <PopUp img={"/icons/open API.png"} >OpenAPI</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/serilog.png">Serilog</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/redis.png">Redis</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/xunit.jpg">xUnit</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/efCore.png">EFCore</PopUp>
+
+                                </motion.div>
+                            </div>
+
+                        </div>
+                        <div className="flex flex-row w-full h-auto">
+
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background">Front📱:</motion.div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/jest.png">JestJS</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/Auth0.jpg">Auth0</PopUp>
+                                </motion.div>
+
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/framerMotion.png">Motion</PopUp>
+                                </motion.div>
+                            </div>
+
+                        </div>
+                        <div className="flex flex-row w-full h-auto">
+
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background">Cloud💭:</motion.div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/eks.jpg"> EKS</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/ec2.jpg">Ec2</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/s3.png">s3</PopUp>
+                                </motion.div>
+
+                            </div>
+
+                        </div>
+                        <div className="flex flex-row w-full h-auto">
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background">CI & CD🚀:</motion.div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/github.jpg">Github</PopUp>
+                                </motion.div>
+                                <motion.div variants={itemVariants} className="w-[15%] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img={"/icons/docker.png"} >Docker</PopUp>
+                                </motion.div>
+
+                            </div>
+
+
+
+                        </div>
+                        {/* ⭐ */}
+                    </motion.div>
                 </div>
             </div>
         </div>

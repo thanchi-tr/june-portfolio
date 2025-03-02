@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const Avata = () => {
     return (
         <div className="relative flex h-full w-full items-end">
-            <div className="absolute 2xl:hidden md:bg-gray-400/10 h-5/6 md:h-3/5 w-[95%] rounded-full scale-y-105"></div>
-            <div className="absolute 2xl:hidden md:bg-secondary h-2/3 md:h-3/5 w-[70%] rounded-full left-[12%]"></div>
+            {/* <div className="absolute 2xl:hidden md:bg-gray-400/10 h-5/6 md:h-3/5 w-[95%] rounded-full scale-y-105"></div>
+            <div className="absolute 2xl:hidden md:bg-secondary h-2/3 md:h-3/5 w-[70%] rounded-full left-[12%]"></div> */}
             {/*Picture */}
             <motion.div className="
                     absolute 
@@ -57,7 +57,11 @@ const Avata = () => {
                     }}
                     transition={{ delay: 0.9, duration: 19, repeat: Infinity }}
                 >
-                    June
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.7, ease: "easeOut" }}
+                    >June</motion.div>
                 </motion.div>
             </motion.div>
             <motion.div className="

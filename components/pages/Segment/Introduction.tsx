@@ -130,7 +130,7 @@ const Introduction = () => {
                         xl:h-[85%] 2xl:border-2
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                         md:bg-primary 2xl:bg-transparent`} >
-                    <div className="w-full h-1/3"></div>
+                    <div className="w-full h-[20%]"></div>
                     {/* description */}
                     <motion.div
                         className="
@@ -157,23 +157,22 @@ const Introduction = () => {
                         </div>
                         <div className={`
                                 p-2 pl-10 md:p-10 
-                                text-lg md:text-sm 
+                                text-sm md:text-sm 
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-2xl 
                                 xl:-translate-y-[10%]
                                 
                             `}>
-                            As
+                            I am a passionate
                             {<span className="font-extrabold underline text-white "> FULL-STACK DEVELOPER </span>}
-                            with 3+ years of experience specializing with Dotnet Application
-                            and NEXTJs FrameWork. I am a
-                            {<span className="ml-1 font-extrabold underline text-white">DEDICATE</span>},
-                            {<span className="font-extrabold underline text-white"> TIMELY</span>},
-                            INNOVATIVE,
-                            {<span className="font-extrabold underline text-white mr-1">SOLUTION-CENTRIC</span>}
-                            developer,
-                            {<span className="font-extrabold underline text-white"> WHO </span>}
-                            ready to tackle any problem head first within the project&#34;s life cycle.
+                            with <span className="font-extrabold underline text-white "> over 3 years of experience </span> n building high-quality applications using
+                            {<span className="ml-1 font-extrabold underline text-white"> .NET </span>}and
+                            {<span className="font-extrabold underline text-white"> Next.js</span>},
+                            My expertise lies in designing scalable architectures, optimizing performance, and ensuring seamless user experiences. I thrive in fast-paced environments, solving complex problems with an
+                            {<span className="font-extrabold underline text-white mr-1">innovative, solution-oriented approach</span>}
+                            If you're looking for a developer who delivers
+                            {<span className="font-extrabold underline text-white"> on time, with precision, and a keen eye for detail </span>}
+                            , <a className="text-primary md:text-black md:uppercase text-xl">let's connect!📧</a>
 
                         </div>
 
@@ -184,7 +183,7 @@ const Introduction = () => {
                             absolute group 
                             top-0 
                             h-full w-full 
-                            backdrop-blur-md hover:backdrop-blur-none 
+                            md:backdrop-blur-md hover:backdrop-blur-none 
                             hover:border-l-[18px] hover:cursor-pointer z-50
                             shadow-inner shadow-black 
                             transition-all xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]

@@ -3,7 +3,27 @@ import ExternalCircularButton from "@/components/client/Functional/ExternalCircu
 import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
 import { easeIn, motion } from "framer-motion";
+
 const Experience = () => {
+    const containerVariants = {
+        show: {
+            transition: {
+                staggerChildren: 0.3, // Each child will animate 0.3s after the previous one
+                delayChildren: 0.5, // Delay before children start animating
+            }
+        },
+    };
+
+    const itemVariants = {
+        show: {
+            translateY: [0, "1.6vh", 0],
+            transition: {
+                duration: 3.2,
+                repeat: Infinity,
+                repeatType: "reverse"
+            }
+        },
+    };
     return (
         <div className="
                     overflow-hiddenq
@@ -27,7 +47,7 @@ const Experience = () => {
 
             <div className="
                         relative flex flex-col-reverse md:flex-row
-                        h-[160vh] 
+                        h-[230vh] sm:h-[200vh] md:h-[160vh] z-20
                         shadow-inner md:shadow-none
                         shadow-black/60
                         w-[82%] md:w-full mx-[8%] md:mx-0
@@ -56,24 +76,35 @@ const Experience = () => {
                             <span className="md:border-t-8 border-black/20 w-4/5" />
                         </div>
                         <div className="h-12 md:h-[4.2%] w-full">
-                            <div className="
+                            <motion.div className="
                                         flex flex-row justify-evenly text-white
-                                        h-full w-[85%] 
-                                        -translate-y-[28vh]  2xl:-translate-y-[42vh]
-                                        ml-[8%]">
-                                <div className="h-full rounded-full aspect-square bg-black">
+                                        h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-3
+                                        -translate-y-[8vh] sm:-translate-y-[18vh]  2xl:-translate-y-[42vh]
+                                        ml-[8%]"
+                                variants={containerVariants}
+                                animate="show"
+                            >
+                                <motion.div className="h-full rounded-full aspect-square bg-black"
+                                    variants={itemVariants}
+                                >
                                     <PopUp img={"/icons/docker.png"} >Docker</PopUp>
-                                </div>
-                                <div className="h-full rounded-full aspect-square bg-black">
+                                </motion.div>
+                                <motion.div className="h-full rounded-full aspect-square bg-black"
+                                    variants={itemVariants}
+                                >
                                     <PopUp img={"/icons/dotnetCore.png"} > .Net Core</PopUp>
-                                </div>
-                                <div className="h-full rounded-full aspect-square bg-black">
+                                </motion.div>
+                                <motion.div className="h-full rounded-full aspect-square bg-black"
+                                    variants={itemVariants}
+                                >
                                     <PopUp img={"/icons/nextjs.png"} >NextJs</PopUp>
-                                </div>
-                                <div className="h-full rounded-full aspect-square bg-black">
+                                </motion.div>
+                                <motion.div className="h-full rounded-full aspect-square bg-black"
+                                    variants={itemVariants}
+                                >
                                     <PopUp img={"/icons/signalR.png"} >SignalR</PopUp>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div >
 
                         </div>
                     </div>
@@ -81,11 +112,29 @@ const Experience = () => {
                 </div>
                 <div className="
                             h-full md:w-2/3
-                            md:ml-3
+                            md:ml-3 
                            ">
                     <div className="
-                            flex flex-col justify-evenly w-full h-full ">
+                            relative flex flex-col justify-evenly w-full h-full z-10">
+                        <div className="absolute top-0 h-[80%] w-[80%]  " >
+                            <motion.div className="hidden md:block h-[35%] w-full relative translate-y-[180%] rounded-2xl overflow-clip"
 
+                                animate={{
+                                    y: ["90%", "112%", "85%", "117%", "90%"],
+                                    x: ["0%", "-10%", "4%", "19%", "-12%", "0%"]
+                                }}
+                                transition={{
+                                    duration: 18,
+                                    repeat: Infinity
+                                }}
+                            >
+                                <Image
+                                    src={"/jungtalentBg.png"}
+                                    alt={""}
+                                    fill
+                                    className="h-full w-full object-contain z-0 opacity-30" />
+                            </motion.div>
+                        </div>
                         <div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] ">
                             <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full ">
                                 <motion.div
@@ -94,7 +143,7 @@ const Experience = () => {
                                         scale-[170%] md:scale-[160%] 2xl:scale-[120%] 
                                         aspect-square bg-white rounded-full 
                                         -translate-y-[15%] md:-translate-x-[20%] 
-                                        z-20 shadow-lg shadow-black/70"
+                                        z-[80] shadow-lg shadow-black/70"
 
                                     initial={{ translate: "35vw" }}
                                     whileInView={{ translate: ["35vw", "70vw", "0vw"] }}
@@ -102,11 +151,11 @@ const Experience = () => {
                                     viewport={{ once: true }}
                                 >
                                     <motion.div className="h-full w-full"
-                                        animate={{ rotate: ["0deg", "360deg"] }}
-                                        transition={{ duration: 15, ease: "linear", repeat: Infinity }}
+                                        animate={{ scale: ["100%", "110%", "100%"] }}
+                                        transition={{ duration: 5, ease: "linear", repeat: Infinity }}
                                     >
-                                        <ExternalCircularButton link={"https://www.https://www.jungtalents.com/"} >
-                                            <Image src="/icons/jungTalent.jpg" alt="Jung Talents Logo" fill className=" object-fill translate-x-[2px]" />
+                                        <ExternalCircularButton link={"https://www.jungtalents.com/"} >
+                                            <Image src="/icons/jungTalent.jpg" alt="Jung Talents Logo" fill className=" object-fill" />
                                         </ExternalCircularButton>
                                     </motion.div>
 
@@ -125,19 +174,19 @@ const Experience = () => {
                                     viewport={{ once: true }}
                                 >
                                     <motion.div className="h-full w-full"
-                                        animate={{ rotate: ["0deg", "360deg"] }}
-                                        transition={{ duration: 15, ease: "linear", repeat: Infinity }}
+                                        animate={{ scale: ["100%", "110%", "100%"] }}
+                                        transition={{ duration: 5, ease: "linear", repeat: Infinity }}
                                     >
                                         <ExternalCircularButton link={"https://www.jungtalents.com/"} >
-                                            <Image src="/icons/jungTalent.jpg" alt="Jung Talents Logo" fill className=" object-fill translate-x-[2px]" />
+                                            <Image src="/icons/jungTalent.jpg" alt="Jung Talents Logo" fill className=" object-fill" />
                                         </ExternalCircularButton>
                                     </motion.div>
                                 </motion.div>
                                 <div className="
-                                        w-[80%] md:w-8/12 
+                                        w-[80%] md:w-8/12
                                         2xl:w-7/12 h-3/5  
                                         md:bg-primary text-center 
-                                        z-10 border-b-2
+                                        z-10 border-b-2 
                                         shadow-2xl shadow-black/30
                                 ">
                                     <div className="h-full w-full -translate-y-2/3">
@@ -178,33 +227,44 @@ const Experience = () => {
                                 </div>
                                 <div className="hidden md:block 2xl:hidden aspect-square h-3/5 bg-primary rounded-full -translate-x-[50%] z-50"></div>
                             </div>
-                            <ul className="pl-[15%] 2xl:pl-[15%] pr-[10%] 2xl:pr-[35%] w-full md:w-[90%]
-                                    translate-y-[35%] md:translate-y-[55%] 2xl:translate-y-[5%] 
-                                    list-disc text-lg md:text-xl text-white/80">
+                            <ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
+                                    translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] md:bg-background rounded-3xl
+                                    list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 ">
                                 <motion.li
-                                    initial={{ translateY: "18vh", opacity: 0 }}
+                                    className=" w-auto rounded-xl mb-2"
+                                    initial={{ translateY: "16vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                >Modernise Landing page, help increase convertion rate by 22%</motion.li>
+                                >Revamped Landing Page UI/UX, leading to a <span className="inline text-primary font-extrabold">22% increase in conversion rate</span>  through modern design and performance optimizations.</motion.li>
                                 <motion.li
-                                    initial={{ translateY: "18vh", opacity: 0 }}
+                                    className=" w-auto rounded-xl mb-2"
+                                    initial={{ translateY: "20vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                >Build and deploy Dotnet application Fast under TDD.</motion.li>
+                                >Architected and deployed a high-performance .NET application, leveraging <span className="font-bold underline">Test-Driven Development (TDD) for faster, bug-free</span> releases</motion.li>
                                 <motion.li
-                                    initial={{ translateY: "18vh", opacity: 0 }}
+                                    className=" opacity-30 w-auto rounded-xl mb-2"
+                                    initial={{ translateY: "23vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                >Optimised Database, lead to an average increase speed by 32%</motion.li>
+                                >Optimized database queries, improving API response times and increasing overall  <span className="inline text-primary font-extrabold">application speed by 32%</span>.</motion.li>
                                 <motion.li
-                                    initial={{ translateY: "18vh", opacity: 0 }}
+                                    className=" w-auto rounded-xl mb-2"
+                                    initial={{ translateY: "26vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                >Maintain a run application.</motion.li>
+                                >Maintained and enhanced a critical production application, ensuring <span className="inline text-primary font-extrabold">99.9% uptime and seamless</span> user experience.</motion.li>
+                                <motion.li
+                                    className=" w-auto rounded-xl mb-2"
+                                    initial={{ translateY: "vh", opacity: 0 }}
+                                    whileInView={{ translateY: "0vh", opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                >Integrated Docker-based CI/CD pipelines, reducing <span className="inline text-primary font-extrabold">deployment time by 40%</span> and improving development efficiency.</motion.li>
                             </ul>
                         </div>
                         <div className="h-[6%] w-full">

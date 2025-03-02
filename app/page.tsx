@@ -58,7 +58,7 @@ const Page = () => {
             {/* testing */}
             {/*200vh for experience */}
             <div className="
-                    h-[200vh] w-full
+                   h-[270vh] sm:h-[240vh] md:h-[200vh] w-full
                 bg-background -z-50
              ">
 
@@ -78,38 +78,35 @@ const Page = () => {
             </div>
             {/* Education */}
             <div className="
-                    flex flex-col 
+                    flex flex-col z-20
                     items-center h-[80vh] 
                     max-w-full bg-background 
                     ">
                 <Education />
             </div>
-            <div className="h-auto bg-gradient-to-t from-secondary to-background -z-10 translate-y-[15%] scale-y-150 2xl:scale-y-100">
+            <div className="h-auto bg-gradient-to-t from-secondary to-background z-50 translate-y-[15%] scale-y-150 2xl:scale-y-100">
                 <Footer />
             </div>
             <div className="
             `       relative text-xs 
                     flex flex-col text-background
-                    h-auto max-w-full scale-y-75
+                    h-auto max-w-full 
                     bg-primary font-semibold 
                     tracking-wider z-50">
 
-                <div className="text-center  my-3 2xl:my-1 scale-y-125"> all right preserved</div>
+                <div className="text-center  my-3 2xl:my-1"> all right preserved</div>
 
-                <div className="flex flex-col md:flex-row justify-evenly gap-5 w-full pb-5 ">
-                    <div className="hidden md:flex w-[35%] scale-y-125">www.junetr.dev</div>
+                <div className="flex flex-col md:flex-row justify-evenly gap-5 w-auto pb-5 ">
+                    <div className="hidden md:flex w-[35%]">www.junetr.dev</div>
 
                     <div className="flex flex-row md:flex-col w-full 
                             justify-evenly 
-                            md:w-[35%]">
-                        <div className="flex flex-row justify-between scale-y-125">
-                            <div className="underline ">phone:</div>
-                            <div>(+61) 432 002 486</div>
+                            md:w-auto">
+                        <div className="flex flex-row justify-between">
+                            <div className="underline pr-[5%]">Written with NextJs: by June</div>
+                            <div>Power by Vercel</div>
                         </div>
-                        <div className="flex flex-row  justify-between scale-y-125">
-                            <div className="underline">Email:</div>
-                            <div>Thanchitr@outlook.com</div>
-                        </div>
+
                     </div>
                 </div>
             </div>

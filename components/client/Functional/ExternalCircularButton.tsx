@@ -7,7 +7,7 @@ interface ExternalLinkCircularButtonProps {
 const ExternalLinkCircularButton = ({ link, children }: ExternalLinkCircularButtonProps) => {
     return (
 
-        <a href={link}  >
+        <a href={link} target="_blank" rel="noopener noreferrer" >
             <div className="
                         relative overflow-hidden
                         h-full w-full shadow-sm
