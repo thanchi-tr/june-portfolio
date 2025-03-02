@@ -4,7 +4,7 @@ interface ExternalLinkCircularButtonProps {
     link: string;
     children: ReactNode;
 }
-let ExternalLinkCircularButton = ({ link, children }: ExternalLinkCircularButtonProps) => {
+const ExternalLinkCircularButton = ({ link, children }: ExternalLinkCircularButtonProps) => {
     return (
 
         <a href={link}  >

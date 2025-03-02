@@ -17,10 +17,10 @@ const RayTracer = () => (<>
                         pointer-events-auto`}>
             <CollapsibleGallery
                 cards={[
-                    <Image src={"/asset/FizzBuzz/waitRoom.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/FizzBuzz/game.png"} alt={"Game Running"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/FizzBuzz/score.png"} alt={"Game Finish Display rank"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/FizzBuzz/add.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
+                    <Image key="card30" src={"/asset/FizzBuzz/waitRoom.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
+                    <Image key="card31" src={"/asset/FizzBuzz/game.png"} alt={"Game Running"} className="object-cover h-full w-full pointer-events-none" fill />,
+                    <Image key="card32" src={"/asset/FizzBuzz/score.png"} alt={"Game Finish Display rank"} className="object-cover h-full w-full pointer-events-none" fill />,
+                    <Image key="card33" src={"/asset/FizzBuzz/add.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
                 ]} />
         </div>
         <div className={`
@@ -31,7 +31,7 @@ const RayTracer = () => (<>
             <div className={`mt-[10%] ml-[5%] w-[90%] pb-[18.5px] md:pb-[52px]`}>
                 <h4 className={`underline font-mainfont pb-5`}>Description:</h4>
                 <p className={`w-[90%] text-xs`}>
-                    Follow the traditional, reowned Fizz Buzz games. Take it another step to allow your math skill to speak and take you up your "pyramid" of skill.
+                    Follow the traditional, reowned Fizz Buzz games. Take it another step to allow your math skill to speak and take you up your &#34;pyramid&#34; of skill.
                     Create a game, wait for your friend to join.
                 </p>
             </div>

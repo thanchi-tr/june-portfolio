@@ -12,7 +12,7 @@ interface ToggleButtonProps {
 /// <param name="onClick">The function to be called when the button is clicked.</param>
 /// <param name="isOn">The state of the button.</param>
 /// <returns>A toggle button that can be used to switch between two states.</returns>
-let ToggleButton = ({ onClick, isOn, onText = "light", offText = "dark" }: ToggleButtonProps) => {
+const ToggleButton = ({ onClick, isOn, onText = "light", offText = "dark" }: ToggleButtonProps) => {
     return (
         <div onClick={onClick} className={`cursor-pointer group`}>
             {/* Container */}

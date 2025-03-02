@@ -18,10 +18,10 @@ export const useThemeContext = () => {
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [isDark, setTheme] = useState(false);
-    useEffect(() => { document.documentElement.classList.toggle("dark") }, []);
+    useEffect(() => { document.documentElement.classList.toggle("light") }, []);
     const toggleTheme = () => {
         setTheme(prev => !prev);
-        document.documentElement.classList.toggle("dark");
+        document.documentElement.classList.toggle("light");
     }
 
     return (

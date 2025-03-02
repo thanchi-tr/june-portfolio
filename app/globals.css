@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-coda-caption: "CodaCaption", sans-serif;
+.light {
+
   --color-background: #fefdfd;
   --color-primary: #ceb2bd;
   --color-secondary: #482a41;
-  --color-accent: #8b3dff;
+  --color-accent: #00ffff;
   --color-descent: #ff00ff;
+  
 }
-.dark {
+:root {
+  --font-coda-caption: "CodaCaption", sans-serif;
   --color-background: #3e3a37;
   --color-primary: #ad9547;
   --color-secondary: #432622;
-  --color-accent: #8b3dff;
+  --color-accent: #00ffff;
   --color-descent: #ff00ff;
+  --color-text-h0-primary: #ad9547;
+  --color-text-h0-secondary: white: 
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -32,7 +36,12 @@ body {
   font-weight: 700;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Bestermind";
+  src: url("/fonts/BestermindRegular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 @font-face {
   font-family: "GeistMono";
   src: url("/fonts/GeistMonoVF.woff") format("woff");

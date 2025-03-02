@@ -1,10 +1,10 @@
 'use client';
 
-import useMouseDisplacementTracker, { LEFT, RIGHT, STATION } from "@/hooks/useMouseDisplacementTracker";
+import useMouseDisplacementTracker, { LEFT, STATION } from "@/hooks/useMouseDisplacementTracker";
 import { numberToGreekNumeral } from "@/utils/numeralHelper";
 
 import { motion } from "framer-motion";
-import { ReactNode, useEffect, useReducer, useRef, useState } from "react";
+import { ReactNode, useEffect, useReducer, useRef } from "react";
 
 interface CardDisplacement {
     currentX: number;
@@ -12,14 +12,13 @@ interface CardDisplacement {
 }
 
 const CardTranslationAnimation = (
-    { displayBlock, totalCount, contents = Array.from({ length: totalCount }, (_, index) => <div>{index}</div>) }: { displayBlock: number, totalCount: number, contents?: ReactNode[] }
+    { displayBlock, totalCount, contents = Array.from({ length: totalCount }, (_, index) => <div key={"block" + index}>{index}</div>) }: { displayBlock: number, totalCount: number, contents?: ReactNode[] }
 
 ) => {
     const imageRef = useRef<HTMLDivElement>(null);
     const sliderWidth = Math.floor(100 / displayBlock) * totalCount;
     const cardWidth = Math.floor(100 / displayBlock)
     const { coordDetail, isTracking } = useMouseDisplacementTracker(imageRef);
-    const [isLock, setIsLock] = useState(false);
 
     const initializeCards = (): CardDisplacement[] =>
         Array.from({ length: totalCount }).map(() => ({ currentX: 0, nextX: 0 }));
@@ -118,7 +117,7 @@ const CardTranslationAnimation = (
 
     const getVariant = (index: number) => {
 
-        let coord = cardsDisplacement[index]
+        const coord = cardsDisplacement[index]
 
         if (isTracking == false) {
             //determine if we want to

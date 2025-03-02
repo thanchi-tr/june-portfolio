@@ -4,11 +4,11 @@ const FizzBuzzProject = () => (<>
     <h1 className={`font-mainfont text-lg xl:text-xl 2xl:text-2xl text-center p-4 text-black/95`}>FizzBuzz RealTime Multi-player Game</h1>
     <div className={`
                       h-full w-full
-                      flex flex-col md:flex-row flex-wrap
+                      flex md:flex-row flex-wrap
                       xl:justify-evenly
                     `}>
         <div className={`
-                        flex items-center content-center
+                        flex flex-col md:flex-row items-center content-center
                         w-[90%] sm:w-[70%] md:w-[52%] xl:w-[38%] 2xl:w-[30%] xl:pb-4
                         h-[540px] 
                         ml-[5%] sm:ml-[15%] md:ml-[3%]
@@ -16,10 +16,10 @@ const FizzBuzzProject = () => (<>
                         pointer-events-auto`}>
             <CollapsibleGallery
                 cards={[
-                    <Image src={"/asset/FizzBuzz/waitRoom.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/FizzBuzz/game.png"} alt={"Game Running"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/FizzBuzz/score.png"} alt={"Game Finish Display rank"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/FizzBuzz/add.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
+                    <Image key="card0" src={"/asset/FizzBuzz/waitRoom.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card1" src={"/asset/FizzBuzz/game.png"} alt={"Game Running"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card2" src={"/asset/FizzBuzz/score.png"} alt={"Game Finish Display rank"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card3" src={"/asset/FizzBuzz/add.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" fill />,
                 ]} />
         </div>
         <div className={`
@@ -31,7 +31,7 @@ const FizzBuzzProject = () => (<>
             <div className={`mt-[10%] ml-[5%] w-[90%] pb-[18.5px] md:pb-[52px]`}>
                 <h4 className={`underline font-mainfont pb-5`}>Description:</h4>
                 <p className={`w-[90%]  text-xs`}>
-                    Follow the traditional, reowned Fizz Buzz games. Take it another step to allow your math skill to speak and take you up your "pyramid" of skill.
+                    Follow the traditional, reowned Fizz Buzz games. Take it another step to allow your math skill to speak and take you up your &#34;pyramid&#34; of skill.
                     Create a game, wait for your friend to join.
                 </p>
             </div>

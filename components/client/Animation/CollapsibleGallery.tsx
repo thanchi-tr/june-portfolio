@@ -21,7 +21,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                         className={`
                             inline overflow-clip
                             h-full relative 
-                            ${index == selectedIndex ? "shadow-xl shadow-foregound rounded-xl border-[1px] border-b-white/15" : "rounded-md"}
+                            ${index == selectedIndex ? "shadow-xl shadow-black rounded-xl border-[1px] border-b-white/15" : "rounded-md"}
                             ${index == selectedIndex ? "bg-gray-300 pointer-events-none" : "bg-primary hover:cursor-pointer "}
                             transition-all duration-[1.5s] ease-out
                             `}

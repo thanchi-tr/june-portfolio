@@ -8,7 +8,7 @@ const MyToDoProject = () => (<>
                       xl:justify-evenly
                     `}>
         <div className={`
-                        flex items-center content-center
+                        flex flex flex-col md:flex-row items-center content-center
                         w-[90%] sm:w-[70%] md:w-[52%] xl:w-[38%] 2xl:w-[30%]
                         h-[540px] 
                         ml-[5%] sm:ml-[15%] md:ml-[3%]
@@ -16,10 +16,10 @@ const MyToDoProject = () => (<>
                         pointer-events-auto`}>
             <CollapsibleGallery
                 cards={[
-                    <Image src={"/asset/MyToDo/login.png"} alt={"Log in and register"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/MyToDo/category.png"} alt={"Game Running"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/MyToDo/todos.png"} alt={"Game Finish Display rank"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/MyToDo/loading.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
+                    <Image key="card20" src={"/asset/MyToDo/login.png"} alt={"Log in and register"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card21" src={"/asset/MyToDo/category.png"} alt={"Game Running"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card22" src={"/asset/MyToDo/todos.png"} alt={"Game Finish Display rank"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card23" src={"/asset/MyToDo/loading.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" fill />,
                 ]} />
         </div>
         <div className={`

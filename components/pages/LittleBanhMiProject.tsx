@@ -8,7 +8,7 @@ const LittleBanhMiProject = () => (<>
                       xl:justify-evenly
                     `}>
         <div className={`
-                        flex items-center content-center
+                        flex flex-col md:flex-row items-center content-center
                         w-[90%] sm:w-[70%] md:w-[52%] xl:w-[38%] 2xl:w-[30%] xl:pb-4
                         h-[540px] 
                         ml-[5%] sm:ml-[15%] md:ml-[3%]
@@ -16,11 +16,11 @@ const LittleBanhMiProject = () => (<>
                         pointer-events-auto`}>
             <CollapsibleGallery
                 cards={[
-                    <Image src={"/asset/LilBM/home.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/LilBM/home2.png"} alt={"Game Running"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/LilBM/story.png"} alt={"Game Finish Display rank"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/LilBM/menu.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
-                    <Image src={"/asset/LilBM/map.png"} alt={"Add Game rule"} className="object-cover h-full w-full pointer-events-none" fill />,
+                    <Image key="card10" src={"/asset/LilBM/home.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card11" src={"/asset/LilBM/home2.png"} alt={"Game Running"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card12" src={"/asset/LilBM/story.png"} alt={"Game Finish Display rank"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card13" src={"/asset/LilBM/menu.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" fill />,
+                    <Image key="card14" src={"/asset/LilBM/map.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" fill />,
                 ]} />
         </div>
         <div className={`

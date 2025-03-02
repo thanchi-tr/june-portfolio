@@ -8,11 +8,10 @@ interface config {
     isReverse?: boolean, //indicate if the text will be clear after complet
     typingSimilationInSecond: number[] // time take for each character to appear
     callback: () => void,
-    constGenerateSpeed?: number
 }
 const INIT = -1;
 const TERMINATE = -2;
-const TypedText = ({ text, typingSimilationInSecond, isReverse, callback, constGenerateSpeed }: config) => {
+const TypedText = ({ text, typingSimilationInSecond, isReverse, callback }: config) => {
     const idRef = useRef(uuidv4());
     const charSet = text.replaceAll(" ", "\u00A0").split("");
     const timeMap = useRef<number[]>(typingSimilationInSecond);
@@ -20,7 +19,6 @@ const TypedText = ({ text, typingSimilationInSecond, isReverse, callback, constG
     const isDeletePath = useRef(false);
     const cursorIndexOffset = useRef(0);
     const [curIndex, setCurIndex] = useState(-1);
-    const [previousTime, setPreviousTime] = useState(-1);
     const reset = () => {
         callback();
         setCurIndex(TERMINATE)
@@ -42,7 +40,7 @@ const TypedText = ({ text, typingSimilationInSecond, isReverse, callback, constG
         () => {
             if (isDeletePath.current) { return; } // make sure effect take place when simulate text typing
             if ((curIndex) < charSet.length) {
-                let timer = setTimeout(
+                const timer = setTimeout(
                     () => {
                         setCurIndex(prev => prev + 1);
                         if ((curIndex + 1) == charSet.length) {
@@ -56,7 +54,7 @@ const TypedText = ({ text, typingSimilationInSecond, isReverse, callback, constG
             }
 
             if (isReverse) {
-                let timer = setTimeout(() => {
+                const timer = setTimeout(() => {
                     isDeletePath.current = true;
                     cursorIndexOffset.current += 1;
                     setTimeout(
@@ -78,7 +76,7 @@ const TypedText = ({ text, typingSimilationInSecond, isReverse, callback, constG
         () => {
             if (!isDeletePath.current) { return; } // make sure effect take place when simulate text deleting
             if (curIndex == 0) {
-                let timer = setTimeout(
+                const timer = setTimeout(
                     () => setCurIndex(prev => prev - 1),
                     timeMap.current[0] * 200
                 );
@@ -86,7 +84,7 @@ const TypedText = ({ text, typingSimilationInSecond, isReverse, callback, constG
                 return () => clearTimeout(timer);
             }
             if (curIndex > 0) {
-                let timer = setTimeout(
+                const timer = setTimeout(
                     () => setCurIndex(prev => prev - 1),
                     timeMap.current[curIndex - 1] * 500
                 );

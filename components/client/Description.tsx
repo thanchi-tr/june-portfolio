@@ -1,7 +1,7 @@
 "use client";
 
 import TypedTextEntity from "@/components/client/Animation/TypedText";
-import { ReactNode, useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { motion } from 'framer-motion'
 
 const Discription = () => {
@@ -31,7 +31,7 @@ const Discription = () => {
     const updateState = useCallback(
         () => setState(prev => prev + 1), [state]
     )
-    const displayText = "ful";
+
 
     const variants = {
         "passive": { scaleY: 1, scaleX: 1 },
@@ -43,7 +43,12 @@ const Discription = () => {
     return (
         <>
 
-            <motion.div className={`absolute z-20 h-[10vh] w-full text-xl bg-white transition-all delay-75 duration-200 overflow-clip rounded-md
+            <motion.div className={`
+                            absolute z-20 
+                            h-[10vh] w-full 2xl:text-black
+                            text-xl 2xl:text-5xl bg-white 
+                            transition-all delay-75 duration-200 overflow-clip 
+                            rounded-md 2xl:rounded-[2.5rem]
             ${state == 4 ? "drop-shadow-sm shadow-highlight border-2 " : " border-2  "}
           `}
                 variants={variants}
@@ -55,7 +60,8 @@ const Discription = () => {
                     <div className={`uppercase font-mainfont font-medium text-center 
               ${state >= 4
                             ? "text-midground transition-all duration-500 text-4xl text-center"
-                            : `text-4xl transition-all duration-200 ease-in-out
+                            : `text-4xl 
+                            transition-all duration-200 ease-in-out
                 `
                         }
               `}

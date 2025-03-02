@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
-
+import plugin from "tailwindcss/plugin";
+import type { PluginAPI } from "tailwindcss/types/config";
 export default {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -8,6 +9,11 @@ export default {
   ],
   theme: {
     extend: {
+      textShadow: {
+        sm: "0 1px 2px var(--tw-shadow-color)",
+        DEFAULT: "0 2px 4px var(--tw-shadow-color)",
+        lg: "0 8px 16px var(--tw-shadow-color)",
+      },
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
@@ -29,6 +35,7 @@ export default {
       fontFamily: {
         secondaryfont: ["GeistMono", "sans-serif"], // Add your custom fonts
         mainfont: ["CodaCaption", "sans-serif"],
+        signaturefont: ["Bestermind", "sans-serif"],
       },
       fontWeight: {
         hairline: "100",
@@ -43,5 +50,16 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }: PluginAPI) {
+      matchUtilities(
+        {
+          "text-shadow": (value: string) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") as Record<string, string> | undefined }
+      );
+    }),
+  ],
 } satisfies Config;

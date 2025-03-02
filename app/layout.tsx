@@ -13,7 +13,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
+const Bestermind = localFont({
+  src: "./fonts/BestermindRegular.ttf",
+  variable: "--font-bestermind",
+  weight: "100 900",
+});
 const codaCaption = localFont({
   src: './fonts/CodaCaption-Heavy.ttf',
   weight: '700',
@@ -34,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${codaCaption.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-foregound/35`}
+        className={`${codaCaption.variable} ${geistSans.variable} ${geistMono.variable} ${Bestermind.variable} antialiased bg-foregound/35`}
       >
         <ThemeProvider>
 

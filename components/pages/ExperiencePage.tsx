@@ -4,7 +4,7 @@
  I want the past experience to be displayed in a vertical where it 
  appears as the user scrolls down.
 */
-let ExperiencePage = () => {
+const ExperiencePage = () => {
     return (
 
         <div>
