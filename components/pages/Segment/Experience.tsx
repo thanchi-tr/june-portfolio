@@ -6,7 +6,8 @@ import { easeIn, motion } from "framer-motion";
 
 const Experience = () => {
     const containerVariants = {
-        show: {
+        "init": {},
+        "playout": {
             transition: {
                 staggerChildren: 0.3, // Each child will animate 0.3s after the previous one
                 delayChildren: 0.5, // Delay before children start animating
@@ -15,12 +16,12 @@ const Experience = () => {
     };
 
     const itemVariants = {
-        show: {
+        "init": {},
+        "playout": {
             translateY: [0, "1.6vh", 0],
             transition: {
                 duration: 3.2,
                 repeat: Infinity,
-                repeatType: "reverse"
             }
         },
     };
@@ -53,6 +54,7 @@ const Experience = () => {
                         w-[82%] md:w-full mx-[8%] md:mx-0
                         bg-secondary md:bg-background
             ">
+
                 <div className="
                             h-full w-full md:w-[27%]
                             md:ml-[8%] 
@@ -82,7 +84,7 @@ const Experience = () => {
                                         -translate-y-[8vh] sm:-translate-y-[18vh]  2xl:-translate-y-[42vh]
                                         ml-[8%]"
                                 variants={containerVariants}
-                                animate="show"
+                                animate="playout"
                             >
                                 <motion.div className="h-full rounded-full aspect-square bg-black"
                                     variants={itemVariants}

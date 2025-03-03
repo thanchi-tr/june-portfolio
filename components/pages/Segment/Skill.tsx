@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 const Skill = () => {
     const containerVariants = {
+        hidden: {},
         show: {
             transition: {
                 staggerChildren: 0.2, // Each child will animate 0.3s after the previous one
@@ -13,12 +14,12 @@ const Skill = () => {
     };
 
     const itemVariants = {
+        hidden: {},
         show: {
             translateY: ["6px", "0"],
             opacity: [0, 1],
             transition: {
                 duration: 0.4,
-                repeatType: "reverse"
             }
         },
     };

@@ -170,9 +170,9 @@ const Introduction = () => {
                             {<span className="font-extrabold underline text-white"> Next.js</span>},
                             My expertise lies in designing scalable architectures, optimizing performance, and ensuring seamless user experiences. I thrive in fast-paced environments, solving complex problems with an
                             {<span className="font-extrabold underline text-white mr-1">innovative, solution-oriented approach</span>}
-                            If you're looking for a developer who delivers
+                            If you&#39;re looking for a developer who delivers
                             {<span className="font-extrabold underline text-white"> on time, with precision, and a keen eye for detail </span>}
-                            , <a className="text-primary md:text-black md:uppercase text-xl">let's connect!📧</a>
+                            , <a className="text-primary md:text-black md:uppercase text-xl">let&#39;s connect!📧</a>
 
                         </div>
 
