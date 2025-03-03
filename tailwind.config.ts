@@ -61,5 +61,6 @@ export default {
         { values: theme("textShadow") as Record<string, string> | undefined }
       );
     }),
+    require("tailwind-scrollbar-hide"),
   ],
 } satisfies Config;

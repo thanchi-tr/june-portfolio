@@ -21,25 +21,25 @@ const Introduction = () => {
                     
                     relative flex
                     flex-col
-                    md:flex-row
-                    h-full w-full 2xl:w-[90%] 2xl:pl-[5%]
+                    lg:flex-row
+                    h-auto w-full 2xl:w-[90%] 2xl:pl-[5%]
                     bg-background 
                     ">
                 <div className={`
                         flex flex-col 
-                        w-full md:w-7/12 h-full
+                        w-full lg:w-7/12 h-full
                         
                         `}>
                     <div className="
                             relative flex 
-                            justify-center md:justify-start
-                            opacity-50 hover:opacity-100 md:opacity-100
+                            justify-center lg:justify-start
+                            opacity-50 hover:opacity-100 lg:opacity-100
                         
                     ">
                         <div className="
                                 opacity-0
-                                scale-[45%] md:scale-[40%] 
-                                 md:-translate-x-[25%] md:-translate-y-[20%]">
+                                scale-[45%] lg:scale-[40%] 
+                                 lg:-translate-x-[25%] lg:-translate-y-[20%]">
 
                             <ToggleButton
                                 onClick={toggleTheme}
@@ -53,7 +53,7 @@ const Introduction = () => {
                                 relative 
                                 flex flex-wrap 
                                 items-center
-                                h-4/5 w-full">
+                                h-[80vh] w-full">
 
                         <div className="
                                     relative flex flex-row 
@@ -62,7 +62,7 @@ const Introduction = () => {
                                     
                             ">
                             <div className="
-                                    absolute md:hidden
+                                    absolute lg:hidden
                                     top-[25%] 
                                     h-[75%]  w-full 
                                      bg-primary" />
@@ -77,10 +77,10 @@ const Introduction = () => {
                                 <div className="
                                         absolute flex flex-row
                                         translate-x-[10%] -translate-y-[110%] origin-top-left rotate-90
-                                        md:translate-x-0 md:rotate-0 md:translate-y-0
+                                        lg:translate-x-0 lg:rotate-0 lg:translate-y-0
                                         top-0 2xl:-translate-y-5 2xl:translate-x-[45%]
-                                        w-full md:w-4/5 2xl:w-1/3
-                                        h-[80%] sm:h-[90%] md:h-3/5 
+                                        w-full lg:w-4/5 2xl:w-1/3
+                                        h-[80%] sm:h-[90%] lg:h-3/5 
                                         pt-2 
                                     ">
                                     <div className="2xl:hidden h-full w-2/3" />
@@ -91,24 +91,24 @@ const Introduction = () => {
                                     ">
                                         {/* Linked In */}
                                         <div className="
-                                                -rotate-90 md:rotate-0 -translate-y-[50%]
-                                                aspect-square h-[22%] sm:h-[24%] md:h-[26%] w-auto rounded-full  bg-white">
+                                                -rotate-90 lg:rotate-0 -translate-y-[50%]
+                                                aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full  bg-white">
                                             <ExternalCircularButton link={""} >
                                                 <Image src="/icons/linkedin.png" alt="github" fill className="scale-75 object-fill" />
                                             </ExternalCircularButton>
                                         </div>
                                         {/* GitHub */}
                                         <div className="
-                                                -rotate-90 md:rotate-0 -translate-y-[50%]
-                                                aspect-square h-[22%] sm:h-[24%] md:h-[26%] w-auto rounded-full">
+                                                -rotate-90 lg:rotate-0 -translate-y-[50%]
+                                                aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full">
                                             <ExternalCircularButton link={""} >
                                                 <Image src="/icons/github.jpg" alt="github" fill className="object-fill" />
                                             </ExternalCircularButton>
                                         </div>
                                         {/* Portfolio website */}
                                         <div className="
-                                                -rotate-90 md:rotate-0 -translate-y-[50%]
-                                                aspect-square h-[22%] sm:h-[24%] md:h-[26%] w-auto rounded-full
+                                                -rotate-90 lg:rotate-0 -translate-y-[50%]
+                                                aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full
                                         ">
                                             <ExternalCircularButton link={"https://www.junetr.dev"} >
                                                 <Image src="/icons/web.webp" alt="github" fill className="scale-125 object-fill translate-x-[2px]" />
@@ -126,16 +126,15 @@ const Introduction = () => {
                 </div>
                 <div className={`
                         flex flex-col relative 
-                        w-full md:w-5/12 xl:w-4/12 md:h-[130vh] lg:h-[100vh]
-                        xl:h-[85%] 2xl:border-2
+                        w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
-                        md:bg-primary 2xl:bg-transparent`} >
+                        lg:bg-primary 2xl:bg-transparent`} >
                     <div className="w-full h-[20%]"></div>
                     {/* description */}
                     <motion.div
                         className="
-                            w-full h-full md:h-2/3 
-                            text-white md:text-black 2xl:text-white    
+                            w-full h-auto lg:h-2/3 
+                            text-white lg:text-black 2xl:text-white    
                             z-40
                     "
                         initial={{ translateY: "100%", opacity: 0 }}
@@ -148,20 +147,20 @@ const Introduction = () => {
                             hidden 2xl:absolute 
                             h-[15vh]
                             w-full  2xl:w-[84%]
-                            md:flex 
-                            md:scale-75 xl:bottom-[18%] 
+                            lg:flex 
+                            lg:scale-75 xl:bottom-[18%] 
                             xl:left-[15%] 2xl:left-[8%]
                             left-[0vw]   items-center justify-center`}>
 
                             <Discription />
                         </div>
                         <div className={`
-                                p-2 pl-10 md:p-10 leading-5
-                                text-sm md:text-sm 
+                                p-2 pl-10 lg:p-6 leading-5
+                                text-sm lg:text-sm 
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-2xl 
                                 xl:-translate-y-[10%]
-                                
+                                h-auto
                             `}>
                             I am a passionate
                             {<span className="font-extrabold underline text-white mx-1">FULL-STACK DEVELOPER</span>}
@@ -172,7 +171,7 @@ const Introduction = () => {
                             {<span className="font-extrabold underline text-white mx-1">innovative, solution-oriented approach</span>}
                             If you&#39;re looking for a developer who delivers
                             {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail</span>}
-                            .<a className="block text-primary md:text-white  uppercase text-xl text-shadow-lg shadow-black">let&#39;s connect!📧</a>
+                            .<a className="block text-primary lg:text-white  uppercase text-xl text-shadow-lg shadow-black">let&#39;s connect!📧</a>
                         </div>
 
 
@@ -183,7 +182,7 @@ const Introduction = () => {
                             absolute group 
                             top-0 
                             h-full w-full 
-                            md:backdrop-blur-md hover:backdrop-blur-none 
+                            lg:backdrop-blur-md hover:backdrop-blur-none 
                             hover:border-l-[18px] hover:cursor-pointer z-50
                             shadow-inner shadow-black 
                             transition-all xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]

@@ -14,7 +14,7 @@ const Avata = () => {
                     right-0 top-0   
                     h-full aspect-square  
                      overflow-clip
-                    -translate-x-[38%] -translate-y-[50%]
+                    translate-x-[38%] -translate-y-[50%]
                     md:-translate-y-[12%] md:translate-x-[5%] sm:translate-x-[10%] 
                     rounded-[100%] 2xl:rounded-bl-[120%] 2xl:rounded-br-[0%] lg:border-b-4 2xl:border-b-8 
                     border-white/40 md:border-white/0 

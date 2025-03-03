@@ -44,7 +44,7 @@ const Page = () => {
                 className={`
                 relative
                 transition-all duration-150
-                h-screen max-full 
+                h-auto max-full 
                 bg-background
                 
                 `}

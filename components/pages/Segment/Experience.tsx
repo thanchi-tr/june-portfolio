@@ -50,7 +50,7 @@ const Experience = () => {
                         relative flex flex-col-reverse md:flex-row
                         h-[220vh] sm:h-[200vh] md:h-[200vh] z-20
                         shadow-inner md:shadow-none
-                        shadow-black/60
+                        shadow-black/60 overflow-clip
                         w-[82%] md:w-full mx-[8%] md:mx-0
                         bg-secondary md:bg-background
             ">
@@ -231,7 +231,9 @@ const Experience = () => {
                             </div>
                             <ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
                                     translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] md:bg-background rounded-3xl
-                                    list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 ">
+                                    list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 
+                                    
+                                    ">
                                 <motion.li
                                     className=" w-auto rounded-xl mb-2"
                                     initial={{ translateY: "16vh", opacity: 0 }}
