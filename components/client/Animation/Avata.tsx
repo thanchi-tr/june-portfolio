@@ -11,7 +11,7 @@ const Avata = () => {
             <motion.div className="
                     absolute 
                     scale-[120%] md:scale-[85%] 2xl:scale-[60%]
-                    right-0 top-0   
+                    right-0 top-0   z-[220] 
                     h-full aspect-square  
                      overflow-clip
                     translate-x-[38%] -translate-y-[50%]
@@ -28,7 +28,7 @@ const Avata = () => {
                     src={"/ava.png"}
                     alt={"Portrait picture of June in black suit, black tie"}
                     fill
-                    className="object-contain md:opacity-0"
+                    className="object-contain md:opacity-0 z-[220]"
                 />
 
             </motion.div>

@@ -69,7 +69,7 @@ const Introduction = () => {
                                      bg-primary" />
                             {/* avatar + link */}
                             <div className="
-                                    flex
+                                    flex z-[220]
                                     w-4/5 h-full
                                     justify-center items-center text-3xl //@delete_line">
                                 <Avata />

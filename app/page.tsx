@@ -7,28 +7,46 @@ import Skill from "@/components/pages/Segment/Skill";
 import Project from "@/components/pages/Segment/Project";
 import Education from "@/components/pages/Segment/Education";
 import Footer from "@/components/client/Animation/Footer";
+import { useRef } from "react";
 export type NavButtonT = { tag: string, data?: ReactNode, className_: string }[];
 import { motion } from "framer-motion";
 import ParticlesComponent from "@/components/client/Animation/ParticlesComponent";
 const Page = () => {
 
-    // const navs: NavButtonT = [
-    //     {
-    //         tag: "About", className_: `bg-background/0`
-    //     },
-    //     { tag: "Exp", className_: `bg-shadow/40` },
-    //     { tag: "Edu", className_: `bg-shadow/40` },
-    //     { tag: "Project", className_: `bg-pink-300/50` },
-    //     { tag: "Contact", className_: `bg-background` },
-    // ]
-
+    const desRef = useRef<HTMLDivElement>(null);
+    const expRef = useRef<HTMLDivElement>(null);
+    const skillRef = useRef<HTMLDivElement>(null);
+    const projectRef = useRef<HTMLDivElement>(null);
     return (
         <div className="h-auto w-full box-border -z-[100] overflow-clip"
         >
             <motion.div className="
+                    opacity-15 hover:opacity-100
+                    sticky  origin-center border-r-4 border-white
+                    h-0 top-0  z-[200] text-sm bg-black
+                    font-bold hover:cursor-pointer
+                    text-center"
+                initial={{ y: "3vh", x: "-45vw" }}
+                transition={{ duration: 3, repeat: Infinity, ease: "anticipate" }}
+            >
+                <p className="absolute top-[4vh] hover:bg-black  text-primary opacity-80  left-[40vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
+                    onClick={() => desRef.current?.scrollIntoView({ behavior: "smooth" })}
+                > Description</p>
+                <p className="absolute hover:bg-white top-[16vh] text-descent opacity-80 left-[40vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary border-2 bg-background"
+                    onClick={() => projectRef.current?.scrollIntoView({ behavior: "smooth" })}
+                > Project</p>
+                <p className="absolute hover:bg-primary top-[8vh] text-black opacity-80   left-[40vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-white bg-background rounded-2xl"
+                    onClick={() => expRef.current?.scrollIntoView({ behavior: "smooth" })}
+                > Experience</p>
+                <p className="absolute top-[12vh] hover:bg-secondary p-1 text-white opacity-80  left-[40vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
+                    onClick={() => skillRef.current?.scrollIntoView({ behavior: "smooth" })}
+                > Skill</p>
+
+            </motion.div>
+            <motion.div className="
                     
                     sticky  origin-center
-                    h-0 top-2  z-[200] text-2xl 
+                    h-0 top-2  z-[200] text-2xl bg-black
                     translate-y-[100vh]
                     font-signaturefont text-center"
                 initial={{ y: "85vh", x: "42vw" }}
@@ -50,7 +68,7 @@ const Page = () => {
                 bg-background
                 
                 `}
-
+                ref={desRef}
             >
 
                 <Introduction />
@@ -62,7 +80,10 @@ const Page = () => {
             <div className="
                    h-[260vh] sm:h-[240vh] md:h-[240vh] w-full
                 bg-background -z-50
-             ">
+             "
+                ref={expRef}
+
+            >
 
                 <Experience />
             </div>
@@ -70,12 +91,16 @@ const Page = () => {
             {/* 200vh for Skill */}
             <div className="
                     h-[200vh] w-full 
-            ">
+            "
+                ref={skillRef}
+            >
 
                 <Skill></Skill>
             </div>
             {/* Project */}
-            <div className="h-auto">
+            <div className="h-auto"
+                ref={projectRef}
+            >
                 <Project />
             </div>
             {/* Education */}
