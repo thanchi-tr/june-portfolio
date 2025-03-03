@@ -6,7 +6,7 @@ import Discription from "@/components/client/Description";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import { useThemeContext } from "@/hooks/context/useThemeContext";
 import { easeIn, motion } from 'framer-motion';
-import Link from "next/link";
+
 const Introduction = () => {
     const { isDark, toggleTheme } = useThemeContext();
     return (
