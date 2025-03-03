@@ -93,7 +93,7 @@ const Page = () => {
                     h-auto max-w-full 
                     bg-primary font-semibold 
                     tracking-wider z-50">
-
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 blur-3xl"></div>
                 <div className="text-center  my-3 2xl:my-1"> all right preserved</div>
 
                 <div className="flex flex-col md:flex-row justify-evenly gap-5 w-auto pb-5 ">

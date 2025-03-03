@@ -46,6 +46,7 @@ const Avata = () => {
                 animate={{ scale: [1, 1.6, 1.5, 1], rotate: ["0deg", "0deg", "12deg"] }}
                 transition={{ duration: 1 }}
             >
+
                 <motion.div
                     initial={{
                         translateX: "0"
@@ -61,7 +62,10 @@ const Avata = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.7, ease: "easeOut" }}
-                    >June</motion.div>
+                    >June
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 2xl:opacity-30 blur-3xl"></div>
+
+                    </motion.div>
                 </motion.div>
             </motion.div>
             <motion.div className="
@@ -74,6 +78,7 @@ const Avata = () => {
                 animate={{ translate: ["39vw", 0], opacity: [0, 0, 1] }}
                 transition={{ duration: 0.6, delay: 0.65, ease: "anticipate" }}
             >
+
                 <motion.div
 
                     animate={{
@@ -83,6 +88,8 @@ const Avata = () => {
                     }}
                     transition={{ delay: 2, duration: 10, repeat: Infinity }}
                 >
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 2xl:opacity-30 blur-3xl"></div>
+
                     Trinh
                 </motion.div>
             </motion.div>

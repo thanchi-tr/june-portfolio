@@ -20,6 +20,7 @@ const Footer = () => {
                 />
 
             </svg>
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-10 blur-3xl scale-y-75"></div>
         </div>
 
     )

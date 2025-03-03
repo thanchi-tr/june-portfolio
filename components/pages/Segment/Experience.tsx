@@ -223,6 +223,7 @@ const Experience = () => {
                                                     text-shadow-lg shadow-primary
                                                     md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">Jung</div> Talents</span>
                                         </motion.div>
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-10 blur-3xl scale-y-50"></div>
                                     </div>
 
 
@@ -235,40 +236,62 @@ const Experience = () => {
                                     
                                     ">
                                 <motion.li
-                                    className=" w-auto rounded-xl mb-2"
+                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
                                     initial={{ translateY: "16vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                >Revamped Landing Page UI/UX, leading to a <span className="inline text-primary font-extrabold">22% increase in conversion rate</span>  through modern design and performance optimizations.</motion.li>
+                                >Revamped Landing Page UI/UX, leading to a
+                                    <span className="relative inline text-primary font-extrabold"> 22% increase in conversion rate
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+
+                                    </span>
+
+                                    through modern design and performance optimizations.
+                                </motion.li>
                                 <motion.li
-                                    className=" w-auto rounded-xl mb-2"
+                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
                                     initial={{ translateY: "20vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                >Architected and deployed a high-performance .NET application, leveraging <span className="font-bold underline">Test-Driven Development (TDD) for faster, bug-free</span> releases</motion.li>
+                                >Architected and deployed a high-performance .NET application, leveraging
+                                    <span className="relative font-bold underline">Test-Driven Development (TDD) for faster, bug-free
+                                    </span>
+                                    releases</motion.li>
                                 <motion.li
-                                    className=" opacity-30 w-auto rounded-xl mb-2"
+                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
                                     initial={{ translateY: "23vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                >Optimized database queries, improving API response times and increasing overall  <span className="inline text-primary font-extrabold">application speed by 32%</span>.</motion.li>
+                                >Optimized database queries, improving API response times and increasing overall
+                                    <span className="relative inline text-primary font-extrabold">application speed by 32%
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+                                    </span>.
+                                </motion.li>
                                 <motion.li
                                     className=" w-auto rounded-xl mb-2"
                                     initial={{ translateY: "26vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                >Maintained and enhanced a critical production application, ensuring <span className="inline text-primary font-extrabold">99.9% uptime and seamless</span> user experience.</motion.li>
+                                >Maintained and enhanced a critical production application, ensuring
+                                    <span className="relative inline text-primary font-extrabold">99.9% uptime and seamless
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+                                    </span>
+                                    user experience.</motion.li>
                                 <motion.li
                                     className=" w-auto rounded-xl mb-2"
                                     initial={{ translateY: "29vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
-                                >Integrated Docker-based CI/CD pipelines, reducing <span className="inline text-primary font-extrabold">deployment time by 40%</span> and improving development efficiency.</motion.li>
+                                >Integrated Docker-based CI/CD pipelines, reducing
+                                    <span className="relative inline text-primary font-extrabold">deployment time by 40%
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+                                    </span>
+                                    and improving development efficiency.</motion.li>
                                 <motion.ul
                                     animate={{ scaleX: [1, 1.7, 0.7, 1.4, 1] }}
                                     transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}

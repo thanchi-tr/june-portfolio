@@ -23,7 +23,19 @@ const Education = () => {
                 whileInView={{ translateY: "0" }}
                 transition={{ duration: 0.44, delay: 0.12, ease: "easeIn" }}
                 viewport={{ once: true }}
-            >University of Melbourne</motion.div>
+            >
+                <motion.div
+                    animate={{
+                        translateY: ["0", "-0.6vw", "0.9vw", "-1.1vw", "0.6vw", "0"],
+                        translateX: ["0", "0.6vw", "-1vw", "0", "2vw", "-1.6vw", "0"],
+                        rotateZ: ["0", "0", "-3deg", "0", "2deg", "0"]
+                    }}
+                    transition={{ repeat: Infinity, duration: 12, delay: 0.7 }}
+                >
+                    University of Melbourne
+
+                </motion.div>
+            </motion.div>
             <div className="
                         flex flex-row justify-evenly
                         w-full

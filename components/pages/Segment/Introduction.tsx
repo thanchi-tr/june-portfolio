@@ -6,6 +6,7 @@ import Discription from "@/components/client/Description";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import { useThemeContext } from "@/hooks/context/useThemeContext";
 import { easeIn, motion } from 'framer-motion';
+import Link from "next/link";
 const Introduction = () => {
     const { isDark, toggleTheme } = useThemeContext();
     return (
@@ -146,10 +147,10 @@ const Introduction = () => {
                         <div className={`
                             hidden 2xl:absolute 
                             h-[15vh]
-                            w-full  2xl:w-[84%]
+                            w-full  2xl:w-[164%] 2xl:scale-50
                             lg:flex 
                             lg:scale-75 xl:bottom-[18%] 
-                            xl:left-[15%] 2xl:left-[8%]
+                            xl:left-[15%] 2xl:-left-[20%] 2xl:translate-y-[50vh]
                             left-[0vw]   items-center justify-center`}>
 
                             <Discription />
@@ -171,7 +172,7 @@ const Introduction = () => {
                             {<span className="font-extrabold underline text-white mx-1">innovative, solution-oriented approach</span>}
                             If you&#39;re looking for a developer who delivers
                             {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail</span>}
-                            .<a className="block text-primary lg:text-white  uppercase text-xl text-shadow-lg shadow-black">let&#39;s connect!📧</a>
+
                         </div>
 
 
@@ -187,6 +188,10 @@ const Introduction = () => {
                             shadow-inner shadow-black 
                             transition-all xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                             " >
+                        {/* <span className="absolute left-0 top-0 h-full w-full bg-white blur-lg opacity-20"></span> */}
+
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl"></div>
+
                         <div className="
                                         absolute hidden opacity-0 group-hover:opacity-100 group-hover:block pointer-events-none 
                                         top-0 h-[100%] w-full z-30 scale-125 -translate-x-[150.5%] lg:-translate-x-[165.5%] 2xl:-translate-x-[190.5%]
@@ -194,8 +199,8 @@ const Introduction = () => {
                             ">
 
                             <motion.div
-                                className="flex flex-col justify-evenly h-[90%] w-[15vw] ml-[10%] rounded-lg backdrop-blur-md 
-                                    origin-center transition-all shadow-inner shadow-black
+                                className="flex flex-col justify-evenly h-[90%] w-[15vw] ml-[10%] rounded-lg backdrop-blur-sm
+                                    origin-center transition-all shadow-inner shadow-black hover:z-[10]
                                 "
                             >
                                 <div className="
@@ -204,7 +209,9 @@ const Introduction = () => {
                                         overflow-hidden
                                         mt-10
                                 ">
-                                    <Image src={"/mainAva.jpg"} alt={""} className="object-cover" fill></Image>
+                                    <Image src={"/mainAva.jpg"} alt={""} className="object-contain" fill></Image>
+
+
                                 </div>
 
                             </motion.div>

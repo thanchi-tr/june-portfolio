@@ -184,6 +184,8 @@ const Skill = () => {
                         whileInView={"show"}
                         viewport={{ once: true }}
                     >
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl"></div>
+
                         <div className="flex flex-row w-full h-auto justify-between">
                             <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase  text-white/90">Database</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4">
