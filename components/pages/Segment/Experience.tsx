@@ -48,7 +48,7 @@ const Experience = () => {
 
             <div className="
                         relative flex flex-col-reverse md:flex-row
-                        h-[230vh] sm:h-[200vh] md:h-[160vh] z-20
+                        h-[220vh] sm:h-[200vh] md:h-[200vh] z-20
                         shadow-inner md:shadow-none
                         shadow-black/60
                         w-[82%] md:w-full mx-[8%] md:mx-0
@@ -79,7 +79,7 @@ const Experience = () => {
                         </div>
                         <div className="h-12 md:h-[4.2%] w-full">
                             <motion.div className="
-                                        flex flex-row justify-evenly text-white
+                                        flex flex-row justify-evenly text-white 
                                         h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-3
                                         -translate-y-[8vh] sm:-translate-y-[18vh]  2xl:-translate-y-[42vh]
                                         ml-[8%]"
@@ -114,12 +114,12 @@ const Experience = () => {
                 </div>
                 <div className="
                             h-full md:w-2/3
-                            md:ml-3 
+                            md:ml-3
                            ">
                     <div className="
                             relative flex flex-col justify-evenly w-full h-full z-10">
                         <div className="absolute top-0 h-[80%] w-[80%]  " >
-                            <motion.div className="hidden md:block h-[35%] w-full relative translate-y-[180%] rounded-2xl overflow-clip"
+                            <motion.div className="hidden md:block h-[25%] w-full relative translate-y-[180%] rounded-2xl overflow-clip"
 
                                 animate={{
                                     y: ["90%", "112%", "85%", "117%", "90%"],
@@ -142,13 +142,13 @@ const Experience = () => {
                                 <motion.div
                                     className="
                                         h-5/6 md:hidden
-                                        scale-[170%] md:scale-[160%] 2xl:scale-[120%] 
+                                        scale-[125%] 
                                         aspect-square bg-white rounded-full 
-                                        -translate-y-[15%] md:-translate-x-[20%] 
+                                        -translate-y-[15%]
                                         z-[80] shadow-lg shadow-black/70"
 
                                     initial={{ translate: "35vw" }}
-                                    whileInView={{ translate: ["35vw", "70vw", "0vw"] }}
+                                    whileInView={{ translate: ["35vw", "60vw", "0vw"] }}
                                     transition={{ duration: 0.55, delay: 0.2, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
@@ -165,9 +165,9 @@ const Experience = () => {
                                 <motion.div
                                     className="
                                         h-5/6 hidden md:block z-[80]
-                                        scale-[170%] md:scale-[155%] 2xl:scale-[115%] 
+                                        scale-[170%] md:scale-[125%] 2xl:scale-[115%] 
                                         aspect-square bg-white rounded-full 
-                                        -translate-y-[15%] md:-translate-x-[20%] 
+                                        -translate-y-[15%]
                                         shadow-lg shadow-black/70"
 
                                     initial={{ translate: "0" }}
@@ -191,14 +191,14 @@ const Experience = () => {
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
                                 ">
-                                    <div className="h-full w-full -translate-y-2/3">
+                                    <div className="h-full w-full -translate-y-2/3  ">
                                         <motion.div
-                                            className="h-3/5 text-gray-400"
+                                            className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: 0.75, duration: 0.36, ease: easeIn }}
-                                        >Jan 2023 - Current
+                                        >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
 
 
                                         </motion.div>
@@ -267,7 +267,13 @@ const Experience = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
                                 >Integrated Docker-based CI/CD pipelines, reducing <span className="inline text-primary font-extrabold">deployment time by 40%</span> and improving development efficiency.</motion.li>
+                                <motion.ul
+                                    animate={{ scaleX: [1, 1.7, 0.7, 1.4, 1] }}
+                                    transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+                                    className="h-[0.8vh] w-2/4 bg-white/60 mt-10 ml-[21%]"
+                                />
                             </ul>
+
                         </div>
                         <div className="h-[6%] w-full">
 

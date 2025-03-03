@@ -156,7 +156,7 @@ const Introduction = () => {
                             <Discription />
                         </div>
                         <div className={`
-                                p-2 pl-10 md:p-10 
+                                p-2 pl-10 md:p-10 leading-5
                                 text-sm md:text-sm 
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-2xl 
@@ -164,17 +164,17 @@ const Introduction = () => {
                                 
                             `}>
                             I am a passionate
-                            {<span className="font-extrabold underline text-white "> FULL-STACK DEVELOPER </span>}
-                            with <span className="font-extrabold underline text-white "> over 3 years of experience </span> n building high-quality applications using
+                            {<span className="font-extrabold underline text-white mx-1">FULL-STACK DEVELOPER</span>}
+                            with <span className="font-extrabold underline text-white ">over 3 years of experience</span> in building high-quality applications using
                             {<span className="ml-1 font-extrabold underline text-white"> .NET </span>}and
                             {<span className="font-extrabold underline text-white"> Next.js</span>},
                             My expertise lies in designing scalable architectures, optimizing performance, and ensuring seamless user experiences. I thrive in fast-paced environments, solving complex problems with an
-                            {<span className="font-extrabold underline text-white mr-1">innovative, solution-oriented approach</span>}
+                            {<span className="font-extrabold underline text-white mx-1">innovative, solution-oriented approach</span>}
                             If you&#39;re looking for a developer who delivers
-                            {<span className="font-extrabold underline text-white"> on time, with precision, and a keen eye for detail </span>}
-                            , <a className="text-primary md:text-black md:uppercase text-xl">let&#39;s connect!📧</a>
-
+                            {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail</span>}
+                            .<a className="block text-primary md:text-white  md:uppercase text-xl text-shadow-lg shadow-black">let&#39;s connect!📧</a>
                         </div>
+
 
 
                     </motion.div>

@@ -58,7 +58,7 @@ const Page = () => {
             {/* testing */}
             {/*200vh for experience */}
             <div className="
-                   h-[270vh] sm:h-[240vh] md:h-[200vh] w-full
+                   h-[260vh] sm:h-[240vh] md:h-[240vh] w-full
                 bg-background -z-50
              ">
 

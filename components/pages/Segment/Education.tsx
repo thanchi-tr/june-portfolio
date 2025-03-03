@@ -33,8 +33,8 @@ const Education = () => {
             >
                 <motion.div className="
                             relative h-[12vh] aspect-square 
-                            rounded-full overflow-clip
-                            bg-blue-950 border-white
+                            rounded-full overflow-clip shadow-inner shadow-black
+                            bg-blue-950 border-white 
                             md:scale-150 border-4
                     "
                     initial={{ translateY: "10vh" }}
