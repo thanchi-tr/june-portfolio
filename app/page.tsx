@@ -9,6 +9,7 @@ import Education from "@/components/pages/Segment/Education";
 import Footer from "@/components/client/Animation/Footer";
 export type NavButtonT = { tag: string, data?: ReactNode, className_: string }[];
 import { motion } from "framer-motion";
+import ParticlesComponent from "@/components/client/Animation/ParticlesComponent";
 const Page = () => {
 
     // const navs: NavButtonT = [
@@ -40,6 +41,7 @@ const Page = () => {
                 <p className="absolute top-[2.5px] text-descent opacity-80 left-[28vw] md:left-[42vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"> JuneTR</p>
 
             </motion.div>
+
             <div
                 className={`
                 relative
@@ -84,7 +86,7 @@ const Page = () => {
                     ">
                 <Education />
             </div>
-            <div className="h-auto bg-gradient-to-t from-secondary to-background z-50 translate-y-[15%] scale-y-150 2xl:scale-y-100">
+            <div className="h-auto bg-gradient-to-t from-secondary to-background translate-y-[15%] scale-y-150 2xl:scale-y-100 z-20">
                 <Footer />
             </div>
             <div className="
@@ -93,7 +95,7 @@ const Page = () => {
                     h-auto max-w-full 
                     bg-primary font-semibold 
                     tracking-wider z-50">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 blur-3xl"></div>
+
                 <div className="text-center  my-3 2xl:my-1"> all right preserved</div>
 
                 <div className="flex flex-col md:flex-row justify-evenly gap-5 w-auto pb-5 ">
@@ -110,6 +112,7 @@ const Page = () => {
                     </div>
                 </div>
             </div>
+            <div className="absolute top-0 h-full w-full hidden lg:block "><ParticlesComponent /></div>
         </div >
 
 

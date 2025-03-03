@@ -7,12 +7,12 @@ const Education = () => {
             <div className="
                         w-full h-[30%]  text-center
                         uppercase  2xl:-translate-y-[40%]
-                        mt-[20%] md:mt-0
+                        mt-[20%] md:mt-0 z-10
                         text-4xl md:text-6xl text-white font-bold
                         tracking-[0.2em] font-mainfont
                         text-shadow-lg shadow-black/70
                 ">education</div>
-            <div className="w-full h-[6%]  text-center font-extrabold text-white/80 translate-y-1/4">2018-2023</div>
+            <div className="w-full h-[6%]  text-center font-extrabold text-white/80 md:text-black z-10 translate-y-1/4">2018-2023</div>
             <motion.div className="
                         w-full h-[20%] md:h-[16.5%] font-mainfont
                         text-center text-5xl z-10
@@ -38,7 +38,7 @@ const Education = () => {
             </motion.div>
             <div className="
                         flex flex-row justify-evenly
-                        w-full
+                        w-full z-10
                         -translate-y-[35%] 2xl:-translate-y-[60%]
                 "
 
@@ -47,14 +47,14 @@ const Education = () => {
                             relative h-[12vh] aspect-square 
                             rounded-full overflow-clip shadow-inner shadow-black
                             bg-blue-950 border-white 
-                            md:scale-150 border-4
+                            md:scale-150 border-4 z-10
                     "
                     initial={{ y: "12vh" }}
                     whileInView={{ y: ["12vh", "0vh", "0vh", "0vh"], rotate: [0, 360], scale: [1, 1, 2.6, 1] }}
                     transition={{ duration: 1.2, delay: 0, ease: "anticipate" }}
                     viewport={{ once: true }}
                 >
-                    <Image src={"/icons/Unimelb.png"} alt={""} fill className="object-contain"></Image>
+                    <Image src={"/icons/Unimelb.png"} alt={""} fill className="object-contain z-10"></Image>
                 </motion.div>
             </div>
             <div className=" flex flex-row justify-evenly h-[30%] w-full self-end z-10 translate-y-[30%]">

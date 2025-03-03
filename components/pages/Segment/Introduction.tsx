@@ -82,7 +82,7 @@ const Introduction = () => {
                                         top-0 2xl:-translate-y-5 2xl:translate-x-[45%]
                                         w-full lg:w-4/5 2xl:w-1/3
                                         h-[80%] sm:h-[90%] lg:h-3/5 
-                                        pt-2 
+                                        pt-2 z-10
                                     ">
                                     <div className="2xl:hidden h-full w-2/3" />
                                     <div className="
@@ -126,7 +126,7 @@ const Introduction = () => {
                     </div>
                 </div>
                 <div className={`
-                        flex flex-col relative 
+                        flex flex-col relative  z-10
                         w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                         lg:bg-primary 2xl:bg-transparent`} >

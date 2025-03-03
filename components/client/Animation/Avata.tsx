@@ -69,7 +69,7 @@ const Avata = () => {
                 </motion.div>
             </motion.div>
             <motion.div className="
-                    absolute 
+                    absolute z-10
                     bottom-0 right-0 
                     text-6xl xl:text-7xl 2xl:text-8xl 2xl:bottom-[20%] 2xl:-right-[10%]
                     text-background md:text-white md:text-shadow-lg shadow-black

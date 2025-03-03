@@ -46,7 +46,7 @@ const Skill = () => {
             ">
 
                 <div className="
-                        flex flex-col
+                        flex flex-col z-10
                         h-[40%] mt-[15%] md:mt-0 md:h-full w-full md:w-1/3
                 ">
                     <div className="h-[10%] ">
