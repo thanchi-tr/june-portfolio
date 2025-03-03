@@ -85,7 +85,7 @@ const Skill = () => {
                             </motion.div>
                             <motion.div className="
                                     flex flex-col justify-evenly
-                                    w-5/8 h-full
+                                    w-5/8 h-full gradient-text
                                     uppercase text-white/80  text-center font-bold
                             "
                                 initial={{ opacity: "0" }}
@@ -98,6 +98,7 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row justify-between
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
+                                
                         ">
                             <motion.div className="hidden md:block w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ translate: "0" }}
@@ -107,7 +108,7 @@ const Skill = () => {
                             >
                                 <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10"></Image>
                             </motion.div>
-                            <motion.div className="md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
                                 initial={{ translate: "0" }}
                                 whileInView={{ translate: ["0", "40vw", "0"] }}
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
@@ -118,10 +119,11 @@ const Skill = () => {
                             <motion.div className="
                                     flex flex-col justify-evenly
                                     w-5/8 h-full
-                                    uppercase text-white/80  text-center font-bold
+                                    uppercase text-center font-bold gradient-text
                             "
                                 initial={{ opacity: "0" }}
                                 whileInView={{ opacity: ["0", "1"] }}
+                                animate={{}}
                                 transition={{ duration: 1.3, delay: 1.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
@@ -129,7 +131,7 @@ const Skill = () => {
                             </motion.div>
                         </div>
                         <motion.div className="flex flex-col justify-evenly
-                                w-full 2xl:w-[70%] h-[10vh] 
+                                w-full 2xl:w-[70%] h-[10vh] gradient-text
                                 uppercase text-white/80 text-2xl text-center font-bold
                         "
                             initial={{ opacity: 0, translateY: "2.1vh" }}

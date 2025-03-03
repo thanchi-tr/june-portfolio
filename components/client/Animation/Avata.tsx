@@ -24,12 +24,7 @@ const Avata = () => {
                 animate={{ opacity: [0, 1] }}
                 transition={{ duration: 0.18, delay: 0.87, ease: "anticipate" }}
             >
-                <Image
-                    src={"/ava.png"}
-                    alt={"Portrait picture of June in black suit, black tie"}
-                    fill
-                    className="object-contain md:opacity-0 z-[220]"
-                />
+
 
             </motion.div>
 
