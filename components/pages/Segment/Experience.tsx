@@ -77,7 +77,7 @@ const Experience = () => {
                                 ">  Full-Stack Engineer</div>
                             <span className="md:border-t-8 border-black/20 w-4/5" />
                         </div>
-                        <div className="h-12 md:h-[4.2%] w-full">
+                        <div className="hidden md:block h-12 md:h-[4.2%] w-full">
                             <motion.div className="
                                         flex flex-row justify-evenly text-white 
                                         h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-3
@@ -262,7 +262,7 @@ const Experience = () => {
                                 >Maintained and enhanced a critical production application, ensuring <span className="inline text-primary font-extrabold">99.9% uptime and seamless</span> user experience.</motion.li>
                                 <motion.li
                                     className=" w-auto rounded-xl mb-2"
-                                    initial={{ translateY: "vh", opacity: 0 }}
+                                    initial={{ translateY: "29vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}

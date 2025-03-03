@@ -76,11 +76,11 @@ const Introduction = () => {
                                 {/* Link holder */}
                                 <div className="
                                         absolute flex flex-row
-                                        translate-x-[10%] -translate-y-[100%] origin-top-left rotate-90
+                                        translate-x-[10%] -translate-y-[110%] origin-top-left rotate-90
                                         md:translate-x-0 md:rotate-0 md:translate-y-0
                                         top-0 2xl:-translate-y-5 2xl:translate-x-[45%]
                                         w-full md:w-4/5 2xl:w-1/3
-                                        h-full md:h-3/5 
+                                        h-[80%] sm:h-[90%] md:h-3/5 
                                         pt-2 
                                     ">
                                     <div className="2xl:hidden h-full w-2/3" />
@@ -92,7 +92,7 @@ const Introduction = () => {
                                         {/* Linked In */}
                                         <div className="
                                                 -rotate-90 md:rotate-0 -translate-y-[50%]
-                                                aspect-square h-[26%] w-auto rounded-full  bg-white">
+                                                aspect-square h-[22%] sm:h-[24%] md:h-[26%] w-auto rounded-full  bg-white">
                                             <ExternalCircularButton link={""} >
                                                 <Image src="/icons/linkedin.png" alt="github" fill className="scale-75 object-fill" />
                                             </ExternalCircularButton>
@@ -100,7 +100,7 @@ const Introduction = () => {
                                         {/* GitHub */}
                                         <div className="
                                                 -rotate-90 md:rotate-0 -translate-y-[50%]
-                                                aspect-square h-[26%] w-auto rounded-full">
+                                                aspect-square h-[22%] sm:h-[24%] md:h-[26%] w-auto rounded-full">
                                             <ExternalCircularButton link={""} >
                                                 <Image src="/icons/github.jpg" alt="github" fill className="object-fill" />
                                             </ExternalCircularButton>
@@ -108,7 +108,7 @@ const Introduction = () => {
                                         {/* Portfolio website */}
                                         <div className="
                                                 -rotate-90 md:rotate-0 -translate-y-[50%]
-                                                aspect-square h-[26%] w-auto rounded-full
+                                                aspect-square h-[22%] sm:h-[24%] md:h-[26%] w-auto rounded-full
                                         ">
                                             <ExternalCircularButton link={"https://www.junetr.dev"} >
                                                 <Image src="/icons/web.webp" alt="github" fill className="scale-125 object-fill translate-x-[2px]" />
