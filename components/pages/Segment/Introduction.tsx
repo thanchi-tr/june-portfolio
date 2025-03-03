@@ -230,7 +230,7 @@ const Introduction = () => {
                                     transition={{ duration: 2, repeat: Infinity }}
                                 >
 
-                                    Let's Connect
+                                    Let&#39;s Connect
                                 </motion.div>
                             </motion.div>
 
