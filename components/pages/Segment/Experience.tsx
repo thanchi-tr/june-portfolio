@@ -63,7 +63,7 @@ const Experience = () => {
                             flex flex-col 
                             md:p-0 md:justify-evenly 
                             w-full 2xl:w-[80%] 2xl:ml-[20.8%] 2xl:rounded-l-2xl
-                            h-full bg-gradient-to-b from-secondary via-secondary to-background 
+                            h-full bg-gradient-to-b from-secondary to-background 
                             2xl:bg-background
                             shadow-xl 2xl:shadow-inner shadow-black 
                             ">
