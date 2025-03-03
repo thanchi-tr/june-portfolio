@@ -15,7 +15,7 @@ const Introduction = () => {
                 bg-background 
                 overflow-x-clip`}
         >
-
+            <div className="hidden 2xl:h-[10vh] bg-transparent w-full" />
             <div
 
                 className="
@@ -194,26 +194,44 @@ const Introduction = () => {
 
                         <div className="
                                         absolute hidden opacity-0 group-hover:opacity-100 group-hover:block pointer-events-none 
-                                        top-0 h-[100%] w-full z-30 scale-125 -translate-x-[150.5%] lg:-translate-x-[165.5%] 2xl:-translate-x-[190.5%]
+                                        top-0 h-[100%] w-full z-30 scale-125 -translate-x-[150.5%] lg:-translate-x-[165.5%] 
+                                        2xl:-translate-x-[180.5%]  2xl:translate-y-[75.5%] 
                                         
                             ">
 
                             <motion.div
-                                className="flex flex-col justify-evenly h-[90%] w-[15vw] ml-[10%] rounded-lg backdrop-blur-sm
+                                className="flex flex-col justify-evenly h-[90%] w-[25vw] ml-[10%] rounded-lg backdrop-blur-sm
                                     origin-center transition-all shadow-inner shadow-black hover:z-[10]
+                                    2xl:w-[50%] 
                                 "
                             >
                                 <div className="
-                                        relative 
-                                        h-[50%] w-full 
-                                        overflow-hidden
+                                        relative rounded-lg overflow-clip
+                                        h-[60%] w-full 
                                         mt-10
                                 ">
-                                    <Image src={"/mainAva.jpg"} alt={""} className="object-contain" fill></Image>
+                                    <Image src={"/mainAva.jpg"} alt={""} className="object-contain h-full w-full" fill></Image>
 
 
                                 </div>
+                                <motion.div className="font-signaturefont text-5xl 2xl:translate-y-10 font-900 text-shadow-lg shadow-white
+                                    translate-x-[30%] 2xl:translate-x-0
+                                "
+                                    animate={{
+                                        color: "#ad9547",
+                                        textShadow: [
+                                            "0px 0px 10px black",
+                                            "3px 3px 105px white",
+                                            "0px 0px 10px black"
+                                        ],
+                                        rotate: [0, 12, 0],
+                                        translateY: ["0", "0.3vw", "-0.6vw", "0"],
+                                    }}
+                                    transition={{ duration: 2, repeat: Infinity }}
+                                >
 
+                                    Let's Connect
+                                </motion.div>
                             </motion.div>
 
                         </div>

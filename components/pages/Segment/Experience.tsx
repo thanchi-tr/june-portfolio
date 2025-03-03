@@ -48,7 +48,7 @@ const Experience = () => {
 
             <div className="
                         relative flex flex-col-reverse md:flex-row
-                        h-[220vh] sm:h-[200vh] md:h-[200vh] z-20
+                        h-[220vh] sm:h-[200vh] md:h-[200vh] 
                         shadow-inner md:shadow-none
                         shadow-black/60 overflow-clip
                         w-[82%] md:w-full mx-[8%] md:mx-0
@@ -57,13 +57,13 @@ const Experience = () => {
 
                 <div className="
                             h-full w-full md:w-[27%]
-                            md:ml-[8%] 
+                            md:ml-[8%] z-10
                            ">
                     <div className="
                             flex flex-col 
                             md:p-0 md:justify-evenly 
                             w-full 2xl:w-[80%] 2xl:ml-[20.8%] 2xl:rounded-l-2xl
-                            h-full bg-gradient-to-b from-secondary to-background 
+                            h-full bg-gradient-to-b from-secondary to-background    2xl:via-secondary 2xl:to-transparent 
                             2xl:bg-background
                             shadow-xl 2xl:shadow-inner shadow-black 
                             ">
@@ -119,7 +119,7 @@ const Experience = () => {
                     <div className="
                             relative flex flex-col justify-evenly w-full h-full z-10">
                         <div className="absolute top-0 h-[80%] w-[80%]  " >
-                            <motion.div className="hidden md:block h-[25%] w-full relative translate-y-[180%] rounded-2xl overflow-clip"
+                            <motion.div className="hidden md:block h-[25%] w-full relative translate-y-[180%] rounded-2xl overflow-clip "
 
                                 animate={{
                                     y: ["90%", "112%", "85%", "117%", "90%"],
@@ -134,11 +134,11 @@ const Experience = () => {
                                     src={"/jungtalentBg.png"}
                                     alt={""}
                                     fill
-                                    className="h-full w-full object-contain z-0 opacity-30" />
+                                    className="h-full w-full object-contain z-10 opacity-30 " />
                             </motion.div>
                         </div>
                         <div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] ">
-                            <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full ">
+                            <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full z-10">
                                 <motion.div
                                     className="
                                         h-5/6 md:hidden
@@ -157,7 +157,7 @@ const Experience = () => {
                                         transition={{ duration: 5, ease: "linear", repeat: Infinity }}
                                     >
                                         <ExternalCircularButton link={"https://www.jungtalents.com/"} >
-                                            <Image src="/icons/jungTalent.jpg" alt="Jung Talents Logo" fill className=" object-fill" />
+                                            <Image src="/icons/jungTalent.jpg" alt="Jung Talents Logo" fill className=" object-fill " />
                                         </ExternalCircularButton>
                                     </motion.div>
 
@@ -233,7 +233,10 @@ const Experience = () => {
                             <ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
                                     translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] md:bg-background rounded-3xl
                                     list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 
-                                    
+                                    2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-[#ad9547]
+                                     border-x-[#ad9547]/15 overflow-clip
+                                    pt-[7%]
+                                    border-b-black/20  
                                     ">
                                 <motion.li
                                     className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"

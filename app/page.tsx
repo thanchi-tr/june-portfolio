@@ -86,11 +86,11 @@ const Page = () => {
                     ">
                 <Education />
             </div>
-            <div className="h-auto bg-gradient-to-t from-secondary to-background translate-y-[15%] scale-y-150 2xl:scale-y-100 z-20">
+            <div className="h-auto bg-gradient-to-t from-secondary to-background translate-y-[15%] scale-y-150 2xl:scale-y-100 z-30">
                 <Footer />
             </div>
             <div className="
-            `       relative text-xs 
+            `       relative text-xs border-t-8
                     flex flex-col text-background
                     h-auto max-w-full 
                     bg-primary font-semibold 

@@ -27,11 +27,13 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                             `}
                         onClick={() => setSelectedIndex(index)}
                     >
+
                         {
                             <div
-                                className={`
+                                className={`relative
                                     transition-all   ease-in-out ${index != selectedIndex ? "duration-75 opacity-0" : "duration-[390ms] delay-1000 opacity-100"}
                                 `}>
+                                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl scale-y-75"></div>
                                 {card}
                             </div>
                         }
@@ -49,10 +51,12 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                 absolute flex justify-evenly
                 w-full h-[30px] 
                 bottom-2`}>
+
                 <div
-                    className={`flex flex-row justify-between`}
+                    className={`flex flex-row justify-between relative `}
                     style={{ width: `${6 * cards.length}%` }}
                 >
+
                     {cards.map(
                         (_, i) => <div key={"cG-" + i}
                             className={`
@@ -64,7 +68,10 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                             onClick={() => setSelectedIndex(i)}
                         >
                             {i != selectedIndex
-                                ? <></>
+                                ? <>
+
+
+                                </>
                                 : <p className={`m-[10%] bg-background z-50 h-[80%] w-auto aspect-square rounded-full`} />
                             }
                         </div>
