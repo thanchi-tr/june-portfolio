@@ -23,22 +23,22 @@ const Page = () => {
             <motion.div className="
                     opacity-15 hover:opacity-100
                     sticky  origin-center border-r-4 border-white
-                    h-0 top-0  z-[200] text-sm bg-black
+                    h-0 top-0   z-[200] text-sm bg-black
                     font-bold hover:cursor-pointer
                     text-center"
                 initial={{ y: "3vh", x: "-45vw" }}
                 transition={{ duration: 3, repeat: Infinity, ease: "anticipate" }}
             >
-                <p className="absolute top-[4vh] hover:bg-black  text-primary opacity-80  left-[40vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
+                <p className="absolute top-[4vh] hover:bg-black  text-primary opacity-80  left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
                     onClick={() => desRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Description</p>
-                <p className="absolute hover:bg-white top-[16vh] text-descent opacity-80 left-[40vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary border-2 bg-background"
+                <p className="absolute hover:bg-white top-[16vh] text-descent opacity-80 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary border-2 bg-background"
                     onClick={() => projectRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Project</p>
-                <p className="absolute hover:bg-primary top-[8vh] text-black opacity-80   left-[40vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-white bg-background rounded-2xl"
+                <p className="absolute hover:bg-primary top-[8vh] text-black opacity-80   left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-white bg-background rounded-2xl"
                     onClick={() => expRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Experience</p>
-                <p className="absolute top-[12vh] hover:bg-secondary p-1 text-white opacity-80  left-[40vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
+                <p className="absolute top-[12vh] hover:bg-secondary p-1 text-white opacity-80  left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
                     onClick={() => skillRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Skill</p>
 
