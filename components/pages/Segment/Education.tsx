@@ -12,11 +12,11 @@ const Education = () => {
                         tracking-[0.2em] font-mainfont
                         text-shadow-lg shadow-black/70
                 ">education</div>
-            <div className="w-full h-[6%]  text-center text-bold text-white/80 translate-y-1/4">2018-2023</div>
+            <div className="w-full h-[6%]  text-center font-extrabold text-white/80 translate-y-1/4">2018-2023</div>
             <motion.div className="
-                        w-full h-[20%] font-mainfont
-                        text-center text-5xl z-10 
-                        text-shadow-sm shadow-primary
+                        w-full h-[20%] md:h-[16.5%] font-mainfont
+                        text-center text-5xl z-10
+                        text-shadow-lg shadow-black/80
                         text-primary font-semibold"
 
                 initial={{ translateY: "20vh" }}
@@ -37,8 +37,8 @@ const Education = () => {
                             bg-blue-950 border-white 
                             md:scale-150 border-4
                     "
-                    initial={{ translateY: "10vh" }}
-                    whileInView={{ translateY: ["10vh", "0vh", "0vh", "0vh"], rotate: [0, 360], scale: [1, 1, 2.6, 1] }}
+                    initial={{ y: "12vh" }}
+                    whileInView={{ y: ["12vh", "0vh", "0vh", "0vh"], rotate: [0, 360], scale: [1, 1, 2.6, 1] }}
                     transition={{ duration: 1.2, delay: 0, ease: "anticipate" }}
                     viewport={{ once: true }}
                 >

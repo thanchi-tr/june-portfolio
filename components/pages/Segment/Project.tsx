@@ -3,6 +3,9 @@ import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery
 import FizzBuzzProject from "../FizzBuzzProject";
 import MyToDoProject from "../MyToDoProject";
 import LittleBanhMiProject from "../LittleBanhMiProject";
+import PTEPlatform from "../PTEPlatform";
+import CompareNSave from "../CompareNSave";
+import CarinaEyeCare from "../CarinaEyeCare";
 
 
 const Project = () => {
@@ -55,6 +58,27 @@ const Project = () => {
                 " >
                     <LittleBanhMiProject />
                 </div>
+                <div className="
+                        overflow-clip relative border-8 border-primary
+                        w-full h-auto lg:h-[128vh] bg-gray-400
+                        rounded-3xl
+                " >
+                    <PTEPlatform />
+                </div>
+                <div className="
+                        overflow-clip relative border-8 border-primary
+                        w-full h-auto lg:h-[128vh] bg-gray-400
+                        rounded-3xl
+                " >
+                    <CompareNSave />
+                </div>
+                <div className="
+                        overflow-clip relative border-8 border-primary
+                        w-full h-auto lg:h-[128vh] bg-gray-400
+                        rounded-3xl
+                " >
+                    <CarinaEyeCare />
+                </div>
             </div>
             <div className={`
                     hidden md:block
@@ -76,8 +100,16 @@ const Project = () => {
                             </div>,
                             <div key="card42" className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
                                 <LittleBanhMiProject />
+                            </div>,
+                            <div key="card42" className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
+                                <PTEPlatform />
+                            </div>,
+                            <div key="card42" className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
+                                <CompareNSave />
+                            </div>,
+                            <div key="card42" className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
+                                <CarinaEyeCare />
                             </div>
-
                         ]} />
 
             </div>

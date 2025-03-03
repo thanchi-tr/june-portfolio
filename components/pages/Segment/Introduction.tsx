@@ -126,7 +126,7 @@ const Introduction = () => {
                 </div>
                 <div className={`
                         flex flex-col relative 
-                        w-full md:w-5/12 xl:w-4/12 md:h-[110vh]
+                        w-full md:w-5/12 xl:w-4/12 md:h-[130vh] lg:h-[100vh]
                         xl:h-[85%] 2xl:border-2
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                         md:bg-primary 2xl:bg-transparent`} >
@@ -172,7 +172,7 @@ const Introduction = () => {
                             {<span className="font-extrabold underline text-white mx-1">innovative, solution-oriented approach</span>}
                             If you&#39;re looking for a developer who delivers
                             {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail</span>}
-                            .<a className="block text-primary md:text-white  md:uppercase text-xl text-shadow-lg shadow-black">let&#39;s connect!📧</a>
+                            .<a className="block text-primary md:text-white  uppercase text-xl text-shadow-lg shadow-black">let&#39;s connect!📧</a>
                         </div>
 
 

@@ -29,39 +29,43 @@ const FizzBuzzProject = () => (<>
                 w-full md:w-[42%]
             `}>
             <div className={`mt-[10%] ml-[5%] w-[90%] pb-[18.5px] md:pb-[52px]`}>
-                <h4 className={`underline font-mainfont pb-5`}>Description:</h4>
+                <div className="flex flex-row justify-between">
+                    <h3 className={`font-mainfont pb-2 text-xs`}>📅Personal Project:</h3>
+
+                </div>
+                <div className="flex flex-row justify-between text-center text-xs font-extrabold pb-2">
+                    🔗<h3 className="pr-1 hover:cursor-pointer z-[100]">
+                        <a href="https://github.com/thanchi-tr/FooBooRealTime-front-next">Frontend(Next.js)</a>
+                    </h3> |
+                    <h3 className="pl-1 hover:cursor-pointer z-[100]">
+                        <a href="https://github.com/thanchi-tr/FooBooRealTime-back-dotnet">Backend(.NET)</a>
+                    </h3>
+                </div>
+                <div className="flex flex-row justify-between">
+                    <h3 className={`font-mainfont pb-3 text-xs`}>📌Tech Stack:</h3>
+                    <p className="text-xs">.NET Core, Next.js, SignalR, Redis, Auth0, PostgreSQL</p>
+                </div>
+
+                <h4 className={`underline font-mainfont pb-1 text-xs`}>Description:</h4>
                 <p className={`w-[90%]  text-xs`}>
-                    Follow the traditional, reowned Fizz Buzz games. Take it another step to allow your math skill to speak and take you up your &#34;pyramid&#34; of skill.
-                    Create a game, wait for your friend to join.
+                    A real-time full-stack application showcasing instant updates, chat functionalities, and data synchronization between multiple users.
                 </p>
             </div>
             <div className={`
                     flex md:flex-col xl:flex-row
-                    w-full md:ml-[30%] xl:ml-0
+                    w-[80%] md:ml-[10%] xl:ml-0
                     justify-evenly`}>
                 <div>
-                    <h2 className={`text-sm font-mainfont pt-2`}>Front</h2>
+                    <h2 className={`text-sm font-mainfont pt-2`}>✔️ Features & Achievements:</h2>
                     <ul className={`text-xs list-disc`}>
-                        <li>NextJS v14+</li>
-                        <li>Tailwind css</li>
-                        <li>Framer motion</li>
-                        <li>SignalR </li>
-                        <li>Auth0</li>
-                        <li>Test with JEST</li>
+                        <li>Implemented real-time notifications & chat using SignalR.</li>
+                        <li>Developed a highly optimized .NET API, handling thousands of concurrent users.</li>
+                        <li>Integrated Redis caching, reducing response times by 40%.</li>
+                        <li>Designed a fully responsive UI with Next.js and Tailwind CSS.</li>
                     </ul>
                 </div>
 
-                <div>
-                    <h2 className={`text-sm font-mainfont pt-2`}>Back</h2>
-                    <ul className={`text-xs list-disc`}>
-                        <li>Web API Dotnet</li>
-                        <li>Signal R</li>
-                        <li>Entity Framework core</li>
-                        <li>Auth0</li>
-                        <li>Serilog</li>
-                        <li>Test with xUnit</li>
-                    </ul>
-                </div>
+
             </div>
         </div>
 

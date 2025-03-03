@@ -132,9 +132,9 @@ const Skill = () => {
                                 w-full 2xl:w-[70%] h-[10vh] 
                                 uppercase text-white/80 text-2xl text-center font-bold
                         "
-                            initial={{ opacity: 0, translateY: "5vh" }}
-                            whileInView={{ opacity: 1, translateY: "0vh" }}
-                            transition={{ duration: 0.4, delay: 0.3, ease: "easeIn" }}
+                            initial={{ opacity: 0, translateY: "2.1vh" }}
+                            whileInView={{ opacity: 1, translateY: ["2.1vh", "0vh"] }}
+                            transition={{ duration: 0.33, delay: 1.3, ease: "easeIn" }}
                             viewport={{ once: true }}
                         >
                             Express.js
@@ -185,7 +185,7 @@ const Skill = () => {
                         viewport={{ once: true }}
                     >
                         <div className="flex flex-row w-full h-auto justify-between">
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background ">Database</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase  text-white/90">Database</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4">
                                 <motion.div variants={itemVariants} className="w-[8vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
                                     <PopUp img={`/icons/postgres.png`}>Postgres</PopUp>
@@ -197,7 +197,7 @@ const Skill = () => {
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background">Back⚙️:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/90">Back⚙️:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
                                 <motion.div variants={itemVariants} className="
                                 w-[8vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[10%]
@@ -231,7 +231,7 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row w-full h-auto">
 
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background">Front📱:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/90">Front📱:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
                                 <motion.div variants={itemVariants} className="w-[8vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
                                     <PopUp img="/icons/jest.png">JestJS</PopUp>
@@ -248,7 +248,7 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row w-full h-auto">
 
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background">Cloud💭:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/80">Cloud💭:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
                                 <motion.div variants={itemVariants} className="w-[8vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
                                     <PopUp img="/icons/eks.jpg"> EKS</PopUp>
@@ -264,7 +264,7 @@ const Skill = () => {
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-background">CI&CD🚀:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/60">CI&CD🚀:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
                                 <motion.div variants={itemVariants} className="w-[8vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[10%] aspect-square rounded-full bg-white border-2">
                                     <PopUp img="/icons/github.jpg">Github</PopUp>

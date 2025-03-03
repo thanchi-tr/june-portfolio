@@ -81,7 +81,7 @@ const Experience = () => {
                             <motion.div className="
                                         flex flex-row justify-evenly text-white 
                                         h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-3
-                                        -translate-y-[8vh] sm:-translate-y-[18vh]  2xl:-translate-y-[42vh]
+                                        -translate-y-[8vh] sm:-translate-y-[28vh] md:-translate-y-[76vh] lg:-translate-y-[58vh]  2xl:-translate-y-[42vh]
                                         ml-[8%]"
                                 variants={containerVariants}
                                 animate="playout"

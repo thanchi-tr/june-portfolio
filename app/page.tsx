@@ -73,7 +73,7 @@ const Page = () => {
                 <Skill></Skill>
             </div>
             {/* Project */}
-            <div className=" h-auto">
+            <div className="h-auto">
                 <Project />
             </div>
             {/* Education */}
