@@ -1,5 +1,4 @@
-import CollapsibleGallery from "../client/Animation/CollapsibleGallery";
-import Image from "next/image";
+
 const CompareNSave
     = () => (<>
         <h1 className={`font-mainfont text-lg xl:text-xl 2xl:text-2xl text-center p-4 text-black/95`}>🛍️ Compare n Save | Loan Comparison Platform</h1>

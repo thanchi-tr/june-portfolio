@@ -1,5 +1,4 @@
-import CollapsibleGallery from "../client/Animation/CollapsibleGallery";
-import Image from "next/image";
+
 const CarinaEyeCare
     = () => (<>
         <h1 className={`font-mainfont text-lg xl:text-xl 2xl:text-2xl text-center p-4 text-black/95`}>🩺 Carina Eye Care | Clinic Management & Booking System</h1>
