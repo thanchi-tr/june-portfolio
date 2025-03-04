@@ -28,7 +28,7 @@ const ParticlesComponent = () => {
                         value: 150,
                         density: {
                             enable: true,
-                            area: 900,
+                            area: 2000,
                         },
 
                     },

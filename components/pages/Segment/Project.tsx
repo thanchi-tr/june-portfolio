@@ -1,11 +1,13 @@
 "use client";
 import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery";
-import FizzBuzzProject from "../FizzBuzzProject";
+
 import MyToDoProject from "../MyToDoProject";
 import LittleBanhMiProject from "../LittleBanhMiProject";
 import PTEPlatform from "../PTEPlatform";
-import CompareNSave from "../CompareNSave";
-import CarinaEyeCare from "../CarinaEyeCare";
+import CompareNSave from "../project/ComparenSave";
+import CarinaEyeCare from "../project/CarinaEye";
+import PTE from "../project/PTE";
+import FizzBuzz from "../project/FizzBuzz";
 
 
 const Project = () => {
@@ -39,42 +41,29 @@ const Project = () => {
             <div className="flex flex-col gap-20 md:hidden w-[90%] ml-[5%]">
                 <div className="
                         overflow-clip relative border-8 border-primary
-                        w-full h-auto lg:h-[128vh] bg-gray-400
+                        w-full hover:w-[90vw] h-auto lg:h-[128vh] bg-background
+                        rounded-3xl pointer-events-auto
+                " >
+                    <FizzBuzz />
+                </div>
+
+                <div className="
+                        overflow-clip relative border-8 border-primary
+                        w-full h-auto lg:h-[128vh] bg-background
                         rounded-3xl
                 " >
-                    <FizzBuzzProject />
+                    <PTE />
                 </div>
                 <div className="
                         overflow-clip relative border-8 border-primary
-                        w-full h-auto lg:h-[128vh] bg-gray-400
-                        rounded-3xl
-                " >
-                    <MyToDoProject />
-                </div>
-                <div className="
-                        overflow-clip relative border-8 border-primary
-                        w-full h-auto lg:h-[128vh] bg-gray-400
-                        rounded-3xl
-                " >
-                    <LittleBanhMiProject />
-                </div>
-                <div className="
-                        overflow-clip relative border-8 border-primary
-                        w-full h-auto lg:h-[128vh] bg-gray-400
-                        rounded-3xl
-                " >
-                    <PTEPlatform />
-                </div>
-                <div className="
-                        overflow-clip relative border-8 border-primary
-                        w-full h-auto lg:h-[128vh] bg-gray-400
+                        w-full h-auto lg:h-[128vh] bg-background
                         rounded-3xl
                 " >
                     <CompareNSave />
                 </div>
                 <div className="
                         overflow-clip relative border-8 border-primary
-                        w-full h-auto lg:h-[128vh] bg-gray-400
+                        w-full h-auto lg:h-[128vh] bg-background
                         rounded-3xl
                 " >
                     <CarinaEyeCare />
@@ -93,7 +82,7 @@ const Project = () => {
                     cards={
                         [
                             <div key="card40" className="h-[140vh] md:h-[130vh] lg:h-[128vh] z-50" >
-                                <FizzBuzzProject />
+                                <PTE />
                             </div>,
                             <div key="card41" className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
                                 <MyToDoProject />

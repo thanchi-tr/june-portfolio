@@ -1,11 +1,11 @@
 import CollapsibleGallery from "../client/Animation/CollapsibleGallery";
 import Image from "next/image";
 const FizzBuzzProject = () => (<>
-    <h1 className={`font-mainfont text-lg xl:text-xl 2xl:text-2xl text-center p-4 text-black/95`}>FizzBuzz RealTime Multi-player Game</h1>
+    <h1 className={`font-mainfont text-lg xl:text-xl 2xl:text-2xl text-center p-4 text-white/95`}>FizzBuzz RealTime Multi-player Game</h1>
     <div className={`
                       h-full w-full
-                      flex md:flex-row flex-wrap
-                      xl:justify-evenly
+                      flex lg:flex-row flex-wrap
+                      xl:justify-evenly text-white/80 md:text-black
                     `}>
         <div className={`
                         flex flex-col md:flex-row items-center content-center
@@ -30,19 +30,19 @@ const FizzBuzzProject = () => (<>
             `}>
             <div className={`mt-[10%] ml-[5%] w-[90%] pb-[18.5px] md:pb-[52px]`}>
                 <div className="flex flex-row justify-between">
-                    <h3 className={`font-mainfont pb-2 text-xs`}>📅Personal Project:</h3>
+                    <h3 className={`font-mainfont pb-2 text-lg`}>📅Personal Project:</h3>
 
                 </div>
-                <div className="flex flex-row justify-between text-center text-xs font-extrabold pb-2">
-                    🔗<h3 className="pr-1 hover:cursor-pointer z-[100]">
-                        <a href="https://github.com/thanchi-tr/FooBooRealTime-front-next">Frontend(Next.js)</a>
+                <div className="flex flex-row w-full flex-wrap justify-between text-center text-xs font-extrabold pb-2 z-[100] pointer-events-auto">
+                    <h3 className="pr-1 hover:cursor-pointer z-[100]">
+                        <a href="https://github.com/thanchi-tr/FooBooRealTime-front-next">🔗Frontend(Next.js)</a>
                     </h3> |
                     <h3 className="pl-1 hover:cursor-pointer z-[100]">
-                        <a href="https://github.com/thanchi-tr/FooBooRealTime-back-dotnet">Backend(.NET)</a>
+                        <a href="https://github.com/thanchi-tr/FooBooRealTime-back-dotnet">🔗Backend(.NET)</a>
                     </h3>
                 </div>
-                <div className="flex flex-row justify-between">
-                    <h3 className={`font-mainfont pb-3 text-xs`}>📌Tech Stack:</h3>
+                <div className="flex flex-row md:flex-col justify-between pb-2">
+                    <h3 className={`font-mainfont pb-1 text-xs`}>📌Tech Stack:</h3>
                     <p className="text-xs">.NET Core, Next.js, SignalR, Redis, Auth0, PostgreSQL</p>
                 </div>
 
@@ -53,7 +53,7 @@ const FizzBuzzProject = () => (<>
             </div>
             <div className={`
                     flex md:flex-col xl:flex-row
-                    w-[80%] md:ml-[10%] xl:ml-0
+                    w-[80%] md:ml-[10%] xl:ml-0 p-4
                     justify-evenly`}>
                 <div>
                     <h2 className={`text-sm font-mainfont pt-2`}>✔️ Features & Achievements:</h2>

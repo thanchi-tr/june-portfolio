@@ -20,10 +20,10 @@ const Discription = () => {
 
     }, [state])
     const displayTexts = [
-        { text: "front dev", timesMap: [1, 1, 1, 1, 1, 1, 1, 0.6, 0.7, 1], scale: 0.19 },
-        { text: "back dev", timesMap: [1.3, 1, 1, 1, 0.5, 1, 1, 1, 1], scale: 0.19 },
+        { text: "On Time, with Precision", timesMap: [1, 1, 1, 1, 1, 1, 1, 0.6, 0.7, 1, 1, 0.5, 1, 1, 1, 1, 2, 3], scale: 0.19 },
+        { text: "Dot Net, Next Js", timesMap: [1.3, 1, 1, 1, 0.5, 1, 1, 1, 1, 1, 0.5, 1, 1, 1, 1], scale: 0.19 },
         {
-            text: "full stack engineer!",
+            text: "Connect?",
             timesMap: [0.5, 0.7, 0.9, 0.8, 0.5, 1.8, 1, 1, 0.4, 0.5, 0.1, 1.1, 0.9, 0.6, 0.7, 0.5, 0.8, 0.4, 0.9, 1.5],
             scale: 0.17
         }

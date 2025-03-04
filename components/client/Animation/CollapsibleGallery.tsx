@@ -33,8 +33,9 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                                 className={`relative
                                     transition-all   ease-in-out ${index != selectedIndex ? "duration-75 opacity-0" : "duration-[390ms] delay-1000 opacity-100"}
                                 `}>
-                                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl scale-y-75"></div>
+
                                 {card}
+                                {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl scale-y-75"></div> */}
                             </div>
                         }
                         <div className={`

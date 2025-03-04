@@ -70,7 +70,6 @@ const Page = () => {
                 `}
                 ref={desRef}
             >
-
                 <Introduction />
 
             </div>
