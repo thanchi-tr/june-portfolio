@@ -38,10 +38,7 @@ const Experience = () => {
 
         return () => unsubscribe(); // Cleanup subscription
     }, [scrollY]);
-    useEffect(() => {
-        console.log(AnimationProgress);
 
-    }, [AnimationProgress])
     return (
         <div className="
                     overflow-hiddenq
@@ -149,8 +146,14 @@ const Experience = () => {
                     <div className="
                             relative flex flex-col justify-evenly w-full h-full z-10">
 
-                        <div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] ">
-                            <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full z-10">
+                        <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] "
+
+                            initial={{ translate: "100%)" }}
+                            animate={(AnimationProgress < 0.2) ? { translate: 100 - AnimationProgress * 500 + "%" } : { translate: "5%" }}
+                            transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full z-10 ">
                                 <motion.div
                                     className="
                                         h-5/6 md:hidden
@@ -160,9 +163,8 @@ const Experience = () => {
                                         z-[80] shadow-lg shadow-black/70"
 
                                     initial={{ translate: "35vw" }}
-                                    whileInView={{ translate: ["35vw", "60vw", "0vw"] }}
+                                    whileInView={AnimationProgress > 0.18 ? { translate: ["35vw", "60vw", "0vw"] } : {}}
                                     transition={{ duration: 0.55, delay: 0.2, ease: "anticipate" }}
-                                    viewport={{ once: true }}
                                 >
                                     <motion.div className="h-full w-full"
                                         animate={{ scale: ["100%", "110%", "100%"] }}
@@ -183,7 +185,7 @@ const Experience = () => {
                                         shadow-lg shadow-black/70"
 
                                     initial={{ translate: "0" }}
-                                    whileInView={{ translate: ["0", "50vw", "0vw"] }}
+                                    whileInView={AnimationProgress > 0.18 ? { translate: ["0", "50vw", "0vw"] } : {}}
                                     transition={{ duration: 0.7, delay: 0.3, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
@@ -207,7 +209,7 @@ const Experience = () => {
                                         <motion.div
                                             className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
                                             initial={{ opacity: 0 }}
-                                            whileInView={{ opacity: 1 }}
+                                            whileInView={AnimationProgress > 0.18 ? { opacity: 1 } : {}}
                                             viewport={{ once: true }}
                                             transition={{ delay: 0.75, duration: 0.36, ease: easeIn }}
                                         >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
@@ -218,7 +220,7 @@ const Experience = () => {
                                             className="text-2xl translate-x-[15%] font-bold text-white md:hidden"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
-                                            whileInView={{ opacity: [0, 0.3, 1] }}
+                                            whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.3, 1] } : {}}
                                             transition={{ delay: 0.8, duration: 0.42, ease: easeIn }}
                                         >
                                             Full-Stack Engineer
@@ -226,7 +228,7 @@ const Experience = () => {
                                         <motion.div className="relative flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] bg-gold text-white"
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
-                                            whileInView={{ opacity: 1, scale: [1.8, 1.5, 1] }}
+                                            whileInView={AnimationProgress > 0.18 ? { opacity: 1, scale: [1.8, 1.5, 1] } : {}}
                                             transition={{ delay: 0.5, duration: 0.72, ease: "anticipate" }}
                                         >
                                             <span className="
@@ -319,7 +321,7 @@ const Experience = () => {
                                 />
                             </motion.ul>
 
-                        </div>
+                        </motion.div>
                         <div className="h-[6%] w-full">
 
 

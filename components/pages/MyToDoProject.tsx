@@ -36,31 +36,7 @@ const MyToDoProject = () => (<>
                     Those time is build up into a category of skill (as you defined). This application is a study of UI/ UX animation of various speed, form and shape
                 </p>
             </div>
-            <div className={`
-                    flex md:flex-col xl:flex-row
-                    w-full md:ml-[30%] xl:ml-0
-                    justify-evenly`}>
-                <div>
-                    <h2 className={`text-sm font-mainfont pt-2`}>Front</h2>
-                    <ul className={`text-xs list-disc`}>
-                        <li>NextJS v14+</li>
-                        <li>Tailwind css</li>
-                        <li>Framer motion</li>
-                        <li>Test with JEST</li>
-                    </ul>
-                </div>
 
-                <div>
-                    <h2 className={`text-sm font-mainfont pt-2`}>Back</h2>
-                    <ul className={`text-xs list-disc`}>
-                        <li>Web API Dotnet</li>
-                        <li>Entity Framework core</li>
-                        <li className="w-3/4 md:w-full">Self Authentication with refresh token</li>
-                        <li>Serilog</li>
-                        <li>Test with xUnit</li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
 

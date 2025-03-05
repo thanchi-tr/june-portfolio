@@ -19,13 +19,13 @@ const ParticlesComponent = () => {
             init={particlesInit}
             options={{
                 background: {
-                    color: "transparent", // Dark background
+                    color: "transparent",
                 },
 
                 fpsLimit: 0,
                 particles: {
                     number: {
-                        value: 150,
+                        value: 180,
                         density: {
                             enable: true,
                             area: 2000,
@@ -37,7 +37,7 @@ const ParticlesComponent = () => {
                         count: 0,
                     },
                     color: {
-                        value: ["#ad9547", "#cca62e", "#70587c"],
+                        value: ["#ad9547", "#cca62e", "#70587c", "#482a41"],
 
                     },
                     shape: { type: "circle" },
@@ -45,7 +45,7 @@ const ParticlesComponent = () => {
                         enable: true,
                         distance: 150, // Maximum distance to connect
                         color: "#ffffff",
-                        opacity: 0.4,
+                        opacity: 0.32,
                         width: 1,
                     },
                     opacity: {
@@ -53,7 +53,7 @@ const ParticlesComponent = () => {
                         random: false,
                     },
                     size: {
-                        value: { min: 1, max: 4 },
+                        value: { min: 0.1, max: 8 },
                         random: true,
                     },
                     move: {

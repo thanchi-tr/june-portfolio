@@ -44,50 +44,48 @@ const Page = () => {
                 > Skill</p>
 
             </motion.div>
-            <motion.div className="
+            <a href={"mailto:thanchitr@outlook.com"}>
+                <motion.div className="
                     
-                    sticky  origin-center
+                    sticky  origin-center translate-x-[85vw] translate-y-[80vh] 2xl:translate-y-[70vh]
                     h-0 top-2  z-[200] text-2xl bg-black
-                    translate-y-[90vh] -translate-x-[100vw]
                     font-signaturefont text-center"
-                initial={{ y: "8vh", x: "85vw" }}
-                animate={{ y: ["80vh", "76vh", "80vh"], x: "85vw" }}
-                transition={{ duration: 3, repeat: Infinity, ease: "anticipate" }}
-            >
+                >
 
-                <div className="relative w-[10vw]">
-                    <div className="
-                            rounded-full overflow-clip
-                            h-[10vh] w-full
-                            mt-10 scale-[200%] md:scale-[150%] lg:scale-125
+                    <div className="relative w-[10vw]">
+                        <div className="
+                            rounded-full overflow-clip 
+                            h-[10vh] 2xl:h-[11vh] w-full
+                            mt-10 scale-[200%] md:scale-[150%] lg:scale-[200%]
                     ">
-                        <Image src={"/ava.png"} alt={""} className="object-cover" fill></Image>
+                            <Image src={"/ava.png"} alt={""} className="object-cover lg:object-contain bg-opacitity-30 hover:opacity-100" fill></Image>
 
 
-                    </div>
-                    <motion.div className="
+                        </div>
+                        <motion.div className="
                                     font-signaturefont text-5xl 2xl:translate-y-10 font-900 text-shadow-lg shadow-white
                                     hover:border-4 hover:cursor-pointer z-[300] pointer-events-auto
                                     scale-50 md:scale-100
                                 "
-                        animate={{
-                            color: "#ad9547",
-                            textShadow: [
-                                "0px 0px 10px black",
-                                "3px 3px 105px white",
-                                "0px 0px 10px black"
-                            ],
-                            rotate: [0, 12, 0],
-                            translateY: ["0", "0.3vw", "-0.6vw", "0"],
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                    >
+                            animate={{
+                                color: "#ad9547",
+                                textShadow: [
+                                    "0px 0px 10px black",
+                                    "3px 3px 105px white",
+                                    "0px 0px 10px black"
+                                ],
+                                rotate: [0, 12, 0],
+                                translateY: ["0", "0.3vw", "-0.6vw", "0"],
+                            }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                        >
 
-                        <p className="text-end -translate-x-[150%]">Connect?</p>
-                    </motion.div>
-                </div>
+                            <p className="text-end -translate-x-[165%] lg:translate-x-0 md:-translate-x-[30%] md:text-2xl md:font-mainfont md:text-white md:text-shadow-lg md:shadow-secondary ">Connect?</p>
+                        </motion.div>
+                    </div>
 
-            </motion.div>
+                </motion.div>
+            </a>
 
             <div
                 className={`

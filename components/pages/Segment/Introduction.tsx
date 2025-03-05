@@ -109,23 +109,25 @@ const Introduction = () => {
                                     ">
                                     <div className="2xl:hidden h-full w-2/3" />
                                     <div className="
-                                                w-full 2xl:border-2
+                                                w-[80%] pl-[5%] 2xl:border-2 md:-translate-x-[8vw] lg:translate-x-0
                                                 flex flex-row justify-evenly
                                                 text-lg uppercase text-center
                                     ">
                                         {/* Linked In */}
-                                        <div className="
-                                                -rotate-90 lg:rotate-0 -translate-y-[250%]
+                                        <div className=" z-[130]
+                                                -rotate-90 lg:rotate-0 -translate-y-[250%] group relative
                                                 aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full  bg-white">
-                                            <ExternalCircularButton link={""} >
+                                            <ExternalCircularButton link={"https://www.linkedin.com/in/xuan-trinh-27553334b/"} >
                                                 <Image src="/icons/linkedin.png" alt="github" fill className="scale-75 object-fill" />
                                             </ExternalCircularButton>
+                                            <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">LinkedIn</p>
                                         </div>
                                         {/* GitHub */}
-                                        <div className="
-                                                -rotate-90 lg:rotate-0 -translate-y-[250%]
+                                        <div className="z-[130]
+                                                -rotate-90 lg:rotate-0 -translate-y-[250%] group
                                                 aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full">
-                                            <ExternalCircularButton link={""} >
+                                            <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block -translate-y-[100%]">Github</p>
+                                            <ExternalCircularButton link={"https://github.com/thanchi-tr"} >
                                                 <Image src="/icons/github.jpg" alt="github" fill className="object-fill" />
                                             </ExternalCircularButton>
                                         </div>
@@ -141,7 +143,7 @@ const Introduction = () => {
                 </div>
                 <div className={`
                         flex flex-col relative  z-10
-                        w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2
+                        w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2 2xl:translate-y-[10%]
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                         lg:bg-gradient-to-b from-primary to-background 2xl:bg-transparent`} >
                     <div className="w-full h-[20%]"></div>
@@ -161,7 +163,7 @@ const Introduction = () => {
 
 
                         <div className={`
-                                p-2 pl-10 lg:p-6 leading-5
+                                p-2 pl-10 lg:p-6 leading-5 2xl:mt-4
                                 text-sm lg:text-sm  
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-2xl 

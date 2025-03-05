@@ -1,6 +1,7 @@
-
+"use client";
+import Image from "next/image";
 const CarinaEyeCare
-    = () => (<>
+    = () => (<div>
         <h1 className={`font-mainfont text-lg xl:text-xl 2xl:text-2xl text-center p-4 text-black/95`}>🩺 Carina Eye Care | Clinic Management & Booking System</h1>
         <div className={`
                       h-full w-full
@@ -17,9 +18,43 @@ const CarinaEyeCare
                         <a href="https://www.carinaeyecare.com.au/">Carina Eye Care</a>
                     </h3>
                 </div>
-                <div className="flex flex-row justify-between">
-                    <h3 className={`font-mainfont pb-3 text-xs`}>📌Tech Stack:</h3>
-                    <p className="text-xs"> .NET Core, Next.js, Headless CMS, SQL Server</p>
+                <div className="flex flex-col">
+                    {/* Image and detail */}
+
+                    <div className="flex gap-4 flex-shrink-0 justify-between">
+                        <h1 className="text-xl font-semibold font-mainfont uppercase">Frontend:</h1>
+                        <div className="flex gap-1 ">
+                            <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
+                                <Image src="/icons/nextjs.png" className="object-cover" fill alt={""} />
+                            </div>
+                            <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
+                                <Image src="/icons/ts.png" className="object-cover" fill alt={""} />
+                            </div>
+                            <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0 bg-white">
+                                <Image src="/icons/tailwind.png" className="object-contain" fill alt={""} />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex gap-1 flex-shrink-0 justify-between">
+                        <h1 className="text-xl font-semibold font-mainfont uppercase">Backend:</h1>
+                        <div className="flex gap-1 ">
+                            <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
+                                <Image src="/icons/dotnetCore.png" className="object-cover" fill alt={""} />
+                            </div>
+                            <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0 bg-black">
+                                <Image src="/icons/docker.png" className="object-cover scale-75" fill alt={""} />
+                            </div>
+                            <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0 bg-white">
+                                <Image src="/icons/mssql.png" className="object-cover scale-90" fill alt={""} />
+                            </div>
+                            <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
+                                <Image src="/icons/eks.jpg" className="object-cover" fill alt={""} />
+                            </div>
+                            <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
+                                <Image src="/icons/redis.png" className="object-cover" fill alt={""} />
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <h4 className={`underline font-mainfont pb-1 text-xs`}>💡Description:</h4>
@@ -46,7 +81,7 @@ const CarinaEyeCare
 
 
         </div>
-    </>)
+    </div>)
 
 export default CarinaEyeCare
     ;

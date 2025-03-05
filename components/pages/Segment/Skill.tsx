@@ -1,7 +1,8 @@
 "use client";
 import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 const Skill = () => {
     const containerVariants = {
         hidden: {},
@@ -23,20 +24,49 @@ const Skill = () => {
             }
         },
     };
+    const selfRef = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({ target: selfRef });
+    const [AnimationProgress, setAnimationProgress] = useState(0);
+    useEffect(() => {
+        const unsubscribe = scrollYProgress.onChange((latest) => {
+            setAnimationProgress(latest)
+        });
+
+        return () => unsubscribe(); // Cleanup subscription
+    }, [scrollY]);
+
+    // Update the animation progress, where we can read later on
+    useEffect(() => {
+        const unsubscribe = scrollYProgress.onChange((latest) => {
+            setAnimationProgress(latest)
+        });
+
+        return () => unsubscribe(); // Cleanup subscription
+    }, [scrollY]);
+    useEffect(() => {
+        console.log(AnimationProgress);
+
+    }, [AnimationProgress])
     return (
         <div className="h-full w-full bg-background">
-            <div className="flex items-center justify-center h-0 w-full">
-                <div className="
+            <div className="flex items-center justify-center h-0 w-full"
+
+            >
+                <motion.div className="
                                 text-white uppercase z-50 
                                 text-6xl md:text-6xl font-bold font-mainfont
                                 md:-translate-x-[8%] tracking-[0.8rem]
                                 
                                 "
+
+                    initial={{ translate: "-20vw" }}
+                    whileInView={{ translate: "0vw" }}
+                    transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
                 >
                     <div className="text-shadow-lg shadow-black md:shadow-transparent md:translate-y-[49%] md:text-primary md:scale-110">Skill</div>
                     <div className="hidden md:block text-background  overflow-clip scale-110">
                         <div className="-translate-y-[50%] scale-y-110">Skill</div></div>
-                </div>
+                </motion.div>
             </div>
             <div className="
                     flex flex-col md:flex-row overflow-x-clip
@@ -143,14 +173,18 @@ const Skill = () => {
                         </motion.div>
                     </div>
                 </div>
-                <div className="
+                <motion.div className="
                         relative flex-col z-10
                         h-auto md:h-[100%] w-[94%] md:w-2/3 pb-[8%]
                         -translate-y-[20%] md:translate-y-0
                         md:ml-3  shadow-xl shadow-black/70
                         bg-gradient-to-b from-primary to-background 2xl:bg-transparent
                         rounded-2xl md:rounded-none
-                ">
+                "
+                    initial={{ translate: "90%" }}
+                    whileInView={{ translate: "0%" }}
+                    transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+                >
                     <div className="h-[10%]"></div>
                     <div className="
                             relative h-[14%] text-center uppercase font-bold 
@@ -289,9 +323,9 @@ const Skill = () => {
                             className="h-[0.8vh] w-1/4 bg-white/60 mt-10"
                         />
                     </motion.div>
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </div >
 
     )
 }
