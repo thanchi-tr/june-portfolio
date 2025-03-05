@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Avata from "@/components/client/Animation/Avata";
 import ToggleButton from "@/components/client/Animation/ToggleButton";
-import Discription from "@/components/client/Description";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import { useThemeContext } from "@/hooks/context/useThemeContext";
 import { easeIn, motion, useScroll } from 'framer-motion';
@@ -144,7 +143,7 @@ const Introduction = () => {
                         flex flex-col relative  z-10
                         w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
-                        lg:bg-primary 2xl:bg-transparent`} >
+                        lg:bg-gradient-to-b from-primary to-background 2xl:bg-transparent`} >
                     <div className="w-full h-[20%]"></div>
                     {/* description */}
                     <motion.div
@@ -158,18 +157,9 @@ const Introduction = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, ease: easeIn }}
                     >
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl"></div>
 
-                        <div className={`
-                            hidden 2xl:absolute 
-                            h-[15vh]
-                            w-full  2xl:w-[164%] 2xl:scale-50
-                            lg:flex 
-                            lg:scale-75 xl:bottom-[18%] 
-                            xl:left-[15%] 2xl:-left-[20%] 2xl:translate-y-[50vh]
-                            left-[0vw]   items-center justify-center`}>
 
-                            <Discription />
-                        </div>
                         <div className={`
                                 p-2 pl-10 lg:p-6 leading-5
                                 text-sm lg:text-sm  
@@ -200,7 +190,7 @@ const Introduction = () => {
                             top-0 
                             h-full w-full 
                             lg:backdrop-blur-md hover:backdrop-blur-none 
-                            hover:border-l-[18px] hover:cursor-pointer z-50
+                            hover:border-l-[18px] hover:cursor-pointer 
                             shadow-inner shadow-black 
                             transition-all xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                             " >
@@ -210,7 +200,7 @@ const Introduction = () => {
 
                         <div className="
                                         absolute  opacity-100 pointer-events-none 
-                                        top-0 h-[100%] w-full z-30 scale-125 -translate-x-[150.5%] lg:-translate-x-[165.5%] 
+                                        top-0 h-[100%] md:aspect-square w-full z-30 scale-125 -translate-x-[150.5%] lg:-translate-x-[95.5%] lg:translate-y-[30%]
                                         2xl:-translate-x-[180.5%]  2xl:translate-y-[75.5%] 
                                         
                             ">
@@ -218,36 +208,10 @@ const Introduction = () => {
                             <motion.div
                                 className="flex flex-col justify-evenly h-[90%] w-[25vw] ml-[10%] rounded-lg backdrop-blur-sm
                                     origin-center transition-all shadow-inner shadow-black hover:z-[10]
-                                    2xl:w-[50%] 
+                                    2xl:w-[50%] z-50
                                 "
                             >
-                                <div className="
-                                        relative rounded-lg overflow-clip
-                                        h-[60%] w-full 
-                                        mt-10
-                                ">
-                                    <Image src={"/mainAva.jpg"} alt={""} className="object-contain h-full w-full" fill></Image>
 
-
-                                </div>
-                                <motion.div className="font-signaturefont text-5xl 2xl:translate-y-10 font-900 text-shadow-lg shadow-white
-                                    translate-x-[30%] 2xl:translate-x-0
-                                "
-                                    animate={{
-                                        color: "#ad9547",
-                                        textShadow: [
-                                            "0px 0px 10px black",
-                                            "3px 3px 105px white",
-                                            "0px 0px 10px black"
-                                        ],
-                                        rotate: [0, 12, 0],
-                                        translateY: ["0", "0.3vw", "-0.6vw", "0"],
-                                    }}
-                                    transition={{ duration: 2, repeat: Infinity }}
-                                >
-
-                                    Let&#39;s Connect
-                                </motion.div>
                             </motion.div>
 
                         </div>

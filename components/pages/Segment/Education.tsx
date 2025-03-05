@@ -82,7 +82,7 @@ const Education = () => {
                         <p className="absolute -bottom-[1.2px] text-descent opacity-80"> June Trinh</p>
                         June Trinh
                     </motion.div>
-                    <div className="flex flex-col justify-end ml-4 font-mainfont font-light"
+                    <div className="flex flex-col justify-end ml-4 font-mainfont font-light text-white/80"
 
                     >
                         @2025</div>

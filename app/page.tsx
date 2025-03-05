@@ -11,6 +11,7 @@ import { useRef } from "react";
 export type NavButtonT = { tag: string, data?: ReactNode, className_: string }[];
 import { motion } from "framer-motion";
 import ParticlesComponent from "@/components/client/Animation/ParticlesComponent";
+import Image from "next/image";
 const Page = () => {
 
     const desRef = useRef<HTMLDivElement>(null);
@@ -47,16 +48,44 @@ const Page = () => {
                     
                     sticky  origin-center
                     h-0 top-2  z-[200] text-2xl bg-black
-                    translate-y-[100vh]
+                    translate-y-[90vh] -translate-x-[100vw]
                     font-signaturefont text-center"
-                initial={{ y: "85vh", x: "42vw" }}
-                animate={{ y: ["85vh", "81vh", "85vh"], x: "42vw" }}
+                initial={{ y: "8vh", x: "85vw" }}
+                animate={{ y: ["80vh", "76vh", "80vh"], x: "85vw" }}
                 transition={{ duration: 3, repeat: Infinity, ease: "anticipate" }}
             >
 
-                <p className="absolute top-[1.5px] text-accent opacity-80 left-[28vw] md:left-[42vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary border-2 bg-background"> JuneTR</p>
-                <p className="absolute top-0 text-black opacity-80  left-[28vw] md:left-[42vw] translate-x-[50%] font-[900] text-shadow-lg shadow-white bg-background rounded-2xl"> JuneTR</p>
-                <p className="absolute top-[2.5px] text-descent opacity-80 left-[28vw] md:left-[42vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"> JuneTR</p>
+                <div className="relative w-[10vw]">
+                    <div className="
+                            rounded-full overflow-clip
+                            h-[10vh] w-full
+                            mt-10 scale-[200%] md:scale-[150%] lg:scale-125
+                    ">
+                        <Image src={"/ava.png"} alt={""} className="object-cover" fill></Image>
+
+
+                    </div>
+                    <motion.div className="
+                                    font-signaturefont text-5xl 2xl:translate-y-10 font-900 text-shadow-lg shadow-white
+                                    hover:border-4 hover:cursor-pointer z-[300] pointer-events-auto
+                                    scale-50 md:scale-100
+                                "
+                        animate={{
+                            color: "#ad9547",
+                            textShadow: [
+                                "0px 0px 10px black",
+                                "3px 3px 105px white",
+                                "0px 0px 10px black"
+                            ],
+                            rotate: [0, 12, 0],
+                            translateY: ["0", "0.3vw", "-0.6vw", "0"],
+                        }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                    >
+
+                        <p className="text-end -translate-x-[150%]">Connect?</p>
+                    </motion.div>
+                </div>
 
             </motion.div>
 
@@ -106,7 +135,7 @@ const Page = () => {
             <div className="
                     flex flex-col z-20
                     items-center h-[80vh] 
-                    max-w-full bg-background 
+                    max-w-full bg-background
                     ">
                 <Education />
             </div>

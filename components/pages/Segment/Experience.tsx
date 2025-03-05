@@ -96,6 +96,7 @@ const Experience = () => {
                         initial={{ translate: "-125%" }}
                         animate={(AnimationProgress < 0.23) ? { translate: -145 + AnimationProgress * 400 + "%" } : { translate: -80 + 0.22 * 380 + "%" }}
                     >
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl"></div>
 
                         <div className="flex flex-col h-full md:h-2/6 w-full ">
                             <div className="

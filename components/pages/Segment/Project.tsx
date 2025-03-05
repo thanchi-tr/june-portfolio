@@ -13,10 +13,10 @@ import FizzBuzz from "../project/FizzBuzz";
 const Project = () => {
 
     return (
-        <div className="relative h-auto w-full  flex flex-col max-w-full bg-secondary md:bg-background pb-[10%]"
+        <div className="relative h-auto w-full  flex flex-col max-w-full bg-gradient-to-b from-secondary to-black md:bg-transparent pb-[10%]"
 
         >
-            <div className="md:hidden absolute h-[50vh] w-full  bg-secondary md:bg-background -translate-y-[100%] z-0">
+            <div className=" absolute h-[50vh] w-full  bg-gradient-to-t from-secondary to-black md:bg-background -translate-y-[100%] z-0">
 
             </div>
             <div className="
@@ -24,7 +24,10 @@ const Project = () => {
                     h-[30vh] border-t-8 md:border-t-0 border-white/50 2xl:w-[85%] 2xl:ml-[5%] md:h-screen w-full z-[30]">
 
                 <div className="h-screen md:w-[27%]
-                            md:ml-[8%]  bg-gradient-to-b from-secondary to-background  2xl:bg-transparent ml-2 md:shadow-3xl shadow-black"></div>
+                            md:ml-[8%]  bg-gradient-to-b from-secondary to-background  2xl:bg-transparent ml-2 md:shadow-3xl shadow-black">
+                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl"></div>
+
+                </div>
                 <div className="h-screen w-2/3 ">
                     <div className="
                             md:-translate-x-1/4 -translate-y-1/2 

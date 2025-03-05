@@ -30,7 +30,7 @@ const Avata = () => {
             <motion.div className="
                         absolute 
                         bottom-[1.6rem] right-[1rem] 2xl:right-[-15.4rem] 2xl:bottom-[-12vh]
-                        rotate-12 text-3xl xl:text-4xl 2xl:text-5xl
+                        rotate-12 text-2xl xl:text-3xl 2xl:text-4xl
                         text-white md:text-white lg:text-white/60 text-shadow-lg shadow-secondary
                         font-mainfont z-10
                         font-[1000] 
@@ -65,7 +65,7 @@ const Avata = () => {
             <motion.div className="
                     absolute z-10
                     bottom-[5vh] right-0 
-                    text-3xl xl:text-4xl 2xl:text-5xl 2xl:bottom-[22%] 2xl:-right-[9%]
+                    text-2xl xl:text-3xl 2xl:text-4xl 2xl:bottom-[22%] 2xl:-right-[9%]
                     text-background md:text-white lg:text-white/60 md:text-shadow-lg shadow-black
                     font-mainfont font-[900]"
                 initial={{ translate: "39vw", opacity: 0 }}
@@ -90,7 +90,7 @@ const Avata = () => {
             <motion.div className="
                     absolute z-10
                     bottom-[-8vh] right-[-25vw] translate-x-[-50%] md:translate-x-0
-                    text-3xl xl:text-4xl 2xl:text-5xl 2xl:bottom-[20%] 2xl:-right-[10%] 2xl:translate-y-[10vh]
+                    text-2xl xl:text-3xl 2xl:text-4xl 2xl:bottom-[20%] 2xl:-right-[10%] 2xl:translate-y-[10vh]
                     text-white md:text-white lg:text-white/60 md:text-shadow-lg shadow-black
                     font-mainfont font-[900]"
                 initial={{ translate: "39vw", opacity: 0 }}
@@ -114,7 +114,7 @@ const Avata = () => {
             </motion.div>
             <motion.div className="
                     absolute z-10
-                    top-0 right-0 2xl:translate-x-[14vw]
+                    top-0 md:top-8 right-0 2xl:translate-x-[14vw]
                     text-4xl xl:text-5xl 2xl:text-6xl 2xl:bottom-[20%] 2xl:-right-[10%]
                     text-background md:text-white md:text-shadow-lg shadow-black
                     font-mainfont font-[900]"

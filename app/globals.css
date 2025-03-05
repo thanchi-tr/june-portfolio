@@ -30,7 +30,8 @@
 }
 :root {
   --font-coda-caption: "CodaCaption", sans-serif;
-  --color-background: #3e3a37;
+  --color-background: black;
+  --color-background1: #3e3a37;
   --color-primary: #ad9547;
   --color-secondary: #432622;
   --color-accent: #00ffff;
