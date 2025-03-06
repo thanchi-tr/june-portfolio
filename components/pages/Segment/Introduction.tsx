@@ -140,11 +140,18 @@ const Introduction = () => {
 
                     </div>
                 </div>
-                <div className={`
+                <motion.div className={`
                         flex flex-col relative  z-10
                         w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2 2xl:translate-y-[10%]
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
-                        lg:bg-gradient-to-b from-primary to-background 2xl:bg-transparent`} >
+                        lg:bg-gradient-to-b from-primary to-background 2xl:bg-transparent
+                        
+                        
+                        `}
+                    initial={{ translateX: "200%" }}
+                    animate={{ translateX: ["200%", "0%"] }}
+                    transition={{ duration: 0.5, delay: 1.7, ease: easeIn }}
+                >
                     <div className="w-full h-[20%]"></div>
                     {/* description */}
                     <motion.div
@@ -156,7 +163,7 @@ const Introduction = () => {
                         initial={{ translateY: "100%", opacity: 0 }}
                         whileInView={{ translateY: "0%", opacity: [0, 0, 0.2, 1] }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.3, ease: easeIn }}
+                        transition={{ duration: 0.3, delay: 0.4, ease: "anticipate" }}
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl "></div>
 
@@ -209,7 +216,7 @@ const Introduction = () => {
                         </div>
                     </div></a>
 
-                </div>
+                </motion.div>
             </div>
 
         </div >
