@@ -54,36 +54,36 @@ const Page = () => {
 
                     <div className="relative w-[10vw] 2xl:w-[4vw] ">
                         <div className="
-                            rounded-xl overflow-clip  border-t-2
-                            h-[10vh] 2xl:h-[12vw]  w-full 
+                            rounded-xl group
+                            h-[10vh] 2xl:h-[12vw]  w-auto 
                             mt-10 scale-[200%] md:scale-[150%] lg:scale-[200%]
                     ">
-                            <div className="absolute top-0 backdrop-blur-sm h-full w-full scale-125 scale-x-[150%]"></div>
-                            <Image src={"/ava.png"} alt={""} className="object-cover lg:object-contain bg-opacitity-30 hover:opacity-100" fill></Image>
 
+                            <motion.div className=" hidden group-hover:block
+                                    font-signaturefont text-5xl  font-900 text-shadow-lg shadow-white
+                                    group-hover:border-4 hover:cursor-pointer z-[300] pointer-events-auto
+                                    scale-50 md:scale-100
+                                "
+                                animate={{
+                                    color: "#ad9547",
+                                    textShadow: [
+                                        "0px 0px 10px black",
+                                        "3px 3px 105px white",
+                                        "0px 0px 10px black"
+                                    ],
+                                    rotate: [0, 12, 0],
+                                    translateY: ["100%"],
+                                }}
+                                transition={{ duration: 2, repeat: Infinity }}
+                            >
+
+                                <p className="text-end translate-x-[-120%] md:translate-x-[-100%] md:text-xl text-sm font-mainfont md:text-white md:text-shadow-lg md:shadow-secondary ">Connect?</p>
+                            </motion.div>
+                            <Image src={"/logo.png"} alt={""} className="object-contain bg-opacitity-30 hover:opacity-100 group-hover:hidden" fill></Image>
 
                         </div>
 
-                        <motion.div className="
-                                    font-signaturefont text-5xl 2xl:translate-y-10 font-900 text-shadow-lg shadow-white
-                                    hover:border-4 hover:cursor-pointer z-[300] pointer-events-auto
-                                    scale-50 md:scale-100
-                                "
-                            animate={{
-                                color: "#ad9547",
-                                textShadow: [
-                                    "0px 0px 10px black",
-                                    "3px 3px 105px white",
-                                    "0px 0px 10px black"
-                                ],
-                                rotate: [0, 12, 0],
-                                translateY: ["0", "0.3vw", "-0.6vw", "0"],
-                            }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                        >
 
-                            <p className="text-end -translate-x-[165%] lg:translate-x-0 md:-translate-x-[30%] md:text-2xl md:font-mainfont md:text-white md:text-shadow-lg md:shadow-secondary ">Connect?</p>
-                        </motion.div>
 
                     </div>
 
