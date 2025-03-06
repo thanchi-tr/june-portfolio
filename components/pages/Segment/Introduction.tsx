@@ -166,7 +166,7 @@ const Introduction = () => {
                                 text-sm lg:text-sm  group-hover:opacity-0
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-2xl 
-                                xl:-translate-y-[10%]
+                                xl:-translate-y-[8%]
                                 h-auto
                             `}
                         >
