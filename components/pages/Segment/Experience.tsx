@@ -265,7 +265,7 @@ const Experience = () => {
                                     translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] md:bg-background rounded-3xl
                                     list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 
                                     2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-[#ad9547]
-                                     border-x-[#ad9547]/15 overflow-clip
+                                     border-x-[#ad9547]/15 
                                     pt-[7%]
                                     border-b-black/20  
                                     "

@@ -99,22 +99,22 @@ const Introduction = () => {
 
                                 {/* Link holder */}
                                 <div className="
-                                        absolute flex flex-row
+                                        absolute flex flex-row z-[100]
                                         translate-x-[10%] -translate-y-[90%] origin-top-left rotate-90
                                         lg:translate-x-0 lg:rotate-0 lg:translate-y-0
                                         top-0 2xl:-translate-y-5 2xl:translate-x-[45%]
                                         w-[90%] lg:w-4/5 2xl:w-1/3
                                         h-[80%] sm:h-[90%] lg:h-3/5 
-                                        pt-2 z-10
+                                        pt-2 
                                     ">
                                     <div className="2xl:hidden h-full w-2/3" />
-                                    <div className="
+                                    <div className=" 
                                                 w-[80%] pl-[5%] 2xl:border-2 md:-translate-x-[8vw] lg:translate-x-0
                                                 flex flex-row justify-evenly
                                                 text-lg uppercase text-center
                                     ">
                                         {/* Linked In */}
-                                        <div className=" z-[130]
+                                        <div className=" z-[200] lg:z-10
                                                 -rotate-90 lg:rotate-0 -translate-y-[250%] group relative
                                                 aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full  bg-white">
                                             <ExternalCircularButton link={"https://www.linkedin.com/in/xuan-trinh-27553334b/"} >
@@ -123,7 +123,7 @@ const Introduction = () => {
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">LinkedIn</p>
                                         </div>
                                         {/* GitHub */}
-                                        <div className="z-[130]
+                                        <div className="z-[200] lg:z-10
                                                 -rotate-90 lg:rotate-0 -translate-y-[250%] group
                                                 aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full">
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block -translate-y-[100%]">Github</p>
@@ -150,7 +150,7 @@ const Introduction = () => {
                     {/* description */}
                     <motion.div
                         className="
-                            w-full h-auto lg:h-2/3 
+                            w-full h-auto lg:h-2/3 group
                             text-white lg:text-black 2xl:text-white    
                             z-40
                     "
@@ -159,12 +159,12 @@ const Introduction = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, ease: easeIn }}
                     >
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl"></div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl "></div>
 
 
                         <div className={`
                                 p-2 pl-10 lg:p-6 leading-5 2xl:mt-4
-                                text-sm lg:text-sm  
+                                text-sm lg:text-sm  group-hover:opacity-0
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-2xl 
                                 xl:-translate-y-[10%]
@@ -189,16 +189,15 @@ const Introduction = () => {
                     {/* blur screen */}
                     <div className="
                             absolute group 
-                            top-0 
-                            h-full w-full 
-                            lg:backdrop-blur-md hover:backdrop-blur-none 
-                            hover:border-l-[18px] hover:cursor-pointer 
-                            shadow-inner shadow-black 
+                            top-0 z-[100]
+                            h-full w-full
+                            hover:border-l-[10vw] hover:cursor-pointer 
+                            shadow-inner shadow-black group-hover:overflow-hidden
                             transition-all xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                             " >
                         {/* <span className="absolute left-0 top-0 h-full w-full bg-white blur-lg opacity-20"></span> */}
 
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl"></div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl hover:bg-transparent"></div>
 
                         <div className="
                                         absolute  opacity-100 pointer-events-none 
@@ -216,6 +215,11 @@ const Introduction = () => {
 
                             </motion.div>
 
+                        </div>
+                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100 ">
+                            <div className=" rounded-full border-2 bg-primary">
+                                <Image src="/ava.png" alt="scroll" className="object-contain" fill />
+                            </div>
                         </div>
                     </div>
 

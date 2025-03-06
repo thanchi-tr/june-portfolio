@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Avata = () => {
     return (
-        <div className="relative flex h-full w-full items-end">
+        <div className="relative flex h-full w-full items-end lg:z-[120]">
             {/* <div className="absolute 2xl:hidden md:bg-gray-400/10 h-5/6 md:h-3/5 w-[95%] rounded-full scale-y-105"></div>
             <div className="absolute 2xl:hidden md:bg-secondary h-2/3 md:h-3/5 w-[70%] rounded-full left-[12%]"></div> */}
             {/*Picture */}
@@ -97,7 +97,7 @@ const Avata = () => {
             <a href="/cv.pdf" target="_blank" rel="noreferrer">
                 <motion.div className="
                     absolute z-110 group cursor-pointer
-                    bottom-[-8vh] right-[-25vw] translate-x-[-50%] md:translate-x-0
+                    bottom-[-8vh] right-[-25vw] translate-x-[-50%] md:translate-x-[-75%] lg:translate-x-0
                     text-2xl xl:text-3xl 2xl:text-4xl 2xl:bottom-[20%] 2xl:-right-[10%] 2xl:translate-y-[10vh]
                     text-white md:text-white lg:text-white/60 md:text-shadow-lg shadow-black
                     font-mainfont font-[900]"
