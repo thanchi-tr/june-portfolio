@@ -22,29 +22,29 @@ const Page = () => {
         <div className="h-auto w-full box-border -z-[100] overflow-clip"
         >
             <motion.div className="
-                    opacity-15 hover:opacity-100 z-[300]
+                    opacity-15 hover:opacity-100 z-[300] pointer-events-none
                     sticky  origin-center border-r-4 border-white
-                    h-0 top-0  text-sm bg-black
+                    h-0 top-0  text-sm bg-black border-2
                     font-bold hover:cursor-pointer
                     text-center"
                 initial={{ y: "3vh", x: "-45vw" }}
                 transition={{ duration: 3, repeat: Infinity, ease: "anticipate" }}
             >
-                <p className="absolute top-[4vh] hover:bg-black  text-primary opacity-80  scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
+                <p className="absolute pointer-events-auto top-[4vh] hover:bg-black  text-primary opacity-80  scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
                     onClick={() => desRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Description</p>
-                <p className="absolute hover:bg-white top-[16vh] text-descent opacity-80 scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary border-2 bg-background"
+                <p className="absolute pointer-events-auto hover:bg-white top-[16vh] text-descent opacity-80 scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary border-2 bg-background"
                     onClick={() => projectRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Project</p>
-                <p className="absolute hover:bg-primary top-[8vh] text-black opacity-80   scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-white bg-background rounded-2xl"
+                <p className="absolute pointer-events-auto hover:bg-primary top-[8vh] text-black opacity-80   scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-white bg-background rounded-2xl"
                     onClick={() => expRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Experience</p>
-                <p className="absolute top-[12vh] hover:bg-secondary p-1 text-white opacity-80  scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
+                <p className="absolute pointer-events-auto top-[12vh] hover:bg-secondary p-1 text-white opacity-80  scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
                     onClick={() => skillRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Skill</p>
 
             </motion.div>
-            <a href={"mailto:thanchitr@outlook.com"}>
+            <a href={"mailto:dev.june.trinh@outlook.com"}>
                 <motion.div className="
                     
                     sticky  origin-center translate-x-[85vw] translate-y-[80vh] 2xl:translate-y-[70vh]
@@ -52,7 +52,7 @@ const Page = () => {
                     font-signaturefont text-center"
                 >
 
-                    <div className="relative w-[10vw] 2xl:w-[4vw] ">
+                    <div className="relative w-[10vw] md:w-[6vw] 2xl:w-[4vw] ">
                         <div className="
                             rounded-xl group
                             h-[10vh] 2xl:h-[12vw]  w-auto 
@@ -61,7 +61,7 @@ const Page = () => {
 
                             <motion.div className=" hidden group-hover:block
                                     font-signaturefont text-5xl  font-900 text-shadow-lg shadow-white
-                                    group-hover:border-4 hover:cursor-pointer z-[300] pointer-events-auto
+                                    lg:group-hover:border-4 hover:cursor-pointer z-[300] pointer-events-auto
                                     scale-50 md:scale-100
                                 "
                                 animate={{
@@ -78,6 +78,7 @@ const Page = () => {
                             >
 
                                 <p className="text-end translate-x-[-120%] md:translate-x-[-100%] md:text-xl text-sm font-mainfont md:text-white md:text-shadow-lg md:shadow-secondary ">Connect?</p>
+                                <p className="text-xs font-secondaryfont translate-x-[-120%] md:translate-x-[-100%]">dev.june.trinh@outlook.com</p>
                             </motion.div>
                             <Image src={"/logo.png"} alt={""} className="object-contain bg-opacitity-30 hover:opacity-100 group-hover:hidden" fill></Image>
 
@@ -150,20 +151,18 @@ const Page = () => {
                     bg-primary font-semibold 
                     tracking-wider z-50">
 
-                <div className="text-center  my-3 2xl:my-1"> all right preserved</div>
 
-                <div className="flex flex-col md:flex-row justify-evenly gap-5 w-auto pb-5 ">
+
+                <div className="flex flex-row md:flex-row justify-evenly w-auto pb-2 text-background ">
+
                     <div className="hidden md:flex w-[35%]">www.junetrinh.dev</div>
-
-                    <div className="flex flex-row md:flex-col w-full 
-                            justify-evenly 
-                            md:w-auto">
-                        <div className="flex flex-row justify-between">
-                            <div className="underline pr-[5%]">Written with NextJs: by June</div>
-                            <div>Power by Vercel</div>
-                        </div>
+                    <div className="">
+                        Power by Vercel
 
                     </div>
+                    <div className="text-center"> JUNE TRINH @2025- all right preserved</div>
+
+                    <div></div>
                 </div>
             </div>
             <div className="absolute top-0 h-full w-full hidden lg:block "><ParticlesComponent /></div>

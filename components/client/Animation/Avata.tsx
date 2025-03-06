@@ -124,8 +124,8 @@ const Avata = () => {
             </a>
             <a href="/cv.pdf" target="_blank" rel="noreferrer">
                 <motion.div className="
-                    absolute z-[100] group hover:cursor-pointer
-                    top-0 md:top-8 right-0 2xl:translate-x-[14vw]
+                    absolute z-[100] group hover:cursor-pointer 2xl:z-[300]
+                    top-0 md:top-8 right-0 2xl:translate-x-[14vw] 
                     text-4xl xl:text-5xl 2xl:text-6xl 2xl:bottom-[20%] 2xl:-right-[10%]
                     text-background md:text-white md:text-shadow-lg shadow-black
                     font-mainfont font-[900]"

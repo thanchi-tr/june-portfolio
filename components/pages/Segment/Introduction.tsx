@@ -99,26 +99,25 @@ const Introduction = () => {
 
                                 {/* Link holder */}
                                 <div className="
-                                        absolute flex flex-row z-[100]
+                                        absolute flex flex-row z-[300]
                                         translate-x-[10%] -translate-y-[90%] origin-top-left rotate-90
                                         lg:translate-x-0 lg:rotate-0 lg:translate-y-0
                                         top-0 2xl:-translate-y-5 2xl:translate-x-[45%]
                                         w-[90%] lg:w-4/5 2xl:w-1/3
-                                        h-[80%] sm:h-[90%] lg:h-3/5 
-                                        pt-2 
+                                        h-[80%] sm:h-[90%] lg:h-3/5
                                     ">
                                     <div className="2xl:hidden h-full w-2/3" />
                                     <div className=" 
                                                 w-[80%] pl-[5%] 2xl:border-2 md:-translate-x-[8vw] lg:translate-x-0
                                                 flex flex-row justify-evenly
-                                                text-lg uppercase text-center
+                                                text-lg uppercase text-center 
                                     ">
                                         {/* Linked In */}
                                         <div className=" z-[200] lg:z-10
                                                 -rotate-90 lg:rotate-0 -translate-y-[250%] group relative
                                                 aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full  bg-white">
                                             <ExternalCircularButton link={"https://www.linkedin.com/in/xuan-trinh-27553334b/"} >
-                                                <Image src="/icons/linkedin.png" alt="github" fill className="scale-75 object-fill" />
+                                                <Image src="/icons/linkedin.png" alt="github" fill className="scale-75 object-fill " />
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">LinkedIn</p>
                                         </div>
@@ -163,7 +162,7 @@ const Introduction = () => {
 
 
                         <div className={`
-                                p-2 pl-10 lg:p-6 leading-5 2xl:mt-4
+                                p-2 py-[8%] lg:py-0 pl-10 lg:p-6 leading-5 2xl:mt-4
                                 text-sm lg:text-sm  group-hover:opacity-0
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-2xl 
@@ -187,7 +186,7 @@ const Introduction = () => {
 
                     </motion.div>
                     {/* blur screen */}
-                    <div className="
+                    <a href={"mailto:dev.june.trinh@outlook.com"}><div className="
                             absolute group 
                             top-0 z-[100]
                             h-full w-full
@@ -199,34 +198,21 @@ const Introduction = () => {
 
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl hover:bg-transparent"></div>
 
-                        <div className="
-                                        absolute  opacity-100 pointer-events-none 
-                                        top-0 h-[100%] md:aspect-square w-full z-30 scale-125 -translate-x-[150.5%] lg:-translate-x-[95.5%] lg:translate-y-[30%]
-                                        2xl:-translate-x-[180.5%]  2xl:translate-y-[75.5%] 
-                                        
-                            ">
+                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100">
 
-                            <motion.div
-                                className="flex flex-col justify-evenly h-[90%] w-[25vw] ml-[10%] rounded-lg backdrop-blur-sm
-                                    origin-center transition-all shadow-inner shadow-black hover:z-[10]
-                                    2xl:w-[50%] z-50
-                                "
-                            >
-
-                            </motion.div>
-
-                        </div>
-                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100 ">
-                            <div className=" rounded-full border-2 bg-primary">
+                            <div className="absolute w-full top-0 left-0 h-[9vh] translate-x-[-30%] rounded-2xl overflow-clip">
+                                <Image src="/icons/logoLarge.png" alt="scroll" className="object-contain" fill />
+                            </div>
+                            <div className="h-full w-full z-10 translate-y-[5%]">
                                 <Image src="/ava.png" alt="scroll" className="object-contain" fill />
                             </div>
                         </div>
-                    </div>
+                    </div></a>
 
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
 
