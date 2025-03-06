@@ -48,7 +48,7 @@ const Avata = () => {
                         }}
                         animate={{
                             translateX: ["0", "-6.2vw", "-3.2vw", "-3.2vw", "-3vw", "-4vw", "0"],
-                            y: ["0", "2vw", "-1vw", "0", "0", "2.3vw", "-1.2vw", "0"],
+                            y: ["0.3vw", "2.3vw", "-1vw", "0.3vw", "0.3vw", "2.5vw", "-1.1vw", "0.3vw"],
                             rotateZ: ["0", "-5deg", "-2deg", "0", "3deg", "0"]
                         }}
                         transition={{ delay: 0.9, duration: 19, repeat: Infinity }}
