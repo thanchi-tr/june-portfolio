@@ -28,7 +28,7 @@ export const viewport: Viewport = {
   width: "device-width", initialScale: 1
 }
 export const metadata: Metadata = {
-  title: "JUNE | Build an Experience",
+  title: "JUNE | Build THE Experience",
   description: "Iterative Innovation | Fullstack Developer | Software Engineer | Web Developer | UI/UX Designer",
   authors: [{ name: "June Trinh", url: "https://www.junetrinh.dev" }],
   keywords: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Fullstack", "web development", "Docker", "GraphQL",
@@ -54,7 +54,7 @@ export default function RootLayout({
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Website",
-            "name": "JUNE | Build an Experience",
+            "name": "JUNE | Build THE Experience",
             "url": "https://junetrinh.dev",
             "description": "Iterative Innovation | Fullstack Developer | Software Engineer | Web Developer | UI/UX Designer.",
             "author": {
