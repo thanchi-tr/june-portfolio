@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/hooks/context/useThemeContext";
@@ -24,10 +24,19 @@ const codaCaption = localFont({
   style: 'normal',
   variable: '--font-coda-caption',
 });
-
+export const viewport: Viewport = {
+  width: "device-width", initialScale: 1
+}
 export const metadata: Metadata = {
   title: "JUNE | Build an Experience",
-  description: "Iterative Innovation",
+  description: "Iterative Innovation | Fullstack Developer | Software Engineer | Web Developer | UI/UX Designer",
+  authors: [{ name: "June Trinh", url: "https://www.junetrinh.dev" }],
+  keywords: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Fullstack", "web development", "Docker", "GraphQL",
+    "PostgreSQL", "Node.js", "Express", "REST API", "API", "MongoDB", "Mongoose", "JWT", "Authentication", "UI", "UX", "Front-end"
+    , "Frontend", "Backend", "Fullstack", "Full-stack", "Developer", "Software Engineer", "Software Developer", "Engineer", "Software", "Development", "Web", "App",
+    "Application", "Website", "Portfolio", "Projects", "Work", "Experience", "Skills", "About", "Contact", "Blog", "Posts", "Articles", "Resume",
+    "CV", "June Trinh", "June", "Trinh", "junetrinh.dev", "junetrinh"],
+
   icons: {
     icon: "/brandlogo.ico", // or "/favicon.png"
   },
@@ -40,6 +49,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Website",
+            "name": "JUNE | Build an Experience",
+            "url": "https://junetrinh.dev",
+            "description": "Iterative Innovation | Fullstack Developer | Software Engineer | Web Developer | UI/UX Designer.",
+            "author": {
+              "@type": "Person",
+              "name": "June Trinh"
+            }
+          })}
+        </script>
+      </head>
       <body
         className={`${codaCaption.variable} ${geistSans.variable} ${geistMono.variable} ${Bestermind.variable} antialiased bg-foregound/35`}
       >
