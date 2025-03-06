@@ -52,16 +52,18 @@ const Page = () => {
                     font-signaturefont text-center"
                 >
 
-                    <div className="relative w-[10vw]">
+                    <div className="relative w-[10vw] 2xl:w-[4vw] ">
                         <div className="
-                            rounded-full overflow-clip 
-                            h-[10vh] 2xl:h-[11vh] w-full
+                            rounded-xl overflow-clip  border-t-2
+                            h-[10vh] 2xl:h-[12vw]  w-full 
                             mt-10 scale-[200%] md:scale-[150%] lg:scale-[200%]
                     ">
+                            <div className="absolute top-0 backdrop-blur-sm h-full w-full scale-125 scale-x-[150%]"></div>
                             <Image src={"/ava.png"} alt={""} className="object-cover lg:object-contain bg-opacitity-30 hover:opacity-100" fill></Image>
 
 
                         </div>
+
                         <motion.div className="
                                     font-signaturefont text-5xl 2xl:translate-y-10 font-900 text-shadow-lg shadow-white
                                     hover:border-4 hover:cursor-pointer z-[300] pointer-events-auto
@@ -82,6 +84,7 @@ const Page = () => {
 
                             <p className="text-end -translate-x-[165%] lg:translate-x-0 md:-translate-x-[30%] md:text-2xl md:font-mainfont md:text-white md:text-shadow-lg md:shadow-secondary ">Connect?</p>
                         </motion.div>
+
                     </div>
 
                 </motion.div>

@@ -20,7 +20,7 @@ const Introduction = () => {
         });
 
         return () => unsubscribe(); // Cleanup subscription
-    }, [scrollY]);
+    }, [scrollYProgress]);
 
     return (
         <div className={`

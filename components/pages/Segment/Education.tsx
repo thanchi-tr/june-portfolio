@@ -85,7 +85,8 @@ const Education = () => {
                     <div className="flex flex-col justify-end ml-4 font-mainfont font-light text-white/80"
 
                     >
-                        @2025</div>
+                        <p className=" bg-secondary px-3">@2025</p>
+                    </div>
                 </div>
 
             </div>

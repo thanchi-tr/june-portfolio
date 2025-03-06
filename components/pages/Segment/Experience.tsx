@@ -37,11 +37,11 @@ const Experience = () => {
         });
 
         return () => unsubscribe(); // Cleanup subscription
-    }, [scrollY]);
+    }, [scrollYProgress]);
 
     return (
         <div className="
-                    overflow-hiddenq
+                    overflow-hidden
                     h-full w-full
                     
                     "
@@ -93,7 +93,7 @@ const Experience = () => {
                         initial={{ translate: "-125%" }}
                         animate={(AnimationProgress < 0.23) ? { translate: -145 + AnimationProgress * 400 + "%" } : { translate: -80 + 0.22 * 380 + "%" }}
                     >
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl"></div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl scale-y-125"></div>
 
                         <div className="flex flex-col h-full md:h-2/6 w-full ">
                             <div className="
@@ -198,13 +198,18 @@ const Experience = () => {
                                         </ExternalCircularButton>
                                     </motion.div>
                                 </motion.div>
-                                <div className="
+                                <motion.div className="
                                         w-[80%] md:w-8/12
                                         2xl:w-7/12 h-3/5  
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
-                                ">
+                                "
+                                    initial={{ opacity: 0 }}
+                                    whileInView={AnimationProgress > 0.18 ? { opacity: [0, 1] } : {}}
+                                    transition={{ duration: 1.2, delay: 0.3, ease: "anticipate" }}
+                                    viewport={{ once: true }}
+                                >
                                     <motion.div className="h-full w-full -translate-y-2/3  ">
                                         <motion.div
                                             className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
@@ -237,11 +242,11 @@ const Experience = () => {
                                                     text-shadow-lg shadow-primary
                                                     md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">Jung</div> Talents</span>
                                         </motion.div>
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-10 blur-3xl scale-y-50"></div>
+                                        <div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"></div>
                                     </motion.div>
 
 
-                                </div>
+                                </motion.div>
                                 <div className="hidden md:block 2xl:hidden aspect-square h-3/5 bg-primary rounded-full -translate-x-[50%] z-50"></div>
                             </div>
                             <motion.ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
@@ -257,20 +262,7 @@ const Experience = () => {
                                 transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
 
                             >
-                                <motion.li
-                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
-                                    initial={{ translateY: "16vh", opacity: 0 }}
-                                    whileInView={{ translateY: "0vh", opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
-                                >Revamped Landing Page UI/UX, leading to a
-                                    <span className="relative inline text-primary font-extrabold"> 22% increase in conversion rate
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
 
-                                    </span>
-
-                                    through modern design and performance optimizations.
-                                </motion.li>
                                 <motion.li
                                     className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
                                     initial={{ translateY: "20vh", opacity: 0 }}
@@ -281,6 +273,21 @@ const Experience = () => {
                                     <span className="relative font-bold underline">Test-Driven Development (TDD) for faster, bug-free
                                     </span>
                                     releases</motion.li>
+                                <motion.li
+                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
+                                    initial={{ translateY: "16vh", opacity: 0 }}
+                                    whileInView={{ translateY: "0vh", opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                >Revamped Landing Page UI/UX, leading to a
+                                    <span className="relative inline text-primary font-extrabold px-2">
+                                        22% increase in conversion rate
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl z-[200]"></div>
+
+                                    </span>
+
+                                    through modern design and performance optimizations.
+                                </motion.li>
                                 <motion.li
                                     className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
                                     initial={{ translateY: "23vh", opacity: 0 }}

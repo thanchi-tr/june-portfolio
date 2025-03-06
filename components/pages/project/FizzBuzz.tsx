@@ -2,7 +2,7 @@
 import Image from "next/image";
 import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery"
 
-let FizzBuzz = () => {
+const FizzBuzz = () => {
     return (<div className="bg-gradient-to-b from-background to-black/20 text-white/90">
         <div className="flex gap-1 justify-stretch">
             {/* logo */}

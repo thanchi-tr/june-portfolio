@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-let ComparenSave = () => {
+const ComparenSave = () => {
     return (
         <div className="p-[5vw] bg-gradient-to-b from-background -black/20 text-white shadow-inner shadow-primary border-black text-sm gap-4">
             {/* Work place and role */}

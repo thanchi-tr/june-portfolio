@@ -33,7 +33,7 @@ const Skill = () => {
         });
 
         return () => unsubscribe(); // Cleanup subscription
-    }, [scrollY]);
+    }, [scrollYProgress]);
 
     // Update the animation progress, where we can read later on
     useEffect(() => {
@@ -42,7 +42,7 @@ const Skill = () => {
         });
 
         return () => unsubscribe(); // Cleanup subscription
-    }, [scrollY]);
+    }, [scrollYProgress]);
     useEffect(() => {
         console.log(AnimationProgress);
 
