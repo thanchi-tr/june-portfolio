@@ -199,8 +199,8 @@ const Experience = () => {
                                     </motion.div>
                                 </motion.div>
                                 <motion.div className="
-                                        w-[80%] md:w-8/12
-                                        2xl:w-7/12 h-3/5  
+                                        w-[85%] md:w-9/12
+                                        2xl:w-8/12 h-3/5  rounded-r-full
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
@@ -230,7 +230,7 @@ const Experience = () => {
                                         >
                                             Full-Stack Engineer
                                         </motion.div>
-                                        <motion.div className="relative flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] bg-gold text-white"
+                                        <motion.div className="relative flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] text-white"
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
                                             whileInView={AnimationProgress > 0.18 ? { opacity: 1, scale: [1.8, 1.5, 1] } : {}}
@@ -242,12 +242,24 @@ const Experience = () => {
                                                     text-shadow-lg shadow-primary
                                                     md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">Jung</div> Talents</span>
                                         </motion.div>
-                                        <div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"></div>
+                                        <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.8] } : {}}
+                                            transition={{ duration: 1.2, delay: 0.38, ease: "anticipate" }}
+                                            viewport={{ once: true }}
+
+                                        ></motion.div>
                                     </motion.div>
 
 
                                 </motion.div>
-                                <div className="hidden md:block 2xl:hidden aspect-square h-3/5 bg-primary rounded-full -translate-x-[50%] z-50"></div>
+
+                                <motion.div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 blur-3xl scale-y-50 z-[300]"
+                                    initial={{ opacity: 0 }}
+                                    whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.3] } : {}}
+                                    transition={{ duration: 1.2, delay: 0.27, ease: "anticipate" }}
+                                    viewport={{ once: true }}
+                                ></motion.div>
                             </div>
                             <motion.ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
                                     translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] md:bg-background rounded-3xl
