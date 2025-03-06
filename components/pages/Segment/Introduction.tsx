@@ -156,7 +156,7 @@ const Introduction = () => {
                     {/* description */}
                     <motion.div
                         className="
-                            w-full h-auto lg:h-2/3 group
+                            w-full h-auto lg:h-4/5 group
                             text-white lg:text-black 2xl:text-white    
                             z-40
                     "
@@ -169,11 +169,11 @@ const Introduction = () => {
 
 
                         <div className={`
-                                p-2 py-[8%] lg:py-0 pl-10 lg:p-6 leading-5 2xl:mt-4
+                                p-3 py-[8%] lg:py-0 pl-10 lg:p-6 leading-5 2xl:mt-4
                                 text-sm lg:text-sm  group-hover:opacity-0
                                 font-semibold tracking-wide
-                                 rounded-t-2xl rounded-br-2xl 
-                                xl:-translate-y-[8%]
+                                 rounded-t-2xl rounded-br-lg
+                                
                                 h-auto
                             `}
                         >
