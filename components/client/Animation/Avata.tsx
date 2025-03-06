@@ -89,7 +89,7 @@ const Avata = () => {
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-white opacity-60 2xl:opacity-30 blur-3xl"></div>
 
-                        Inovative
+                        Innovative
                         <p className="gradient-text text-3xl hidden group-hover:block">Click for CV</p>
                     </motion.div>
                 </motion.div>

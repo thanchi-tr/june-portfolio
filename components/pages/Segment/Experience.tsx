@@ -307,7 +307,7 @@ const Experience = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
                                 >Optimized database queries, improving API response times and increasing overall
-                                    <span className="relative inline text-primary font-extrabold">application speed by 32%
+                                    <span className="relative inline text-primary font-extrabold mx-2">application speed by 32%
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
                                     </span>.
                                 </motion.li>
@@ -318,7 +318,7 @@ const Experience = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
                                 >Maintained and enhanced a critical production application, ensuring
-                                    <span className="relative inline text-primary font-extrabold">99.9% uptime and seamless
+                                    <span className="relative inline text-primary font-extrabold mx-2">99.9% uptime and seamless
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
                                     </span>
                                     user experience.</motion.li>
@@ -329,7 +329,7 @@ const Experience = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
                                 >Integrated Docker-based CI/CD pipelines, reducing
-                                    <span className="relative inline text-primary font-extrabold">deployment time by 40%
+                                    <span className="relative inline text-primary font-extrabold mx-2">deployment time by 40%
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
                                     </span>
                                     and improving development efficiency.</motion.li>
