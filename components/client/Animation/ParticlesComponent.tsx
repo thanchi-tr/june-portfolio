@@ -25,10 +25,10 @@ const ParticlesComponent = () => {
                 fpsLimit: 0,
                 particles: {
                     number: {
-                        value: 180,
+                        value: 156,
                         density: {
                             enable: true,
-                            area: 2000,
+                            area: 2200,
                         },
 
                     },
@@ -53,7 +53,7 @@ const ParticlesComponent = () => {
                         random: false,
                     },
                     size: {
-                        value: { min: 0.1, max: 8 },
+                        value: { min: 0.1, max: 9 },
                         random: true,
                     },
                     move: {
