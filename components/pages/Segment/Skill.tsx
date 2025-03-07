@@ -212,8 +212,8 @@ const Skill = () => {
                             gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-6 md:gap-y-[6vh] 2xl:gap-y-6
                             justify-evenly
                             h-auto 
-                            w-4/5 md:w-[65%] 2xl:w-3/5
-                            mx-[15%] 2xl:mx-[10%]
+                            w-4/5 md:w-[65%] 2xl:w-[58%]
+                            mx-[15%] 2xl:mx-[13%] 2xl:pl-[2%]
                             pt-[5%]
                         "
                         variants={containerVariants}

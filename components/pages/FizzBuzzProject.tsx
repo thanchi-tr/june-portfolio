@@ -1,7 +1,7 @@
 import CollapsibleGallery from "../client/Animation/CollapsibleGallery";
 import Image from "next/image";
 const FizzBuzzProject = () => (<>
-    <h1 className={`font-mainfont text-lg xl:text-xl 2xl:text-2xl text-center p-4 text-white/95`}>FizzBuzz RealTime Multi-player Game</h1>
+    <h1 className={`font-mainfont text-lg xl:text-2xl 2xl:text-3xl text-center p-4 text-white/95`}>FizzBuzz RealTime Multi-player Game</h1>
     <div className={`
                       h-full w-full
                       flex lg:flex-row flex-wrap

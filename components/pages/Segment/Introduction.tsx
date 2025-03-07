@@ -108,7 +108,7 @@ const Introduction = () => {
                                     ">
                                     <div className="2xl:hidden h-full w-2/3" />
                                     <div className=" 
-                                                w-[80%] pl-[5%] 2xl:border-2 md:-translate-x-[8vw] lg:translate-x-0
+                                                w-[80%] pl-[5%] md:-translate-x-[8vw] lg:translate-x-0
                                                 flex flex-row justify-evenly
                                                 text-lg uppercase text-center 
                                     ">
@@ -141,7 +141,8 @@ const Introduction = () => {
                     </div>
                 </div>
                 <motion.div className={`
-                        flex flex-col relative  z-10
+                        
+                        flex flex-col relative  z-10 2xl:mt-4
                         w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2 2xl:translate-y-[10%]
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                         lg:bg-gradient-to-b from-primary to-background 2xl:bg-transparent
@@ -169,7 +170,7 @@ const Introduction = () => {
 
 
                         <div className={`
-                                p-3 py-[8%] lg:py-0 pl-10 lg:p-6 leading-5 2xl:mt-4
+                                p-3 py-[8%] lg:py-0 px-12 md:px-20 lg:p-6 leading-5 2xl:mt-4
                                 text-sm lg:text-sm  group-hover:opacity-0
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-lg
@@ -196,8 +197,10 @@ const Introduction = () => {
                     <a href={"mailto:dev.june.trinh@outlook.com"}><div className="
                             absolute group 
                             top-0 z-[100]
-                            h-full w-full
-                            hover:border-l-[10vw] hover:cursor-pointer 
+                            h-full w-full 
+                            lg:hover:border-l-0 lg:border-l-[10vw] 
+                            border-l-0 hover:border-l-[10vw]
+                            hover:cursor-pointer 
                             shadow-inner shadow-black group-hover:overflow-hidden
                             transition-all xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                             " >
@@ -205,12 +208,12 @@ const Introduction = () => {
 
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl hover:bg-transparent"></div>
 
-                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100">
+                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100 lg:group-hover:opacity-0 lg:opacity-100">
 
                             <div className="absolute w-full top-0 left-0 h-[9vh] translate-x-[-30%] rounded-2xl overflow-clip">
                                 <Image src="/icons/logoLarge.png" alt="scroll" className="object-contain" fill />
                             </div>
-                            <div className="h-full w-full z-10 translate-y-[5%]">
+                            <div className="h-full w-full z-10 translate-y-[5%] rounded-3xl overflow-clip border-x-2 border-b-2">
                                 <Image src="/ava.png" alt="scroll" className="object-contain" fill />
                             </div>
                         </div>

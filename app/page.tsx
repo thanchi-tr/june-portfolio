@@ -59,8 +59,8 @@ const Page = () => {
                             h-full w-full
                             
                             "
-                            animate={{ opacity: [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                            animate={{ opacity: [0, 0, 0, 0, 1, 1, 1, 0, 0, 0] }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                         >
 
 

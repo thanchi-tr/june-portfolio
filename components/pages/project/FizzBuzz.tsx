@@ -3,17 +3,17 @@ import Image from "next/image";
 import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery"
 
 const FizzBuzz = () => {
-    return (<div className="bg-gradient-to-b from-background to-black/20 text-white/90">
+    return (<div className="bg-gradient-to-b from-background to-black/20 text-white/90 ">
         <div className="flex gap-1 justify-stretch">
             {/* logo */}
             <div></div>
-            <div className="font-semibold py-1">Personal Projec
+            <div className="font-semibold py-1">Personal Project
             </div>
 
         </div>
-        <h1 className={`font-mainfont text-2xl xl:text-xl 2xl:text-2xl text-center p-4 text-white/95 gradient-text`}>FizzBuzz RealTime Multi-player Game</h1>
+        <h1 className={`font-mainfont text-2xl xl:text-3xl 2xl:text-4xl text-center p-4 text-white/95 gradient-text md:mb-[15%]`}>FizzBuzz RealTime Multi-player Game</h1>
         <div className={`
-                      h-full w-full
+                       w-full
                       flex lg:flex-row flex-wrap
                       xl:justify-evenly text-white/80
                     `}>
@@ -41,7 +41,7 @@ const FizzBuzz = () => {
             `}>
                 <div className={`mt-[10%] ml-[5%] w-[90%] pb-[18.5px] md:pb-[52px]`}>
 
-                    <div className="flex flex-row w-full flex-wrap justify-between text-center text-xs font-extrabold pb-2 z-[100] pointer-events-auto">
+                    <div className="flex flex-row w-full flex-wrap justify-between text-center text-xs xl:text-xl font-extrabold pb-2 z-[100] pointer-events-auto">
                         <h3 className="pr-1 hover:cursor-pointer z-[100]">
                             <a href="https://github.com/thanchi-tr/FooBooRealTime-front-next">🔗Frontend(Next.js)</a>
                         </h3> |
@@ -53,7 +53,7 @@ const FizzBuzz = () => {
                         {/* Image and detail */}
 
                         <div className="flex flex-col gap-4 flex-shrink-0 justify-between">
-                            <h1 className="text-xl font-semibold font-mainfont uppercase">Frontend:</h1>
+                            <h1 className="text-xl xl:text-2xl font-semibold font-mainfont uppercase">Frontend:</h1>
                             <div className="flex gap-1 ">
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
                                     <Image src="/icons/nextjs.png" className="object-cover" fill alt={""} />
@@ -67,7 +67,7 @@ const FizzBuzz = () => {
                             </div>
                         </div>
                         <div className="flex flex-col gap-1 flex-shrink-0 justify-between">
-                            <h1 className="text-xl font-semibold font-mainfont uppercase">Backend:</h1>
+                            <h1 className="text-xl xl:text-2xl font-semibold font-mainfont uppercase">Backend:</h1>
                             <div className="flex gap-1 ">
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
                                     <Image src="/icons/dotnetCore.png" className="object-cover" fill alt={""} />
@@ -92,11 +92,11 @@ const FizzBuzz = () => {
                 </div>
                 <div className={`
                     flex md:flex-col xl:flex-row
-                    w-[100%] xl:ml-0 p-4
+                    w-[100%] xl:ml-0 p-4 text-sm md:text-lg lg:text-xl
                     justify-evenly`}>
                     <div>
-                        <h2 className={`text-sm font-mainfont pt-2`}>✔️ Features & Achievements:</h2>
-                        <ul className="flex flex-col list-disc list-inside px-1 gap-2 text-sm">
+                        <h2 className={` font-mainfont pt-2 md:text-xl lg:text-2xl`}>✔️ Features & Achievements:</h2>
+                        <ul className="flex flex-col list-disc list-inside px-1 gap-2 ">
                             <li>Built a highly optimized SignalR WebSocket communication layer, reducing
                                 <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
                                     network latency by 30%

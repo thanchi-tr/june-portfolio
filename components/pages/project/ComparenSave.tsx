@@ -2,7 +2,7 @@
 import Image from "next/image";
 const ComparenSave = () => {
     return (
-        <div className="p-[5vw] bg-gradient-to-b from-background -black/20 text-white shadow-inner shadow-primary border-black text-sm gap-4">
+        <div className="p-[5vw] bg-gradient-to-b from-background -black/20 text-white shadow-inner shadow-primary border-black  text-sm md:text-lg lg:text-xl gap-4">
             {/* Work place and role */}
             <div className="flex gap-1 justify-stretch">
                 {/* logo */}
@@ -20,13 +20,13 @@ const ComparenSave = () => {
 
             <div className="flex flex-row h-auto w-auto gap-1 justify-evenly">
                 <div className="h-auto w-auto">
-                    <div className="relative w-[14vw] overflow-clip aspect-square rounded-full">
+                    <div className="relative w-[14vw] md:w-[10vw] overflow-clip aspect-square rounded-full">
                         <Image src="/icons/compareNSave.png" className="object-cover scale-125" fill alt={""} />
                     </div>
                 </div>
 
                 <a href="https://comparensave.com.au/" className="pointer-events-auto z-[110]" target="_blank">
-                    <h1 className="text-2xl font-bold font-mainfont text-center gradient-text flex-col">  <span className="text-lg">Loan Comparison Platform</span><span className="block">Compare n Save 🔗</span></h1>
+                    <h1 className="text-2xl md:text-3xl xl:text-4xl font-bold font-mainfont text-center gradient-text flex-col">  <span className="text-lg">Loan Comparison Platform</span><span className="block">Compare n Save 🔗</span></h1>
                 </a>
 
             </div>
@@ -36,7 +36,7 @@ const ComparenSave = () => {
             <div className="flex flex-col">
                 {/* Image and detail */}
 
-                <div className="flex gap-4 flex-shrink-0 justify-between">
+                <div className="flex gap-4 flex-shrink-0 justify-between px-[10%] xl:px-[18%] pb-5">
                     <h1 className="text-xl font-semibold font-mainfont uppercase">Frontend:</h1>
                     <div className="flex gap-1 ">
                         <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
@@ -56,7 +56,7 @@ const ComparenSave = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-1 flex-shrink-0 justify-between">
+                <div className="flex gap-1 flex-shrink-0 justify-between px-[10%] xl:px-[18%] pb-5">
                     <h1 className="text-xl font-semibold font-mainfont uppercase">Backend:</h1>
                     <div className="flex gap-1 ">
                         <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
@@ -76,9 +76,9 @@ const ComparenSave = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-1 flex-shrink-0">
+                <div className="flex gap-1 flex-shrink-0 justify-evenly px-[10%] xl:px-[18%]">
                     <h1 className="text-xl font-semibold font-mainfont uppercase" >Team Size:</h1>
-                    <p className="text-xl">3</p>
+                    <p className="text-2xl font-extrabold">3</p>
                 </div>
             </div>
             <div className="h-[12vh]"></div>
@@ -87,7 +87,7 @@ const ComparenSave = () => {
 
 
                 {/* Solution */}
-                <div>
+                <div className={"px-[3%] xl:px-[12%]"}>
                     <h1 className="text-xl font-semibold font-mainfont pb-4">Achievements & Trade-offs:</h1>
                     <ul className="flex flex-col list-disc list-inside px-8 gap-2">
                         <li> Migrated to GraphQL, reducing

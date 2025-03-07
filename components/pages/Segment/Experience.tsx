@@ -90,18 +90,19 @@ const Experience = () => {
                             2xl:bg-background
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "
-                        initial={{ translate: "-125%" }}
-                        animate={(AnimationProgress < 0.23) ? { translate: -145 + AnimationProgress * 400 + "%" } : { translate: -80 + 0.22 * 380 + "%" }}
+                        initial={{ translate: "-145%" }}
+                        animate={(AnimationProgress < 0.20) ? { translate: -145 + AnimationProgress * 820 + "%" } : { translate: -80 + 0.245 * 380 + "%" }}
+                       
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl scale-y-125"></div>
 
                         <div className="flex flex-col h-full md:h-2/6 w-full ">
                             <div className="
-                                hidden md:block ml-[15%] 2xl:ml-[2%]
+                                hidden md:block ml-[10%] 2xl:ml-[2%]
                                 w-3/5 2xl:w-4/5 
-                                text-3xl 2xl:text-2xl font-bold text-center 
+                                text-2xl 2xl:text-3xl 3xl:text-4xl font-bold text-center 
                                 text-white
-                                ">  Full-Stack Engineer</div>
+                                ">  FullStack Engineer</div>
                             <span className="md:border-t-8 border-black/20 w-4/5" />
                         </div>
                         <div className="hidden md:block h-12 md:h-[4.2%] w-full">
@@ -148,8 +149,8 @@ const Experience = () => {
 
                         <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] "
 
-                            initial={{ translate: "100%)" }}
-                            animate={(AnimationProgress < 0.2) ? { translate: 100 - AnimationProgress * 500 + "%" } : { translate: "5%" }}
+                            initial={{ translate: "105%)" }}
+                            animate={(AnimationProgress < 0.2) ? { translate: 105 - AnimationProgress * 500 + "%" } : { translate: "5%" }}
                             transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
                             viewport={{ once: true }}
                         >
@@ -222,7 +223,7 @@ const Experience = () => {
 
                                         </motion.div>
                                         <motion.div
-                                            className="text-2xl translate-x-[15%] font-bold text-white md:hidden"
+                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white md:hidden"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
                                             whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.3, 1] } : {}}
@@ -282,7 +283,7 @@ const Experience = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
                                 >Architected and deployed a high-performance .NET application, leveraging
-                                    <span className="relative font-bold underline">Test-Driven Development (TDD) for faster, bug-free
+                                    <span className="relative font-bold underline px-2">Test-Driven Development (TDD) for faster, bug-free
                                     </span>
                                     releases</motion.li>
                                 <motion.li
