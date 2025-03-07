@@ -100,7 +100,7 @@ const Introduction = () => {
                                 {/* Link holder */}
                                 <div className="
                                         absolute flex flex-row z-[300]
-                                        translate-x-[10%] -translate-y-[90%] origin-top-left rotate-90
+                                         origin-top-left
                                         lg:translate-x-0 lg:rotate-0 lg:translate-y-0
                                         top-0 2xl:-translate-y-5 2xl:translate-x-[45%]
                                         w-[90%] lg:w-4/5 2xl:w-1/3
@@ -108,23 +108,23 @@ const Introduction = () => {
                                     ">
                                     <div className="2xl:hidden h-full w-2/3" />
                                     <div className=" 
-                                                w-[80%] pl-[5%] md:-translate-x-[8vw] lg:translate-x-0
+                                                w-[110%] md:w-full pl-[5%] md:-translate-x-[8vw] lg:translate-x-0
                                                 flex flex-row justify-evenly
                                                 text-lg uppercase text-center 
                                     ">
                                         {/* Linked In */}
-                                        <div className=" z-[200] lg:z-10
-                                                -rotate-90 lg:rotate-0 -translate-y-[250%] group relative
-                                                aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full  bg-white">
+                                        <div className=" z-[200] lg:z-10 hover:scale-110  active:scale-90
+                                                 -translate-y-[250%] group relative
+                                                aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full  bg-white">
                                             <ExternalCircularButton link={"https://www.linkedin.com/in/xuan-trinh-27553334b/"} >
                                                 <Image src="/icons/linkedin.png" alt="github" fill className="scale-75 object-fill " />
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">LinkedIn</p>
                                         </div>
                                         {/* GitHub */}
-                                        <div className="z-[200] lg:z-10
-                                                -rotate-90 lg:rotate-0 -translate-y-[250%] group
-                                                aspect-square h-[22%] sm:h-[24%] lg:h-[26%] w-auto rounded-full">
+                                        <div className="z-[200] lg:z-10 hover:scale-110 active:scale-90
+                                                 -translate-y-[250%] group
+                                                aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full">
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block -translate-y-[100%]">Github</p>
                                             <ExternalCircularButton link={"https://github.com/thanchi-tr"} >
                                                 <Image src="/icons/github.jpg" alt="github" fill className="object-fill" />

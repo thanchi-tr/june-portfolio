@@ -98,7 +98,7 @@ const PTE = () => {
                 {/* Solution */}
                 <div className={"px-[3%] xl:px-[12%]"}>
                     <h1 className="text-xl font-semibold font-mainfont pb-4">Achievements & Trade-offs:</h1>
-                    <ul className="flex flex-col list-disc list-inside px-8 gap-2">
+                    <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
                         <li>Built a .NET Core Microservices API with Load Balancer,
                             <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
                                 reducing server load by 50%

@@ -52,14 +52,26 @@ const Page = () => {
                     font-signaturefont text-center"
                 >
 
-                    <div className="relative w-[8vw] md:w-[5vw] 2xl:w-[3vw] h-[8vw] md:h-[5vw] 2xl:h-[3vw] scale-[200%] md:scale-[150%] lg:scale-[200%]">
-                        <p className="border-2 text-white font-mainfont text-xs text-center translate-y-[5%] scale-75 -z-[10]">HIRE ME? </p>
+                    <div className="
+                            relative w-[8vw] md:w-[5vw] 2xl:w-[3vw] h-[8vw] md:h-[5vw] 2xl:h-[3vw] scale-[200%] md:scale-[150%] lg:scale-[200%]
+                            group-hover:shadow-xl shadow-white bg-violet-700/60 group
+                            active:scale-90
+                    ">
+                        <motion.p className="border-2 text-white font-mainfont text-xs text-center scale-75 -z-[10] group-hover:border-black group-hover:text-black bg-transparent"
+                            animate={{
+                                scale: [1.15, 1.3, 1.2, 0.9, 1, 1, 1, 1, 1.1, 1.2],
+                                opacity: [1, 1, 1, 0.2, 0, 0, 0, 1, 1]
+                            }}
+                            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                        >HIRE ME🚀 </motion.p>
                         <motion.div className="
                             group flex flex-col
-                            h-full w-full
-                            
+                            h-auto w-full
+                            group-hover:border-t-8 group-hover:border-black
                             "
-                            animate={{ opacity: [0, 0, 0, 0, 1, 1, 1, 0, 0, 0] }}
+                            animate={{
+                                opacity: [0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+                            }}
                             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                         >
 
