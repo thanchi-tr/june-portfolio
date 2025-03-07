@@ -148,7 +148,7 @@ const Avata = () => {
 
                         FULLSTACK ENGINEER
                         <p className="gradient-text text-5xl hidden group-hover:block">Click for CV</p>
-                        <p className="gradient-text text-5xl group-hover:hidden">Let&#39;s Build The Experience</p>
+                        <p className="gradient-text text-4xl group-hover:hidden">Let&#39;s Build The Experience</p>
                     </motion.div>
                 </motion.div>
             </a>

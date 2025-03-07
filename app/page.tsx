@@ -47,42 +47,26 @@ const Page = () => {
             <a href={"mailto:dev.june.trinh@outlook.com"}>
                 <motion.div className="
                     
-                    sticky  origin-center translate-x-[85vw] translate-y-[80vh] 2xl:translate-y-[70vh]
-                    h-0 top-2  z-[200] text-2xl bg-black
+                    sticky  origin-center translate-x-[85vw] 2xl:translate-x-[90vw] translate-y-[80vh] 2xl:translate-y-[80vh]
+                    h-0 top-2 z-[200] text-2xl bg-black 
                     font-signaturefont text-center"
                 >
 
-                    <div className="relative w-[10vw] md:w-[6vw] 2xl:w-[4vw] ">
-                        <div className="
-                            rounded-xl group
-                            h-[10vh] 2xl:h-[12vw]  w-auto 
-                            mt-10 scale-[200%] md:scale-[150%] lg:scale-[200%]
-                    ">
+                    <div className="relative w-[8vw] md:w-[5vw] 2xl:w-[3vw] h-[8vw] md:h-[5vw] 2xl:h-[3vw] scale-[200%] md:scale-[150%] lg:scale-[200%]">
+                        <p className="border-2 text-white font-mainfont text-xs text-center translate-y-[5%] scale-75 -z-[10]">HIRE ME? </p>
+                        <motion.div className="
+                            group flex flex-col
+                            h-full w-full
+                            
+                            "
+                            animate={{ opacity: [0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                        >
 
-                            <motion.div className=" hidden group-hover:block
-                                    font-signaturefont text-5xl  font-900 text-shadow-lg shadow-white
-                                    lg:group-hover:border-4 hover:cursor-pointer z-[300] pointer-events-auto
-                                    scale-50 md:scale-100
-                                "
-                                animate={{
-                                    color: "#ad9547",
-                                    textShadow: [
-                                        "0px 0px 10px black",
-                                        "3px 3px 105px white",
-                                        "0px 0px 10px black"
-                                    ],
-                                    rotate: [0, 12, 0],
-                                    translateY: ["100%"],
-                                }}
-                                transition={{ duration: 2, repeat: Infinity }}
-                            >
 
-                                <p className="text-end translate-x-[-120%] md:translate-x-[-100%] md:text-xl text-sm font-mainfont md:text-white md:text-shadow-lg md:shadow-secondary ">Connect?</p>
-                                <p className="text-xs font-secondaryfont translate-x-[-120%] md:translate-x-[-100%]">dev.june.trinh@outlook.com</p>
-                            </motion.div>
-                            <Image src={"/logo.png"} alt={""} className="object-contain bg-opacitity-30 hover:opacity-100 group-hover:hidden" fill></Image>
+                            <Image src={"/logo.png"} alt={""} className="object-contain scale-105 " fill></Image>
 
-                        </div>
+                        </motion.div>
 
 
 
@@ -108,9 +92,9 @@ const Page = () => {
             {/* testing */}
             {/*200vh for experience */}
             <div className="
-                   h-[260vh] sm:h-[240vh] md:h-[240vh] w-full
-                bg-background -z-50
-             "
+                            h-[260vh] sm:h-[240vh] md:h-[240vh] w-full
+                        bg-background -z-50
+                        "
                 ref={expRef}
 
             >
