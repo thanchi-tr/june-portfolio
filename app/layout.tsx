@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/hooks/context/useThemeContext";
-
+import { Analytics } from '@vercel/analytics/next';
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -70,6 +70,7 @@ export default function RootLayout({
         <ThemeProvider>
 
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
