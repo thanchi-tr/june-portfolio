@@ -155,7 +155,7 @@ const Introduction = () => {
                 </div>
                 <motion.div className={`
                         
-                        flex flex-col relative  z-10 2xl:mt-4
+                        flex flex-col relative  z-10 2xl:mt-4 
                         w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2 2xl:translate-y-[10%]
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                         lg:bg-gradient-to-b from-primary to-background 2xl:bg-transparent
@@ -175,7 +175,7 @@ const Introduction = () => {
                     {/* description */}
                     <motion.div
                         className="
-                            w-full h-auto lg:h-4/5 group
+                            w-full h-auto lg:h-4/5 group 
                             text-white lg:text-black 2xl:text-white    
                             z-40
                     "
@@ -205,7 +205,7 @@ const Introduction = () => {
                             {<span className="font-extrabold underline text-white mx-1">innovative, solution-oriented approach</span>}
                             If you&#39;re looking for a developer who delivers
                             {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail</span>}
-
+                            Let me know how I can help you.
                         </div>
 
 

@@ -16,7 +16,7 @@ const Footer = () => {
                     >
                         <a href="tel:+61432002486">(+61) 432 002 486</a>
 
-                        <a href="mailto:dev.june.trinh@outlook.com">Dev.june.trinh@outlook.com</a>
+                        <a href="mailto:dev.june.trinh@outlook.com">| Dev.june.trinh@outlook.com</a>
                     </motion.div>
                 </div>
             </div>
