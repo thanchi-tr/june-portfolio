@@ -97,14 +97,14 @@ const Experience = () => {
 
                         <div className="flex flex-col h-full md:h-2/6 w-full ">
                             <div className="
-                                hidden md:block ml-[10%] 2xl:ml-[2%]
+                                hidden lg:block ml-[10%] 2xl:ml-[2%]
                                 w-3/5 2xl:w-4/5 
                                 text-2xl 2xl:text-3xl 3xl:text-4xl font-bold text-center 
                                 text-white
                                 ">  FullStack Engineer</div>
                             <span className="md:border-t-8 border-black/20 w-4/5" />
                         </div>
-                        <div className="hidden md:block h-12 md:h-[4.2%] w-full">
+                        <div className="hidden lglg:block h-12 md:h-[4.2%] w-full">
                             <motion.div className="
                                         flex flex-row justify-evenly text-white will-change-transform
                                         h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-4 2xl:gap-y-6 gap-x-1
@@ -182,7 +182,7 @@ const Experience = () => {
                             <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full z-10 ">
                                 <motion.div
                                     className="
-                                        h-5/6 md:hidden
+                                        h-5/6 lglg:hidden
                                         scale-[125%] will-change-transform
                                         aspect-square bg-white rounded-full 
                                         -translate-y-[15%]
@@ -209,7 +209,7 @@ const Experience = () => {
                                 </motion.div>
                                 <motion.div
                                     className="
-                                        h-5/6 hidden md:block z-[80] will-change-[transform,opacity]
+                                        h-5/6 hidden lg:block z-[80] will-change-[transform,opacity]
                                         scale-[170%] md:scale-[125%] 2xl:scale-[115%] 
                                         aspect-square bg-white rounded-full 
                                         -translate-y-[15%]
@@ -235,7 +235,7 @@ const Experience = () => {
                                 </motion.div>
 
                                 <motion.div className="
-                                        hidden md:flex md:w-9/12
+                                        hidden lg:flex md:w-9/12
                                         2xl:w-8/12 h-3/5  rounded-r-full rounded-tl-full
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
@@ -258,7 +258,7 @@ const Experience = () => {
 
                                         </motion.div>
                                         <motion.div
-                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white md:hidden will-change-[opacity]"
+                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white lg:hidden will-change-[opacity]"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
                                             whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.3, 1] } : {}}
@@ -290,7 +290,7 @@ const Experience = () => {
 
                                 </motion.div>
                                 <motion.div className="
-                                        w-[85%] md:hidden
+                                        w-[85%] lg:hidden
                                         2xl:w-8/12 h-3/5  rounded-r-full rounded-tl-full
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
@@ -313,7 +313,7 @@ const Experience = () => {
 
                                         </motion.div>
                                         <motion.div
-                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white md:hidden will-change-[opacity]"
+                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white lg:hidden will-change-[opacity]"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
                                             whileInView={{ opacity: [1] }}

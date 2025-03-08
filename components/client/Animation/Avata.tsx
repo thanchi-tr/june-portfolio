@@ -146,11 +146,7 @@ const Avata = () => {
                     font-mainfont font-[900]"
                     >
 
-                        <div
-
-
-                        >
-
+                        <div>
                             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 2xl:opacity-30 blur-3xl"></div>
 
                             FULLSTACK ENGINEER

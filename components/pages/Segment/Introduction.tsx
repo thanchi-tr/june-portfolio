@@ -1,22 +1,17 @@
 "use clients"
 import Image from "next/image";
 import Avata from "@/components/client/Animation/Avata";
+import ToggleButton from "@/components/client/Animation/ToggleButton";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
+
 import { motion, useScroll } from 'framer-motion';
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Introduction = () => {
     const selfRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: selfRef });
     const [AnimationProgress, setAnimationProgress] = useState(0);
 
-    const scrollH = useMemo(() => {
-        return (AnimationProgress * 35) + 40 + "%";
-    }, [AnimationProgress])
-
-    const scrollT = useMemo(() => {
-        return 75 - (AnimationProgress * 50) + "%";
-    }, [AnimationProgress])
     // Update the animation progress, where we can read later on
     useEffect(() => {
         const unsubscribe = scrollYProgress.onChange((latest) => {
@@ -37,7 +32,6 @@ const Introduction = () => {
             <div
 
                 className="
-                    
                     relative flex
                     flex-col
                     lg:flex-row
@@ -47,8 +41,26 @@ const Introduction = () => {
                 <div className={`
                         flex flex-col 
                         w-full lg:w-7/12 h-full
+                        
                         `}>
+                    <div className="
+                            relative flex 
+                            justify-center lg:justify-start
+                            opacity-50 hover:opacity-100 lg:opacity-100
+                        
+                    ">
+                        <div className="
+                                opacity-0
+                                scale-[45%] lg:scale-[40%] 
+                                 lg:-translate-x-[25%] lg:-translate-y-[20%]">
 
+                            <ToggleButton
+                                onClick={() => { }}
+                                isOn={false}
+                            />
+                        </div>
+
+                    </div>
 
                     <div className="
                                 relative 
@@ -67,8 +79,8 @@ const Introduction = () => {
                                      w-full will-change-transform
                                     bg-[url(/mobile-info-2.jpeg)] bg-cover bg-top"
                                 animate={{
-                                    height: scrollH,
-                                    top: scrollT
+                                    height: (AnimationProgress * 35) + 40 + "%",
+                                    top: 75 - (AnimationProgress * 50) + "%"
                                 }}
                                 transition={{ ease: "easeOut", duration: 0.3 }}
                             >
@@ -81,9 +93,12 @@ const Introduction = () => {
                                     flex z-[220]
                                     w-4/5 h-full
                                     justify-center items-center text-3xl //@delete_line">
-                                <div className="h-full w-full">
+                                <motion.div
+                                    className="h-full w-full"
+                                >
+
                                     <Avata />
-                                </div>
+                                </motion.div>
 
                                 {/* Link holder */}
                                 <div className="
@@ -141,6 +156,7 @@ const Introduction = () => {
                     </div>
                 </div>
                 <motion.div className={`
+                        
                         flex flex-col relative  z-10 2xl:mt-4 
                         w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2 2xl:translate-y-[10%]
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
