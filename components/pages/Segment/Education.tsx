@@ -71,12 +71,12 @@ const Education = () => {
                                 font-signaturefont will-change-[transform, opacity]
                         "
                         animate={{
-                            y: ["0", "1.2rem", "-1.3rem", "0"],
-                            x: ["0", "0.6vw", "1vw", "0", "-2vw", "-1.6vw", "0"],
-                            rotateZ: ["0", "0", "-3deg", "0", "5deg", "0"]
+                            y: ["0", "1.2rem", 0],
+                            x: ["0", "-2vw", "0"],
+                            rotateZ: ["0", "-3deg", "0"]
 
                         }}
-                        transition={{ repeat: Infinity, duration: 15 }}
+                        transition={{ repeat: Infinity, duration: 2 }}
                     >
 
                         <p className="absolute bottom-[2px] text-accent opacity-80"> June Trinh</p>

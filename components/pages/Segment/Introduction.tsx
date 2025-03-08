@@ -1,18 +1,22 @@
 "use clients"
 import Image from "next/image";
 import Avata from "@/components/client/Animation/Avata";
-import ToggleButton from "@/components/client/Animation/ToggleButton";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
-import { useThemeContext } from "@/hooks/context/useThemeContext";
 import { motion, useScroll } from 'framer-motion';
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 const Introduction = () => {
-    const { isDark, toggleTheme } = useThemeContext();
     const selfRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: selfRef });
     const [AnimationProgress, setAnimationProgress] = useState(0);
 
+    const scrollH = useMemo(() => {
+        return (AnimationProgress * 35) + 40 + "%";
+    }, [AnimationProgress])
+
+    const scrollT = useMemo(() => {
+        return 75 - (AnimationProgress * 50) + "%";
+    }, [AnimationProgress])
     // Update the animation progress, where we can read later on
     useEffect(() => {
         const unsubscribe = scrollYProgress.onChange((latest) => {
@@ -45,24 +49,7 @@ const Introduction = () => {
                         w-full lg:w-7/12 h-full
                         
                         `}>
-                    <div className="
-                            relative flex 
-                            justify-center lg:justify-start
-                            opacity-50 hover:opacity-100 lg:opacity-100
-                        
-                    ">
-                        <div className="
-                                opacity-0
-                                scale-[45%] lg:scale-[40%] 
-                                 lg:-translate-x-[25%] lg:-translate-y-[20%]">
 
-                            <ToggleButton
-                                onClick={toggleTheme}
-                                isOn={isDark}
-                            />
-                        </div>
-
-                    </div>
 
                     <div className="
                                 relative 
@@ -81,8 +68,8 @@ const Introduction = () => {
                                      w-full will-change-transform
                                     bg-[url(/mobile-info-2.jpeg)] bg-cover bg-top"
                                 animate={{
-                                    height: (AnimationProgress * 35) + 40 + "%",
-                                    top: 75 - (AnimationProgress * 50) + "%"
+                                    height: scrollH,
+                                    top: scrollT
                                 }}
                                 transition={{ ease: "easeOut", duration: 0.3 }}
                             >
