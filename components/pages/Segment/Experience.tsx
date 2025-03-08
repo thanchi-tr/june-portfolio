@@ -74,7 +74,7 @@ const Experience = () => {
                         shadow-inner md:shadow-none
                         shadow-black/60 overflow-clip
                         w-[82%] md:w-full mx-[8%] md:mx-0
-                        bg-secondary md:bg-background
+                        bg-gradient-to-b from-secondary to-background md:bg-background
             ">
 
                 <div className="
@@ -107,33 +107,59 @@ const Experience = () => {
                         </div>
                         <div className="hidden md:block h-12 md:h-[4.2%] w-full">
                             <motion.div className="
-                                        flex flex-row justify-evenly text-white 
-                                        h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-3
-                                        -translate-y-[8vh] sm:-translate-y-[28vh] md:-translate-y-[76vh] lg:-translate-y-[58vh]  2xl:-translate-y-[42vh]
+                                        flex flex-row justify-evenly text-white will-change-transform
+                                        h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-4 2xl:gap-y-6 gap-x-1
+                                        -translate-y-[8vh] sm:-translate-y-[29vh] xl:-translate-y-[32vh]  md:-translate-y-[76vh] lg:-translate-y-[58vh]  2xl:-translate-y-[42vh]
                                         ml-[8%]"
                                 variants={containerVariants}
                                 animate="playout"
                             >
-                                <motion.div className="h-full rounded-full aspect-square bg-black"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/docker.png"} >Docker</PopUp>
-                                </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black"
+                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/dotnetCore.png"} > .Net Core</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black"
+                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/nextjs.png"} >NextJs</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black"
+                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                    variants={itemVariants}
+                                >
+                                    <PopUp img={"/icons/docker.png"} >Docker</PopUp>
+                                </motion.div>
+                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                    variants={itemVariants}
+                                >
+                                    <PopUp img={"/icons/efCore.png"} >EFCore</PopUp>
+                                </motion.div>
+                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                    variants={itemVariants}
+                                >
+                                    <PopUp img={"/icons/postgres.png"} >posgres</PopUp>
+                                </motion.div>
+                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                    variants={itemVariants}
+                                >
+                                    <PopUp img={"/icons/graphQl.png"} >graphQl</PopUp>
+                                </motion.div>
+                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                    variants={itemVariants}
+                                >
+                                    <PopUp img={"/icons/serilog.png"} >Serilog</PopUp>
+                                </motion.div>
+                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                    variants={itemVariants}
+                                >
+                                    <PopUp img={"/icons/Auth0.jpg"} >Auth0</PopUp>
+                                </motion.div>
+                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/signalR.png"} >SignalR</PopUp>
                                 </motion.div>
+
                             </motion.div >
 
                         </div>
@@ -158,13 +184,13 @@ const Experience = () => {
                                 <motion.div
                                     className="
                                         h-5/6 md:hidden
-                                        scale-[125%] will-change-[transform,opacity]
+                                        scale-[125%] will-change-transform
                                         aspect-square bg-white rounded-full 
                                         -translate-y-[15%]
                                         z-[80] shadow-lg shadow-black/70"
 
-                                    initial={{ x: "35vw" }}
-                                    whileInView={AnimationProgress > 0.18 ? { x: ["35vw", "60vw", "0vw"] } : {}}
+                                    initial={{ x: "30vw" }}
+                                    animate={{ x: ["30vw", "0vw"] }}
                                     transition={{ duration: 0.55, delay: 0.2, ease: "anticipate" }}
                                 >
                                     <motion.div className="h-full w-full"
@@ -208,9 +234,10 @@ const Experience = () => {
                                         </ExternalCircularButton>
                                     </motion.div>
                                 </motion.div>
+
                                 <motion.div className="
-                                        w-[85%] md:w-9/12
-                                        2xl:w-8/12 h-3/5  rounded-r-full
+                                        hidden md:flex md:w-9/12
+                                        2xl:w-8/12 h-3/5  rounded-r-full rounded-tl-full
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
@@ -263,10 +290,64 @@ const Experience = () => {
 
 
                                 </motion.div>
+                                <motion.div className="
+                                        w-[85%] md:hidden
+                                        2xl:w-8/12 h-3/5  rounded-r-full rounded-tl-full
+                                        md:bg-primary text-center 
+                                        z-10 border-b-2 
+                                        shadow-2xl shadow-black/30
+                                "
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: [0, 1] }}
+                                    transition={{ duration: 1.2, delay: 0.3, ease: "anticipate" }}
+                                    viewport={{ once: true }}
+                                >
+                                    <motion.div className="h-full w-full -translate-y-2/3  will-change-[opacity]">
+                                        <motion.div
+                                            className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: 0.75, duration: 0.36, ease: easeIn }}
+                                        >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
 
+
+                                        </motion.div>
+                                        <motion.div
+                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white md:hidden will-change-[opacity]"
+                                            initial={{ opacity: 0 }}
+                                            viewport={{ once: true }}
+                                            whileInView={{ opacity: [1] }}
+                                            transition={{ delay: 0.8, duration: 0.42, ease: easeIn }}
+                                        >
+                                            Full-Stack Engineer
+                                        </motion.div>
+                                        <motion.div className="relative will-change-[transform,opacity] flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] text-white"
+                                            initial={{ opacity: 0, scale: 1.5 }}
+                                            viewport={{ once: true }}
+                                            whileInView={{ opacity: 1, scale: [1.8, 1.5, 1] }}
+                                            transition={{ delay: 0.5, duration: 0.72, ease: "anticipate" }}
+                                        >
+                                            <span className="
+                                                    text-4xl font-signaturefont  will-change-[opacity]
+                                                    text-primary md:text-white
+                                                    text-shadow-lg shadow-primary
+                                                    md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">Jung</div> Talents</span>
+                                        </motion.div>
+                                        <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: [0, 0.8] }}
+                                            transition={{ duration: 1.2, delay: 0.38, ease: "anticipate" }}
+                                            viewport={{ once: true }}
+
+                                        ></motion.div>
+                                    </motion.div>
+
+
+                                </motion.div>
                                 <motion.div className="absolute will-change-[opacity] top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 blur-3xl scale-y-50 z-[300]"
                                     initial={{ opacity: 0 }}
-                                    whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.3] } : {}}
+                                    whileInView={{ opacity: [0, 0.3] }}
                                     transition={{ duration: 1.2, delay: 0.27, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 ></motion.div>

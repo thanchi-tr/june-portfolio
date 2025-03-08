@@ -7,17 +7,13 @@ const Footer = () => {
             <div className="absolute flex flex-col h-[80%] translate-y-[-35%] w-full bottom-0 text-end z-20 text-black justify-between">
                 <div />
                 <div className=" font-secondaryfont scale-y-75 font-extrabold shadow-md shadow-black bg-secondary">
-                    <motion.div className="flex flex-row justify-evenly text-sm lg:text-lg 2xl:text-xl uppercase gradient-text will-change-[transform,opacity]"
-                        animate={{
-                            translateX: ["0%", "-85%", "-95%", "100%", "0%", "0%", "0%"],
-                            opacity: [1, 1, 0, 0, 0, 0.75, 1, 1, 1]
-                        }}
-                        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+                    <div className="flex flex-row justify-evenly text-sm lg:text-lg 2xl:text-xl uppercase gradient-text will-change-[transform,opacity]"
+
                     >
                         <a href="tel:+61432002486">(+61) 432 002 486</a>
 
                         <a href="mailto:dev.june.trinh@outlook.com">| Dev.june.trinh@outlook.com</a>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
             <svg className="h-full w-full z-10" viewBox="0 0 5576 1284" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -204,8 +204,8 @@ const Introduction = () => {
                             My expertise lies in designing scalable architectures, optimizing performance, and ensuring seamless user experiences. I thrive in fast-paced environments, solving complex problems with an
                             {<span className="font-extrabold underline text-white mx-1">innovative, solution-oriented approach</span>}
                             If you&#39;re looking for a developer who delivers
-                            {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail</span>}
-                            Let me know how I can help you.
+                            {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail Let me know how I can help you.</span>}
+
                         </div>
 
 
