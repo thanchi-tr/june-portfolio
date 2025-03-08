@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: public/asset/*
+Disallow: public/icons/*
+Disallow: /private/
+Disallow: /tmp/
