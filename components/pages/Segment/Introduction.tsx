@@ -4,7 +4,7 @@ import Avata from "@/components/client/Animation/Avata";
 import ToggleButton from "@/components/client/Animation/ToggleButton";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import { useThemeContext } from "@/hooks/context/useThemeContext";
-import { easeIn, motion, useScroll } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import { useEffect, useRef, useState } from "react";
 
 const Introduction = () => {
