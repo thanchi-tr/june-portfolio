@@ -40,7 +40,7 @@ const Avata = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5, ease: "easeOut" }}
                             >Solution-oriented
-                                <p className="gradient-text text-3xl hidden group-hover:block">Click for CV</p>
+                                <p className="gradient-text text-3xl opacity-0 group-hover:opacity-100">Click for CV</p>
                                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-white opacity-60 2xl:opacity-30 blur-3xl"></div>
 
                             </motion.div>
@@ -72,7 +72,7 @@ const Avata = () => {
                             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-white opacity-60 2xl:opacity-30 blur-3xl"></div>
 
                             Innovative
-                            <p className="gradient-text text-3xl hidden group-hover:block">Click for CV</p>
+                            <p className="gradient-text text-3xl opacity-0 group-hover:opacity-100">Click for CV</p>
                         </motion.div>
                     </motion.div>
                 </a>
@@ -100,7 +100,7 @@ const Avata = () => {
                             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-white opacity-60 2xl:opacity-30 blur-3xl"></div>
 
                             Team-player
-                            <p className="gradient-text text-3xl hidden group-hover:block">Click for CV</p>
+                            <p className="gradient-text text-3xl opacity-0 group-hover:opacity-100">Click for CV</p>
                         </motion.div>
                     </motion.div>
                 </a>
