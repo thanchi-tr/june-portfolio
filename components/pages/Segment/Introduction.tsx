@@ -77,15 +77,19 @@ const Introduction = () => {
                                     
                             ">
                             <motion.div className="
-                                    absolute lg:hidden
+                                    absolute lg:hidden border-8 border-black/50
                                      w-full will-change-transform
-                                    bg-primary"
+                                    bg-[url(/mobile-info-2.jpeg)] bg-cover bg-top"
                                 animate={{
                                     height: (AnimationProgress * 35) + 40 + "%",
                                     top: 75 - (AnimationProgress * 50) + "%"
                                 }}
                                 transition={{ ease: "easeOut", duration: 0.3 }}
-                            />
+                            >
+
+                                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-transparent"></div>
+
+                            </motion.div>
                             {/* avatar + link */}
                             <div className="
                                     flex z-[220]
@@ -179,16 +183,13 @@ const Introduction = () => {
                             text-white lg:text-black 2xl:text-white    
                             z-40
                     "
-                        initial={{ translateY: "100%", opacity: 0 }}
-                        whileInView={{ translateY: "0%", opacity: [0, 0, 0.2, 1] }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: 0.4, ease: "anticipate" }}
+
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl "></div>
 
 
                         <div className={`
-                                p-3 py-[8%] lg:py-0 px-12 md:px-20 lg:p-6 leading-5 2xl:mt-4
+                                p-3 py-[8%] lg:py-[10vh] px-12 md:px-20 lg:p-6 leading-5 2xl:mt-4
                                 text-sm lg:text-sm  group-hover:opacity-0
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-lg
@@ -196,7 +197,7 @@ const Introduction = () => {
                                 h-auto
                             `}
                         >
-                            I am a passionate
+                            {/* I am a passionate
                             {<span className="font-extrabold underline text-white mx-1">FULL-STACK DEVELOPER</span>}
                             with <span className="font-extrabold underline text-white ">over 3 years of experience</span> in building high-quality applications using
                             {<span className="ml-1 font-extrabold underline text-white"> .NET </span>}and
@@ -204,8 +205,14 @@ const Introduction = () => {
                             My expertise lies in designing scalable architectures, optimizing performance, and ensuring seamless user experiences. I thrive in fast-paced environments, solving complex problems with an
                             {<span className="font-extrabold underline text-white mx-1">innovative, solution-oriented approach</span>}
                             If you&#39;re looking for a developer who delivers
-                            {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail Let me know how I can help you.</span>}
-
+                            {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail Let me know how I can help you.</span>} */}
+                            Hi, I&#39;
+                            <span className="font-extrabold underline text-white mx-1">  June Trinh</span>, a passionate
+                            <span className="font-extrabold underline text-white mx-1"> Full Stack Developer</span>. I build
+                            <span className="font-extrabold underline text-white mx-1">DotNet & NextJs application</span> that is
+                            <span className="font-extrabold underline text-white mx-1">designed with scalable architectures</span>, with a focus on
+                            <span className="font-extrabold underline text-white mx-1">performance and seamless user experiences.</span>
+                            <span className="font-extrabold underline text-white mx-1">Let connect !!!</span>
                         </div>
 
 

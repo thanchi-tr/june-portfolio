@@ -77,7 +77,7 @@ const Page = () => {
                             animate={{
                                 opacity: [0, 0, 1, 1, 0]
                             }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
                         >
 
 

@@ -54,7 +54,7 @@ const Avata = () => {
                     absolute z-120 group cursor-pointer
                     bottom-[5vh] right-0 will-change-[transform,opacity]
                     text-2xl xl:text-3xl 2xl:text-4xl 2xl:bottom-[22%] 2xl:-right-[9%]
-                    text-background md:text-white lg:text-white/60 md:text-shadow-lg shadow-black
+                    text-white md:text-white lg:text-white/60 md:text-shadow-lg shadow-black
                     font-mainfont font-[900]"
                     initial={{ x: "39vw", opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}

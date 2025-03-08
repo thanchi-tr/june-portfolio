@@ -50,17 +50,16 @@ const Experience = () => {
         >
 
             <div className={`
-                        flex items-end
+                        flex items-end 
                         h-[40vh] w-full text-center tracking-widest`}>
                 <motion.span
                     className="
-                        text-4xl md:text-6xl tracking-wider font-bold 
-                        text-white w-full
-                        translate-y-1/2 uppercase font-mainfont z-50
+                        text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl tracking-wider font-bold 
+                        text-white w-full uppercase font-mainfont z-50
                         text-shadow-lg shadow-black/70
                        "
-                    initial={{ x: "-100%", scale: 1.1 }}
-                    whileInView={{ x: 0, scale: 1 }}
+                    initial={{ x: "-100%", scale: 1.1, y: "50%" }}
+                    whileInView={{ x: 0, scale: 1, y: "50%" }}
                     transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
                     viewport={{ once: true }}
 
@@ -74,7 +73,7 @@ const Experience = () => {
                         shadow-inner md:shadow-none
                         shadow-black/60 overflow-clip
                         w-[82%] md:w-full mx-[8%] md:mx-0
-                        bg-gradient-to-b from-secondary to-background md:bg-background
+                        bg-gradient-to-b from-secondary   to-background md:from-[#43262230]
             ">
 
                 <div className="
@@ -86,7 +85,7 @@ const Experience = () => {
                             opacity-0 md:opacity-100
                             md:p-0 md:justify-evenly 
                             w-full md:w-[80%] md:ml-[20.8%] md:rounded-l-2xl
-                            h-full bg-gradient-to-b from-secondary to-background    2xl:via-secondary 2xl:to-transparent 
+                            h-full bg-gradient-to-b from-secondary to-background   2xl:via-secondary 2xl:to-transparent 
                             2xl:bg-background
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "

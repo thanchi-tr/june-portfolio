@@ -54,7 +54,7 @@ const Skill = () => {
             >
                 <motion.div className="
                                 text-white uppercase z-50 
-                                text-6xl md:text-6xl font-bold font-mainfont
+                                text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl font-bold font-mainfont
                                 md:-translate-x-[8%] tracking-[0.8rem]
                                 will-change-transform
                                 "
@@ -194,7 +194,7 @@ const Skill = () => {
                     whileInView={{ x: "0%" }}
                     transition={{ duration: 0.8, delay: 0.05, ease: "easeInOut" }}
                 >
-                    <div className="h-[10%]"></div>
+                    <div className="h-[10%] "></div>
                     <div className="
                             relative h-[14%] text-center uppercase font-bold 
                             text-3xl md:text-4xl text-background 2xl:text-background

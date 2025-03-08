@@ -29,7 +29,7 @@ const Project = () => {
                             md:-translate-x-1/4 -translate-y-1/2 
                             uppercase font-mainfont
                              text-white 
-                            text-5xl md:text-7xl font-bold
+                            text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl font-bold
                             tracking-widest text-shadow-lg shadow-black/70
                     ">
                         Project
