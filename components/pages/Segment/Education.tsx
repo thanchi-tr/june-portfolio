@@ -25,7 +25,7 @@ const Education = () => {
                 viewport={{ once: true }}
             >
                 <motion.div
-                    className="will-change-transform"
+                    className="will-change-transform hidden lg:block"
                     animate={{
                         y: ["0", "-0.6rem", "0.9rem", "-1.1rem", "0.6rem", "0"],
                         x: ["0", "0.6vw", "-1vw", "0", "2vw", "-1.6vw", "0"],
@@ -36,6 +36,12 @@ const Education = () => {
                     University of Melbourne
 
                 </motion.div>
+                <div
+                    className="will-change-transform lg:hidden"
+                >
+                    University of Melbourne
+
+                </div>
             </motion.div>
             <div className="
                         flex flex-row justify-evenly
@@ -45,6 +51,7 @@ const Education = () => {
 
             >
                 <motion.div className="
+                            hidden lg:block
                             relative h-[12vh] aspect-square will-change-transform
                             rounded-full overflow-clip shadow-inner shadow-black
                             bg-blue-950 border-white 
@@ -57,8 +64,22 @@ const Education = () => {
                 >
                     <Image src={"/icons/Unimelb.png"} alt={""} fill className="object-contain z-10"></Image>
                 </motion.div>
+                {/* simpler animation for mobile */}
+                <motion.div className="lg:hidden
+                            relative h-[12vh] aspect-square will-change-transform
+                            rounded-full overflow-clip shadow-inner shadow-black
+                            bg-blue-950 border-white 
+                            md:scale-150 border-4 z-10
+                    "
+                    initial={{ y: "12vh" }}
+                    whileInView={{ y: ["12vh", "0vh"] }}
+                    transition={{ duration: 1.2, delay: 0, ease: "anticipate" }}
+                    viewport={{ once: true }}
+                >
+                    <Image src={"/icons/Unimelb.png"} alt={""} fill className="object-contain z-10"></Image>
+                </motion.div>
             </div>
-            <div className=" flex flex-row justify-evenly h-[30%] w-full self-end z-10 translate-y-[30%]">
+            <div className=" flex-row justify-evenly h-[30%] w-full self-end z-10 translate-y-[30%] hidden lg:flex">
 
                 <div className="
                             flex flex-row 
