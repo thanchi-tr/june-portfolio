@@ -3,7 +3,7 @@ import ExternalCircularButton from "@/components/client/Functional/ExternalCircu
 import Image from "next/image";
 import { easeIn, motion } from "framer-motion";
 
-const mobileExperience = () => {
+const MobileExperience = () => {
 
 
     return (
@@ -348,4 +348,4 @@ const mobileExperience = () => {
     )
 }
 
-export default mobileExperience;
+export default MobileExperience;

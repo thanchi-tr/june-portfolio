@@ -12,7 +12,7 @@ export type NavButtonT = { tag: string, data?: ReactNode, className_: string }[]
 import { motion } from "framer-motion";
 import ParticlesComponent from "@/components/client/Animation/ParticlesComponent";
 import Image from "next/image";
-import MobileExperience from "@/components/pages/Segment/mobileExperience";
+import MobileExperience from "@/components/pages/Segment/MobileExperience";
 const Page = () => {
 
     const desRef = useRef<HTMLDivElement>(null);
