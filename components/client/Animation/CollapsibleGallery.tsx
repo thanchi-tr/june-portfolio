@@ -15,7 +15,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
         `}>
             {cards.map(
                 (card, index) => (
-                    <div key={`cGallery-0-${index}`}>
+                    <div key={`cGallery-0-${index} h-full w-full`}>
                         <motion.div
                             key={`cGallery-1-${index}`}
                             style={{ width: ((index != selectedIndex) ? "4%" : `${Math.floor(97 - (cards.length - 1) * 4)}%`) }}
