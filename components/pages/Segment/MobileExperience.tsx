@@ -14,7 +14,7 @@ const MobileExperience = () => {
         >
 
             <div className={`
-                        flex items-end
+                        flex items-end 
                         h-[40vh] w-full text-center tracking-widest`}>
                 <motion.span
                     className="
@@ -22,8 +22,8 @@ const MobileExperience = () => {
                         text-white w-full uppercase font-mainfont z-50
                         text-shadow-lg shadow-black/70
                        "
-                    initial={{ x: "-100%", scale: 1.1 }}
-                    whileInView={{ x: 0, scale: 1 }}
+                    initial={{ x: "-100%", scale: 1.1, y: "50%" }}
+                    whileInView={{ x: 0, scale: 1, y: "50%" }}
                     transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
                     viewport={{ once: true }}
 
@@ -31,7 +31,7 @@ const MobileExperience = () => {
 
             </div>
 
-            <div className="translate-y-[50vw]
+            <div className="
                         relative flex flex-col-reverse md:flex-row
                         h-[220vh] sm:h-[200vh] md:h-[200vh] 
                         shadow-inner md:shadow-none

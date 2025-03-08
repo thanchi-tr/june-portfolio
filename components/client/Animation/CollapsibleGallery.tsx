@@ -15,9 +15,9 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
         `}>
             {cards.map(
                 (card, index) => (
-                    <>
+                    <div key={`cGallery-0-${index}`}>
                         <motion.div
-                            key={`cGallery-${index}`}
+                            key={`cGallery-1-${index}`}
                             style={{ width: ((index != selectedIndex) ? "4%" : `${Math.floor(97 - (cards.length - 1) * 4)}%`) }}
                             className={`
                             inline overflow-clip lg:hidden
@@ -48,7 +48,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
 
                         </motion.div>
                         <motion.div
-                            key={`cGallery2-${index}`}
+                            key={`cGallery-2-${index}`}
                             style={{ width: ((index != selectedIndex) ? "4%" : `${Math.floor(97 - (cards.length - 1) * 4)}%`) }}
                             className={`
                              overflow-clip hidden lg:inline
@@ -67,6 +67,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
 
                             {
                                 <motion.div
+
                                     className={`relative origin-top-right h-full w-full will-change-[transform,opacity]
                                     transition-all   ease-in-out ${index != selectedIndex ? "duration-75 opacity-0" : "duration-[390ms] delay-1000 opacity-100"}
                                 `}
@@ -86,7 +87,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                             {/* The index display*/}
 
                         </motion.div>
-                    </>
+                    </div>
 
                 )
             )}
