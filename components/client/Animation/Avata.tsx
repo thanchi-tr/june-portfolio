@@ -3,12 +3,9 @@ import { motion } from "framer-motion";
 
 const Avata = () => {
     return (
-        <div className="relative flex h-full w-full items-end lg:z-[120]">
+        <div className="relative h-full w-full items-end lg:z-[120] hidden lg:flex">
             {/* <div className="absolute 2xl:hidden md:bg-gray-400/10 h-5/6 md:h-3/5 w-[95%] rounded-full scale-y-105"></div>
             <div className="absolute 2xl:hidden md:bg-secondary h-2/3 md:h-3/5 w-[70%] rounded-full left-[12%]"></div> */}
-
-
-
             <a href="/cv.pdf" target="_blank" rel="noreferrer">
                 <motion.div className="
                         absolute group hover:cursor-pointer

@@ -47,7 +47,6 @@ const Introduction = () => {
                 <div className={`
                         flex flex-col 
                         w-full lg:w-7/12 h-full
-                        
                         `}>
 
 
@@ -82,12 +81,9 @@ const Introduction = () => {
                                     flex z-[220]
                                     w-4/5 h-full
                                     justify-center items-center text-3xl //@delete_line">
-                                <motion.div
-                                    className="h-full w-full"
-                                >
-
+                                <div className="h-full w-full">
                                     <Avata />
-                                </motion.div>
+                                </div>
 
                                 {/* Link holder */}
                                 <div className="
@@ -145,7 +141,6 @@ const Introduction = () => {
                     </div>
                 </div>
                 <motion.div className={`
-                        
                         flex flex-col relative  z-10 2xl:mt-4 
                         w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2 2xl:translate-y-[10%]
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
