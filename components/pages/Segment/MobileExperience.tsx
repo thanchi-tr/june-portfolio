@@ -14,7 +14,7 @@ const MobileExperience = () => {
         >
 
             <div className={`
-                        flex items-end 
+                        flex items-end
                         h-[40vh] w-full text-center tracking-widest`}>
                 <motion.span
                     className="
@@ -31,7 +31,7 @@ const MobileExperience = () => {
 
             </div>
 
-            <div className="
+            <div className="translate-y-[10vw]
                         relative flex flex-col-reverse md:flex-row
                         h-[220vh] sm:h-[200vh] md:h-[200vh] 
                         shadow-inner md:shadow-none
