@@ -22,8 +22,8 @@ const MobileExperience = () => {
                         text-white w-full uppercase font-mainfont z-50
                         text-shadow-lg shadow-black/70
                        "
-                    initial={{ x: "-100%", scale: 1.1, y: "50%" }}
-                    whileInView={{ x: 0, scale: 1, y: "50%" }}
+                    initial={{ x: "-100%", scale: 1.1 }}
+                    whileInView={{ x: 0, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
                     viewport={{ once: true }}
 
