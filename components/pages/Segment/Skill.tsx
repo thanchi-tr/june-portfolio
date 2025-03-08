@@ -26,27 +26,7 @@ const Skill = () => {
     };
     const selfRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: selfRef });
-    const [AnimationProgress, setAnimationProgress] = useState(0);
-    useEffect(() => {
-        const unsubscribe = scrollYProgress.onChange((latest) => {
-            setAnimationProgress(latest)
-        });
 
-        return () => unsubscribe(); // Cleanup subscription
-    }, [scrollYProgress]);
-
-    // Update the animation progress, where we can read later on
-    useEffect(() => {
-        const unsubscribe = scrollYProgress.onChange((latest) => {
-            setAnimationProgress(latest)
-        });
-
-        return () => unsubscribe(); // Cleanup subscription
-    }, [scrollYProgress]);
-    useEffect(() => {
-        console.log(AnimationProgress);
-
-    }, [AnimationProgress])
     return (
         <div className="h-full w-full bg-background">
             <div className="flex items-center justify-center h-0 w-full"
@@ -216,7 +196,7 @@ const Skill = () => {
 
                     {/* teck stack icon list */}
                     <motion.div className="
-                            flex flex-row 
+                            lg:flex flex-row hidden 
                             flex-wrap flex-shrink-0 flex-grow-0 
                             gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-6 md:gap-y-[6vh] 2xl:gap-y-6
                             justify-evenly
@@ -332,6 +312,118 @@ const Skill = () => {
                             className="h-[0.8vh] w-1/4 bg-white/60 mt-10 will-change-transform"
                         />
                     </motion.div>
+
+
+                    {/* Mobile without stagger animation */}
+                    <div className="
+                            flex flex-row lg:hidden
+                            flex-wrap flex-shrink-0 flex-grow-0 
+                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-6 md:gap-y-[6vh] 2xl:gap-y-6
+                            justify-evenly
+                            h-auto 
+                            w-4/5 md:w-[65%] 2xl:w-[58%]
+                            mx-[15%] 2xl:mx-[13%] 2xl:pl-[2%]
+                            pt-[5%]
+                        "
+                    >
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl"></div>
+
+                        <div className="flex flex-row w-full h-auto justify-between">
+                            <div className="w-[22vw] font-extrabold uppercase  text-white/90">DB:</div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4">
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img={`/icons/postgres.png`}>Postgres</PopUp>
+                                </div>
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/mongo db.png">MongoDB</PopUp>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="flex flex-row w-full h-auto">
+                            <div className="w-[22vw] font-extrabold uppercase text-white/90">Back:</div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
+                                <div className="
+                                w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%]
+                                aspect-square 
+                                rounded-full bg-white 
+                                border-2">
+                                    <PopUp img={"/icons/signalR.png"} >SignalR</PopUp>
+                                </div>
+                                <div className="
+                                w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%]
+                                aspect-square 
+                                rounded-full bg-white 
+                                border-2">
+                                    <PopUp img={"/icons/open API.png"} >OpenAPI</PopUp>
+                                </div>
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/serilog.png">Serilog</PopUp>
+                                </div>
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/redis.png">Redis</PopUp>
+                                </div>
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/xunit.jpg">xUnit</PopUp>
+                                </div>
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/efCore.png">EFCore</PopUp>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="flex flex-row w-full h-auto">
+
+                            <div className="w-[22vw] font-extrabold uppercase text-white/90">Front:</div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/jest.png">JestJS</PopUp>
+                                </div>
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/Auth0.jpg">Auth0</PopUp>
+                                </div>
+
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/framerMotion.png">Motion</PopUp>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="flex flex-row w-full h-auto">
+
+                            <div className="w-[22vw] font-extrabold uppercase text-white/80">Cloud:</div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/eks.jpg"> EKS</PopUp>
+                                </div>
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/ec2.jpg">Ec2</PopUp>
+                                </div>
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/s3.png">s3</PopUp>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div className="flex flex-row w-full h-auto">
+                            <div className="w-[22vw] font-extrabold uppercase text-white/60">CI&CD:</div>
+                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img="/icons/github.jpg">Github</PopUp>
+                                </div>
+                                <div className="w-[9.5vw] md:w-[15%] md:h-auto h-[8vw] 2xl:w-[13.5%] aspect-square rounded-full bg-white border-2">
+                                    <PopUp img={"/icons/docker.png"} >Docker</PopUp>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
                 </motion.div>
             </div>
         </div >
