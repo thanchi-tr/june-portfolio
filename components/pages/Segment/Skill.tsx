@@ -97,7 +97,7 @@ const Skill = () => {
                                 mt-[15%] md:mt-[25%] text-lg md:text-xl
                         ">
 
-                            <motion.div className="hidden will-change-transform md:block w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="hidden will-change-transform md:block w-2/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
@@ -134,7 +134,7 @@ const Skill = () => {
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
                                 
                         ">
-                            <motion.div className="hidden will-change-transform md:block w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="hidden will-change-transform md:block w-2/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
