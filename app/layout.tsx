@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 }
 export const metadata: Metadata = {
   title: "JUNE | Build THE Experience",
-  description: "Iterative Innovation | Fullstack Developer | Software Engineer | Web Developer | UI/UX Designer",
+  description: "Iterative Innovation | Fullstack Developer | Software Engineer | Web Developer | UI/UX Designer | .NET Developer Portfolio | June Trinh | junetrinh.dev",
   authors: [{ name: "June Trinh", url: "https://www.junetrinh.dev" }],
   keywords: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Fullstack", "web development", "Docker", "GraphQL",
     "PostgreSQL", "Node.js", "Express", "REST API", "API", "MongoDB", "Mongoose", "JWT", "Authentication", "UI", "UX", "Front-end"

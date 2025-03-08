@@ -172,7 +172,12 @@ const Experience = () => {
                                         transition={{ duration: 5, ease: "linear", repeat: Infinity }}
                                     >
                                         <ExternalCircularButton link={"https://www.jungtalents.com/"} >
-                                            <Image src="/icons/jungTalent.jpg" alt="Jung Talents Logo" fill className=" object-fill " />
+                                            <Image
+                                                src="/icons/jungTalent.jpg"
+                                                alt="Jung Talents Logo" fill
+                                                className=" object-fill"
+                                                quality={100}
+                                            />
                                         </ExternalCircularButton>
                                     </motion.div>
 
@@ -195,7 +200,11 @@ const Experience = () => {
                                         transition={{ duration: 5, ease: "linear", repeat: Infinity }}
                                     >
                                         <ExternalCircularButton link={"https://www.jungtalents.com/"} >
-                                            <Image src="/icons/jungTalent.jpg" alt="Jung Talents Logo" fill className=" object-fill" />
+                                            <Image src="/icons/jungTalent.jpg"
+                                                alt="Jung Talents Logo" fill
+                                                className=" object-fill "
+                                                quality={100}
+                                            />
                                         </ExternalCircularButton>
                                     </motion.div>
                                 </motion.div>

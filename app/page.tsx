@@ -81,7 +81,14 @@ const Page = () => {
                         >
 
 
-                            <Image src={"/logo.png"} alt={""} className="object-contain scale-105 " fill></Image>
+                            <Image
+                                src={"/logo.png"}
+                                alt={"Miniture Version of Logo, include brand slogan"}
+                                className="object-contain scale-105 "
+                                priority
+                                quality={100}
+                                fill
+                            />
 
                         </motion.div>
 

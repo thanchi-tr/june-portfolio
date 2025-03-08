@@ -20,7 +20,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                         style={{ width: ((index != selectedIndex) ? "4%" : `${Math.floor(97 - (cards.length - 1) * 4)}%`) }}
                         className={`
                             inline overflow-clip
-                            h-full relative 
+                            h-full relative will-change-[transform,opacity]
                             ${index == selectedIndex ? "shadow-xl shadow-black rounded-xl border-[1px] border-b-white/15" : "rounded-md"}
                             ${index == selectedIndex ? "bg-transparent pointer-events-none" : "bg-gradient-to-t from-primary via-primary/50 border-t-[1.2vw] border-primary border-opacity-35 to-black/30 hover:cursor-pointer "}
                             transition-all duration-[1.5s] ease-out
@@ -35,10 +35,10 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
 
                         {
                             <motion.div
-                                className={`relative origin-top-right h-full w-full
+                                className={`relative origin-top-right h-full w-full will-change-[transform,opacity]
                                     transition-all   ease-in-out ${index != selectedIndex ? "duration-75 opacity-0" : "duration-[390ms] delay-1000 opacity-100"}
                                 `}
-                                whileInView={selectedIndex == index ? { opacity: [0, 0, 1] } : { opacity: 0 }}
+                                whileInView={selectedIndex == index ? { opacity: [0, 1] } : { opacity: 0 }}
                                 viewport={{ once: true }}
                                 transition={selectedIndex == index ? { duration: 0.6, delay: 0.2 * index + 1 } : { duration: 0.1 }}
                             >

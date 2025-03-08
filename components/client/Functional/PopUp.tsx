@@ -16,7 +16,12 @@ const PopUp = ({ children, img }: PopUpProps) => {
             onClick={() => setIsOpen(prev => !prev)}
         >
             <div className="relative h-auto w-full aspect-square overflow-clip rounded-full">
-                <Image src={img} alt={""} fill className="object-contain aspect-square"></Image>
+                <Image
+                    src={img}
+                    alt={"Clickable Image"} fill
+                    className="object-contain aspect-square"
+                    quality={50}
+                />
             </div>
             <div className={`
                 absolute top-0 flex flex-wrap 

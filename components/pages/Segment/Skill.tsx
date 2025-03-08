@@ -103,7 +103,11 @@ const Skill = () => {
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
-                                <Image src={"/icons/dotnetCore.png"} alt={""} fill className="object-contain z-10"></Image>
+                                <Image
+                                    src={"/icons/dotnetCore.png"}
+                                    alt={"Microsoft Dotnet Core icon"} fill
+                                    quality={40}
+                                    className="object-contain z-10" />
                             </motion.div>
                             <motion.div className="md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 will-change-transform"
                                 initial={{ x: "0", opacity: 0 }}
@@ -136,7 +140,12 @@ const Skill = () => {
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
-                                <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10"></Image>
+                                <Image
+                                    src={"/icons/nextjs.png"}
+                                    alt={"Next Js logo"} fill
+                                    className="object-contain z-10"
+                                    quality={40}
+                                />
                             </motion.div>
                             <motion.div className="md:hidden will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
                                 initial={{ x: "0" }}

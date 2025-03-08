@@ -117,7 +117,13 @@ const Introduction = () => {
                                                  -translate-y-[250%] group relative
                                                 aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full  bg-white">
                                             <ExternalCircularButton link={"https://www.linkedin.com/in/xuan-trinh-27553334b/"} >
-                                                <Image src="/icons/linkedin.png" alt="github" fill className="scale-75 object-fill " />
+                                                <Image
+                                                    src="/icons/linkedin.png"
+                                                    alt="URL to linkedin Profile" fill
+                                                    className="scale-75 object-fill "
+                                                    priority
+                                                    quality={50}
+                                                />
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">LinkedIn</p>
                                         </div>
@@ -127,7 +133,13 @@ const Introduction = () => {
                                                 aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full">
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block -translate-y-[100%]">Github</p>
                                             <ExternalCircularButton link={"https://github.com/thanchi-tr"} >
-                                                <Image src="/icons/github.jpg" alt="github" fill className="object-fill" />
+                                                <Image
+                                                    src="/icons/github.jpg"
+                                                    alt="github" fill
+                                                    className="object-fill"
+                                                    priority
+                                                    quality={50}
+                                                />
                                             </ExternalCircularButton>
                                         </div>
                                     </div>
@@ -216,10 +228,20 @@ const Introduction = () => {
                         <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100 lg:group-hover:opacity-0 lg:opacity-100">
 
                             <div className="absolute w-full top-0 left-0 h-[9vh] translate-x-[-30%] rounded-2xl overflow-clip">
-                                <Image src="/icons/logoLarge.png" alt="scroll" className="object-contain" fill />
+                                <Image
+                                    src="/icons/logoLarge.png"
+                                    alt="Full Version of Logo include brand slogan"
+                                    className="object-contain" fill
+                                    quality={100}
+                                />
                             </div>
                             <div className="h-full w-full z-10 translate-y-[5%] rounded-3xl overflow-clip border-x-2 border-b-2">
-                                <Image src="/ava.png" alt="scroll" className="object-contain" fill />
+                                <Image
+                                    src="/ava.png"
+                                    alt="Avatar of the Developer"
+                                    className="object-contain" fill
+                                    quality={100}
+                                />
                             </div>
                         </div>
                     </div></a>
