@@ -97,7 +97,7 @@ const Skill = () => {
                                 mt-[15%] md:mt-[25%] text-lg md:text-xl
                         ">
 
-                            <motion.div className="hidden md:block w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="hidden will-change-transform md:block w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
@@ -106,8 +106,8 @@ const Skill = () => {
                                 <Image src={"/icons/dotnetCore.png"} alt={""} fill className="object-contain z-10"></Image>
                             </motion.div>
                             <motion.div className="md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 will-change-transform"
-                                initial={{ x: "0" }}
-                                whileInView={{ x: ["0", "40vw", "0"] }}
+                                initial={{ x: "0", opacity: 0 }}
+                                whileInView={{ x: ["0", "40vw", "0"], opacity: 1 }}
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >

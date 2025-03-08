@@ -26,7 +26,7 @@ const CompareNSave = () => {
                 </div>
 
                 <a href="https://www.carinaeyecare.com.au/" className="pointer-events-auto z-[110]" target="_blank">
-                    <h1 className="text-2xl md:text-3xl xl:text-4xl font-bold font-bold font-mainfont text-center gradient-text flex-col">  <span className="text-lg">Clinic Management & Booking System</span><span className="block">Carina Eye Care 🔗</span></h1>
+                    <h1 className="text-2xl md:text-3xl xl:text-4xl font-bold font-mainfont text-center gradient-text flex-col">  <span className="text-lg">Clinic Management & Booking System</span><span className="block">Carina Eye Care 🔗</span></h1>
                 </a>
 
             </div>
