@@ -16,7 +16,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
             {cards.map(
                 (card, index) => (
                     <>
-                        <div
+                        <motion.div
                             key={`cGallery-${index}`}
                             style={{ width: ((index != selectedIndex) ? "4%" : `${Math.floor(97 - (cards.length - 1) * 4)}%`) }}
                             className={`
@@ -46,7 +46,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                             z-[100] `} />
                             {/* The index display*/}
 
-                        </div>
+                        </motion.div>
                         <motion.div
                             key={`cGallery2-${index}`}
                             style={{ width: ((index != selectedIndex) ? "4%" : `${Math.floor(97 - (cards.length - 1) * 4)}%`) }}

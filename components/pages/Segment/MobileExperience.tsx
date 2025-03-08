@@ -255,7 +255,7 @@ const MobileExperience = () => {
                                     viewport={{ once: true }}
                                 ></motion.div>
                             </div>
-                            <motion.ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
+                            <ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
                                     translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] md:bg-background rounded-3xl
                                     list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 
                                     2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-[#ad9547]
@@ -263,76 +263,54 @@ const MobileExperience = () => {
                                     pt-[7%] will-change-transform
                                     border-b-black/20  
                                     "
-                                initial={{ translate: "300%" }}
-                                animate={{ translate: "0%" }}
-                                transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
 
                             >
 
-                                <motion.li
-                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
-                                    initial={{ translateY: "20vh", opacity: 0 }}
-                                    whileInView={{ translateY: "0vh", opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                <li key="0"
+                                    className=" opacity-60  w-auto rounded-xl mb-2"
+
                                 >Architected and deployed a high-performance .NET application, leveraging
                                     <span className="relative font-bold underline px-2">Test-Driven Development (TDD) for faster, bug-free
                                     </span>
-                                    releases</motion.li>
-                                <motion.li
-                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
-                                    initial={{ translateY: "16vh", opacity: 0 }}
-                                    whileInView={{ translateY: "0vh", opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                    releases</li>
+                                <li key={1}
+                                    className=" opacity-60  w-auto rounded-xl mb-2"
+
                                 >Revamped Landing Page UI/UX, leading to a
                                     <span className="relative inline text-primary font-extrabold px-2">
                                         22% increase in conversion rate
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl z-[200]"></div>
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60  blur-3xl z-[200]"></div>
 
                                     </span>
 
                                     through modern design and performance optimizations.
-                                </motion.li>
-                                <motion.li
-                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
-                                    initial={{ translateY: "23vh", opacity: 0 }}
-                                    whileInView={{ translateY: "0vh", opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                </li>
+                                <li key={2}
+                                    className=" opacity-60  w-auto rounded-xl mb-2"
+
                                 >Optimized database queries, improving API response times and increasing overall
                                     <span className="relative inline text-primary font-extrabold mx-2">application speed by 32%
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60  blur-3xl"></div>
                                     </span>.
-                                </motion.li>
-                                <motion.li
+                                </li>
+                                <li key={3}
                                     className=" w-auto rounded-xl mb-2"
-                                    initial={{ translateY: "26vh", opacity: 0 }}
-                                    whileInView={{ translateY: "0vh", opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+
                                 >Maintained and enhanced a critical production application, ensuring
                                     <span className="relative inline text-primary font-extrabold mx-2">99.9% uptime and seamless
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60  blur-3xl"></div>
                                     </span>
-                                    user experience.</motion.li>
-                                <motion.li
+                                    user experience.</li>
+                                <li key={4}
                                     className=" w-auto rounded-xl mb-2"
-                                    initial={{ translateY: "29vh", opacity: 0 }}
-                                    whileInView={{ translateY: "0vh", opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+
                                 >Integrated Docker-based CI/CD pipelines, reducing
                                     <span className="relative inline text-primary font-extrabold mx-2">deployment time by 40%
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60  blur-3xl"></div>
                                     </span>
-                                    and improving development efficiency.</motion.li>
-                                <motion.ul
-                                    animate={{ scaleX: [1, 1.7, 0.7, 1.4, 1] }}
-                                    transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-                                    className="h-[0.8vh] w-2/4 bg-white/60 mt-10 ml-[21%]"
-                                />
-                            </motion.ul>
+                                    and improving development efficiency.</li>
+
+                            </ul>
 
                         </motion.div>
                         <div className="h-[6%] w-full">
