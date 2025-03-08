@@ -31,7 +31,7 @@ const MobileExperience = () => {
 
             </div>
 
-            <div className="translate-y-[10vw]
+            <div className="translate-y-[50vw]
                         relative flex flex-col-reverse md:flex-row
                         h-[220vh] sm:h-[200vh] md:h-[200vh] 
                         shadow-inner md:shadow-none
