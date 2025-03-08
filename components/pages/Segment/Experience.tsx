@@ -104,7 +104,7 @@ const Experience = () => {
                                 ">  FullStack Engineer</div>
                             <span className="md:border-t-8 border-black/20 w-4/5" />
                         </div>
-                        <div className="hidden lglg:block h-12 md:h-[4.2%] w-full">
+                        <div className="hidden lg:block h-12 md:h-[4.2%] w-full">
                             <motion.div className="
                                         flex flex-row justify-evenly text-white will-change-transform
                                         h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-4 2xl:gap-y-6 gap-x-1
@@ -179,36 +179,10 @@ const Experience = () => {
                             viewport={{ once: true }}
                         >
                             <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full z-10 ">
+
                                 <motion.div
                                     className="
-                                        h-5/6 lg:hidden
-                                        scale-[125%] will-change-transform
-                                        aspect-square bg-white rounded-full 
-                                        -translate-y-[15%]
-                                        z-[80] shadow-lg shadow-black/70"
-
-                                    initial={{ x: "30vw" }}
-                                    animate={{ x: ["30vw", "0vw"] }}
-                                    transition={{ duration: 0.55, delay: 0.2, ease: "anticipate" }}
-                                >
-                                    <motion.div className="h-full w-full"
-                                        animate={{ scale: ["100%", "110%", "100%"] }}
-                                        transition={{ duration: 5, ease: "linear", repeat: Infinity }}
-                                    >
-                                        <ExternalCircularButton link={"https://www.jungtalents.com/"} >
-                                            <Image
-                                                src="/icons/jungTalent.jpg"
-                                                alt="Jung Talents Logo" fill
-                                                className=" object-fill"
-                                                quality={100}
-                                            />
-                                        </ExternalCircularButton>
-                                    </motion.div>
-
-                                </motion.div>
-                                <motion.div
-                                    className="
-                                        h-5/6 hidden lg:block z-[80] will-change-[transform,opacity]
+                                        h-5/6 block z-[80] will-change-[transform,opacity]
                                         scale-[170%] md:scale-[125%] 2xl:scale-[115%] 
                                         aspect-square bg-white rounded-full 
                                         -translate-y-[15%]
