@@ -182,7 +182,7 @@ const Experience = () => {
                             <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full z-10 ">
                                 <motion.div
                                     className="
-                                        h-5/6 lglg:hidden
+                                        h-5/6 lg:hidden
                                         scale-[125%] will-change-transform
                                         aspect-square bg-white rounded-full 
                                         -translate-y-[15%]
