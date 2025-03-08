@@ -146,12 +146,17 @@ const Introduction = () => {
                         w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2 2xl:translate-y-[10%]
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                         lg:bg-gradient-to-b from-primary to-background 2xl:bg-transparent
-                        
+                        will-change-transform
                         
                         `}
-                    initial={{ translateX: "200%" }}
-                    animate={{ translateX: ["200%", "0%"] }}
-                    transition={{ duration: 0.5, delay: 1.7, ease: easeIn }}
+                    initial={{ x: "100vw" }}
+                    animate={{ x: 0 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 120, // Controls the speed of the spring effect
+                        damping: 18, // Reduces overshoot
+                        delay: 1.7,
+                    }}
                 >
                     <div className="w-full h-[20%]"></div>
                     {/* description */}

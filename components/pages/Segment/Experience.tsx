@@ -43,7 +43,6 @@ const Experience = () => {
         <div className="
                     overflow-hidden
                     h-full w-full
-                    
                     "
 
             ref={selfRef}
@@ -82,7 +81,7 @@ const Experience = () => {
                             md:ml-[8%] z-10
                            ">
                     <motion.div className="
-                            flex flex-col 
+                            flex flex-col will-change-[transform,opacity]
                             opacity-0 md:opacity-100
                             md:p-0 md:justify-evenly 
                             w-full md:w-[80%] md:ml-[20.8%] md:rounded-l-2xl
@@ -92,7 +91,7 @@ const Experience = () => {
                             "
                         initial={{ translate: "-145%" }}
                         animate={(AnimationProgress < 0.20) ? { translate: -145 + AnimationProgress * 820 + "%" } : { translate: -80 + 0.245 * 380 + "%" }}
-                       
+
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl scale-y-125"></div>
 
@@ -147,7 +146,7 @@ const Experience = () => {
                     <div className="
                             relative flex flex-col justify-evenly w-full h-full z-10">
 
-                        <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] "
+                        <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]"
 
                             initial={{ translate: "105%)" }}
                             animate={(AnimationProgress < 0.2) ? { translate: 105 - AnimationProgress * 500 + "%" } : { translate: "5%" }}
@@ -158,7 +157,7 @@ const Experience = () => {
                                 <motion.div
                                     className="
                                         h-5/6 md:hidden
-                                        scale-[125%] 
+                                        scale-[125%] will-change-[transform,opacity]
                                         aspect-square bg-white rounded-full 
                                         -translate-y-[15%]
                                         z-[80] shadow-lg shadow-black/70"
@@ -179,7 +178,7 @@ const Experience = () => {
                                 </motion.div>
                                 <motion.div
                                     className="
-                                        h-5/6 hidden md:block z-[80]
+                                        h-5/6 hidden md:block z-[80] will-change-[transform,opacity]
                                         scale-[170%] md:scale-[125%] 2xl:scale-[115%] 
                                         aspect-square bg-white rounded-full 
                                         -translate-y-[15%]
@@ -211,7 +210,7 @@ const Experience = () => {
                                     transition={{ duration: 1.2, delay: 0.3, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
-                                    <motion.div className="h-full w-full -translate-y-2/3  ">
+                                    <motion.div className="h-full w-full -translate-y-2/3  will-change-[opacity]">
                                         <motion.div
                                             className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
                                             initial={{ opacity: 0 }}
@@ -223,7 +222,7 @@ const Experience = () => {
 
                                         </motion.div>
                                         <motion.div
-                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white md:hidden"
+                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white md:hidden will-change-[opacity]"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
                                             whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.3, 1] } : {}}
@@ -231,14 +230,14 @@ const Experience = () => {
                                         >
                                             Full-Stack Engineer
                                         </motion.div>
-                                        <motion.div className="relative flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] text-white"
+                                        <motion.div className="relative will-change-[transform,opacity] flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] text-white"
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
                                             whileInView={AnimationProgress > 0.18 ? { opacity: 1, scale: [1.8, 1.5, 1] } : {}}
                                             transition={{ delay: 0.5, duration: 0.72, ease: "anticipate" }}
                                         >
                                             <span className="
-                                                    text-4xl font-signaturefont 
+                                                    text-4xl font-signaturefont  will-change-[opacity]
                                                     text-primary md:text-white
                                                     text-shadow-lg shadow-primary
                                                     md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">Jung</div> Talents</span>
@@ -255,7 +254,7 @@ const Experience = () => {
 
                                 </motion.div>
 
-                                <motion.div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 blur-3xl scale-y-50 z-[300]"
+                                <motion.div className="absolute will-change-[opacity] top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 blur-3xl scale-y-50 z-[300]"
                                     initial={{ opacity: 0 }}
                                     whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.3] } : {}}
                                     transition={{ duration: 1.2, delay: 0.27, ease: "anticipate" }}

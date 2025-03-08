@@ -59,10 +59,15 @@ const Page = () => {
                     ">
                         <motion.p className="border-2 text-white font-mainfont text-xs text-center scale-75 -z-[10] group-hover:border-black group-hover:text-black bg-transparent"
                             animate={{
-                                scale: [1.15, 1.3, 1.2, 0.9, 1, 1, 1, 1, 1.1, 1.2],
-                                opacity: [1, 1, 1, 0.2, 0, 0, 0, 1, 1]
+                                scale: [1.1, 1.3, 1],
+                                opacity: [1, 0.2, 0, 1]
                             }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                            transition={{
+                                duration: 6,
+                                repeat: Infinity,
+                                repeatType: "mirror",
+                                ease: ["easeInOut", "easeOut", "easeIn"]
+                            }}
                         >HIRE ME🚀 </motion.p>
                         <motion.div className="
                             group flex flex-col
@@ -70,7 +75,7 @@ const Page = () => {
                             group-hover:border-t-8 group-hover:border-black
                             "
                             animate={{
-                                opacity: [0, 0, 0, 1, 1, 1, 1, 0, 0, 0]
+                                opacity: [0, 0, 1, 1, 0]
                             }}
                             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                         >
