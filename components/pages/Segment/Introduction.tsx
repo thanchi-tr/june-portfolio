@@ -119,7 +119,7 @@ const Introduction = () => {
                                         <div className=" z-[200] lg:z-10 hover:scale-110  active:scale-90
                                                  -translate-y-[250%] group relative
                                                 aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full  bg-white">
-                                            <ExternalCircularButton link={"https://www.linkedin.com/in/xuan-trinh-27553334b/"} >
+                                            <ExternalCircularButton link={"https://www.linkedin.com/in/devJuneTrinh/"} >
                                                 <Image
                                                     src="/icons/linkedin.png"
                                                     alt="URL to linkedin Profile" fill
