@@ -2,10 +2,9 @@
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
-import { easeIn, motion, useScroll } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { easeIn, motion } from "framer-motion";
 
-const Experience = () => {
+const mobileExperience = () => {
     const containerVariants = {
         "init": {},
         "playout": {
@@ -27,26 +26,12 @@ const Experience = () => {
             }
         },
     };
-    const selfRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({ target: selfRef });
-    const [AnimationProgress, setAnimationProgress] = useState(0);
-
-    // Update the animation progress, where we can read later on
-    useEffect(() => {
-        const unsubscribe = scrollYProgress.onChange((latest) => {
-            setAnimationProgress(latest)
-        });
-
-        return () => unsubscribe(); // Cleanup subscription
-    }, [scrollYProgress]);
 
     return (
         <div className="
                     overflow-hidden
                     h-full w-full
                     "
-
-            ref={selfRef}
         >
 
             <div className={`
@@ -90,8 +75,9 @@ const Experience = () => {
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "
                         initial={{ x: "-148%" }}
-                        animate={(AnimationProgress < 0.20) ? { x: -148 + AnimationProgress * 820 + "%" } : { x: -80 + 0.245 * 380 + "%" }}
+                        whileInView={{ x: 0 }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
+                        viewport={{ once: true }}
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl scale-y-125"></div>
 
@@ -104,64 +90,7 @@ const Experience = () => {
                                 ">  FullStack Engineer</div>
                             <span className="md:border-t-8 border-black/20 w-4/5" />
                         </div>
-                        <div className="hidden lglg:block h-12 md:h-[4.2%] w-full">
-                            <motion.div className="
-                                        flex flex-row justify-evenly text-white will-change-transform
-                                        h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-4 2xl:gap-y-6 gap-x-1
-                                        -translate-y-[8vh] sm:-translate-y-[29vh] xl:-translate-y-[32vh]  md:-translate-y-[76vh] lg:-translate-y-[58vh]  2xl:-translate-y-[42vh]
-                                        ml-[8%]"
-                                variants={containerVariants}
-                                animate="playout"
-                            >
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/dotnetCore.png"} > .Net Core</PopUp>
-                                </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/nextjs.png"} >NextJs</PopUp>
-                                </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/docker.png"} >Docker</PopUp>
-                                </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/efCore.png"} >EFCore</PopUp>
-                                </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/postgres.png"} >posgres</PopUp>
-                                </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/graphQl.png"} >graphQl</PopUp>
-                                </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/serilog.png"} >Serilog</PopUp>
-                                </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/Auth0.jpg"} >Auth0</PopUp>
-                                </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
-                                    variants={itemVariants}
-                                >
-                                    <PopUp img={"/icons/signalR.png"} >SignalR</PopUp>
-                                </motion.div>
 
-                            </motion.div >
-
-                        </div>
                     </motion.div>
 
                 </div>
@@ -174,7 +103,7 @@ const Experience = () => {
                         <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]"
 
                             initial={{ translate: "105%)" }}
-                            animate={(AnimationProgress < 0.2) ? { translate: 105 - AnimationProgress * 500 + "%" } : { translate: "5%" }}
+                            whileInView={{ translate: "5%" }}
                             transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
                             viewport={{ once: true }}
                         >
@@ -206,7 +135,7 @@ const Experience = () => {
                                     </motion.div>
 
                                 </motion.div>
-                                <motion.div
+                                <div
                                     className="
                                         h-5/6 hidden lg:block z-[80] will-change-[transform,opacity]
                                         scale-[170%] md:scale-[125%] 2xl:scale-[115%] 
@@ -214,10 +143,7 @@ const Experience = () => {
                                         -translate-y-[15%]
                                         shadow-lg shadow-black/70"
 
-                                    initial={{ x: "0" }}
-                                    whileInView={AnimationProgress > 0.18 ? { x: ["0", "50vw", "0vw"] } : {}}
-                                    transition={{ duration: 0.7, delay: 0.3, ease: "anticipate" }}
-                                    viewport={{ once: true }}
+
                                 >
                                     <motion.div className="h-full w-full"
                                         animate={{ scale: ["100%", "110%", "100%"] }}
@@ -231,7 +157,7 @@ const Experience = () => {
                                             />
                                         </ExternalCircularButton>
                                     </motion.div>
-                                </motion.div>
+                                </div>
 
                                 <motion.div className="
                                         hidden lg:flex md:w-9/12
@@ -241,7 +167,7 @@ const Experience = () => {
                                         shadow-2xl shadow-black/30
                                 "
                                     initial={{ opacity: 0 }}
-                                    whileInView={AnimationProgress > 0.18 ? { opacity: [0, 1] } : {}}
+                                    whileInView={{ opacity: [0, 1] }}
                                     transition={{ duration: 1.2, delay: 0.3, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
@@ -249,7 +175,7 @@ const Experience = () => {
                                         <motion.div
                                             className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
                                             initial={{ opacity: 0 }}
-                                            whileInView={AnimationProgress > 0.18 ? { opacity: 1 } : {}}
+                                            whileInView={{ opacity: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: 0.75, duration: 0.36, ease: easeIn }}
                                         >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
@@ -260,7 +186,7 @@ const Experience = () => {
                                             className="text-2xl translate-x-[6%] pr-1 font-bold text-white lg:hidden will-change-[opacity]"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
-                                            whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.3, 1] } : {}}
+                                            whileInView={{ opacity: [0, 0.3, 1] }}
                                             transition={{ delay: 0.8, duration: 0.42, ease: easeIn }}
                                         >
                                             Full-Stack Engineer
@@ -268,7 +194,7 @@ const Experience = () => {
                                         <motion.div className="relative will-change-[transform,opacity] flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] text-white"
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
-                                            whileInView={AnimationProgress > 0.18 ? { opacity: 1, scale: [1.8, 1.5, 1] } : {}}
+                                            whileInView={{ opacity: 1, scale: [1.8, 1.5, 1] }}
                                             transition={{ delay: 0.5, duration: 0.72, ease: "anticipate" }}
                                         >
                                             <span className="
@@ -279,7 +205,7 @@ const Experience = () => {
                                         </motion.div>
                                         <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
                                             initial={{ opacity: 0 }}
-                                            whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.8] } : {}}
+                                            whileInView={{ opacity: [0, 0.8] }}
                                             transition={{ duration: 1.2, delay: 0.38, ease: "anticipate" }}
                                             viewport={{ once: true }}
 
@@ -359,7 +285,7 @@ const Experience = () => {
                                     border-b-black/20  
                                     "
                                 initial={{ translate: "300%" }}
-                                animate={(AnimationProgress < 0.2) ? { translate: 100 - AnimationProgress * 400 + "%" } : { translate: "0%" }}
+                                animate={{ translate: "0%" }}
                                 transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
 
                             >
@@ -438,9 +364,9 @@ const Experience = () => {
                     </div>
 
                 </div>
-            </div>
+            </div >
         </div >
     )
 }
 
-export default Experience;
+export default mobileExperience;

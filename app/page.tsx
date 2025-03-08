@@ -12,6 +12,7 @@ export type NavButtonT = { tag: string, data?: ReactNode, className_: string }[]
 import { motion } from "framer-motion";
 import ParticlesComponent from "@/components/client/Animation/ParticlesComponent";
 import Image from "next/image";
+import MobileExperience from "@/components/pages/Segment/mobileExperience";
 const Page = () => {
 
     const desRef = useRef<HTMLDivElement>(null);
@@ -122,8 +123,12 @@ const Page = () => {
                 ref={expRef}
 
             >
-
-                <Experience />
+                <div className="h-full w-full hidden lg:block">
+                    <Experience />
+                </div>
+                <div className="h-full w-full lg:hidden">
+                    <MobileExperience />
+                </div>
             </div>
 
             {/* 200vh for Skill */}
