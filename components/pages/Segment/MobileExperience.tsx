@@ -8,7 +8,7 @@ const MobileExperience = () => {
 
     return (
         <div className="
-                    overflow-hidden
+                    
                     h-full w-full
                     "
         >
