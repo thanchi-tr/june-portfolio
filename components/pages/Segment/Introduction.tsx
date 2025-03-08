@@ -78,12 +78,13 @@ const Introduction = () => {
                             ">
                             <motion.div className="
                                     absolute lg:hidden
-                                     w-full 
+                                     w-full will-change-transform
                                     bg-primary"
                                 animate={{
                                     height: (AnimationProgress * 35) + 40 + "%",
                                     top: 75 - (AnimationProgress * 50) + "%"
                                 }}
+                                transition={{ ease: "easeOut", duration: 0.3 }}
                             />
                             {/* avatar + link */}
                             <div className="
