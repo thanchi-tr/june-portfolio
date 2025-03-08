@@ -15,19 +15,20 @@ const Education = () => {
             <div className="w-full h-[6%]  text-center font-extrabold text-white/80 md:text-black z-10 translate-y-1/4">2018-2023</div>
             <motion.div className="
                         w-full h-[20%] md:h-[16.5%] font-mainfont
-                        text-center text-5xl z-10
+                        text-center text-5xl z-10 will-change-transform
                         text-shadow-lg shadow-black/80
                         text-primary font-semibold"
 
-                initial={{ translateY: "20vh" }}
-                whileInView={{ translateY: "0" }}
+                initial={{ y: "20rem" }}
+                whileInView={{ y: "0" }}
                 transition={{ duration: 0.44, delay: 0.12, ease: "easeIn" }}
                 viewport={{ once: true }}
             >
                 <motion.div
+                    className="will-change-transform"
                     animate={{
-                        translateY: ["0", "-0.6vw", "0.9vw", "-1.1vw", "0.6vw", "0"],
-                        translateX: ["0", "0.6vw", "-1vw", "0", "2vw", "-1.6vw", "0"],
+                        y: ["0", "-0.6rem", "0.9rem", "-1.1rem", "0.6rem", "0"],
+                        x: ["0", "0.6vw", "-1vw", "0", "2vw", "-1.6vw", "0"],
                         rotateZ: ["0", "0", "-3deg", "0", "2deg", "0"]
                     }}
                     transition={{ repeat: Infinity, duration: 12, delay: 0.7 }}
@@ -44,7 +45,7 @@ const Education = () => {
 
             >
                 <motion.div className="
-                            relative h-[12vh] aspect-square 
+                            relative h-[12vh] aspect-square will-change-transform
                             rounded-full overflow-clip shadow-inner shadow-black
                             bg-blue-950 border-white 
                             md:scale-150 border-4 z-10
@@ -67,11 +68,11 @@ const Education = () => {
                                 relative flex flex-col justify-end 
                                 h-full w-auto font-extrabold
                                 text-5xl tracking-widest
-                                font-signaturefont 
+                                font-signaturefont will-change-transform
                         "
                         animate={{
-                            translateY: ["0", "1.2vw", "-1.3vw", "0"],
-                            translateX: ["0", "0.6vw", "1vw", "0", "-2vw", "-1.6vw", "0"],
+                            y: ["0", "1.2rem", "-1.3rem", "0"],
+                            x: ["0", "0.6vw", "1vw", "0", "-2vw", "-1.6vw", "0"],
                             rotateZ: ["0", "0", "-3deg", "0", "5deg", "0"]
 
                         }}

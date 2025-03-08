@@ -17,7 +17,7 @@ const Skill = () => {
     const itemVariants = {
         hidden: {},
         show: {
-            translateY: ["6px", "0"],
+            y: ["6px", "0"],
             opacity: [0, 1],
             transition: {
                 duration: 0.4,
@@ -56,11 +56,11 @@ const Skill = () => {
                                 text-white uppercase z-50 
                                 text-6xl md:text-6xl font-bold font-mainfont
                                 md:-translate-x-[8%] tracking-[0.8rem]
-                                
+                                will-change-transform
                                 "
 
-                    initial={{ translate: "-20vw" }}
-                    whileInView={{ translate: "0vw" }}
+                    initial={{ x: "-20vw" }}
+                    whileInView={{ x: "0vw" }}
                     transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
                 >
                     <div className="text-shadow-lg shadow-black md:shadow-transparent md:translate-y-[49%] md:text-primary md:scale-110">Skill</div>
@@ -98,16 +98,16 @@ const Skill = () => {
                         ">
 
                             <motion.div className="hidden md:block w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
-                                initial={{ translate: "0" }}
-                                whileInView={{ translate: ["0", "250%", "0"] }}
+                                initial={{ x: "0" }}
+                                whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image src={"/icons/dotnetCore.png"} alt={""} fill className="object-contain z-10"></Image>
                             </motion.div>
-                            <motion.div className="md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
-                                initial={{ translate: "0" }}
-                                whileInView={{ translate: ["0", "40vw", "0"] }}
+                            <motion.div className="md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 will-change-transform"
+                                initial={{ x: "0" }}
+                                whileInView={{ x: ["0", "40vw", "0"] }}
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
@@ -115,12 +115,12 @@ const Skill = () => {
                             </motion.div>
                             <motion.div className="
                                     flex flex-col justify-evenly
-                                    w-5/8 h-full gradient-text
+                                    w-5/8 h-full gradient-text will-change-opacity
                                     uppercase text-white/80  text-center font-bold
                             "
-                                initial={{ opacity: "0" }}
-                                whileInView={{ opacity: ["0", "1"] }}
-                                transition={{ duration: 1.3, delay: 1.3, ease: "anticipate" }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 1.3, delay: 1.1, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 .net core
@@ -130,17 +130,17 @@ const Skill = () => {
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
                                 
                         ">
-                            <motion.div className="hidden md:block w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
-                                initial={{ translate: "0" }}
-                                whileInView={{ translate: ["0", "250%", "0"] }}
+                            <motion.div className="hidden will-change-transform md:block w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                                initial={{ x: "0" }}
+                                whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10"></Image>
                             </motion.div>
-                            <motion.div className="md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
-                                initial={{ translate: "0" }}
-                                whileInView={{ translate: ["0", "40vw", "0"] }}
+                            <motion.div className="md:hidden will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
+                                initial={{ x: "0" }}
+                                whileInView={{ x: ["0", "40vw", "0"] }}
                                 transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
@@ -148,25 +148,25 @@ const Skill = () => {
                             </motion.div>
                             <motion.div className="
                                     flex flex-col justify-evenly
-                                    w-5/8 h-full
+                                    w-5/8 h-full will-change-transform
                                     uppercase text-center font-bold gradient-text
                             "
-                                initial={{ opacity: "0" }}
-                                whileInView={{ opacity: ["0", "1"] }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
                                 animate={{}}
-                                transition={{ duration: 1.3, delay: 1.3, ease: "anticipate" }}
+                                transition={{ duration: 1.3, delay: 1.1, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 next.js
                             </motion.div>
                         </div>
                         <motion.div className="flex flex-col justify-evenly
-                                w-full 2xl:w-[70%] h-[10vh] gradient-text
+                                w-full 2xl:w-[70%] h-[10vh] gradient-text will-change-transform
                                 uppercase text-white/80 text-2xl text-center font-bold
                         "
-                            initial={{ opacity: 0, translateY: "2.1vh" }}
-                            whileInView={{ opacity: 1, translateY: ["2.1vh", "0vh"] }}
-                            transition={{ duration: 0.33, delay: 1.3, ease: "easeIn" }}
+                            initial={{ opacity: 0, y: "2.1rem" }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.33, delay: 1.1, ease: "easeIn" }}
                             viewport={{ once: true }}
                         >
                             Express.js
@@ -181,8 +181,8 @@ const Skill = () => {
                         bg-gradient-to-b from-primary to-background 2xl:bg-transparent
                         rounded-2xl md:rounded-none
                 "
-                    initial={{ translate: "90%" }}
-                    whileInView={{ translate: "0%" }}
+                    initial={{ x: "90%" }}
+                    whileInView={{ x: "0%" }}
                     transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
                 >
                     <div className="h-[10%]"></div>
@@ -320,7 +320,7 @@ const Skill = () => {
                         <motion.div
                             animate={{ scaleX: [1, 1.7, 0.7, 1.4, 1] }}
                             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-                            className="h-[0.8vh] w-1/4 bg-white/60 mt-10"
+                            className="h-[0.8vh] w-1/4 bg-white/60 mt-10 will-change-transform"
                         />
                     </motion.div>
                 </motion.div>

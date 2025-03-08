@@ -19,10 +19,11 @@ const Experience = () => {
     const itemVariants = {
         "init": {},
         "playout": {
-            translateY: [0, "1.6vh", 0],
+            y: [0, "1.6rem", 0],
             transition: {
                 duration: 3.2,
                 repeat: Infinity,
+                ease: "easeInOut",
             }
         },
     };
@@ -54,12 +55,12 @@ const Experience = () => {
                 <motion.span
                     className="
                         text-4xl md:text-6xl tracking-wider font-bold 
-                        text-white w-full scale-x-125 scale-y-110
+                        text-white w-full
                         translate-y-1/2 uppercase font-mainfont z-50
                         text-shadow-lg shadow-black/70
                        "
-                    initial={{ x: "-100%" }}
-                    whileInView={{ transform: ["translateX(-100%)", "translateX(0%)"] }}
+                    initial={{ x: "-100%", scale: 1.1 }}
+                    whileInView={{ x: 0, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
                     viewport={{ once: true }}
 
@@ -89,9 +90,9 @@ const Experience = () => {
                             2xl:bg-background
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "
-                        initial={{ translate: "-145%" }}
-                        animate={(AnimationProgress < 0.20) ? { translate: -145 + AnimationProgress * 820 + "%" } : { translate: -80 + 0.245 * 380 + "%" }}
-
+                        initial={{ x: "-148%" }}
+                        animate={(AnimationProgress < 0.20) ? { x: -148 + AnimationProgress * 820 + "%" } : { x: -80 + 0.245 * 380 + "%" }}
+                        transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl scale-y-125"></div>
 
@@ -162,8 +163,8 @@ const Experience = () => {
                                         -translate-y-[15%]
                                         z-[80] shadow-lg shadow-black/70"
 
-                                    initial={{ translate: "35vw" }}
-                                    whileInView={AnimationProgress > 0.18 ? { translate: ["35vw", "60vw", "0vw"] } : {}}
+                                    initial={{ x: "35vw" }}
+                                    whileInView={AnimationProgress > 0.18 ? { x: ["35vw", "60vw", "0vw"] } : {}}
                                     transition={{ duration: 0.55, delay: 0.2, ease: "anticipate" }}
                                 >
                                     <motion.div className="h-full w-full"
@@ -184,8 +185,8 @@ const Experience = () => {
                                         -translate-y-[15%]
                                         shadow-lg shadow-black/70"
 
-                                    initial={{ translate: "0" }}
-                                    whileInView={AnimationProgress > 0.18 ? { translate: ["0", "50vw", "0vw"] } : {}}
+                                    initial={{ x: "0" }}
+                                    whileInView={AnimationProgress > 0.18 ? { x: ["0", "50vw", "0vw"] } : {}}
                                     transition={{ duration: 0.7, delay: 0.3, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
@@ -266,7 +267,7 @@ const Experience = () => {
                                     list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 
                                     2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-[#ad9547]
                                      border-x-[#ad9547]/15 
-                                    pt-[7%]
+                                    pt-[7%] will-change-transform
                                     border-b-black/20  
                                     "
                                 initial={{ translate: "300%" }}
