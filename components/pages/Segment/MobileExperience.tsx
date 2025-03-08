@@ -1,31 +1,10 @@
 "use client";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
-import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
 import { easeIn, motion } from "framer-motion";
 
 const mobileExperience = () => {
-    const containerVariants = {
-        "init": {},
-        "playout": {
-            transition: {
-                staggerChildren: 0.3, // Each child will animate 0.3s after the previous one
-                delayChildren: 0.5, // Delay before children start animating
-            }
-        },
-    };
 
-    const itemVariants = {
-        "init": {},
-        "playout": {
-            y: [0, "1.6rem", 0],
-            transition: {
-                duration: 3.2,
-                repeat: Infinity,
-                ease: "easeInOut",
-            }
-        },
-    };
 
     return (
         <div className="
