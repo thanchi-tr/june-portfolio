@@ -133,7 +133,7 @@ const Page = () => {
                 ref={skillRef}
             >
 
-                <Skill></Skill>
+                <Skill />
             </div>
             {/* Project */}
             <div className="h-auto"

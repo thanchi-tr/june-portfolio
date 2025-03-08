@@ -186,13 +186,13 @@ const Skill = () => {
                         relative flex-col z-10
                         h-auto md:h-[100%] w-[94%] md:w-2/3 pb-[8%]
                         -translate-y-[20%] md:translate-y-0
-                        md:ml-3  shadow-xl shadow-black/70
+                        md:ml-3  shadow-xl shadow-black/70 will-change-transform
                         bg-gradient-to-b from-primary to-background 2xl:bg-transparent
                         rounded-2xl md:rounded-none
                 "
                     initial={{ x: "90%" }}
                     whileInView={{ x: "0%" }}
-                    transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+                    transition={{ duration: 0.8, delay: 0.05, ease: "easeInOut" }}
                 >
                     <div className="h-[10%]"></div>
                     <div className="

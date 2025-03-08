@@ -226,7 +226,10 @@ const Introduction = () => {
 
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl hover:bg-transparent"></div>
 
-                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100 lg:group-hover:opacity-0 lg:opacity-100">
+                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100 lg:group-hover:opacity-0 lg:opacity-100
+                                transition-all group-hover:duration-300 ease-in-out
+                        
+                        ">
 
                             <div className="absolute w-full top-0 left-0 h-[9vh] translate-x-[-30%] rounded-2xl overflow-clip">
                                 <Image

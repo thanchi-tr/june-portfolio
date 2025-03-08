@@ -68,7 +68,7 @@ const Education = () => {
                                 relative flex flex-col justify-end 
                                 h-full w-auto font-extrabold
                                 text-5xl tracking-widest
-                                font-signaturefont will-change-transform
+                                font-signaturefont will-change-[transform, opacity]
                         "
                         animate={{
                             y: ["0", "1.2rem", "-1.3rem", "0"],
@@ -86,7 +86,7 @@ const Education = () => {
                     <div className="flex flex-col justify-end ml-4 font-mainfont font-light text-white/80"
 
                     >
-                        <p className=" bg-secondary px-3">@2025</p>
+                        <p className=" bg-secondary px-3 rounded-lg">@2025</p>
                     </div>
                 </div>
 
