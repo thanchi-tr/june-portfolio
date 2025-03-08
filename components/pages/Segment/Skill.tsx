@@ -1,8 +1,7 @@
 "use client";
 import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
-import { motion, useScroll } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 const Skill = () => {
     const containerVariants = {
         hidden: {},
@@ -24,9 +23,6 @@ const Skill = () => {
             }
         },
     };
-    const selfRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({ target: selfRef });
-
     return (
         <div className="h-full w-full bg-background">
             <div className="flex items-center justify-center h-0 w-full"
