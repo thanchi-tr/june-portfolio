@@ -7,8 +7,8 @@ const Skill = () => {
         hidden: {},
         show: {
             transition: {
-                staggerChildren: 0.2, // Each child will animate 0.3s after the previous one
-                delayChildren: 0.6, // Delay before children start animating
+                staggerChildren: 0.1,
+                delayChildren: 0.3, // Delay before children start animating
             }
         },
     };
@@ -19,7 +19,7 @@ const Skill = () => {
             y: ["6px", "0"],
             opacity: [0, 1],
             transition: {
-                duration: 0.4,
+                duration: 0.2,
             }
         },
     };
