@@ -21,7 +21,7 @@ const Avata = () => {
                         "
                     initial={{ scale: 1, rotate: "-0deg" }}
                     animate={{ scale: [1, 1.6, 1.5, 1], rotate: ["0deg", "12deg", "0deg"] }}
-                    transition={{ duration: 0.75, ease: "easeInOut" }}
+                    transition={{ duration: 0.1, ease: "easeInOut" }}
                 >
 
                     <motion.div
@@ -34,12 +34,12 @@ const Avata = () => {
                             y: ["0.3rem", "2.1rem", "-1rem", "0.3rem", "0.3rem", "1.1rem", "-1.1rem", "0.3rem"],
                             rotateZ: ["0", "-5deg", "-2deg", "3deg", "0"]
                         }}
-                        transition={{ delay: 0.5, duration: 19, repeat: Infinity, ease: "easeInOut" }}
+                        transition={{ delay: 0.2, duration: 19, repeat: Infinity, ease: "easeInOut" }}
                     >
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ duration: 0.7, ease: "easeOut" }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
                         >Solution-oriented
                             <p className="gradient-text text-3xl hidden group-hover:block">Click for CV</p>
                             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-white opacity-60 2xl:opacity-30 blur-3xl"></div>
@@ -58,7 +58,7 @@ const Avata = () => {
                     font-mainfont font-[900]"
                     initial={{ x: "39vw", opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.95, ease: "anticipate" }}
+                    transition={{ duration: 0.4, delay: 0.65, ease: "anticipate" }}
                 >
 
                     <motion.div
@@ -68,7 +68,7 @@ const Avata = () => {
                             x: ["0", "0.6vw", "1vw", "0", "-5vw", "-1.3vw", "0"],
                             rotateZ: ["0", "0", "-3deg", "0", "5deg", "0"]
                         }}
-                        transition={{ delay: 1.6, duration: 11, repeat: Infinity }}
+                        transition={{ delay: 1.2, duration: 11, repeat: Infinity }}
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-white opacity-60 2xl:opacity-30 blur-3xl"></div>
 
@@ -86,7 +86,7 @@ const Avata = () => {
                     font-mainfont font-[900]"
                     initial={{ translate: "39vw", opacity: 0 }}
                     animate={{ translate: 0, opacity: 1 }}
-                    transition={{ duration: 0.9, delay: 1.25, ease: "anticipate" }}
+                    transition={{ duration: 0.65, delay: 0.2, ease: "anticipate" }}
                 >
 
                     <motion.div
@@ -96,7 +96,7 @@ const Avata = () => {
                             x: ["0", "0.6vw", "1vw", "0", "-2vw", "-1.3vw", "0"],
                             rotateZ: ["0", "2deg", "-3deg", "0", "5deg", "0"]
                         }}
-                        transition={{ delay: 0.8, duration: 8, repeat: Infinity }}
+                        transition={{ delay: 0.3, duration: 8, repeat: Infinity }}
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-white opacity-60 2xl:opacity-30 blur-3xl"></div>
 
@@ -114,7 +114,7 @@ const Avata = () => {
                     font-mainfont font-[900]"
                     initial={{ x: "39vw", opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 0.65, ease: "anticipate" }}
+                    transition={{ duration: 0.65, delay: 0.42, ease: "anticipate" }}
                 >
 
                     <motion.div
@@ -124,7 +124,7 @@ const Avata = () => {
                             x: ["0", "0.6vw", "1vw", "0", "-2vw", "-1.3vw", "0"],
                             rotateZ: ["0", "-3deg", "0", "5deg", "0", "0"]
                         }}
-                        transition={{ delay: 2, duration: 10, repeat: Infinity }}
+                        transition={{ delay: 1.25, duration: 6, repeat: Infinity }}
                     >
 
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 2xl:opacity-30 blur-3xl"></div>

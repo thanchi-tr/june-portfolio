@@ -170,9 +170,9 @@ const Introduction = () => {
                     animate={{ x: 0 }}
                     transition={{
                         type: "spring",
-                        stiffness: 120, // Controls the speed of the spring effect
+                        stiffness: 300, // Controls the speed of the spring effect
                         damping: 18, // Reduces overshoot
-                        delay: 1.7,
+                        delay: 0.7,
                     }}
                 >
                     <div className="w-full h-[20%]"></div>
