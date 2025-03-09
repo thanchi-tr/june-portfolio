@@ -219,7 +219,7 @@ const Experience = () => {
                                         shadow-2xl shadow-black/30
                                 "
                                     initial={{ opacity: 0 }}
-                                    whileInView={AnimationProgress > 0.18 ? { opacity: [0, 1] } : {}}
+                                    whileInView={AnimationProgress.get() > 0.18 ? { opacity: [0, 1] } : {}}
                                     transition={{ duration: 1.2, delay: 0.3, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
@@ -227,7 +227,7 @@ const Experience = () => {
                                         <motion.div
                                             className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
                                             initial={{ opacity: 0 }}
-                                            whileInView={AnimationProgress > 0.18 ? { opacity: 1 } : {}}
+                                            whileInView={AnimationProgress.get() > 0.18 ? { opacity: 1 } : {}}
                                             viewport={{ once: true }}
                                             transition={{ delay: 0.75, duration: 0.36, ease: easeIn }}
                                         >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
@@ -238,7 +238,7 @@ const Experience = () => {
                                             className="text-2xl translate-x-[6%] pr-1 font-bold text-white lg:hidden will-change-[opacity]"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
-                                            whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.3, 1] } : {}}
+                                            whileInView={AnimationProgress.get() > 0.18 ? { opacity: [0, 0.3, 1] } : {}}
                                             transition={{ delay: 0.8, duration: 0.42, ease: easeIn }}
                                         >
                                             Full-Stack Engineer
@@ -246,7 +246,7 @@ const Experience = () => {
                                         <motion.div className="relative will-change-[transform,opacity] flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] text-white"
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
-                                            whileInView={AnimationProgress > 0.18 ? { opacity: 1, scale: [1.8, 1.5, 1] } : {}}
+                                            whileInView={AnimationProgress.get() > 0.18 ? { opacity: 1, scale: [1.8, 1.5, 1] } : {}}
                                             transition={{ delay: 0.5, duration: 0.72, ease: "anticipate" }}
                                         >
                                             <span className="
@@ -257,7 +257,7 @@ const Experience = () => {
                                         </motion.div>
                                         <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
                                             initial={{ opacity: 0 }}
-                                            whileInView={AnimationProgress > 0.18 ? { opacity: [0, 0.8] } : {}}
+                                            whileInView={AnimationProgress.get() > 0.18 ? { opacity: [0, 0.8] } : {}}
                                             transition={{ duration: 1.2, delay: 0.38, ease: "anticipate" }}
                                             viewport={{ once: true }}
 
@@ -337,7 +337,7 @@ const Experience = () => {
                                     border-b-black/20  
                                     "
                                 initial={{ translate: "300%" }}
-                                animate={(AnimationProgress < 0.2) ? { translate: 100 - AnimationProgress * 400 + "%" } : { translate: "0%" }}
+                                animate={(AnimationProgress.get() < 0.2) ? { translate: 100 - AnimationProgress.get() * 400 + "%" } : { translate: "0%" }}
                                 transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
 
                             >
