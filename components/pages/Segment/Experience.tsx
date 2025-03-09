@@ -360,7 +360,7 @@ const Experience = () => {
                                     transition={{ delay: 0.2, duration: 0.6 }}
                                 >Revamped Landing Page UI/UX, leading to a
                                     <span className="relative inline text-primary font-extrabold px-2">
-                                        22% increase in conversion rate
+                                        22% increase in average conversion rate
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl z-[200]"></div>
 
                                     </span>
@@ -374,7 +374,7 @@ const Experience = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, duration: 0.6 }}
                                 >Optimized database queries, improving API response times and increasing overall
-                                    <span className="relative inline text-primary font-extrabold mx-2">application speed by 32%
+                                    <span className="relative inline text-primary font-extrabold mx-2">application speed by 35%
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
                                     </span>.
                                 </motion.li>
