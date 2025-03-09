@@ -44,9 +44,10 @@ const ParticlesComponent = () => {
                     links: {
                         enable: true,
                         distance: 150, // Maximum distance to connect
-                        color: "#ffffff",
-                        opacity: 0.32,
+                        color: "#ad9547",
+                        opacity: 0.24,
                         width: 1,
+
                     },
                     opacity: {
                         value: { min: 0.2, max: 0.8 },
