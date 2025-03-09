@@ -178,7 +178,7 @@ const Experience = () => {
                         <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]"
 
                             initial={{ translate: "105%)" }}
-                            animate={(AnimationProgress < 0.2) ? { translate: 105 - AnimationProgress * 500 + "%" } : { translate: "5%" }}
+                            animate={(AnimationProgress.get() < 0.2) ? { translate: 105 - AnimationProgress.get() * 500 + "%" } : { translate: "5%" }}
                             transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
                             viewport={{ once: true }}
                         >
@@ -193,7 +193,7 @@ const Experience = () => {
                                         shadow-lg shadow-black/70"
 
                                     initial={{ x: "0" }}
-                                    whileInView={AnimationProgress > 0.18 ? { x: ["0", "50vw", "0vw"] } : {}}
+                                    whileInView={AnimationProgress.get() > 0.18 ? { x: ["0", "50vw", "0vw"] } : {}}
                                     transition={{ duration: 0.7, delay: 0.3, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
