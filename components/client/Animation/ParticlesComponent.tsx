@@ -37,14 +37,14 @@ const ParticlesComponent = () => {
                         count: 0,
                     },
                     color: {
-                        value: ["#000000"],
+                        value: ["#ad9547", "#cca62e", "#70587c", "#482a41"],
 
                     },
                     shape: { type: "circle" },
                     links: {
                         enable: true,
                         distance: 150, // Maximum distance to connect
-                        color: "#000000",
+                        color: "#ffffff",
                         opacity: 0.32,
                         width: 1,
                     },
