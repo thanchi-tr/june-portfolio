@@ -1,5 +1,5 @@
 import { MotionValue } from "framer-motion";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 
 let useAnimationProgress = (value: MotionValue, delay: number) => {
   const [AnimationProgress, setAnimationProgress] = useState(value);

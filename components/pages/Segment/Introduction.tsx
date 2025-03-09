@@ -4,7 +4,7 @@ import Avata from "@/components/client/Animation/Avata";
 import ToggleButton from "@/components/client/Animation/ToggleButton";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const Introduction = () => {
     const selfRef = useRef<HTMLDivElement>(null);

@@ -3,7 +3,7 @@ import ExternalCircularButton from "@/components/client/Functional/ExternalCircu
 import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
 import { easeIn, motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const Experience = () => {
     const containerVariants = {
