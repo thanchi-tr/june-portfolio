@@ -92,11 +92,11 @@ const ComparenSave = () => {
                     <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
                         <li> Migrated to GraphQL, reducing
                             <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
-                                no-show rates by 15%
+                                no-show rates by 16%
 
                             </span>
                             through automated appointment reminders, increasing SMS cost overhead.</li>
-                        <li>Optimized SQL Server indexing,
+                        <li>Optimized SQL Server indexing, adopting GraphQL to aid in reduce
                             <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
                                 over-fetching by 60%
 

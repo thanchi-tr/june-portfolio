@@ -7,7 +7,7 @@ const FizzBuzz = () => {
         <div className="flex gap-1 justify-stretch">
             {/* logo */}
             <div></div>
-            <div className="font-semibold py-1">Personal Project
+            <div className="font-semibold py-1 bg-primary">Personal Project
             </div>
 
         </div>
@@ -99,7 +99,7 @@ const FizzBuzz = () => {
                         <ul className="flex flex-col list-disc list-inside px-1 gap-2 ">
                             <li>Built a highly optimized SignalR WebSocket communication layer, reducing
                                 <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
-                                    network latency by 30%
+                                    network latency and enable real-time communication.
 
                                 </span>.</li>
                             <li>Optimized server-side game state management, reducing

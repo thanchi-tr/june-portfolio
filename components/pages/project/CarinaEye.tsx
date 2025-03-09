@@ -92,9 +92,9 @@ const CompareNSave = () => {
                             through automated appointment reminders, increasing SMS cost overhead.</li>
                         <li>Optimized SQL Server indexing,
                             <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
-                                educing query execution time by 50%,
+                                reducing query execution time by 30%,
 
-                            </span>, but requiring higher initial computational costs.</li>
+                            </span>.</li>
                         <li>Migrated to Next.js, improving
                             <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
                                 page load speed by 50%,

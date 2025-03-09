@@ -101,7 +101,7 @@ const PTE = () => {
                     <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
                         <li>Built a .NET Core Microservices API with Load Balancer,
                             <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
-                                reducing server load by 50%
+                                reducing server load by 40%
 
                             </span>
                             while maintaining modular scalability.</li>
