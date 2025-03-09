@@ -21,14 +21,14 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                         style={{ width: ((index != selectedIndex) ? "4%" : `${Math.floor(97 - (cards.length - 1) * 4)}%`) }}
                         className={`
                              overflow-clip inline
-                            h-full relative will-change-[transform,opacity]
+                            h-full relative will-change-transform
                             ${index == selectedIndex ? "shadow-xl shadow-black rounded-xl border-[1px] border-b-white/15" : "rounded-md"}
                             ${index == selectedIndex ? "bg-transparent pointer-events-none" : "bg-gradient-to-t from-primary via-primary/50 border-t-[1.2vw] border-primary border-opacity-35 to-black/30 hover:cursor-pointer "}
                             transition-all duration-[1.5s] ease-out
                             `}
                         onClick={() => setSelectedIndex(index)}
                         initial={selectedIndex != index ? { translateY: "20%" } : { scaleX: "40%" }}
-                        whileInView={selectedIndex != index ? { translateY: ["20%", "0%"], opacity: [0, 1] } : { scaleX: ["40%", "100%"] }}
+                        whileInView={selectedIndex != index ? { translateY: ["20%", "0%"] } : { scaleX: ["40%", "100%"] }}
                         transition={{ duration: 0.5, delay: 0.2 * index }}
 
                         viewport={{ once: true }}
@@ -37,7 +37,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                         {
                             <motion.div
 
-                                className={`relative origin-top-right h-full w-full will-change-[transform,opacity]
+                                className={`relative origin-top-right h-full w-full will-change-opacity
                                     transition-all   ease-in-out ${index != selectedIndex ? "duration-75 opacity-0" : "duration-[390ms] delay-1000 opacity-100"}
                                 `}
                                 whileInView={selectedIndex == index ? { opacity: [0, 1] } : { opacity: 0 }}
