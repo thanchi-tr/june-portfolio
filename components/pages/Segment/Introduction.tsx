@@ -21,7 +21,7 @@ const Introduction = () => {
         };
         setTimeout(() => {
             setRefresh(true);
-        }, 200);
+        }, 20);
     });
     return (
         <div className={`
