@@ -3,20 +3,20 @@ import Image from "next/image";
 import Avata from "@/components/client/Animation/Avata";
 import ToggleButton from "@/components/client/Animation/ToggleButton";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useRef, useState } from "react";
 
 const Introduction = () => {
     const selfRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: selfRef });
     const [refresh, setRefresh] = useState(false);
-    const [AnimationProgress, setAnimationProgress] = useState(0);
+    const AnimationProgress = useMotionValue(0);
 
     useMotionValueEvent(scrollYProgress, 'change', (latest) => {
 
         // Additional logic based on scroll progress
         if (refresh) {
-            setAnimationProgress(latest)
+            AnimationProgress.set(latest)
             setRefresh(false);
         };
         setTimeout(() => {
@@ -80,8 +80,8 @@ const Introduction = () => {
                                      w-full will-change-transform
                                     bg-[url(/mobile-info-2.jpeg)] bg-cover bg-top"
                                 animate={{
-                                    height: (AnimationProgress * 35) + 40 + "%",
-                                    top: 75 - (AnimationProgress * 50) + "%"
+                                    height: (AnimationProgress.get() * 35) + 40 + "%",
+                                    top: 75 - (AnimationProgress.get() * 50) + "%"
                                 }}
                                 transition={{ ease: "easeOut", duration: 0.3 }}
                             >

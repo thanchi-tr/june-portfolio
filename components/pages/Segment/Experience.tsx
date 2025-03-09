@@ -2,7 +2,7 @@
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
-import { easeIn, motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { easeIn, motion, useMotionValue, useMotionValueEvent, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 
 const Experience = () => {
@@ -30,21 +30,19 @@ const Experience = () => {
     const selfRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: selfRef });
     const [refresh, setRefresh] = useState(false);
-    const [AnimationProgress, setAnimationProgress] = useState(0);
+    const AnimationProgress = useMotionValue(0);
 
     useMotionValueEvent(scrollYProgress, 'change', (latest) => {
 
         // Additional logic based on scroll progress
         if (refresh) {
-            setAnimationProgress(latest)
+            AnimationProgress.set(latest)
             setRefresh(false);
         };
         setTimeout(() => {
             setRefresh(true);
-        }, 100);
+        }, 200);
     });
-
-
 
     return (
         <div className="
@@ -96,7 +94,7 @@ const Experience = () => {
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "
                         initial={{ x: "-148%" }}
-                        animate={(AnimationProgress < 0.20) ? { x: -148 + AnimationProgress * 820 + "%" } : { x: -80 + 0.245 * 380 + "%" }}
+                        animate={(AnimationProgress.get() < 0.20) ? { x: -148 + AnimationProgress.get() * 820 + "%" } : { x: -80 + 0.245 * 380 + "%" }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl scale-y-125"></div>
