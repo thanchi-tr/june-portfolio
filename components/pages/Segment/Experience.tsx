@@ -2,7 +2,7 @@
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
-import { easeIn, motion, useScroll } from "framer-motion";
+import { easeIn, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const Experience = () => {
@@ -29,16 +29,22 @@ const Experience = () => {
     };
     const selfRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: selfRef });
+    const [refresh, setRefresh] = useState(false);
     const [AnimationProgress, setAnimationProgress] = useState(0);
 
-    // Update the animation progress, where we can read later on
-    useEffect(() => {
-        const unsubscribe = scrollYProgress.onChange((latest) => {
-            setAnimationProgress(latest)
-        });
+    useMotionValueEvent(scrollYProgress, 'change', (latest) => {
 
-        return () => unsubscribe(); // Cleanup subscription
-    }, [scrollYProgress]);
+        // Additional logic based on scroll progress
+        if (refresh) {
+            setAnimationProgress(latest)
+            setRefresh(false);
+        };
+        setTimeout(() => {
+            setRefresh(true);
+        }, 100);
+    });
+
+
 
     return (
         <div className="

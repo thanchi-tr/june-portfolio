@@ -3,23 +3,26 @@ import Image from "next/image";
 import Avata from "@/components/client/Animation/Avata";
 import ToggleButton from "@/components/client/Animation/ToggleButton";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
-import { motion, useScroll } from 'framer-motion';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useEffect, useRef, useState } from "react";
 
 const Introduction = () => {
     const selfRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: selfRef });
+    const [refresh, setRefresh] = useState(false);
     const [AnimationProgress, setAnimationProgress] = useState(0);
 
-    // Update the animation progress, where we can read later on
-    useEffect(() => {
-        const unsubscribe = scrollYProgress.onChange((latest) => {
+    useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+
+        // Additional logic based on scroll progress
+        if (refresh) {
             setAnimationProgress(latest)
-        });
-
-        return () => unsubscribe(); // Cleanup subscription
-    }, [scrollYProgress]);
-
+            setRefresh(false);
+        };
+        setTimeout(() => {
+            setRefresh(true);
+        }, 100);
+    });
     return (
         <div className={`
                 relative h-full w-full
@@ -29,7 +32,6 @@ const Introduction = () => {
         >
             <div className="hidden 2xl:h-[10vh] bg-transparent w-full" />
             <div
-
                 className="
                     relative flex
                     flex-col
