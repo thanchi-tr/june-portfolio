@@ -40,8 +40,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                                 className={`relative origin-top-right h-full w-full will-change-opacity
                                     transition-all   ease-in-out ${index != selectedIndex ? "duration-75 opacity-0" : "duration-[390ms] delay-1000 opacity-100"}
                                 `}
-                                whileInView={selectedIndex == index ? { opacity: [0, 1] } : { opacity: 0 }}
-                                viewport={{ once: true }}
+                                animate={selectedIndex == index ? { opacity: [0, 1] } : { opacity: 0 }}
                                 transition={selectedIndex == index ? { duration: 0.6, delay: 0.2 * index + 1 } : { duration: 0.1 }}
                             >
                                 {card}
