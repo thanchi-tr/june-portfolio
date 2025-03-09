@@ -48,7 +48,6 @@ const Education = () => {
                         w-full z-10
                         -translate-y-[35%] 2xl:-translate-y-[60%]
                 "
-
             >
                 <motion.div className="
                             hidden lg:block

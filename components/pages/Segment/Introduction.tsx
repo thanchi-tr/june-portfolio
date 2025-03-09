@@ -3,7 +3,6 @@ import Image from "next/image";
 import Avata from "@/components/client/Animation/Avata";
 import ToggleButton from "@/components/client/Animation/ToggleButton";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
-
 import { motion, useScroll } from 'framer-motion';
 import { useEffect, useRef, useState } from "react";
 
@@ -180,8 +179,7 @@ const Introduction = () => {
                             w-full h-auto lg:h-4/5 group 
                             text-white lg:text-black 2xl:text-white    
                             z-40
-                    "
-
+                        "
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl "></div>
 
