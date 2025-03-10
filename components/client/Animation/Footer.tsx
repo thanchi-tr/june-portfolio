@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 const Footer = () => {
     return (
         <div className="relative h-full w-full z-20">
@@ -10,9 +10,24 @@ const Footer = () => {
                     <div className="flex flex-row justify-evenly text-sm lg:text-lg 2xl:text-xl uppercase gradient-text will-change-[transform,opacity]"
 
                     >
-                        <a href="tel:+61432002486">(+61) 432 002 486</a>
+                        <a href="tel:+61432002486"  >
+                            <div className="h-auto flex">
+                                <div className="relative h-[1.5em] w-auto aspect-square rounded-full overflow-clip opacity-70 hover:opacity-100">
+                                    <Image src="/icons/phone.jpg" className="object-contain" alt="Phone" fill />
+                                </div>
+                                (+61) 432 002 486
+                            </div>
+                        </a>
 
-                        <a href="mailto:dev.june.trinh@outlook.com">| Dev.june.trinh@outlook.com</a>
+                        <a href="mailto:dev.june.trinh@outlook.com">
+                            <div className="h-auto flex">
+                                |                                                                  <div className="relative h-[1.5em] w-auto aspect-square rounded-full overflow-clip opacity-70 hover:opacity-100">
+                                    <Image src="/icons/email.jpg" className="object-contain" alt="Email" fill />
+                                </div>
+                                Dev.june.trinh@outlook.com
+
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -35,7 +50,7 @@ const Footer = () => {
 
             </svg>
 
-        </div>
+        </div >
 
     )
 }

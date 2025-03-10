@@ -57,7 +57,7 @@ const Page = () => {
                             }}
                         >HIRE ME🚀 </motion.p>
                         <motion.div className="
-                            group flex flex-col
+                            group flex flex-col 
                             h-auto w-full
                             group-hover:border-t-8 group-hover:border-black
                             "
