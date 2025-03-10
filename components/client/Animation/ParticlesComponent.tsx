@@ -58,10 +58,9 @@ const ParticlesComponent = () => {
                         random: true,
                     },
                     move: {
-                        enable: false,
-                        speed: 1,
-                        direction: "inside",
-                        random: false,
+                        enable: true,
+                        speed: 0.3,
+                        random: true,
                         straight: false,
                         outModes: { default: "out" },
                         trail: { enable: false },
@@ -69,7 +68,8 @@ const ParticlesComponent = () => {
                     interactivity: {
                         events: {
                             onHover: {
-                                enable: false,
+                                enable: true,
+                                mode: "repulse",
 
                             },
                             onClick: {
@@ -77,7 +77,7 @@ const ParticlesComponent = () => {
                             },
                         },
                     },
-                    shadow: { enable: false }, // No shadows
+                    shadow: { enable: true }, // No shadows
                     stroke: { width: 0 }, // No outlines
 
                 },

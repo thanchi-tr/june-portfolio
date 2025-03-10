@@ -122,14 +122,14 @@ const Introduction = () => {
                                                 aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full  bg-white">
                                             <ExternalCircularButton link={"https://www.linkedin.com/in/devJuneTrinh/"} >
                                                 <Image
-                                                    src="/icons/linkedin.png"
+                                                    src="/icons/cv.png"
                                                     alt="URL to linkedin Profile" fill
-                                                    className="scale-75 object-fill "
+                                                    className="scale-75 object-contain"
                                                     priority
                                                     quality={50}
                                                 />
                                             </ExternalCircularButton>
-                                            <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">LinkedIn</p>
+                                            <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">resume</p>
                                         </div>
                                         {/* GitHub */}
                                         <div className="z-[200] lg:z-10 hover:scale-110 active:scale-90
@@ -165,13 +165,13 @@ const Introduction = () => {
                         will-change-transform
                         
                         `}
-                    initial={{ x: "100vw" }}
+                    initial={{ x: "90vw" }}
                     animate={{ x: 0 }}
                     transition={{
                         type: "spring",
-                        stiffness: 300, // Controls the speed of the spring effect
-                        damping: 18, // Reduces overshoot
-                        delay: 0.7,
+                        stiffness: 700, // Controls the speed of the spring effect
+                        damping: 32, // Reduces overshoot
+                        delay: 0.2,
                     }}
                 >
                     <div className="w-full h-[20%]"></div>
@@ -185,16 +185,16 @@ const Introduction = () => {
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl "></div>
 
-
                         <div className={`
                                 p-3 py-[8%] lg:py-[10vh] px-12 md:px-20 lg:p-6 leading-5 2xl:mt-4
-                                text-sm lg:text-sm  group-hover:opacity-0
+                                text-sm lg:text-sm text-white
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-lg
-                                
-                                h-auto
+                                lg:translate-y-[78%] lg:bg-gradient-to-b from-[#ff8c00]/40 to-[#8a2be2]/10
+                                h-auto rounded-b-3xl
                             `}
                         >
+
                             {/* I am a passionate
                             {<span className="font-extrabold underline text-white mx-1">FULL-STACK DEVELOPER</span>}
                             with <span className="font-extrabold underline text-white ">over 3 years of experience</span> in building high-quality applications using
@@ -231,12 +231,16 @@ const Introduction = () => {
 
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl hover:bg-transparent"></div>
 
-                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100 lg:group-hover:opacity-0 lg:opacity-100
+                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100  lg:opacity-100
                                 transition-all group-hover:duration-300 ease-in-out
                         
                         ">
 
-                            <div className="absolute w-full top-0 left-0 h-[9vh] translate-x-[-30%] rounded-2xl overflow-clip">
+                            <div className="
+                                absolute w-full top-0 left-0 h-[9vh] translate-x-[-30%] rounded-2xl overflow-clip 
+                                lg:group-hover:scale-[190%] lg:group-hover:left-[10vw] 2lg:group-hover:left-[5vw] lg:group-hover:top-[4vh]
+                                transition-all duration-100 ease-in-out
+                                " >
                                 <Image
                                     src="/icons/logoLarge.png"
                                     alt="Full Version of Logo include brand slogan"
@@ -244,7 +248,7 @@ const Introduction = () => {
                                     quality={100}
                                 />
                             </div>
-                            <div className="h-full w-full z-10 translate-y-[5%] rounded-3xl overflow-clip border-x-2 border-b-2">
+                            <div className="h-full w-full z-10 translate-y-[5%] rounded-3xl overflow-clip border-x-2 border-b-2 ">
                                 <Image
                                     src="/ava.png"
                                     alt="Avatar of the Developer"

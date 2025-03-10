@@ -32,7 +32,7 @@ const Project = () => {
                             text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl font-bold
                             tracking-widest text-shadow-lg shadow-black/70
                     ">
-                        Project
+                        Projects
 
                     </div>
                 </div>

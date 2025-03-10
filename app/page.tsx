@@ -22,29 +22,15 @@ const Page = () => {
     return (
         <div className="h-auto w-full box-border -z-[100] overflow-clip"
         >
-            <motion.div className="
-                    opacity-15 hover:opacity-100 z-[300] pointer-events-none
-                    sticky  origin-center border-r-4 border-white
-                    h-0 top-0  text-sm bg-black border-2
-                    font-bold hover:cursor-pointer
-                    text-center"
-                initial={{ y: "3vh", x: "-45vw" }}
-                transition={{ duration: 3, repeat: Infinity, ease: "anticipate" }}
-            >
-                <p className="absolute pointer-events-auto top-[4vh] hover:bg-black  text-primary opacity-80  scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
-                    onClick={() => desRef.current?.scrollIntoView({ behavior: "smooth" })}
-                > Description</p>
-                <p className="absolute pointer-events-auto hover:bg-white top-[16vh] text-descent opacity-80 scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary border-2 bg-background"
-                    onClick={() => projectRef.current?.scrollIntoView({ behavior: "smooth" })}
-                > Project</p>
-                <p className="absolute pointer-events-auto hover:bg-primary top-[8vh] text-black opacity-80   scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-white bg-background rounded-2xl"
-                    onClick={() => expRef.current?.scrollIntoView({ behavior: "smooth" })}
-                > Experience</p>
-                <p className="absolute pointer-events-auto top-[12vh] hover:bg-secondary p-1 text-white opacity-80  scale-[150%] md:scale-100 left-[44vw] sm:left-[42vw]  md:left-[45vw] translate-x-[50%] font-[900] text-shadow-lg shadow-primary"
-                    onClick={() => skillRef.current?.scrollIntoView({ behavior: "smooth" })}
-                > Skill</p>
-
-            </motion.div>
+            <div className="sticky top-0 w-full h-4 bg-black z-[200]">
+                <div className="absolute top-0 left-0 w-auto h-auto bg-transparent text-white uppercase font-extrabold  p-3 text-lg group border-l-4 hover:border-l-8">
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Intro</div>
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Exps</div>
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Skills</div>
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Projects</div>
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Edu</div>
+                </div>
+            </div>
             <a href={"mailto:dev.june.trinh@outlook.com"}>
                 <motion.div className="
                     
@@ -154,6 +140,8 @@ const Page = () => {
                     ">
                 <Education />
             </div>
+            <div className="absolute top-0 h-full w-full hidden lg:block "><ParticlesComponent /></div>
+
             <div className="h-auto bg-gradient-to-t from-secondary to-background translate-y-[15%] scale-y-150 2xl:scale-y-100 z-30">
                 <Footer />
             </div>
@@ -178,7 +166,6 @@ const Page = () => {
                     <div></div>
                 </div>
             </div>
-            <div className="absolute top-0 h-full w-full hidden lg:block "><ParticlesComponent /></div>
         </div >
 
 

@@ -10,8 +10,8 @@ const Experience = () => {
         "init": {},
         "playout": {
             transition: {
-                staggerChildren: 0.3, // Each child will animate 0.3s after the previous one
-                delayChildren: 0.5, // Delay before children start animating
+                staggerChildren: 0.2, // Each child will animate 0.3s after the previous one
+                delayChildren: 0.3, // Delay before children start animating
             }
         },
     };
@@ -64,10 +64,10 @@ const Experience = () => {
                        "
                     initial={{ x: "-100%", scale: 1.1, y: "50%" }}
                     whileInView={{ x: 0, scale: 1, y: "50%" }}
-                    transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                    transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
                     viewport={{ once: true }}
 
-                >Experience</motion.span>
+                >Experiences</motion.span>
 
             </div>
 
@@ -95,7 +95,7 @@ const Experience = () => {
                             "
                         initial={{ x: "-148%" }}
                         animate={(AnimationProgress.get() < 0.20) ? { x: -148 + AnimationProgress.get() * 820 + "%" } : { x: -80 + 0.245 * 380 + "%" }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                        transition={{ duration: 0.1, ease: "easeInOut" }}
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl scale-y-125"></div>
 
@@ -105,7 +105,7 @@ const Experience = () => {
                                 w-3/5 2xl:w-4/5 
                                 text-2xl 2xl:text-3xl 3xl:text-4xl font-bold text-center 
                                 text-white
-                                ">  FullStack Engineer</div>
+                                ">FullStack Engineer</div>
                             <span className="md:border-t-8 border-black/20 w-4/5" />
                         </div>
                         <div className="hidden lg:block h-12 md:h-[4.2%] w-full">
@@ -120,7 +120,7 @@ const Experience = () => {
                                 <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
-                                    <PopUp img={"/icons/dotnetCore.png"} > .Net Core</PopUp>
+                                    <PopUp img={"/icons/dotnetCore.png"} >.Net Core</PopUp>
                                 </motion.div>
                                 <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
                                     variants={itemVariants}
@@ -179,7 +179,7 @@ const Experience = () => {
 
                             initial={{ translate: "105%)" }}
                             animate={(AnimationProgress.get() < 0.2) ? { translate: 105 - AnimationProgress.get() * 500 + "%" } : { translate: "5%" }}
-                            transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+                            transition={{ duration: 0.3, delay: 0, ease: "easeInOut" }}
                             viewport={{ once: true }}
                         >
                             <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full z-10 ">
@@ -194,7 +194,7 @@ const Experience = () => {
 
                                     initial={{ x: "0" }}
                                     whileInView={AnimationProgress.get() > 0.18 ? { x: ["0", "50vw", "0vw"] } : {}}
-                                    transition={{ duration: 0.7, delay: 0.3, ease: "anticipate" }}
+                                    transition={{ duration: 0.4, delay: 0.3, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
                                     <motion.div className="h-full w-full"
@@ -220,7 +220,7 @@ const Experience = () => {
                                 "
                                     initial={{ opacity: 0 }}
                                     whileInView={AnimationProgress.get() > 0.18 ? { opacity: [0, 1] } : {}}
-                                    transition={{ duration: 1.2, delay: 0.3, ease: "anticipate" }}
+                                    transition={{ duration: 0.8, delay: 0.25, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
                                     <motion.div className="h-full w-full -translate-y-2/3  will-change-[opacity]">
@@ -229,7 +229,7 @@ const Experience = () => {
                                             initial={{ opacity: 0 }}
                                             whileInView={AnimationProgress.get() > 0.18 ? { opacity: 1 } : {}}
                                             viewport={{ once: true }}
-                                            transition={{ delay: 0.75, duration: 0.36, ease: easeIn }}
+                                            transition={{ delay: 0.55, duration: 0.22, ease: easeIn }}
                                         >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
 
 
@@ -239,7 +239,7 @@ const Experience = () => {
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
                                             whileInView={AnimationProgress.get() > 0.18 ? { opacity: [0, 0.3, 1] } : {}}
-                                            transition={{ delay: 0.8, duration: 0.42, ease: easeIn }}
+                                            transition={{ delay: 0.6, duration: 0.25, ease: easeIn }}
                                         >
                                             Full-Stack Engineer
                                         </motion.div>
@@ -247,7 +247,7 @@ const Experience = () => {
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
                                             whileInView={AnimationProgress.get() > 0.18 ? { opacity: 1, scale: [1.8, 1.5, 1] } : {}}
-                                            transition={{ delay: 0.5, duration: 0.72, ease: "anticipate" }}
+                                            transition={{ delay: 0.3, duration: 0.42, ease: "anticipate" }}
                                         >
                                             <span className="
                                                     text-4xl font-signaturefont  will-change-[opacity]
@@ -284,7 +284,7 @@ const Experience = () => {
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 1 }}
                                             viewport={{ once: true }}
-                                            transition={{ delay: 0.75, duration: 0.36, ease: easeIn }}
+                                            transition={{ delay: 0.35, duration: 0.26, ease: easeIn }}
                                         >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
 
 
@@ -294,7 +294,7 @@ const Experience = () => {
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
                                             whileInView={{ opacity: [1] }}
-                                            transition={{ delay: 0.8, duration: 0.42, ease: easeIn }}
+                                            transition={{ delay: 0.6, duration: 0.25, ease: easeIn }}
                                         >
                                             Full-Stack Engineer
                                         </motion.div>
@@ -302,7 +302,7 @@ const Experience = () => {
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
                                             whileInView={{ opacity: 1, scale: [1.8, 1.5, 1] }}
-                                            transition={{ delay: 0.5, duration: 0.72, ease: "anticipate" }}
+                                            transition={{ delay: 0.3, duration: 0.42, ease: "anticipate" }}
                                         >
                                             <span className="
                                                     text-4xl font-signaturefont  will-change-[opacity]
@@ -313,7 +313,7 @@ const Experience = () => {
                                         <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: [0, 0.8] }}
-                                            transition={{ duration: 1.2, delay: 0.38, ease: "anticipate" }}
+                                            transition={{ duration: 0.7, delay: 0.22, ease: "anticipate" }}
                                             viewport={{ once: true }}
 
                                         ></motion.div>
@@ -324,7 +324,7 @@ const Experience = () => {
                                 <motion.div className="absolute will-change-[opacity] top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 blur-3xl scale-y-50 z-[300]"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: [0, 0.3] }}
-                                    transition={{ duration: 1.2, delay: 0.27, ease: "anticipate" }}
+                                    transition={{ duration: 0.7, delay: 0.15, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 ></motion.div>
                             </div>
@@ -347,7 +347,7 @@ const Experience = () => {
                                     initial={{ translateY: "20vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                    transition={{ delay: 0.1, duration: 0.42 }}
                                 >Architected and deployed a high-performance .NET application, leveraging
                                     <span className="relative font-bold underline px-2">Test-Driven Development (TDD) for faster, bug-free
                                     </span>
@@ -357,7 +357,7 @@ const Experience = () => {
                                     initial={{ translateY: "16vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                    transition={{ delay: 0.1, duration: 0.42 }}
                                 >Revamped Landing Page UI/UX, leading to a
                                     <span className="relative inline text-primary font-extrabold px-2">
                                         22% increase in average conversion rate
@@ -372,7 +372,7 @@ const Experience = () => {
                                     initial={{ translateY: "23vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                    transition={{ delay: 0.1, duration: 0.42 }}
                                 >Optimized database queries, improving API response times and increasing overall
                                     <span className="relative inline text-primary font-extrabold mx-2">application speed by 35%
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
@@ -383,7 +383,7 @@ const Experience = () => {
                                     initial={{ translateY: "26vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                    transition={{ delay: 0.1, duration: 0.42 }}
                                 >Maintained and enhanced a critical production application, ensuring
                                     <span className="relative inline text-primary font-extrabold mx-2">99.9% uptime and seamless
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
@@ -394,7 +394,7 @@ const Experience = () => {
                                     initial={{ translateY: "29vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.2, duration: 0.6 }}
+                                    transition={{ delay: 0.1, duration: 0.42 }}
                                 >Integrated Docker-based CI/CD pipelines, reducing
                                     <span className="relative inline text-primary font-extrabold mx-2">deployment time by 40%
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>

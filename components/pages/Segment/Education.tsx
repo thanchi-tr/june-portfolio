@@ -12,7 +12,7 @@ const Education = () => {
                         tracking-[0.2em] font-mainfont
                         text-shadow-lg shadow-black/70
                 ">education</div>
-            <div className="w-full h-[6%]  text-center font-extrabold text-white/80 md:text-black z-10 translate-y-1/4">2018-2023</div>
+            <div className="w-full h-[6%]  text-center font-extrabold text-white/80 z-10 translate-y-1/4">2018-2023 </div>
             <motion.div className="
                         w-full h-[20%] md:h-[16.5%] font-mainfont
                         text-center text-5xl z-10 will-change-transform
@@ -21,7 +21,7 @@ const Education = () => {
 
                 initial={{ y: "20rem" }}
                 whileInView={{ y: "0" }}
-                transition={{ duration: 0.44, delay: 0.12, ease: "easeIn" }}
+                transition={{ duration: 0.24, delay: 0.08, ease: "easeIn" }}
                 viewport={{ once: true }}
             >
                 <motion.div
@@ -34,13 +34,13 @@ const Education = () => {
                     transition={{ repeat: Infinity, duration: 12, delay: 0.7 }}
                 >
                     University of Melbourne
-
+                    <p className="text-2xl text-white/70">-Computing and software system-</p>
                 </motion.div>
                 <div
                     className="will-change-transform lg:hidden"
                 >
                     University of Melbourne
-
+                    <p className="text-2xl text-white/70">-Computing and software system-</p>
                 </div>
             </motion.div>
             <div className="
@@ -57,8 +57,8 @@ const Education = () => {
                             md:scale-150 border-4 z-10
                     "
                     initial={{ y: "12vh" }}
-                    whileInView={{ y: ["12vh", "0vh", "0vh", "0vh"], rotate: [0, 360], scale: [1, 1, 2.6, 1] }}
-                    transition={{ duration: 1.2, delay: 0, ease: "anticipate" }}
+                    whileInView={{ y: ["12vh", "5vh", "5vh", "5vh"], rotate: [0, 360], scale: [1, 1, 2.6, 1] }}
+                    transition={{ duration: 1, delay: 0, ease: "anticipate" }}
                     viewport={{ once: true }}
                 >
                     <Image src={"/icons/Unimelb.png"} alt={""} fill className="object-contain z-10"></Image>
@@ -71,7 +71,7 @@ const Education = () => {
                             md:scale-150 border-4 z-10
                     "
                     initial={{ y: "12vh" }}
-                    whileInView={{ y: ["12vh", "0vh"] }}
+                    whileInView={{ y: ["12vh", "7vh"] }}
                     transition={{ duration: 1.2, delay: 0, ease: "anticipate" }}
                     viewport={{ once: true }}
                 >

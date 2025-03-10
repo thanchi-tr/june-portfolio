@@ -19,7 +19,7 @@ const Skill = () => {
             y: ["6px", "0"],
             opacity: [0, 1],
             transition: {
-                duration: 0.2,
+                duration: 0.7,
             }
         },
     };
@@ -37,11 +37,11 @@ const Skill = () => {
 
                     initial={{ x: "-20vw" }}
                     whileInView={{ x: "0vw" }}
-                    transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+                    transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
                 >
-                    <div className="text-shadow-lg shadow-black md:shadow-transparent md:translate-y-[49%] md:text-primary md:scale-110">Skill</div>
+                    <div className="text-shadow-lg shadow-black md:shadow-transparent md:translate-y-[49%] md:text-primary md:scale-110">Skills</div>
                     <div className="hidden md:block text-background  overflow-clip scale-110">
-                        <div className="-translate-y-[50%] scale-y-110">Skill</div></div>
+                        <div className="-translate-y-[50%] scale-y-110">Skills</div></div>
                 </motion.div>
             </div>
             <div className="
@@ -60,7 +60,7 @@ const Skill = () => {
                     <div className="
                             h-auto md:h-[14%] 2xl:h-[12%] text-center uppercase 
                             font-bold underline md:no-underline
-                            text-3xl md:text-3xl lg:text-4xl sm:text-4xl text-primary"> Framework</div>
+                            text-xl md:text-2xl lg:text-3xl sm:text-3xl text-primary"> Frameworks</div>
                     <div className="w-[60%] h-auto
                             flex flex-col
                             gap-y-6 2xl:gap-y-3
@@ -76,7 +76,7 @@ const Skill = () => {
                             <motion.div className="hidden will-change-transform md:block w-2/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
-                                transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
+                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image
@@ -88,7 +88,7 @@ const Skill = () => {
                             <motion.div className="md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 will-change-transform"
                                 initial={{ x: "0", opacity: 0 }}
                                 whileInView={{ x: ["0", "40vw", "0"], opacity: 1 }}
-                                transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
+                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image src={"/icons/dotnetCore.png"} alt={""} fill className="object-contain z-10"></Image>
@@ -100,7 +100,7 @@ const Skill = () => {
                             "
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                transition={{ duration: 1.3, delay: 1.1, ease: "anticipate" }}
+                                transition={{ duration: 0.55, delay: 0.55, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 .net core
@@ -113,7 +113,7 @@ const Skill = () => {
                             <motion.div className="hidden will-change-transform md:block w-2/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
-                                transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
+                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image
@@ -126,7 +126,7 @@ const Skill = () => {
                             <motion.div className="md:hidden will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "40vw", "0"] }}
-                                transition={{ duration: 1.3, delay: 0.3, ease: "anticipate" }}
+                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10"></Image>
@@ -139,23 +139,53 @@ const Skill = () => {
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 animate={{}}
-                                transition={{ duration: 1.3, delay: 1.1, ease: "anticipate" }}
+                                transition={{ duration: 0.55, delay: 0.55, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 next.js
                             </motion.div>
+
                         </div>
-                        <motion.div className="flex flex-col justify-evenly
-                                w-full 2xl:w-[70%] h-[10vh] gradient-text will-change-transform
-                                uppercase text-white/80 text-2xl text-center font-bold
-                        "
-                            initial={{ opacity: 0, y: "2.1rem" }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.33, delay: 1.1, ease: "easeIn" }}
-                            viewport={{ once: true }}
-                        >
-                            Express.js
-                        </motion.div>
+                        <div className="flex flex-row justify-between
+                                w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
+                                
+                        ">
+                            <motion.div className="hidden will-change-transform md:block w-2/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                                initial={{ x: "0" }}
+                                whileInView={{ x: ["0", "250%", "0"] }}
+                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
+                                viewport={{ once: true }}
+                            >
+                                <Image
+                                    src={"/icons/express.png"}
+                                    alt={"Express Js logo"} fill
+                                    className="object-contain z-10"
+                                    quality={40}
+                                />
+                            </motion.div>
+                            <motion.div className="md:hidden will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
+                                initial={{ x: "0" }}
+                                whileInView={{ x: ["0", "40vw", "0"] }}
+                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
+                                viewport={{ once: true }}
+                            >
+                                <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10"></Image>
+                            </motion.div>
+                            <motion.div className="
+                                    flex flex-col justify-evenly
+                                    w-5/8 h-full will-change-transform
+                                    uppercase text-center font-bold gradient-text
+                            "
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                animate={{}}
+                                transition={{ duration: 0.55, delay: 0.55, ease: "anticipate" }}
+                                viewport={{ once: true }}
+                            >
+                                express.js
+                            </motion.div>
+
+                        </div>
                     </div>
                 </div>
                 <motion.div className="
@@ -168,12 +198,12 @@ const Skill = () => {
                 "
                     initial={{ x: "90%" }}
                     whileInView={{ x: "0%" }}
-                    transition={{ duration: 0.8, delay: 0.05, ease: "easeInOut" }}
+                    transition={{ duration: 0.3, delay: 0.02, ease: "easeInOut" }}
                 >
                     <div className="h-[10%] "></div>
                     <div className="
                             relative h-[14%] text-center uppercase font-bold 
-                            text-3xl md:text-4xl text-background 2xl:text-background
+                            text-xl md:text-2xl lg:text-3xl sm:text-3xl text-background 2xl:text-background
                             
                             underline md:no-underline
                     ">
@@ -183,10 +213,10 @@ const Skill = () => {
 
                             <span className="opacity-0 2xl:opacity-100 absolute bottom-0 text-center -translate-x-[50%]
                                     pr-[20%] box-border border-r-8 border-white/40
-                            ">Tech-stack</span>
+                            ">Tech-stacks</span>
                         </div>
 
-                        Tech-stack
+                        Tech-stacks
 
                     </div>
 
