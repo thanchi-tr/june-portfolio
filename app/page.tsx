@@ -19,16 +19,27 @@ const Page = () => {
     const expRef = useRef<HTMLDivElement>(null);
     const skillRef = useRef<HTMLDivElement>(null);
     const projectRef = useRef<HTMLDivElement>(null);
+    const eduRef = useRef<HTMLDivElement>(null);
     return (
         <div className="h-auto w-full box-border -z-[100] overflow-clip"
         >
             <div className="sticky top-0 w-full h-4 bg-black z-[200]">
                 <div className="absolute top-0 left-0 w-auto h-auto bg-transparent text-white uppercase font-extrabold  p-3 text-lg group border-l-4 hover:border-l-8">
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Intro</div>
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Exps</div>
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Skills</div>
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Projects</div>
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"> Edu</div>
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
+                        onClick={() => desRef.current?.scrollIntoView({ behavior: "smooth" })}
+                    > Intro</div>
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
+                        onClick={() => expRef.current?.scrollIntoView({ behavior: "smooth" })}
+                    > Exps</div>
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
+                        onClick={() => skillRef.current?.scrollIntoView({ behavior: "smooth" })}
+                    > Skills</div>
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
+                        onClick={() => projectRef.current?.scrollIntoView({ behavior: "smooth" })}
+                    > Projects</div>
+                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
+                        onClick={() => eduRef.current?.scrollIntoView({ behavior: "smooth" })}
+                    > Edu</div>
                 </div>
             </div>
             <a href={"mailto:dev.june.trinh@outlook.com"}>
@@ -137,7 +148,9 @@ const Page = () => {
                     flex flex-col z-20
                     items-center h-[80vh] 
                     max-w-full bg-background
-                    ">
+                    "
+                ref={eduRef}
+            >
                 <Education />
             </div>
             <div className="absolute top-0 h-full w-full hidden lg:block "><ParticlesComponent /></div>

@@ -120,7 +120,7 @@ const Introduction = () => {
                                         <div className=" z-[200] lg:z-10 hover:scale-110  active:scale-90
                                                  -translate-y-[250%] group relative
                                                 aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full  bg-white">
-                                            <ExternalCircularButton link={"https://www.linkedin.com/in/devJuneTrinh/"} >
+                                            <ExternalCircularButton link={"/cv.pdf"} >
                                                 <Image
                                                     src="/icons/cv.png"
                                                     alt="URL to linkedin Profile" fill
@@ -158,7 +158,7 @@ const Introduction = () => {
                 </div>
                 <motion.div className={`
                         
-                        flex flex-col relative  z-10 2xl:mt-4 
+                        flex flex-col relative  z-10 2xl:mt-4 border-black
                         w-full lg:w-5/12 xl:w-4/12 h-[120%] 2xl:border-2 2xl:translate-y-[10%]
                         rounded-bl-md xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
                         lg:bg-gradient-to-b from-primary to-background 2xl:bg-transparent
@@ -220,9 +220,9 @@ const Introduction = () => {
                     <a href={"mailto:dev.june.trinh@outlook.com"}><div className="
                             absolute group 
                             top-0 z-[100]
-                            h-full w-full 
+                            h-full w-full
                             lg:hover:border-l-0 lg:border-l-[10vw] 
-                            border-l-0 hover:border-l-[10vw]
+                            border-l-0 border-violet-950/65
                             hover:cursor-pointer 
                             shadow-inner shadow-black group-hover:overflow-hidden
                             transition-all xl:rounded-br-[3.5rem] 2xl:rounded-b-[0rem]
@@ -238,7 +238,7 @@ const Introduction = () => {
 
                             <div className="
                                 absolute w-full top-0 left-0 h-[9vh] translate-x-[-30%] rounded-2xl overflow-clip 
-                                lg:group-hover:scale-[190%] lg:group-hover:left-[10vw] 2lg:group-hover:left-[5vw] lg:group-hover:top-[4vh]
+                                lg:group-hover:scale-[210%] lg:group-hover:left-[10vw] 2lg:group-hover:left-[5vw] lg:group-hover:top-[4vh]
                                 transition-all duration-100 ease-in-out
                                 " >
                                 <Image
@@ -248,7 +248,11 @@ const Introduction = () => {
                                     quality={100}
                                 />
                             </div>
-                            <div className="h-full w-full z-10 translate-y-[5%] rounded-3xl overflow-clip border-x-2 border-b-2 ">
+                            <div className="
+                                    h-full w-full z-10 
+                                    translate-y-[5%] group-hover:-translate-y-[10%]
+                                    rounded-3xl transition-all duration-75
+                                    overflow-clip border-x-2 border-b-2 group-hover:scale-125 group-hover:border-0">
                                 <Image
                                     src="/ava.png"
                                     alt="Avatar of the Developer"

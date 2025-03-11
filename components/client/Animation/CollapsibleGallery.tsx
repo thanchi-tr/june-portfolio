@@ -27,9 +27,9 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                             transition-all duration-[1.5s] ease-out
                             `}
                         onClick={() => setSelectedIndex(index)}
-                        initial={selectedIndex != index ? { translateY: "20%" } : { scaleX: "40%" }}
-                        whileInView={selectedIndex != index ? { translateY: ["20%", "0%"] } : { scaleX: ["40%", "100%"] }}
-                        transition={selectedIndex != index ? { duration: 0.2, delay: 0.1 * index } : { duration: 0.2, delay: 0 }}
+                        initial={selectedIndex != index ? { translateY: "20%" } : { scaleX: "52%" }}
+                        whileInView={selectedIndex != index ? { translateY: ["20%", "0%"] } : { scaleX: ["52%", "100%"] }}
+                        transition={selectedIndex != index ? { duration: 0.2, delay: 0.1 * index } : { duration: 0.05, delay: 0 }}
 
                         viewport={{ once: true }}
                     >
@@ -41,7 +41,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                                     transition-all   ease-in-out ${index != selectedIndex ? "duration-75 opacity-0" : "duration-[390ms] delay-1000 opacity-100"}
                                 `}
                                 animate={selectedIndex == index ? { opacity: [0, 1] } : { opacity: 0 }}
-                                transition={selectedIndex == index ? { duration: 0.2, delay: 0.1 * index + 1 } : { duration: 0.1 }}
+                                transition={selectedIndex == index ? { duration: 0.2, delay: 0.1 * index + 0.5 } : { duration: 0 }}
                             >
                                 {card}
                                 {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl scale-y-75"></div> */}

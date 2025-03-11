@@ -94,7 +94,7 @@ const Experience = () => {
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "
                         initial={{ x: "-148%" }}
-                        animate={(AnimationProgress.get() < 0.20) ? { x: -148 + AnimationProgress.get() * 820 + "%" } : { x: -80 + 0.245 * 380 + "%" }}
+                        animate={(AnimationProgress.get() < 0.10) ? { x: -148 + AnimationProgress.get() * 840 + "%" } : { x: -80 + 0.245 * 390 + "%" }}
                         transition={{ duration: 0.1, ease: "easeInOut" }}
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl scale-y-125"></div>
@@ -247,7 +247,7 @@ const Experience = () => {
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
                                             whileInView={AnimationProgress.get() > 0.18 ? { opacity: 1, scale: [1.8, 1.5, 1] } : {}}
-                                            transition={{ delay: 0.3, duration: 0.42, ease: "anticipate" }}
+                                            transition={{ delay: 0.3, duration: 0.36, ease: "anticipate" }}
                                         >
                                             <span className="
                                                     text-4xl font-signaturefont  will-change-[opacity]
@@ -302,7 +302,7 @@ const Experience = () => {
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
                                             whileInView={{ opacity: 1, scale: [1.8, 1.5, 1] }}
-                                            transition={{ delay: 0.3, duration: 0.42, ease: "anticipate" }}
+                                            transition={{ delay: 0.3, duration: 0.36, ease: "anticipate" }}
                                         >
                                             <span className="
                                                     text-4xl font-signaturefont  will-change-[opacity]
@@ -347,7 +347,7 @@ const Experience = () => {
                                     initial={{ translateY: "20vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.1, duration: 0.42 }}
+                                    transition={{ delay: 0.1, duration: 0.36 }}
                                 >Architected and deployed a high-performance .NET application, leveraging
                                     <span className="relative font-bold underline px-2">Test-Driven Development (TDD) for faster, bug-free
                                     </span>
@@ -357,7 +357,7 @@ const Experience = () => {
                                     initial={{ translateY: "16vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.1, duration: 0.42 }}
+                                    transition={{ delay: 0.1, duration: 0.36 }}
                                 >Revamped Landing Page UI/UX, leading to a
                                     <span className="relative inline text-primary font-extrabold px-2">
                                         22% increase in average conversion rate
@@ -372,7 +372,7 @@ const Experience = () => {
                                     initial={{ translateY: "23vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.1, duration: 0.42 }}
+                                    transition={{ delay: 0.1, duration: 0.36 }}
                                 >Optimized database queries, improving API response times and increasing overall
                                     <span className="relative inline text-primary font-extrabold mx-2">application speed by 35%
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
@@ -383,7 +383,7 @@ const Experience = () => {
                                     initial={{ translateY: "26vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.1, duration: 0.42 }}
+                                    transition={{ delay: 0.1, duration: 0.36 }}
                                 >Maintained and enhanced a critical production application, ensuring
                                     <span className="relative inline text-primary font-extrabold mx-2">99.9% uptime and seamless
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
@@ -394,7 +394,7 @@ const Experience = () => {
                                     initial={{ translateY: "29vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.1, duration: 0.42 }}
+                                    transition={{ delay: 0.1, duration: 0.36 }}
                                 >Integrated Docker-based CI/CD pipelines, reducing
                                     <span className="relative inline text-primary font-extrabold mx-2">deployment time by 40%
                                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
