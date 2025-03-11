@@ -168,7 +168,7 @@ const Skill = () => {
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
-                                <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10"></Image>
+                                <Image src={"/icons/express.png"} alt={""} fill className="object-contain z-10"></Image>
                             </motion.div>
                             <motion.div className="
                                     flex flex-col justify-evenly
@@ -208,7 +208,7 @@ const Skill = () => {
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
-                                <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10"></Image>
+                                <Image src={"/icons/angular.png"} alt={""} fill className="object-contain z-10"></Image>
                             </motion.div>
                             <motion.div className="
                                     flex flex-col justify-evenly
