@@ -76,9 +76,9 @@ const Introduction = () => {
                                     
                             ">
                             <motion.div className="
-                                    absolute lg:hidden border-8 border-black/50
+                                    absolute lg:hidden border-8 border-primary/50
                                      w-full will-change-transform
-                                    bg-[url(/mobile-info-2.jpeg)] bg-cover bg-top"
+                                    bg-[url(/icons/logoLarge.png)] bg-contain bg-top"
                                 animate={{
                                     height: (AnimationProgress.get() * 35) + 40 + "%",
                                     top: 75 - (AnimationProgress.get() * 50) + "%"
@@ -238,7 +238,7 @@ const Introduction = () => {
 
                             <div className="
                                 absolute w-full top-0 left-0 h-[9vh] translate-x-[-30%] rounded-2xl overflow-clip 
-                                lg:group-hover:scale-[210%] lg:group-hover:left-[10vw] 2lg:group-hover:left-[5vw] lg:group-hover:top-[4vh]
+                                lg:group-hover:scale-[210%]  2lg:group-hover:left-[5vw] lg:group-hover:top-[4vh]
                                 transition-all duration-100 ease-in-out
                                 " >
                                 <Image
@@ -254,11 +254,18 @@ const Introduction = () => {
                                     rounded-3xl transition-all duration-75
                                     overflow-clip border-x-2 border-b-2 group-hover:scale-125 group-hover:border-0">
                                 <Image
-                                    src="/ava.png"
+                                    src="/animatedAva.png"
+                                    alt="Avatar of the Developer"
+                                    className="object-contain translate-x-[42%] group-hover:translate-x-[27%] scale-[150%] group-hover:scale-[100%] -translate-y-[4%]" fill
+                                    quality={100}
+                                />
+                                <Image
+                                    src="/ava3.png"
                                     alt="Avatar of the Developer"
                                     className="object-contain" fill
                                     quality={100}
                                 />
+
                             </div>
                         </div>
                     </div></a>

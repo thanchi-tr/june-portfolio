@@ -89,15 +89,15 @@ const Experience = () => {
                             opacity-0 md:opacity-100
                             md:p-0 md:justify-evenly 
                             w-full md:w-[80%] md:ml-[20.8%] md:rounded-l-2xl
-                            h-full bg-gradient-to-b from-secondary to-background   2xl:via-secondary 2xl:to-transparent 
-                            2xl:bg-background
+                            h-full bg-gradient-to-b from-secondary via-secondary to-transparent 
+                            2xl:from-transparent
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "
                         initial={{ x: "-148%" }}
                         animate={(AnimationProgress.get() < 0.10) ? { x: -148 + AnimationProgress.get() * 840 + "%" } : { x: -80 + 0.245 * 390 + "%" }}
                         transition={{ duration: 0.1, ease: "easeInOut" }}
                     >
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl scale-y-125"></div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-45 2xl:scale-x-125 blur-3xl scale-y-125"></div>
 
                         <div className="flex flex-col h-full md:h-2/6 w-full ">
                             <div className="

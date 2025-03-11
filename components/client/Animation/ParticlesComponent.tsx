@@ -43,7 +43,7 @@ const ParticlesComponent = () => {
                     shape: { type: "circle" },
                     links: {
                         enable: true,
-                        distance: 150, // Maximum distance to connect
+                        distance: 120, // Maximum distance to connect
                         color: "#ad9547",
                         opacity: 0.24,
                         width: 1,
@@ -54,12 +54,13 @@ const ParticlesComponent = () => {
                         random: false,
                     },
                     size: {
-                        value: { min: 0.1, max: 9 },
+                        value: { min: 0.1, max: 10 },
                         random: true,
+                        anim: { enable: true, speed: 2, size_min: 0.1, sync: false },
                     },
                     move: {
                         enable: true,
-                        speed: 0.3,
+                        speed: 0.2,
                         random: true,
                         straight: false,
                         outModes: { default: "out" },
@@ -68,9 +69,7 @@ const ParticlesComponent = () => {
                     interactivity: {
                         events: {
                             onHover: {
-                                enable: true,
-                                mode: "repulse",
-
+                                enable: false,
                             },
                             onClick: {
                                 enable: false,

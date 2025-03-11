@@ -34,13 +34,13 @@ const Education = () => {
                     transition={{ repeat: Infinity, duration: 12, delay: 0.7 }}
                 >
                     University of Melbourne
-                    <p className="text-2xl text-white/70">-Computing and software system-</p>
+                    <p className="text-2xl text-white/70">BcS-Computing and software system</p>
                 </motion.div>
                 <div
                     className="will-change-transform lg:hidden"
                 >
                     University of Melbourne
-                    <p className="text-xl text-white/70">-Computing and software system-</p>
+                    <p className="text-xl text-white/70">BcS-Computing and software system</p>
                 </div>
             </motion.div>
             <div className="

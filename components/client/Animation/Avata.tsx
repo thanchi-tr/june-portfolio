@@ -147,17 +147,19 @@ const Avata = () => {
                     absolute z-[100] group hover:cursor-pointer 2xl:z-[300]
                     top-0 md:top-8 right-0 2xl:translate-x-[14vw] will-change-[transform,opacity]
                     text-4xl xl:text-5xl 2xl:text-6xl 2xl:bottom-[20%] 2xl:-right-[10%]
-                    text-background md:text-white md:text-shadow-lg shadow-black
+                    text-primary lg:text-white md:text-shadow-lg shadow-black
                     font-mainfont font-[900]"
                     >
 
                         <div>
-                            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 2xl:opacity-30 blur-3xl"></div>
 
                             FULLSTACK ENGINEER
                             <p className="gradient-text text-5xl hidden group-hover:block">Click for CV</p>
-                            <p className="gradient-text text-4xl group-hover:hidden">Let&#39;s Build The Experience</p>
+                            <p className="text-white lg:gradient-text text-4xl group-hover:hidden">Let&#39;s Build The Experience</p>
+
                         </div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-violet-700 lg:to-[#8a2be2] opacity-60 2xl:opacity-30 blur-3xl"></div>
+
                     </div>
                 </a>
             </div>
