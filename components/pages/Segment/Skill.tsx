@@ -61,7 +61,7 @@ const Skill = () => {
                             font-bold underline md:no-underline
                             text-xl md:text-2xl lg:text-3xl sm:text-3xl text-primary"> Frameworks</div>
                     <div className="w-[60%] h-auto
-                            flex flex-col
+                            flex flex-col pt-[10%]
                             gap-y-6 2xl:gap-y-3
                             ml-[20%] 2xl:ml-[28%]
                     "
@@ -240,7 +240,7 @@ const Skill = () => {
                     whileInView={{ x: "0%" }}
                     transition={{ duration: 0.3, delay: 0.02, ease: "easeInOut" }}
                 >
-                    <div className="h-[10%] "></div>
+                    <div className="h-[16%] "></div>
                     <div className="
                             relative h-[14%] text-center uppercase font-bold 
                             text-xl md:text-2xl lg:text-3xl sm:text-3xl text-background 2xl:text-background
@@ -256,7 +256,6 @@ const Skill = () => {
                             ">Tech-stacks</span>
                         </div>
 
-                        Tech-stacks
 
                     </div>
 
@@ -264,7 +263,7 @@ const Skill = () => {
                     <motion.div className="
                             lg:flex flex-row hidden 
                             flex-wrap flex-shrink-0 flex-grow-0 
-                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-6 md:gap-y-[6vh] 2xl:gap-y-6
+                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-4 md:gap-y-[6vh] 2xl:gap-y-6
                             justify-evenly text-white
                             h-auto font-bold 
                             w-4/5 md:w-[65%] 2xl:w-[58%]
