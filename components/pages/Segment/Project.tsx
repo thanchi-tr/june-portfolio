@@ -1,8 +1,5 @@
 "use client";
 import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery";
-import CompareNSave from "../project/CarinaEye";
-import CarinaEyeCare from "../project/ComparenSave";
-import PTE from "../project/PTE";
 import FizzBuzz from "../project/FizzBuzz";
 
 
