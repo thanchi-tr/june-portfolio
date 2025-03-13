@@ -81,7 +81,7 @@ const Introduction = () => {
                                     bg-[url(/icons/logoLarge.png)] bg-contain bg-top"
                                 animate={{
                                     height: (AnimationProgress.get() * 35) + 40 + "%",
-                                    top: 75 - (AnimationProgress.get() * 50) + "%"
+                                    top: -65 - (AnimationProgress.get() * 50) + "%"
                                 }}
                                 transition={{ ease: "easeOut", duration: 0.3 }}
                             >
@@ -231,9 +231,9 @@ const Introduction = () => {
 
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl hover:bg-transparent"></div>
 
-                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-0 group-hover:opacity-100  lg:opacity-100
+                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-100  lg:opacity-100
                                 transition-all group-hover:duration-300 ease-in-out
-                        
+                                -translate-y-[100%] lg:translate-y-0
                         ">
 
                             <div className="
@@ -252,7 +252,7 @@ const Introduction = () => {
                                     h-full w-full z-10 
                                     translate-y-[5%] group-hover:-translate-y-[10%]
                                     rounded-3xl transition-all duration-75
-                                    overflow-clip border-x-2 border-b-2 group-hover:scale-125 group-hover:border-0">
+                                    overflow-clip lg:border-x-2 lg:border-b-2 group-hover:scale-125 group-hover:border-0">
                                 <Image
                                     src="/animatedAva.png"
                                     alt="Avatar of the Developer"
