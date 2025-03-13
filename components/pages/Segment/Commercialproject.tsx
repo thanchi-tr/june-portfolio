@@ -3,10 +3,9 @@ import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery
 import CompareNSave from "../project/CarinaEye";
 import CarinaEyeCare from "../project/ComparenSave";
 import PTE from "../project/PTE";
-import FizzBuzz from "../project/FizzBuzz";
 
 
-const Project = () => {
+const Commercialproject = () => {
 
     return (
         <div className="relative h-auto w-full  flex flex-col max-w-full bg-gradient-to-b from-secondary to-black md:bg-transparent pb-[10%]"
@@ -32,21 +31,34 @@ const Project = () => {
                             text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl font-bold
                             tracking-widest text-shadow-lg shadow-black/70
                     ">
-                        Personal Projects
+                        Commercial Projects
 
                     </div>
                 </div>
             </div>
             <div className="flex flex-col gap-20 md:hidden w-[90%] ml-[5%]">
+
                 <div className="
                         overflow-clip relative border-8 border-primary
                         w-full h-auto lg:h-[128vh] bg-background
-                        rounded-3xl pointer-events-auto
+                        rounded-3xl
                 " >
-                    <FizzBuzz />
+                    <PTE />
                 </div>
-
-
+                <div className="
+                        overflow-clip relative border-8 border-primary
+                        w-full h-auto lg:h-[128vh] bg-background
+                        rounded-3xl
+                " >
+                    <CompareNSave />
+                </div>
+                <div className="
+                        overflow-clip relative border-8 border-primary
+                        w-full h-auto lg:h-[128vh] bg-background
+                        rounded-3xl
+                " >
+                    <CarinaEyeCare />
+                </div>
             </div>
             <div className={`
                     hidden md:block
@@ -59,10 +71,16 @@ const Project = () => {
                 <CollapsibleGallery
 
                     cards={
-                        [<div key="card42" className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
-                            <FizzBuzz />
-                        </div>,
-
+                        [
+                            <div key="card40" className="h-[140vh] md:h-[130vh] lg:h-[128vh] z-50" >
+                                <PTE />
+                            </div>,
+                            <div key="card42" className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
+                                <CompareNSave />
+                            </div>,
+                            <div key="card42" className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
+                                <CarinaEyeCare />
+                            </div>
                         ]} />
 
             </div>
@@ -71,4 +89,4 @@ const Project = () => {
     )
 }
 
-export default Project;
+export default Commercialproject;

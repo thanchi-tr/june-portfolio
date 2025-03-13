@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import ParticlesComponent from "@/components/client/Animation/ParticlesComponent";
 import Image from "next/image";
 import MobileExperience from "@/components/pages/Segment/MobileExperience";
+import Commercialproject from "@/components/pages/Segment/Commercialproject";
 const Page = () => {
 
     const desRef = useRef<HTMLDivElement>(null);
@@ -142,6 +143,11 @@ const Page = () => {
                 ref={projectRef}
             >
                 <Project />
+            </div>
+            <div className="h-auto"
+                ref={projectRef}
+            >
+                <Commercialproject />
             </div>
             {/* Education */}
             <div className="
