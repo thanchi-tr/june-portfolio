@@ -1,7 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 const Footer = () => {
+    const [email, setEmail] = useState<string | null>(null);
+    useEffect(() => {
+        setEmail(process.env.NEXT_EMAIL || "dev.xuan.trinh@outlook.com");
+    }, []);
     return (
         <div className="relative h-full w-full z-20">
             <div className="lg:absolute flex flex-col h-[80%] translate-y-[-35%] w-full bottom-0 text-end z-20 text-black justify-between">
@@ -19,12 +24,12 @@ const Footer = () => {
                             </div>
                         </a>
 
-                        <a href="mailto:dev.june.trinh@outlook.com">
+                        <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - Full Stack Developer")}&body=${"Hello June, ...."}`}>
                             <div className="h-auto flex">
                                 |                                                                  <div className="relative h-[1.5em] w-auto aspect-square rounded-full overflow-clip opacity-70 hover:opacity-100">
                                     <Image src="/icons/email.jpg" className="object-contain" alt="Email" fill />
                                 </div>
-                                Dev.june.trinh@outlook.com
+                                {email}
 
                             </div>
                         </a>

@@ -7,8 +7,6 @@ const FizzBuzz = () => {
         <div className="flex gap-1 justify-stretch">
             {/* logo */}
             <div></div>
-            <div className="font-semibold py-1 bg-primary">Personal Project
-            </div>
 
         </div>
         <h1 className={`font-mainfont text-2xl xl:text-3xl 2xl:text-4xl text-center p-4 text-white/95 gradient-text md:mb-[15%]`}>FizzBuzz RealTime Multi-player Game</h1>

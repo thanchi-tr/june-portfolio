@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Introduction from "@/components/pages/Segment/Introduction";
 import Experience from "@/components/pages/Segment/Experience";
 import Skill from "@/components/pages/Segment/Skill";
@@ -15,7 +15,10 @@ import Image from "next/image";
 import MobileExperience from "@/components/pages/Segment/MobileExperience";
 import Commercialproject from "@/components/pages/Segment/Commercialproject";
 const Page = () => {
-
+    const [email, setEmail] = useState<string | null>(null);
+    useEffect(() => {
+        setEmail(process.env.NEXT_EMAIL || "dev.xuan.trinh@outlook.com");
+    }, []);
     const desRef = useRef<HTMLDivElement>(null);
     const expRef = useRef<HTMLDivElement>(null);
     const skillRef = useRef<HTMLDivElement>(null);
@@ -43,7 +46,7 @@ const Page = () => {
                     > Edu</div>
                 </div>
             </div>
-            <a href={"mailto:dev.june.trinh@outlook.com"}>
+            <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}>
                 <motion.div className="
                     
                     sticky  origin-center translate-x-[85vw] 2xl:translate-x-[90vw] translate-y-[80vh] 2xl:translate-y-[80vh]

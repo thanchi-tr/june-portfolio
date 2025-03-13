@@ -4,14 +4,17 @@ import Avata from "@/components/client/Animation/Avata";
 import ToggleButton from "@/components/client/Animation/ToggleButton";
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import { motion, useMotionValue, useMotionValueEvent, useScroll } from 'framer-motion';
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Introduction = () => {
     const selfRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({ target: selfRef });
     const [refresh, setRefresh] = useState(false);
     const AnimationProgress = useMotionValue(0);
-
+    const [email, setEmail] = useState<string | null>(null);
+    useEffect(() => {
+        setEmail(process.env.NEXT_EMAIL || "dev.xuan.trinh@outlook.com");
+    }, []);
     useMotionValueEvent(scrollYProgress, 'change', (latest) => {
 
         // Additional logic based on scroll progress
@@ -204,20 +207,20 @@ const Introduction = () => {
                             {<span className="font-extrabold underline text-white mx-1">innovative, solution-oriented approach</span>}
                             If you&#39;re looking for a developer who delivers
                             {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail Let me know how I can help you.</span>} */}
-                            Hi, I&#39;
-                            <span className="font-extrabold underline text-white mx-1">  June Trinh</span>, a passionate
-                            <span className="font-extrabold underline text-white mx-1"> Full Stack Developer</span>. I build
+                            Hi, I&#39;m
+                            <span className="font-extrabold underline text-white mx-1"> June</span>, a passionate
+                            <span className="font-extrabold underline text-white mx-1"> Full Stack Developer</span>, who build
                             <span className="font-extrabold underline text-white mx-1">DotNet & NextJs application</span> that is
                             <span className="font-extrabold underline text-white mx-1">designed with scalable architectures</span>, with a focus on
                             <span className="font-extrabold underline text-white mx-1">performance and seamless user experiences.</span>
-                            <span className="font-extrabold underline text-white mx-1">Let connect !!!</span>
+                            <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}> <span className="font-extrabold underline text-white mx-1">Let chat !!!</span></a>
                         </div>
 
 
 
                     </motion.div>
                     {/* blur screen */}
-                    <a href={"mailto:dev.june.trinh@outlook.com"}><div className="
+                    <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}><div className="
                             absolute group 
                             top-0 z-[100]
                             h-full w-full
