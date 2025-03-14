@@ -251,8 +251,8 @@ const Skill = () => {
                                 rounded-bl-3xl
                         " >
 
-                            <span className="opacity-0 2xl:opacity-100 absolute bottom-0 text-center -translate-x-[50%]
-                                    pr-[20%] box-border border-r-8 border-white/40
+                            <span className="opacity-100 2xl:opacity-100 absolute bottom-0 text-center -translate-x-[50%]
+                                    underline lg:pr-[20%] box-border lg:border-r-8 border-white/40
                             ">Tech-stacks</span>
                         </div>
 

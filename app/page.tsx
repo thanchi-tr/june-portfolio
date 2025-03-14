@@ -115,7 +115,6 @@ const Page = () => {
 
             </div>
 
-            {/* testing */}
             {/*200vh for experience */}
             <div className="
                             h-[260vh] sm:h-[240vh] md:h-[240vh] w-full

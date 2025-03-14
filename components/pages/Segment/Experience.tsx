@@ -329,12 +329,9 @@ const Experience = () => {
                                 ></motion.div>
                             </div>
                             <motion.ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
-                                    translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] md:bg-background rounded-3xl
+                                    translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] 
                                     list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 
-                                    2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-[#ad9547]
-                                     border-x-[#ad9547]/15 
-                                    pt-[7%] will-change-transform
-                                    border-b-black/20  
+                                    
                                     "
                                 initial={{ translate: "300%" }}
                                 animate={(AnimationProgress.get() < 0.2) ? { translate: 100 - AnimationProgress.get() * 400 + "%" } : { translate: "0%" }}
@@ -343,7 +340,10 @@ const Experience = () => {
                             >
 
                                 <motion.li
-                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
+                                    className=" opacity-60 scale-y-50 w-auto mb-2 2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-white/10 bg-black/55 pl-2 rounded-3xl
+                                     border-x-[#ad9547]/15 
+                                    pt-[%] 5ill-change-transform
+                                    border-b-black/20  "
                                     initial={{ translateY: "20vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
@@ -353,7 +353,10 @@ const Experience = () => {
                                     </span>
                                     releases</motion.li>
                                 <motion.li
-                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
+                                    className=" opacity-60 scale-y-50 w-auto mb-2 2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-white/10 bg-black/55 pl-2 rounded-3xl
+                                     border-x-[#ad9547]/15 
+                                    pt-[%] 5ill-change-transform
+                                    border-b-black/20  "
                                     initial={{ translateY: "16vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
@@ -368,7 +371,10 @@ const Experience = () => {
                                     through modern design and performance optimizations.
                                 </motion.li>
                                 <motion.li
-                                    className=" opacity-60 scale-y-50 w-auto rounded-xl mb-2"
+                                    className=" opacity-60 scale-y-50 w-auto mb-2 2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-white/10 bg-black/55 pl-2 rounded-3xl
+                                     border-x-[#ad9547]/15 
+                                    pt-[%] 5ill-change-transform
+                                    border-b-black/20  "
                                     initial={{ translateY: "23vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
@@ -379,7 +385,10 @@ const Experience = () => {
                                     </span>.
                                 </motion.li>
                                 <motion.li
-                                    className=" w-auto rounded-xl mb-2"
+                                    className=" w-auto mb-2 2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-white/10 bg-black/55 pl-2 rounded-3xl
+                                     border-x-[#ad9547]/15 
+                                    t-[5%] will-change-transform
+                                    border-b-black/20  "
                                     initial={{ translateY: "26vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
@@ -390,7 +399,10 @@ const Experience = () => {
                                     </span>
                                     user experience.</motion.li>
                                 <motion.li
-                                    className=" w-auto rounded-xl mb-2"
+                                    className=" w-auto mb-2 2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-white/10 bg-black/55 pl-2 rounded-3xl
+                                     border-x-[#ad9547]/15 
+                                    t-[5%] will-change-transform
+                                    border-b-black/20  "
                                     initial={{ translateY: "29vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}

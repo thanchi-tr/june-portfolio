@@ -28,13 +28,9 @@ const ParticlesComponent = () => {
                         value: 156,
                         density: {
                             enable: true,
-                            area: 2200,
+                            area: 1200,
                         },
 
-                    },
-                    life: {
-                        duration: 2, // Each particle lasts for 3 seconds
-                        count: 0,
                     },
                     color: {
                         value: ["#ad9547", "#cca62e", "#70587c", "#482a41"],
@@ -43,9 +39,9 @@ const ParticlesComponent = () => {
                     shape: { type: "circle" },
                     links: {
                         enable: true,
-                        distance: 120, // Maximum distance to connect
+                        distance: 185, // Maximum distance to connect
                         color: "#ad9547",
-                        opacity: 0.24,
+                        opacity: 0.25,
                         width: 1,
 
                     },
@@ -54,7 +50,7 @@ const ParticlesComponent = () => {
                         random: false,
                     },
                     size: {
-                        value: { min: 0.1, max: 10 },
+                        value: { min: 0.1, max: 8 },
                         random: true,
                         anim: { enable: true, speed: 2, size_min: 0.1, sync: false },
                     },
