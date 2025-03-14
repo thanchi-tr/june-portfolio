@@ -207,36 +207,37 @@ const MobileExperience = () => {
                                     2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-[#ad9547]
                                      border-x-[#ad9547]/15 
                                     pt-[7%] will-change-transform
-                                    border-b-black/20  
+                                    border-b-black/20
                                     "
 
                             >
 
                                 <li key="0"
-                                    className=" opacity-60  w-auto rounded-xl mb-2"
+                                    className="  w-auto rounded-xl mb-2"
 
                                 >Architected and deployed a high-performance .NET application, leveraging
                                     <span className="relative font-bold underline px-2">Test-Driven Development (TDD) for faster, bug-free
+
                                     </span>
                                     releases</li>
                                 <li key={1}
-                                    className=" opacity-60  w-auto rounded-xl mb-2"
+                                    className="  w-auto rounded-xl mb-2"
 
                                 >Revamped Landing Page UI/UX, leading to a
                                     <span className="relative inline text-primary font-extrabold px-2">
                                         22% increase in conversion rate
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60  blur-3xl z-[200]"></div>
+
 
                                     </span>
 
                                     through modern design and performance optimizations.
                                 </li>
                                 <li key={2}
-                                    className=" opacity-60  w-auto rounded-xl mb-2"
+                                    className="  w-auto rounded-xl mb-2"
 
                                 >Optimized database queries, improving API response times and increasing overall
                                     <span className="relative inline text-primary font-extrabold mx-2">application speed by 32%
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60  blur-3xl"></div>
+
                                     </span>.
                                 </li>
                                 <li key={3}
@@ -244,7 +245,7 @@ const MobileExperience = () => {
 
                                 >Maintained and enhanced a critical production application, ensuring
                                     <span className="relative inline text-primary font-extrabold mx-2">99.9% uptime and seamless
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60  blur-3xl"></div>
+
                                     </span>
                                     user experience.</li>
                                 <li key={4}
@@ -252,7 +253,7 @@ const MobileExperience = () => {
 
                                 >Integrated Docker-based CI/CD pipelines, reducing
                                     <span className="relative inline text-primary font-extrabold mx-2">deployment time by 40%
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60  blur-3xl"></div>
+
                                     </span>
                                     and improving development efficiency.</li>
 

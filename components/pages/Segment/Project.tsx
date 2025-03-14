@@ -1,7 +1,6 @@
 "use client";
 import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery";
 import FizzBuzz from "../project/FizzBuzz";
-import Portfolio from "../project/Portfolio";
 
 
 const Project = () => {
