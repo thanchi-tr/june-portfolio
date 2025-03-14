@@ -70,8 +70,8 @@ const Education = () => {
                             bg-blue-950 border-white 
                             md:scale-150 border-4 z-10
                     "
-                    initial={{ y: "12vh" }}
-                    whileInView={{ y: ["12vh", "7vh"] }}
+                    initial={{ y: "19vh" }}
+                    whileInView={{ y: ["19vh", "12vh"] }}
                     transition={{ duration: 1.2, delay: 0, ease: "anticipate" }}
                     viewport={{ once: true }}
                 >
@@ -96,7 +96,7 @@ const Education = () => {
                             rotateZ: ["0", "-3deg", "0"]
 
                         }}
-                        transition={{ repeat: Infinity, duration: 2 }}
+                        transition={{ repeat: Infinity, duration: 1 }}
                     >
 
                         <p className="absolute bottom-[2px] text-accent opacity-80"> June Trinh</p>

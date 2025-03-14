@@ -3,7 +3,7 @@ import Image from "next/image";
 import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery"
 
 const FizzBuzz = () => {
-    return (<div className="bg-gradient-to-b from-background to-black/20 text-white/90 ">
+    return (<div className="bg-gradient-to-b from-background to-black/20 text-white/90 h-[180vh]">
         <div className="flex gap-1 justify-stretch">
             {/* logo */}
             <div></div>
@@ -89,12 +89,12 @@ const FizzBuzz = () => {
 
                 </div>
                 <div className={`
-                    flex md:flex-col xl:flex-row
+                    flex md:flex-col xl:flex-row h-auto
                     w-[100%] xl:ml-0 p-4 text-sm md:text-lg lg:text-xl
                     justify-evenly`}>
                     <div>
                         <h2 className={` font-mainfont pt-2 md:text-xl lg:text-2xl`}>✔️ Features & Achievements:</h2>
-                        <ul className="flex flex-col list-disc list-inside px-1 gap-2 ">
+                        <ul className="flex flex-col list-disc list-inside px-1 gap-2 h-auto ">
                             <li>Built a highly optimized SignalR WebSocket communication layer, reducing
                                 <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
                                     network latency and enable real-time communication.

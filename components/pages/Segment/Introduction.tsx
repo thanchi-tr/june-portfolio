@@ -78,20 +78,6 @@ const Introduction = () => {
                                     w-full h-3/5
                                     
                             ">
-                            <motion.div className="
-                                    absolute lg:hidden border-8 border-primary/50
-                                     w-full will-change-transform
-                                    bg-[url(/icons/logoLarge.png)] bg-contain bg-top"
-                                animate={{
-                                    height: (AnimationProgress.get() * 35) + 40 + "%",
-                                    top: -65 - (AnimationProgress.get() * 50) + "%"
-                                }}
-                                transition={{ ease: "easeOut", duration: 0.3 }}
-                            >
-
-                                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-transparent"></div>
-
-                            </motion.div>
                             {/* avatar + link */}
                             <div className="
                                     flex z-[220]
@@ -253,13 +239,13 @@ const Introduction = () => {
                             </div>
                             <div className="
                                     h-full w-full z-10 
-                                    translate-y-[5%] group-hover:-translate-y-[10%]
+                                    translate-y-[5%] lg:group-hover:-translate-y-[10%]
                                     rounded-3xl transition-all duration-75
-                                    overflow-clip lg:border-x-2 lg:border-b-2 group-hover:scale-125 group-hover:border-0">
+                                    overflow-clip lg:border-x-2 lg:border-b-2 lg:group-hover:scale-125 lg:group-hover:border-0">
                                 <Image
                                     src="/animatedAva.png"
                                     alt="Avatar of the Developer"
-                                    className="object-contain translate-x-[42%] group-hover:translate-x-[27%] scale-[150%] group-hover:scale-[100%] -translate-y-[4%]" fill
+                                    className="object-contain translate-x-[42%] lg:group-hover:translate-x-[27%] scale-[150%] lg:group-hover:scale-[100%] -translate-y-[4%]" fill
                                     quality={100}
                                 />
                                 <Image

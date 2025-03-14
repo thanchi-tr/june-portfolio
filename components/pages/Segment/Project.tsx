@@ -1,6 +1,7 @@
 "use client";
 import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery";
 import FizzBuzz from "../project/FizzBuzz";
+import Portfolio from "../project/Portfolio";
 
 
 const Project = () => {
@@ -21,7 +22,7 @@ const Project = () => {
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl"></div>
 
                 </div>
-                <div className="h-screen w-2/3 ">
+                <div className="h-auto w-2/3 ">
                     <div className="
                             md:-translate-x-1/4 -translate-y-1/2 
                             uppercase font-mainfont
@@ -34,24 +35,20 @@ const Project = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col gap-20 md:hidden w-[90%] ml-[5%]">
-                <div className="
-                        overflow-clip relative border-8 border-primary
-                        w-full h-auto lg:h-[128vh] bg-background
-                        rounded-3xl pointer-events-auto
-                " >
+            <div className="lg:hidden">
+                <div>
                     <FizzBuzz />
                 </div>
 
-
             </div>
+
             <div className={`
                     hidden md:block
                     h-[150vh] lg:h-[158vh] 2xl:h-[134vh]
                     ml-[10%] z-50
                     w-[84%] xl:w-[80%] 
                     rounded-lg xl:rounded-xs 
-                    -translate-y-[54%] 2xl:-translate-y-[35%]
+                    lg:-translate-y-[54%] 2xl:-translate-y-[35%]
                             `}>
                 <CollapsibleGallery
 
