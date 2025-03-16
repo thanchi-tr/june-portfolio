@@ -3,6 +3,11 @@ import Image from "next/image";
 const PTE = () => {
     return (
         <div className="p-[5vw] bg-gradient-to-b from-background -black/20 text-white shadow-inner shadow-primary border-black text-sm md:text-lg lg:text-xl gap-4">
+            <a className="absolute bottom-0 right-0 p-2 z-50" href="https://www.jungtalents.com/" target="_blank">
+                <div className="h-[11vw] aspect-square opacity-30 -translate-y-[40%] -translate-x-[40%] hover:opacity-100 z-50" >
+                    <Image src={"/icons/external-link.png"} alt={""} fill />
+                </div>
+            </a>
             {/* Work place and role */}
             <div className="flex gap-1 justify-stretch">
                 {/* logo */}
