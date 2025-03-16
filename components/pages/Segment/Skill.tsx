@@ -72,7 +72,7 @@ const Skill = () => {
                                 mt-[15%] md:mt-[5%] text-lg md:text-xl
                         ">
 
-                            <motion.div className="hidden will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="hidden relative will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -82,15 +82,16 @@ const Skill = () => {
                                     src={"/icons/dotnetCore.png"}
                                     alt={"Microsoft Dotnet Core icon"} fill
                                     quality={40}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-contain z-10" />
                             </motion.div>
-                            <motion.div className="md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 will-change-transform"
+                            <motion.div className="relative md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 will-change-transform"
                                 initial={{ x: "0", opacity: 0 }}
                                 whileInView={{ x: ["0", "40vw", "0"], opacity: 1 }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
-                                <Image src={"/icons/dotnetCore.png"} alt={""} fill className="object-contain z-10"></Image>
+                                <Image src={"/icons/dotnetCore.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
                             </motion.div>
                             <motion.div className="
                                     flex flex-col justify-evenly
@@ -109,7 +110,7 @@ const Skill = () => {
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
                                 
                         ">
-                            <motion.div className="hidden will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="relative hidden will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -119,16 +120,17 @@ const Skill = () => {
                                     src={"/icons/nextjs.png"}
                                     alt={"Next Js logo"} fill
                                     className="object-contain z-10"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     quality={40}
                                 />
                             </motion.div>
-                            <motion.div className="md:hidden will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
+                            <motion.div className=" md:hidden relative will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "40vw", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
-                                <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10"></Image>
+                                <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
                             </motion.div>
                             <motion.div className="
                                     flex flex-col justify-evenly
@@ -149,7 +151,7 @@ const Skill = () => {
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
                                 
                         ">
-                            <motion.div className="hidden will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="relative hidden will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -159,16 +161,17 @@ const Skill = () => {
                                     src={"/icons/express.png"}
                                     alt={"Express Js logo"} fill
                                     className="object-contain z-10"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     quality={40}
                                 />
                             </motion.div>
-                            <motion.div className="md:hidden will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
+                            <motion.div className="relative md:hidden will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "40vw", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
-                                <Image src={"/icons/express.png"} alt={""} fill className="object-contain z-10"></Image>
+                                <Image src={"/icons/express.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
                             </motion.div>
                             <motion.div className="
                                     flex flex-col justify-evenly
@@ -189,7 +192,7 @@ const Skill = () => {
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
                                 
                         ">
-                            <motion.div className="hidden will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="hidden relative  will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -199,16 +202,17 @@ const Skill = () => {
                                     src={"/icons/angular.png"}
                                     alt={"Express Js logo"} fill
                                     className="object-cover z-10"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     quality={40}
                                 />
                             </motion.div>
-                            <motion.div className="md:hidden will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
+                            <motion.div className="md:hidden relative will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "40vw", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
-                                <Image src={"/icons/angular.png"} alt={""} fill className="object-contain z-10"></Image>
+                                <Image src={"/icons/angular.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
                             </motion.div>
                             <motion.div className="
                                     flex flex-col justify-evenly

@@ -106,8 +106,10 @@ const Introduction = () => {
                                                 text-lg uppercase text-center 
                                     ">
                                         {/* Linked In */}
-                                        <div className=" z-[200] lg:z-10 hover:scale-110  active:scale-90
-                                                 -translate-y-[250%] group relative
+                                        <div className=" 
+                                                relative 
+                                                z-[200] lg:z-10 hover:scale-110  active:scale-90
+                                                 -translate-y-[250%] group
                                                 aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full  bg-white">
                                             <ExternalCircularButton link={"/cv.pdf"} >
                                                 <Image
@@ -115,7 +117,8 @@ const Introduction = () => {
                                                     alt="URL to linkedin Profile" fill
                                                     className="scale-75 object-contain"
                                                     priority
-                                                    quality={50}
+                                                    quality={30}
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 />
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">resume</p>
@@ -131,7 +134,8 @@ const Introduction = () => {
                                                     alt="github" fill
                                                     className="object-fill"
                                                     priority
-                                                    quality={50}
+                                                    quality={30}
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                 />
                                             </ExternalCircularButton>
                                         </div>
@@ -234,12 +238,14 @@ const Introduction = () => {
                                 <Image
                                     src="/icons/logoLarge.png"
                                     alt="Full Version of Logo include brand slogan"
-                                    className="object-contain" fill
+                                    className="object-contain h-full w-full"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     quality={100}
                                 />
                             </div>
                             <div className="
-                                    h-full w-full z-10 
+                                    h-full w-full z-10 relative
                                     translate-y-[5%] lg:group-hover:-translate-y-[10%]
                                     rounded-3xl transition-all duration-75
                                     overflow-clip lg:border-x-2 lg:border-b-2 lg:group-hover:scale-125 lg:group-hover:border-0">
@@ -248,12 +254,17 @@ const Introduction = () => {
                                     alt="Avatar of the Developer"
                                     className="object-contain translate-x-[42%] lg:group-hover:translate-x-[27%] scale-[150%] lg:group-hover:scale-[100%] -translate-y-[4%]" fill
                                     quality={100}
+                                    priority
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                                 <Image
                                     src="/ava3.png"
                                     alt="Avatar of the Developer"
                                     className="object-contain" fill
+                                    priority
                                     quality={100}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
                                 />
 
                             </div>

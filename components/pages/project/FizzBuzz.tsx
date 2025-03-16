@@ -25,10 +25,10 @@ const FizzBuzz = () => {
 
                 <CollapsibleGallery
                     cards={[
-                        <Image key="card0" src={"/asset/FizzBuzz/waitRoom.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" fill />,
-                        <Image key="card1" src={"/asset/FizzBuzz/game.png"} alt={"Game Running"} className="object-contain h-full w-full pointer-events-none" fill />,
-                        <Image key="card2" src={"/asset/FizzBuzz/score.png"} alt={"Game Finish Display rank"} className="object-contain h-full w-full pointer-events-none" fill />,
-                        <Image key="card3" src={"/asset/FizzBuzz/add.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" fill />,
+                        <Image key="card0" src={"/asset/FizzBuzz/waitRoom.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill />,
+                        <Image key="card1" src={"/asset/FizzBuzz/game.png"} alt={"Game Running"} className="object-contain h-full w-full pointer-events-none" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill />,
+                        <Image key="card2" src={"/asset/FizzBuzz/score.png"} alt={"Game Finish Display rank"} className="object-contain h-full w-full pointer-events-none" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill />,
+                        <Image key="card3" src={"/asset/FizzBuzz/add.png"} alt={"Add Game rule"} className="object-contain h-full w-full pointer-events-none" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill />,
                     ]} />
             </div>
             <div className={`
@@ -52,15 +52,15 @@ const FizzBuzz = () => {
 
                         <div className="flex flex-col gap-4 flex-shrink-0 justify-between">
                             <h1 className="text-xl xl:text-2xl font-semibold font-mainfont uppercase">Frontend:</h1>
-                            <div className="flex gap-1 ">
+                            <div className="flex gap-1 relative">
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
-                                    <Image src="/icons/nextjs.png" className="object-cover" fill alt={""} />
+                                    <Image src="/icons/nextjs.png" className="object-cover" fill alt={""} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                                 </div>
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
-                                    <Image src="/icons/ts.png" className="object-cover" fill alt={""} />
+                                    <Image src="/icons/ts.png" className="object-cover" fill alt={""} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                                 </div>
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0 bg-white">
-                                    <Image src="/icons/tailwind.png" className="object-contain" fill alt={""} />
+                                    <Image src="/icons/tailwind.png" className="object-contain" fill alt={""} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                                 </div>
                             </div>
                         </div>
@@ -68,19 +68,29 @@ const FizzBuzz = () => {
                             <h1 className="text-xl xl:text-2xl font-semibold font-mainfont uppercase">Backend:</h1>
                             <div className="flex gap-1 ">
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
-                                    <Image src="/icons/dotnetCore.png" className="object-cover" fill alt={""} />
+                                    <Image src="/icons/dotnetCore.png" className="object-cover" fill alt={""}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
                                 </div>
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0 bg-black">
-                                    <Image src="/icons/docker.png" className="object-cover scale-75" fill alt={""} />
+                                    <Image src="/icons/docker.png" className="object-cover scale-75" fill alt={""}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
                                 </div>
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0 bg-white">
-                                    <Image src="/icons/mssql.png" className="object-cover scale-90" fill alt={""} />
+                                    <Image src="/icons/mssql.png" className="object-cover scale-90" fill alt={""}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
                                 </div>
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
-                                    <Image src="/icons/eks.jpg" className="object-cover" fill alt={""} />
+                                    <Image src="/icons/eks.jpg" className="object-cover" fill alt={""}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
                                 </div>
                                 <div className="w-[4.2vw] h-[4.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
-                                    <Image src="/icons/redis.png" className="object-cover" fill alt={""} />
+                                    <Image src="/icons/redis.png" className="object-cover" fill alt={""}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    />
                                 </div>
                             </div>
                         </div>

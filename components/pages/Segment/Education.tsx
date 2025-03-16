@@ -61,7 +61,7 @@ const Education = () => {
                     transition={{ duration: 1, delay: 0, ease: "anticipate" }}
                     viewport={{ once: true }}
                 >
-                    <Image src={"/icons/Unimelb.png"} alt={""} fill className="object-contain z-10"></Image>
+                    <Image src={"/icons/Unimelb.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
                 </motion.div>
                 {/* simpler animation for mobile */}
                 <motion.div className="lg:hidden
@@ -75,7 +75,7 @@ const Education = () => {
                     transition={{ duration: 1.2, delay: 0, ease: "anticipate" }}
                     viewport={{ once: true }}
                 >
-                    <Image src={"/icons/Unimelb.png"} alt={""} fill className="object-contain z-10"></Image>
+                    <Image src={"/icons/Unimelb.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
                 </motion.div>
             </div>
             <div className=" flex-row justify-evenly h-[30%] w-full self-end z-10 translate-y-[30%] hidden lg:flex">

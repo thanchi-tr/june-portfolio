@@ -56,8 +56,9 @@ const Page = () => {
                             }}
                         >HIRE ME🚀 </motion.p>
                         <motion.div className="
+                            relative -translate-y-[77%]
                             group flex flex-col 
-                            h-auto w-full
+                            w-full aspect-square
                             group-hover:border-t-8 group-hover:border-black
                             "
                             animate={{
@@ -70,9 +71,10 @@ const Page = () => {
                             <Image
                                 src={"/logo.png"}
                                 alt={"Miniture Version of Logo, include brand slogan"}
-                                className="object-contain scale-105 "
+                                className=" object-contain scale-105 "
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 priority
-                                quality={100}
+                                quality={50}
                                 fill
                             />
 

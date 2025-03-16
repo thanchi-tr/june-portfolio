@@ -18,7 +18,7 @@ const Footer = () => {
                         <a href="tel:+61432002486"  >
                             <div className="h-auto flex">
                                 <div className="relative h-[1.5em] w-auto aspect-square rounded-full overflow-clip opacity-70 hover:opacity-100">
-                                    <Image src="/icons/phone.jpg" className="object-contain" alt="Phone" fill />
+                                    <Image src="/icons/phone.jpg" className="object-contain" alt="Phone" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                                 </div>
                                 (+61)432 002 486
                             </div>
@@ -27,7 +27,7 @@ const Footer = () => {
                         <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - Full Stack Developer")}&body=${"Hello June, ...."}`}>
                             <div className="h-auto flex">
                                 |                                                                  <div className="relative h-[1.5em] w-auto aspect-square rounded-full overflow-clip opacity-70 hover:opacity-100">
-                                    <Image src="/icons/email.jpg" className="object-contain" alt="Email" fill />
+                                    <Image src="/icons/email.jpg" className="object-contain" alt="Email" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                                 </div>
                                 {email}
 

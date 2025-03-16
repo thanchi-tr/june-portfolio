@@ -18,12 +18,7 @@ const Bestermind = localFont({
   variable: "--font-bestermind",
   weight: "100 900",
 });
-const codaCaption = localFont({
-  src: './fonts/CodaCaption-Heavy.ttf',
-  weight: '700',
-  style: 'normal',
-  variable: '--font-coda-caption',
-});
+
 export const viewport: Viewport = {
   width: "device-width", initialScale: 1
 }
@@ -65,7 +60,7 @@ export default function RootLayout({
         </script>
       </head>
       <body
-        className={`${codaCaption.variable} ${geistSans.variable} ${geistMono.variable} ${Bestermind.variable} antialiased bg-foregound/35`}
+        className={` ${geistSans.variable} ${geistMono.variable} ${Bestermind.variable} antialiased bg-foregound/35`}
       >
 
         {children}

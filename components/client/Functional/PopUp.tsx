@@ -23,6 +23,7 @@ const PopUp = ({ children, img }: PopUpProps) => {
                     src={img}
                     alt={"Clickable Image"} fill
                     className="object-contain aspect-square"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     quality={50}
                 />
             </motion.div>

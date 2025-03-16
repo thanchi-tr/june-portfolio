@@ -29,7 +29,6 @@
   
 }
 :root {
-  --font-coda-caption: "CodaCaption", sans-serif;
   --color-background: black;
   --color-background1: #3e3a37;
   --color-primary: #ad9547;
@@ -48,12 +47,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@font-face {
-  font-family: "CodaCaption";
-  src: url("/fonts/CodaCaption-Heavy.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
 @font-face {
   font-family: "Bestermind";
   src: url("/fonts/BestermindRegular.ttf") format("truetype");

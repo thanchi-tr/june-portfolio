@@ -34,7 +34,7 @@ export default {
       },
       fontFamily: {
         secondaryfont: ["GeistMono", "sans-serif"], // Add your custom fonts
-        mainfont: ["CodaCaption", "sans-serif"],
+        mainfont: ["PP Neue Montreal", "sans-serif"],
         signaturefont: ["Bestermind", "sans-serif"],
       },
       fontWeight: {
