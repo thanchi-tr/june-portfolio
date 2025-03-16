@@ -78,7 +78,7 @@ const MobileExperience = () => {
                             md:ml-3
                            ">
                     <div className="
-                            relative flex flex-col justify-evenly w-full h-[100vh] z-10 pt-[25vh]">
+                            relative flex flex-col justify-evenly w-full h-[80vh] z-10 pt-[32vh]">
                         <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]"
 
                             initial={{ translate: "105%)" }}
