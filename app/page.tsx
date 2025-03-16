@@ -42,31 +42,20 @@ const Page = () => {
 
                     <div className="
                             relative w-[8vw] md:w-[5vw] 2xl:w-[3vw] h-[8vw] md:h-[5vw] 2xl:h-[3vw] scale-[200%] md:scale-[150%] lg:scale-[200%]
-                            group-hover:shadow-xl shadow-white bg-violet-700/60 group
+                            group-hover:shadow-xl shadow-white group
                             active:scale-90
                     ">
-                        <motion.p className="border-2 text-white font-mainfont text-xs text-center scale-75 -z-[10] group-hover:border-black group-hover:text-black bg-transparent"
-                            animate={{
-                                scale: [1.1, 1.3, 1],
-                                opacity: [1, 0.2, 0, 1]
-                            }}
-                            transition={{
-                                duration: 6,
-                                repeat: Infinity,
-                                repeatType: "mirror",
-                                ease: ["easeInOut", "easeOut", "easeIn"]
-                            }}
-                        >HIRE ME🚀 </motion.p>
+
                         <motion.div className="
-                            relative -translate-y-[77%]
+                            relative 
                             group flex flex-col 
                             w-full aspect-square
                             group-hover:border-t-8 group-hover:border-black
                             "
                             animate={{
-                                opacity: [0, 0, 1, 1, 0]
+                                opacity: [0.2, 1, 1, 1, 0.2]
                             }}
-                            transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "anticipate" }}
                         >
 
 
