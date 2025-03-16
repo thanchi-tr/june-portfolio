@@ -195,8 +195,8 @@ const Introduction = () => {
                             {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail Let me know how I can help you.</span>} */}
                             Hi, I&#39;m
                             <span className="font-extrabold underline text-white mx-1"> June</span>, a passionate
-                            <span className="font-extrabold underline text-white mx-1"> Full Stack Developer</span>, who build
-                            <span className="font-extrabold underline text-white mx-1">DotNet & NextJs application</span> that is
+                            <strong className="font-extrabold underline text-white mx-1"> Full Stack Developer</strong>, who build
+                            <strong className="font-extrabold underline text-white mx-1">DotNet & NextJs application</strong> that is
                             <span className="font-extrabold underline text-white mx-1">designed with scalable architectures</span>, with a focus on
                             <span className="font-extrabold underline text-white mx-1">performance and seamless user experiences.</span>
                             <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}> <span className="font-extrabold underline text-white mx-1">Let chat !!!</span></a>
@@ -271,7 +271,7 @@ const Introduction = () => {
                                     overflow-clip lg:border-x-2 lg:border-b-2 lg:group-hover:scale-125 lg:group-hover:border-0">
                                 <Image
                                     src="/animatedAva.png"
-                                    alt="Avatar of the Developer"
+                                    alt="Mid-level Full Stack Developer specializing in .NET, Next.js, and Angular, based in Melbourne, Australia."
                                     className="object-contain translate-x-[42%] lg:group-hover:translate-x-[27%] scale-[150%] lg:group-hover:scale-[100%] -translate-y-[4%]" fill
                                     quality={80}
 
@@ -279,7 +279,7 @@ const Introduction = () => {
                                 />
                                 <Image
                                     src="/ava3.png"
-                                    alt="Avatar of the Developer"
+                                    alt="Mid-level Full Stack Developer specializing in .NET, Next.js, and Angular, based in Melbourne, Australia."
                                     className="object-contain" fill
 
                                     quality={80}
