@@ -213,7 +213,7 @@ const Experience = () => {
 
                                 <motion.div className="
                                         hidden lg:flex md:w-9/12
-                                        2xl:w-8/12 h-3/5  rounded-r-full rounded-tl-full
+                                        2xl:w-8/12 h-3/5  rounded-full
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
@@ -253,7 +253,7 @@ const Experience = () => {
                                                     text-4xl font-signaturefont  will-change-[opacity]
                                                     text-primary md:text-white
                                                     text-shadow-lg shadow-primary
-                                                    md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">Jung</div> Talents</span>
+                                                    md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">JUNG</div> Talents</span>
                                         </motion.div>
                                         <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
                                             initial={{ opacity: 0 }}
@@ -268,7 +268,7 @@ const Experience = () => {
                                 </motion.div>
                                 <motion.div className="
                                         w-[85%] lg:hidden
-                                        2xl:w-8/12 h-3/5  rounded-r-full rounded-tl-full
+                                        2xl:w-8/12 h-3/5  rounded-full 
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
@@ -308,7 +308,7 @@ const Experience = () => {
                                                     text-4xl font-signaturefont  will-change-[opacity]
                                                     text-primary md:text-white
                                                     text-shadow-lg shadow-primary
-                                                    md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">Jung</div> Talents</span>
+                                                    md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">JUNG</div> Talents</span>
                                         </motion.div>
                                         <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
                                             initial={{ opacity: 0 }}
@@ -357,14 +357,14 @@ const Experience = () => {
                                      border-x-[#ad9547]/15 
                                     pt-[%] 5ill-change-transform
                                     border-b-black/20  "
-                                    initial={{ translateY: "16vh", opacity: 0 }}
+                                    initial={{ translateY: "15vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.1, duration: 0.36 }}
                                 >Revamped Landing Page UI/UX, leading to a
                                     <span className="relative inline text-primary font-extrabold px-2">
                                         22% increase in average conversion rate
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl z-[200]"></div>
+
 
                                     </span>
 
@@ -375,13 +375,13 @@ const Experience = () => {
                                      border-x-[#ad9547]/15 
                                     pt-[%] 5ill-change-transform
                                     border-b-black/20  "
-                                    initial={{ translateY: "23vh", opacity: 0 }}
+                                    initial={{ translateY: "24vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.1, duration: 0.36 }}
                                 >Optimized database queries, improving API response times and increasing overall
                                     <span className="relative inline text-primary font-extrabold mx-2">application speed by 35%
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+
                                     </span>.
                                 </motion.li>
                                 <motion.li
@@ -389,13 +389,13 @@ const Experience = () => {
                                      border-x-[#ad9547]/15 
                                     t-[5%] will-change-transform
                                     border-b-black/20  "
-                                    initial={{ translateY: "26vh", opacity: 0 }}
+                                    initial={{ translateY: "28vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.1, duration: 0.36 }}
                                 >Maintained and enhanced a critical production application, ensuring
                                     <span className="relative inline text-primary font-extrabold mx-2">99.9% uptime and seamless
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+
                                     </span>
                                     user experience.</motion.li>
                                 <motion.li
@@ -403,13 +403,13 @@ const Experience = () => {
                                      border-x-[#ad9547]/15 
                                     t-[5%] will-change-transform
                                     border-b-black/20  "
-                                    initial={{ translateY: "29vh", opacity: 0 }}
+                                    initial={{ translateY: "32vh", opacity: 0 }}
                                     whileInView={{ translateY: "0vh", opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.1, duration: 0.36 }}
                                 >Integrated Docker-based CI/CD pipelines, reducing
                                     <span className="relative inline text-primary font-extrabold mx-2">deployment time by 40%
-                                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 scale-y-50 blur-3xl"></div>
+
                                     </span>
                                     and improving development efficiency.</motion.li>
                                 <motion.ul
