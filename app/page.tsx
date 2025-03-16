@@ -26,11 +26,12 @@ const Page = () => {
     const skillRef = useRef<HTMLDivElement>(null);
     const projectRef = useRef<HTMLDivElement>(null);
     const eduRef = useRef<HTMLDivElement>(null);
+    const ContactRef = useRef<HTMLDivElement>(null);
     return (
         <div className="h-auto w-full box-border -z-[100] overflow-clip"
         >
 
-            <NavBar desRef={desRef} expRef={expRef} skillRef={skillRef} projectRef={projectRef} eduRef={eduRef} />
+            <NavBar desRef={desRef} expRef={expRef} skillRef={skillRef} projectRef={projectRef} eduRef={eduRef} contactRef={ContactRef} />
             <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}>
                 <motion.div className="
                     
@@ -161,7 +162,9 @@ const Page = () => {
                     flex flex-col text-background
                     h-auto max-w-full 
                     bg-primary font-semibold 
-                    tracking-wider z-50">
+                    tracking-wider z-50"
+                ref={ContactRef}
+            >
 
 
 
