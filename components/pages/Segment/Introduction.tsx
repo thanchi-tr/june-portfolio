@@ -241,15 +241,15 @@ const Introduction = () => {
                                 />
                             </div>
                             <div className="
-                                    h-full w-full z-10 relative
+                                    lg:hidden h-full w-full z-10 relative
                                     translate-y-[5%] lg:group-hover:-translate-y-[10%]
-                                    rounded-3xl transition-all duration-75
+                                    rounded-3xl
                                     overflow-clip lg:border-x-2 lg:border-b-2 lg:group-hover:scale-125 lg:group-hover:border-0">
                                 <Image
                                     src="/animatedAva.png"
                                     alt="Avatar of the Developer"
                                     className="object-contain translate-x-[42%] lg:group-hover:translate-x-[27%] scale-[150%] lg:group-hover:scale-[100%] -translate-y-[4%]" fill
-                                    quality={100}
+                                    quality={40}
                                     priority
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
@@ -258,7 +258,31 @@ const Introduction = () => {
                                     alt="Avatar of the Developer"
                                     className="object-contain" fill
                                     priority
-                                    quality={100}
+                                    quality={40}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+
+                                />
+
+                            </div>
+                            <div className="
+                                    hidden lg:block h-full w-full z-10 relative
+                                    translate-y-[5%] lg:group-hover:-translate-y-[10%]
+                                    rounded-3xl transition-all duration-75
+                                    overflow-clip lg:border-x-2 lg:border-b-2 lg:group-hover:scale-125 lg:group-hover:border-0">
+                                <Image
+                                    src="/animatedAva.png"
+                                    alt="Avatar of the Developer"
+                                    className="object-contain translate-x-[42%] lg:group-hover:translate-x-[27%] scale-[150%] lg:group-hover:scale-[100%] -translate-y-[4%]" fill
+                                    quality={80}
+
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                />
+                                <Image
+                                    src="/ava3.png"
+                                    alt="Avatar of the Developer"
+                                    className="object-contain" fill
+
+                                    quality={80}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 
                                 />
