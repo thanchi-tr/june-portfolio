@@ -224,7 +224,7 @@ const Experience = () => {
                                     transition={{ duration: 0.8, delay: 0.25, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
-                                    <motion.div className="h-full w-full -translate-y-2/3  will-change-[opacity]">
+                                    <motion.div className="h-full w-full lg:-translate-y-2/3  will-change-[opacity]">
                                         <motion.div
                                             className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
                                             initial={{ opacity: 0 }}
