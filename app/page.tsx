@@ -138,7 +138,8 @@ const Page = () => {
             >
                 <Education />
             </div>
-            <div className="absolute top-0 h-full w-full hidden lg:block "><ParticlesComponent /></div>
+            <div className="absolute top-0 h-full w-full "><ParticlesComponent /></div>
+
             <div className="h-auto bg-black z-50">
                 <ContactForm />
             </div>
