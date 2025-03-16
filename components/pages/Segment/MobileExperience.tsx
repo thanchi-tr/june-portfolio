@@ -18,7 +18,7 @@ const MobileExperience = () => {
                         h-[40vh] w-full text-center tracking-widest`}>
                 <motion.span
                     className="
-                        text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl tracking-wider font-bold 
+                        text-4xl md:text-5xl tracking-wider font-bold 
                         text-white w-full uppercase font-mainfont z-50
                         text-shadow-lg shadow-black/70
                        "
@@ -78,7 +78,7 @@ const MobileExperience = () => {
                             md:ml-3
                            ">
                     <div className="
-                            relative flex flex-col justify-evenly w-full h-[80vh] z-10 pt-[32vh]">
+                            relative flex flex-col justify-evenly w-full h-[120vh] z-10 pt-[32vh]">
                         <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]"
 
                             initial={{ translate: "105%)" }}
@@ -239,7 +239,7 @@ const MobileExperience = () => {
                             </ul>
 
                         </motion.div>
-                        <div className="h-[6%] w-full">
+                        <div className="h-[100px] w-full">
 
 
                         </div>
