@@ -101,7 +101,7 @@ const Introduction = () => {
                                                 flex flex-row justify-evenly
                                                 text-lg uppercase text-center 
                                     ">
-                                        {/* Linked In */}
+                                        {/* CV */}
                                         <div className=" 
                                                 relative max-w-[90px] max-h-[90px]
                                                 z-[200] lg:z-10 hover:scale-110  active:scale-90
@@ -118,6 +118,24 @@ const Introduction = () => {
                                                 />
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">resume</p>
+                                        </div>
+                                        {/* Seek */}
+                                        <div className=" 
+                                                relative max-w-[90px] max-h-[90px]
+                                                z-[200] lg:z-10 hover:scale-110  active:scale-90
+                                                 -translate-y-[250%] group
+                                                aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full  bg-white">
+                                            <ExternalCircularButton link={"https://www.seek.com.au/profile/xuan-trinh-trhbqWtn3B"} >
+                                                <Image
+                                                    src="/icons/seek.webp"
+                                                    alt="URL to Download Xuan's CV" fill
+                                                    className="scale-105 object-contain"
+                                                    priority
+                                                    quality={20}
+                                                    sizes="(max-width: 768px) 20vw, (max-width: 1200px) 20vw, 33vw"
+                                                />
+                                            </ExternalCircularButton>
+                                            <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">Seek</p>
                                         </div>
                                         {/* GitHub */}
                                         <div className="z-[200] lg:z-10 hover:scale-110 active:scale-90
