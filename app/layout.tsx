@@ -73,6 +73,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://junetrinh.dev" />
+        <link rel="icon" href="/brandlogo.ico" sizes="32x32" />
         <link rel="preload" href="/styles/global.css" as="style" />
         <script type="application/ld+json" defer>
           {JSON.stringify({
