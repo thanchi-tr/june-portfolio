@@ -46,7 +46,7 @@ const Experience = () => {
 
     return (
         <div className="
-                    overflow-hidden
+                    lg:overflow-hidden
                     h-full w-full
                     "
 
@@ -268,7 +268,7 @@ const Experience = () => {
 
                                 </motion.div>
                                 <motion.div className="
-                                        w-[85%] lg:hidden
+                                        w-[85%] lg:hidden bg-white
                                         2xl:w-8/12 h-auto  rounded-r-full rounded-tl-full
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
