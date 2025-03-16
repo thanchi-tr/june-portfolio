@@ -25,19 +25,19 @@ const NavBar = ({ desRef, eduRef, expRef, skillRef, projectRef }: { desRef: RefO
                     absolute 
                    
                     top-0 left-0 w-auto h-auto bg-transparent text-white uppercase font-extrabold  p-3 text-lg group border-l-4 lg:hover:border-l-8`}>
-                <div className={` ${(navShow) ? "" : "hidden"} hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
+                <div className={` ${(navShow) ? "" : "hidden"} rounded-2xl text-center border-2 px-2 bg-black hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
                     onClick={() => desRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Intro</div>
-                <div className={` ${(navShow) ? "" : "hidden"} hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
+                <div className={` ${(navShow) ? "" : "hidden"} rounded-2xl text-center border-2 px-2 bg-black hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
                     onClick={() => expRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Exps</div>
-                <div className={` ${(navShow) ? "" : "hidden"} hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
+                <div className={` ${(navShow) ? "" : "hidden"} rounded-2xl text-center border-2 px-2 bg-black hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
                     onClick={() => skillRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Skills</div>
-                <div className={` ${(navShow) ? "" : "hidden"} hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
+                <div className={` ${(navShow) ? "" : "hidden"} rounded-2xl text-center border-2 px-2 bg-black hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
                     onClick={() => projectRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Projects</div>
-                <div className={` ${(navShow) ? "" : "hidden"} hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
+                <div className={` ${(navShow) ? "" : "hidden"} rounded-2xl text-center border-2 px-2 bg-black hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15`}
                     onClick={() => eduRef.current?.scrollIntoView({ behavior: "smooth" })}
                 > Edu</div>
                 <div

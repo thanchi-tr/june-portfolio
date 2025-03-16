@@ -39,21 +39,21 @@ const Commercialproject = () => {
             <div className="flex flex-col gap-20 md:hidden w-[90%] ml-[5%]">
 
                 <div className="
-                        overflow-clip relative border-8 border-primary
+                        overflow-clip relative border-1 border-primary
                         w-full h-auto lg:h-[128vh] bg-background
                         rounded-3xl
                 " >
                     <PTE />
                 </div>
                 <div className="
-                        overflow-clip relative border-8 border-primary
+                        overflow-clip relative border-1  border-primary
                         w-full h-auto lg:h-[128vh] bg-background
                         rounded-3xl
                 " >
                     <CompareNSave />
                 </div>
                 <div className="
-                        overflow-clip relative border-8 border-primary
+                        overflow-clip relative border-1 border-b-2 shadow-2xl shadow-white/10 border-primary
                         w-full h-auto lg:h-[128vh] bg-background
                         rounded-3xl
                 " >
