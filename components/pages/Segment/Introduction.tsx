@@ -113,8 +113,8 @@ const Introduction = () => {
                                                     alt="URL to Download Xuan's CV" fill
                                                     className="scale-75 object-contain"
                                                     priority
-                                                    quality={30}
-                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                    quality={20}
+                                                    sizes="(max-width: 768px) 20vw, (max-width: 1200px) 20vw, 33vw"
                                                 />
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">resume</p>

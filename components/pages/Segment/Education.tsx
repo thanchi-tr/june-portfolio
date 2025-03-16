@@ -8,7 +8,7 @@ const Education = () => {
                         w-full h-[30%]  text-center
                         uppercase  2xl:-translate-y-[40%]
                         mt-[20%] md:mt-0 z-10
-                        text-4xl md:text-6xl text-white font-bold
+                        text-5xl md:text-6xl text-white font-bold
                         tracking-[0.2em] font-mainfont
                         text-shadow-lg shadow-black/70
                 ">education</div>
@@ -34,13 +34,13 @@ const Education = () => {
                     transition={{ repeat: Infinity, duration: 12, delay: 0.7 }}
                 >
                     University of Melbourne
-                    <p className="text-2xl text-white/70">BcS-Computing and software system</p>
+                    <p className="text-2xl text-white">BcS-Computing and software system</p>
                 </motion.div>
                 <div
                     className="will-change-transform lg:hidden"
                 >
                     University of Melbourne
-                    <p className="text-xl text-white/70">BcS-Computing and software system</p>
+                    <p className="text-xl text-white">BcS-Computing and software system</p>
                 </div>
             </motion.div>
             <div className="

@@ -282,7 +282,7 @@ const Skill = () => {
 
 
                         <div className="flex flex-row w-full h-auto justify-between">
-                            <motion.div variants={itemVariants} className="w-[22vw] text-2xl font-extrabold uppercase  text-white/90">DB:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] text-2xl font-extrabold uppercase  text-white">DB:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4  flex-wrap">
                                 <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
                                     PostGresSQL
@@ -297,7 +297,7 @@ const Skill = () => {
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/90 text-2xl">Back:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white text-2xl">Back:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
                                 <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
                                     SignalR
@@ -334,7 +334,7 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row w-full h-auto">
 
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/90 text-2xl">Front:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white text-2xl">Front:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
                                 <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
                                     JestJS
@@ -430,7 +430,7 @@ const Skill = () => {
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl"></div>
 
                         <div className="flex flex-row w-full h-auto justify-between">
-                            <motion.div variants={itemVariants} className="w-[22vw] text-2xl font-extrabold uppercase  text-white/90">DB:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] text-2xl font-extrabold uppercase  text-white">DB:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4  flex-wrap">
                                 <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
                                     PostGresSQL
@@ -445,7 +445,7 @@ const Skill = () => {
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/90 text-2xl">Back:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white text-2xl">Back:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
                                 <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
                                     SignalR
@@ -482,7 +482,7 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row w-full h-auto">
 
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/90 text-2xl">Front:</motion.div>
+                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white text-2xl">Front:</motion.div>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
                                 <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
                                     JestJS
