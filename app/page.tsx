@@ -103,7 +103,7 @@ const Page = () => {
                 <div className="h-full w-full hidden lg:block">
                     <Experience />
                 </div>
-                <div className="h-full w-full lg:hidden">
+                <div className="h-auto w-full lg:hidden">
                     <MobileExperience />
                 </div>
             </div>

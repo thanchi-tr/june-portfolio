@@ -74,11 +74,11 @@ const MobileExperience = () => {
 
                 </div>
                 <div className="
-                            h-full md:w-2/3
+                            h-auto md:w-2/3
                             md:ml-3
                            ">
                     <div className="
-                            relative flex flex-col justify-evenly w-full h-full z-10">
+                            relative flex flex-col justify-evenly w-full h-[120vh] z-10">
                         <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]"
 
                             initial={{ translate: "105%)" }}
@@ -120,7 +120,7 @@ const MobileExperience = () => {
 
                                 <motion.div className="
                                         w-[85%] lg:hidden
-                                        2xl:w-8/12 h-3/5  rounded-r-full rounded-tl-full
+                                         h-3/5  rounded-r-full rounded-tl-full
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
@@ -180,10 +180,10 @@ const MobileExperience = () => {
                                     viewport={{ once: true }}
                                 ></motion.div>
                             </div>
-                            <ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
-                                    translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] md:bg-background rounded-3xl
-                                    list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 
-                                    2xl:shadow-2xl shadow-black/30 2xl:border-2 2xl:border-t-4 border-t-[#ad9547]
+                            <ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%]  translate-x-[10%]
+                                    translate-y-[15%] md:translate-y-[15%] md:bg-background rounded-3xl
+                                    list-disc text-lg md:text-sm lg:text-lg text-white/80 
+                                     shadow-black/30  border-t-[#ad9547]
                                      border-x-[#ad9547]/15 
                                     pt-[7%] will-change-transform
                                     border-b-black/20

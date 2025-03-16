@@ -46,7 +46,7 @@ const Experience = () => {
 
     return (
         <div className="
-                    lg:overflow-hidden
+                    overflow-hidden
                     h-full w-full
                     "
 
@@ -58,9 +58,9 @@ const Experience = () => {
                         h-[40vh] w-full text-center tracking-widest`}>
                 <motion.span
                     className="
-                        text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl tracking-wider
+                        text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl tracking-wider font-bold 
                         text-white w-full uppercase font-mainfont z-50
-                        text-shadow-lg shadow-black/70 font-black
+                        text-shadow-lg shadow-black/70
                        "
                     initial={{ x: "-100%", scale: 1.1, y: "50%" }}
                     whileInView={{ x: 0, scale: 1, y: "50%" }}
@@ -206,7 +206,6 @@ const Experience = () => {
                                                 alt="Jung Talents Logo" fill
                                                 className=" object-fill "
                                                 quality={100}
-                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                             />
                                         </ExternalCircularButton>
                                     </motion.div>
@@ -224,7 +223,7 @@ const Experience = () => {
                                     transition={{ duration: 0.8, delay: 0.25, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
-                                    <motion.div className="h-full w-full lg:-translate-y-2/3  will-change-[opacity]">
+                                    <motion.div className="h-full w-full -translate-y-2/3  will-change-[opacity]">
                                         <motion.div
                                             className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
                                             initial={{ opacity: 0 }}
@@ -268,8 +267,8 @@ const Experience = () => {
 
                                 </motion.div>
                                 <motion.div className="
-                                        w-[85%] lg:hidden bg-white
-                                        2xl:w-8/12 h-auto  rounded-r-full rounded-tl-full
+                                        w-[85%] lg:hidden
+                                        2xl:w-8/12 h-3/5  rounded-r-full rounded-tl-full
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
@@ -279,7 +278,7 @@ const Experience = () => {
                                     transition={{ duration: 1.2, delay: 0.3, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
-                                    <motion.div className="h-full w-full  will-change-[opacity]">
+                                    <motion.div className="h-full w-full -translate-y-2/3  will-change-[opacity]">
                                         <motion.div
                                             className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
                                             initial={{ opacity: 0 }}
