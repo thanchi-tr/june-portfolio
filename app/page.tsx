@@ -62,7 +62,7 @@ const Page = () => {
                             <Image
                                 src={"/logo.png"}
                                 alt={"Miniture Version of Logo, include brand slogan"}
-                                className=" object-contain scale-105 "
+                                className=" object-contain scale-125 "
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 priority
                                 quality={50}
