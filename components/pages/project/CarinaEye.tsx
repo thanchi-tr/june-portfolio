@@ -95,23 +95,23 @@ const CompareNSave = () => {
                     <h1 className="text-xl font-semibold font-mainfont pb-4">Achievements & Trade-offs:</h1>
                     <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
                         <li>Reduced
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 no-show rates by 15%
 
                             </span>
                             through automated appointment reminders, increasing SMS cost overhead.</li>
                         <li>Optimized SQL Server indexing,
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 reducing query execution time by 30%,
 
                             </span>.</li>
                         <li>Migrated to Next.js, improving
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 page load speed by 50%,
 
                             </span> by optimising  server-side rendering (SSR).</li>
                         <li>
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 Cut content update time by 70%
 
                             </span> through a user-friendly CMS, increasing staff efficiency.</li>

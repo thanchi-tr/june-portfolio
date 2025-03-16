@@ -100,23 +100,23 @@ const PTE = () => {
                     <h1 className="text-xl font-semibold font-mainfont pb-4">Achievements & Trade-offs:</h1>
                     <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
                         <li>Built a .NET Core Microservices API with Load Balancer,
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 reducing server load by 40%
 
                             </span>
                             while maintaining modular scalability.</li>
                         <li>Optimized PostgreSQL queries,
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 reducing response times by 35%
 
                             </span> at the cost of additional initial indexing overhead.</li>
                         <li>Implemented CI/CD Pipelines using GitLab,
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 cutting deployment time by 40%
 
                             </span>, but requiring an increased DevOps learning curve.</li>
                         <li>Reduced cloud infrastructure
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 costs by 25%
 
                             </span> by optimizing compute resource allocation in AWS without sacrificing performance.</li>

@@ -101,28 +101,28 @@ const ComparenSave = () => {
                     <h1 className="text-xl font-semibold font-mainfont pb-4">Achievements & Trade-offs:</h1>
                     <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
                         <li> Migrated to GraphQL, reducing
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 no-show rates by 16%
 
                             </span>
                             through automated appointment reminders, increasing SMS cost overhead.</li>
                         <li>Optimized SQL Server indexing, adopting GraphQL to aid in reduce
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 over-fetching by 60%
 
                             </span></li>
                         <li>Implemented Redis caching, cutting
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 API response time by 35%
 
                             </span> , at an increasing memory usage costs.</li>
                         <li>Optimized UI rendering,
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 decreasing FCP time by 43%
 
                             </span> via frontend refactoring</li>
                         <li>Integrated Storyblok CMS, allowing
-                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                            <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 non-technical staff to update content,
 
                             </span> via custom API integrations.</li>

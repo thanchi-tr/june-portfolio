@@ -106,17 +106,17 @@ const FizzBuzz = () => {
                         <h2 className={` font-mainfont pt-2 md:text-xl lg:text-2xl`}>✔️ Features & Achievements:</h2>
                         <ul className="flex flex-col list-disc list-inside px-1 gap-2 h-auto ">
                             <li>Built a highly optimized SignalR WebSocket communication layer, reducing
-                                <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                                <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:lg:lg:shadow-pink-300">
                                     network latency and enable real-time communication.
 
                                 </span>.</li>
                             <li>Optimized server-side game state management, reducing
-                                <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                                <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:lg:lg:shadow-pink-300">
                                     redundant API calls by 40%.
 
                                 </span>.</li>
                             <li>
-                                <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg shadow-pink-300">
+                                <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:lg:lg:shadow-pink-300">
                                     Developed a fully responsive UI
 
                                 </span> , ensuring seamless gameplay across all devices.</li>
