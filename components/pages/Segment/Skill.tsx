@@ -76,7 +76,7 @@ const Skill = () => {
                             <motion.div className="
                             
                                 hidden relative will-change-transform md:block lg:w-2/8 lg:h-auto 
-                                w-[70px] h-[70px]
+                                
                                 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
@@ -90,7 +90,7 @@ const Skill = () => {
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-contain z-10" />
                             </motion.div>
-                            <motion.div className="relative md:hidden w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 will-change-transform"
+                            <motion.div className="relative md:hidden w-[70px] h-[70px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 will-change-transform"
                                 initial={{ x: "0", opacity: 0 }}
                                 whileInView={{ x: ["0", "40vw", "0"], opacity: 1 }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
