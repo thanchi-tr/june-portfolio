@@ -15,6 +15,7 @@ import Image from "next/image";
 import MobileExperience from "@/components/pages/Segment/MobileExperience";
 import Commercialproject from "@/components/pages/Segment/Commercialproject";
 import NavBar from "@/components/client/Functional/NavBar";
+import ContactForm from "@/components/client/Functional/Form";
 const Page = () => {
     const [email, setEmail] = useState<string | null>(null);
     useEffect(() => {
@@ -148,10 +149,13 @@ const Page = () => {
                 <Education />
             </div>
             <div className="absolute top-0 h-full w-full hidden lg:block "><ParticlesComponent /></div>
-
+            <div className="h-auto bg-black z-50">
+                <ContactForm />
+            </div>
             <div className="h-auto bg-gradient-to-t from-secondary to-background translate-y-[15%] scale-y-150 2xl:scale-y-100 z-30">
                 <Footer />
             </div>
+
             <div className="
             `       relative text-xs border-t-8
                     flex flex-col text-background

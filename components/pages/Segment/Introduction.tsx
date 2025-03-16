@@ -167,7 +167,7 @@ const Introduction = () => {
                     {/* description */}
                     <motion.div
                         className="
-                            w-full h-auto lg:h-4/5 group 
+                            w-[90%] md:w-full ml-[3%] lg:ml-[5%] h-auto lg:h-4/5 group 
                             text-white lg:text-black 2xl:text-white    
                             z-40
                         "
@@ -175,7 +175,7 @@ const Introduction = () => {
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl "></div>
 
                         <div className={`
-                                p-3 py-[8%] lg:py-[10vh] px-12 md:px-20 lg:p-6 leading-5 2xl:mt-4
+                                p-4 py-[8%] lg:py-[10vh] px-20 md:px-20 lg:p-6 leading-5 2xl:mt-4
                                 text-sm lg:text-sm text-white
                                 font-semibold tracking-wide
                                  rounded-t-2xl rounded-br-lg
@@ -227,7 +227,7 @@ const Introduction = () => {
                         ">
 
                             <div className="
-                                absolute w-full top-0 left-0 h-[9vh] translate-x-[-30%] rounded-2xl overflow-clip 
+                                absolute w-full top-0 left-0 h-[9vh] translate-x-[-21%] sm:translate-x-[-25%] md:translate-x-[-27%] rounded-2xl overflow-clip 
                                 lg:group-hover:scale-[210%]  2lg:group-hover:left-[5vw] lg:group-hover:top-[4vh]
                                 transition-all duration-100 ease-in-out
                                 " >
@@ -248,7 +248,7 @@ const Introduction = () => {
                                 <Image
                                     src="/animatedAva.png"
                                     alt="Avatar of the Developer"
-                                    className="object-contain translate-x-[42%] lg:group-hover:translate-x-[27%] scale-[150%] lg:group-hover:scale-[100%] -translate-y-[4%]" fill
+                                    className="object-contain translate-x-[30%] sm:translate-x-[23%] ms:translate-x-[10%] lg:group-hover:translate-x-[27%] scale-[150%] lg:group-hover:scale-[100%] -translate-y-[4%]" fill
                                     quality={40}
                                     priority
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
