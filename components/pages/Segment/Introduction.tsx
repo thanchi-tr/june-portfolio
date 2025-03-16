@@ -54,14 +54,11 @@ const Introduction = () => {
                         
                     ">
                         <div className="
-                                opacity-0
+                                opacity-0 h-[22vh]
                                 scale-[45%] lg:scale-[40%] 
                                  lg:-translate-x-[25%] lg:-translate-y-[20%]">
 
-                            <ToggleButton
-                                onClick={() => { }}
-                                isOn={false}
-                            />
+
                         </div>
 
                     </div>
