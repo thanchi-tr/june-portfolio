@@ -40,12 +40,12 @@ const FizzBuzz = () => {
                 <div className={`mt-[10%] ml-[5%] w-[90%] pb-[18.5px] md:pb-[52px]`}>
 
                     <div className="flex flex-row w-full flex-wrap justify-between text-center text-xs xl:text-xl font-extrabold pb-2 z-[100] pointer-events-auto">
-                        <h3 className="pr-1 hover:cursor-pointer z-[100]">
+                        <h2 className="pr-1 hover:cursor-pointer z-[100]">
                             <a href="https://github.com/thanchi-tr/FooBooRealTime-front-next">🔗Frontend(Next.js)</a>
-                        </h3> |
-                        <h3 className="pl-1 hover:cursor-pointer z-[100]">
+                        </h2> |
+                        <h2 className="pl-1 hover:cursor-pointer z-[100]">
                             <a href="https://github.com/thanchi-tr/FooBooRealTime-back-dotnet">🔗Backend(.NET)</a>
-                        </h3>
+                        </h2>
                     </div>
                     <div className="flex flex-col">
                         {/* Image and detail */}
