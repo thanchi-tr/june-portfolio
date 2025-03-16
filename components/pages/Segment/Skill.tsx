@@ -37,6 +37,7 @@ const Skill = () => {
                     initial={{ x: "-20vw" }}
                     whileInView={{ x: "0vw" }}
                     transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
+                    viewport={{ once: true }}
                 >
                     <div className="text-shadow-lg shadow-black md:shadow-transparent md:translate-y-[49%] md:text-primary md:scale-110">Skills</div>
                     <div className="hidden md:block text-background  overflow-clip scale-110">
@@ -248,6 +249,7 @@ const Skill = () => {
                     initial={{ x: "90%" }}
                     whileInView={{ x: "0%" }}
                     transition={{ duration: 0.3, delay: 0.02, ease: "easeInOut" }}
+                    viewport={{ once: true }}
                 >
                     <div className="h-[16%] "></div>
                     <div className="
