@@ -6,7 +6,7 @@ import FizzBuzz from "../project/FizzBuzz";
 const Project = () => {
 
     return (
-        <div className="relative h-auto w-full  flex flex-col max-w-full bg-gradient-to-b from-secondary to-black md:bg-transparent pb-[30%] lg:pb-[10%]"
+        <div className="relative h-auto w-full  flex flex-col max-w-full bg-gradient-to-b from-secondary to-black md:bg-transparent pb-[80%] lg:pb-[10%]"
 
         >
             <div className=" absolute h-[50vh] w-full  bg-gradient-to-t from-secondary to-black md:bg-background -translate-y-[100%] z-0">
