@@ -75,9 +75,8 @@ const Skill = () => {
 
                             <motion.div className="
                             
-                                hidden relative will-change-transform md:block w-2/8 
-                                max-w-[70px] max-h-[70px] 
-                                min-h-[30px] 
+                                hidden relative will-change-transform md:block lg:w-2/8 lg:h-auto 
+                                w-[70px] h-[70px]
                                 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
