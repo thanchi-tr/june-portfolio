@@ -1,6 +1,7 @@
 User-agent: *
-Sitemap: https://junetrinh.dev/sitemap.xml
-Disallow: public/asset/*
-Disallow: public/icons/*
+Disallow: /public/asset/
+Disallow: /public/icons/
 Disallow: /private/
 Disallow: /tmp/
+
+Sitemap: https://junetrinh.dev/sitemap.xml
