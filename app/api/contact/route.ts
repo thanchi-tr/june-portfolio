@@ -17,7 +17,7 @@ export async function POST(req: Request) {
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "dev.xuan.trinh@outlook.com",
-      subject: `Contact Form Submission from ${name} , @TIME: ${sydneyTime}`,
+      subject: `Contact Form Submission from ${name} , @TIME:    ${sydneyTime}`,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,
     });
 
