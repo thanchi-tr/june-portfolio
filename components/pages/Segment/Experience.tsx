@@ -269,7 +269,7 @@ const Experience = () => {
                                 </motion.div>
                                 <motion.div className="
                                         w-[85%] lg:hidden
-                                        2xl:w-8/12 h-3/5  rounded-r-full rounded-tl-full
+                                        2xl:w-8/12 h-auto  rounded-r-full rounded-tl-full
                                         md:bg-primary text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
