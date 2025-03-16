@@ -111,7 +111,7 @@ const Introduction = () => {
                                             <ExternalCircularButton link={"/cv.pdf"} >
                                                 <Image
                                                     src="/icons/cv.png"
-                                                    alt="URL to linkedin Profile" fill
+                                                    alt="URL to Download Xuan's CV" fill
                                                     className="scale-75 object-contain"
                                                     priority
                                                     quality={30}
