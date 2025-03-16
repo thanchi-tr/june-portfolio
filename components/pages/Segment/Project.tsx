@@ -17,7 +17,7 @@ const Project = () => {
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl"></div>
 
                 </div>
-                <div className="h-auto w-2/3 ">
+                <div className="h-auto w-full mb-4">
                     <div className="
                             md:-translate-x-1/4 -translate-y-1/2 
                             uppercase font-mainfont
