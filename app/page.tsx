@@ -14,6 +14,7 @@ import ParticlesComponent from "@/components/client/Animation/ParticlesComponent
 import Image from "next/image";
 import MobileExperience from "@/components/pages/Segment/MobileExperience";
 import Commercialproject from "@/components/pages/Segment/Commercialproject";
+import NavBar from "@/components/client/Functional/NavBar";
 const Page = () => {
     const [email, setEmail] = useState<string | null>(null);
     useEffect(() => {
@@ -27,25 +28,8 @@ const Page = () => {
     return (
         <div className="h-auto w-full box-border -z-[100] overflow-clip"
         >
-            <div className="sticky top-0 w-full h-4 bg-black z-[200]">
-                <div className="absolute top-0 left-0 w-auto h-auto bg-transparent text-white uppercase font-extrabold  p-3 text-lg group border-l-4 hover:border-l-8">
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
-                        onClick={() => desRef.current?.scrollIntoView({ behavior: "smooth" })}
-                    > Intro</div>
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
-                        onClick={() => expRef.current?.scrollIntoView({ behavior: "smooth" })}
-                    > Exps</div>
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
-                        onClick={() => skillRef.current?.scrollIntoView({ behavior: "smooth" })}
-                    > Skills</div>
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
-                        onClick={() => projectRef.current?.scrollIntoView({ behavior: "smooth" })}
-                    > Projects</div>
-                    <div className="hover:underline hover:cursor-pointer [&:not(:hover)]:group-hover:opacity-40 hover:opacity-100 opacity-15"
-                        onClick={() => eduRef.current?.scrollIntoView({ behavior: "smooth" })}
-                    > Edu</div>
-                </div>
-            </div>
+
+            <NavBar desRef={desRef} expRef={expRef} skillRef={skillRef} projectRef={projectRef} eduRef={eduRef} />
             <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}>
                 <motion.div className="
                     

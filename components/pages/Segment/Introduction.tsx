@@ -200,6 +200,7 @@ const Introduction = () => {
                             <span className="font-extrabold underline text-white mx-1">designed with scalable architectures</span>, with a focus on
                             <span className="font-extrabold underline text-white mx-1">performance and seamless user experiences.</span>
                             <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}> <span className="font-extrabold underline text-white mx-1">Let chat !!!</span></a>
+
                         </div>
 
 
