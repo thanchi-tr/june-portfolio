@@ -58,9 +58,9 @@ const Experience = () => {
                         h-[40vh] w-full text-center tracking-widest`}>
                 <motion.span
                     className="
-                        text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl tracking-wider font-bold 
+                        text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl tracking-wider
                         text-white w-full uppercase font-mainfont z-50
-                        text-shadow-lg shadow-black/70
+                        text-shadow-lg shadow-black/70 font-black
                        "
                     initial={{ x: "-100%", scale: 1.1, y: "50%" }}
                     whileInView={{ x: 0, scale: 1, y: "50%" }}

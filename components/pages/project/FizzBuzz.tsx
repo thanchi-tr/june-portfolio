@@ -3,7 +3,7 @@ import Image from "next/image";
 import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery"
 
 const FizzBuzz = () => {
-    return (<div className="bg-gradient-to-b from-background to-black/20 text-white/90 h-[180vh]">
+    return (<div className="bg-gradient-to-b from-background to-black/20 text-white/90 h-auto pb-[10vh]">
         <div className="flex gap-1 justify-stretch">
             {/* logo */}
             <div></div>
@@ -34,7 +34,7 @@ const FizzBuzz = () => {
             <div className={`
                 flex flex-col
                 justify-evenly
-                h-[550px] md:h-[620px]
+                h-auto
                 w-full md:w-[42%]
             `}>
                 <div className={`mt-[10%] ml-[5%] w-[90%] pb-[18.5px] md:pb-[52px]`}>
@@ -100,7 +100,7 @@ const FizzBuzz = () => {
                 </div>
                 <div className={`
                     flex md:flex-col xl:flex-row h-auto
-                    w-[100%] xl:ml-0 p-4 text-sm md:text-lg lg:text-xl
+                    w-[100%] xl:ml-0 p-4 text-xs md:text-lg lg:text-xl
                     justify-evenly`}>
                     <div>
                         <h2 className={` font-mainfont pt-2 md:text-xl lg:text-2xl`}>✔️ Features & Achievements:</h2>

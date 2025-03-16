@@ -89,7 +89,8 @@ const MobileExperience = () => {
                             <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full z-10 ">
                                 <motion.div
                                     className="
-                                        h-5/6 lg:hidden
+                                        max-w-[120px] max-h-[120px]
+                                        h-5/6 lg:hidden 
                                         scale-[125%] will-change-transform
                                         aspect-square bg-white rounded-full 
                                         -translate-y-[15%]
@@ -114,29 +115,7 @@ const MobileExperience = () => {
                                     </motion.div>
 
                                 </motion.div>
-                                <div
-                                    className="
-                                        h-5/6 hidden lg:block z-[80] will-change-[transform,opacity]
-                                        scale-[170%] md:scale-[125%] 2xl:scale-[115%] 
-                                        aspect-square bg-white rounded-full 
-                                        -translate-y-[15%]
-                                        shadow-lg shadow-black/70"
 
-
-                                >
-                                    <motion.div className="h-full w-full"
-                                        animate={{ scale: ["100%", "110%", "100%"] }}
-                                        transition={{ duration: 5, ease: "linear", repeat: Infinity }}
-                                    >
-                                        <ExternalCircularButton link={"https://www.jungtalents.com/"} >
-                                            <Image src="/icons/jungTalent.jpg"
-                                                alt="Jung Talents Logo" fill
-                                                className=" object-fill "
-                                                quality={100}
-                                            />
-                                        </ExternalCircularButton>
-                                    </motion.div>
-                                </div>
 
 
                                 <motion.div className="

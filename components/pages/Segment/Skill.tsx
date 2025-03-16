@@ -29,9 +29,9 @@ const Skill = () => {
             >
                 <motion.div className="
                                 text-white uppercase z-50 
-                                text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl font-bold font-mainfont
+                                text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl font-mainfont
                                 md:-translate-x-[8%] tracking-[0.8rem]
-                                will-change-transform
+                                will-change-transform font-black
                                 "
 
                     initial={{ x: "-20vw" }}
@@ -70,9 +70,12 @@ const Skill = () => {
                                 flex flex-row justify-between flex-shrink-0 flex-grow-0
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
                                 mt-[15%] md:mt-[5%] text-lg md:text-xl
+                                max-h-[70px] lg:max-h-none
                         ">
 
-                            <motion.div className="hidden relative will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="
+                            
+                                hidden relative will-change-transform md:block w-2/8 max-w-[70px] max-h-[70px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -108,9 +111,9 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row justify-between
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
-                                
+                                max-h-[70px] lg:max-h-none
                         ">
-                            <motion.div className="relative hidden will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="relative hidden will-change-transform md:block w-2/8 max-w-[70px] max-h-[70px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -149,9 +152,9 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row justify-between
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
-                                
+                                max-h-[70px] lg:max-h-none
                         ">
-                            <motion.div className="relative hidden will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="relative hidden will-change-transform md:block w-2/8 max-w-[70px] max-h-[70px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -190,9 +193,9 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row justify-between
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
-                                
+                                max-h-[70px] lg:max-h-none
                         ">
-                            <motion.div className="hidden relative  will-change-transform md:block w-2/8 max-w-[120px] max-h-[120px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div className="hidden relative  will-change-transform md:block w-2/8 max-w-[70px] max-h-[70px]  aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}

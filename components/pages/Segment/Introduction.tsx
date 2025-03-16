@@ -103,7 +103,7 @@ const Introduction = () => {
                                     ">
                                         {/* Linked In */}
                                         <div className=" 
-                                                relative 
+                                                relative max-w-[90px] max-h-[90px]
                                                 z-[200] lg:z-10 hover:scale-110  active:scale-90
                                                  -translate-y-[250%] group
                                                 aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full  bg-white">
@@ -121,7 +121,7 @@ const Introduction = () => {
                                         </div>
                                         {/* GitHub */}
                                         <div className="z-[200] lg:z-10 hover:scale-110 active:scale-90
-                                                 -translate-y-[250%] group
+                                                 -translate-y-[250%] group max-w-[90px] max-h-[90px]
                                                 aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full">
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block -translate-y-[100%]">Github</p>
                                             <ExternalCircularButton link={"https://github.com/thanchi-tr"} >

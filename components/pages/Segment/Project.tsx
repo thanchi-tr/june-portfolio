@@ -1,22 +1,18 @@
 "use client";
-import CollapsibleGallery from "@/components/client/Animation/CollapsibleGallery";
 import FizzBuzz from "../project/FizzBuzz";
 
 
 const Project = () => {
 
     return (
-        <div className="relative h-auto w-full  flex flex-col max-w-full bg-gradient-to-b from-secondary to-black md:bg-transparent pb-[80%] lg:pb-[10%]"
+        <div className="relative h-auto w-full  flex flex-col max-w-full bg-gradient-to-b from-secondary to-black md:bg-transparent "
 
         >
-            <div className=" absolute h-[50vh] w-full  bg-gradient-to-t from-secondary to-black md:bg-background -translate-y-[100%] z-0">
-
-            </div>
             <div className="
                     flex flex-row 
-                    h-[30vh] border-t-8 md:border-t-0 border-white/50 2xl:w-[85%] 2xl:ml-[5%] md:h-screen w-full z-[30]">
+                    h-auto border-t-8 md:border-t-0 border-white/50 2xl:w-[85%] 2xl:ml-[5%] w-full z-[30]">
 
-                <div className="h-screen md:w-[27%]
+                <div className="h-auto md:w-[27%]
                             md:ml-[8%]  bg-gradient-to-b from-secondary to-background  2xl:bg-transparent ml-2 md:shadow-3xl shadow-black">
                     <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl"></div>
 
@@ -32,33 +28,18 @@ const Project = () => {
                         Personal Projects
 
                     </div>
-                </div>
-            </div>
-            <div className="lg:hidden">
-                <div>
-                    <FizzBuzz />
-                </div>
-
-            </div>
-
-            <div className={`
-                    hidden md:block
-                    h-[150vh] lg:h-[158vh] 2xl:h-[134vh]
-                    ml-[10%] z-50
-                    w-[84%] xl:w-[80%] 
-                    rounded-lg xl:rounded-xs 
-                    lg:-translate-y-[54%] 2xl:-translate-y-[35%]
-                            `}>
-                <CollapsibleGallery
-
-                    cards={
-                        [<div key="card42" className="h-[140vh] md:h-[130vh] lg:h-[128vh]" >
+                    <div className="h-auto w-full ">
+                        <div className="h-auto w-full">
                             <FizzBuzz />
-                        </div>,
+                        </div>
 
-                        ]} />
+                    </div>
+                </div>
 
             </div>
+
+
+
         </div>
 
     )
