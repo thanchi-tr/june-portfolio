@@ -119,6 +119,22 @@ const Introduction = () => {
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block">resume</p>
                                         </div>
+                                        {/* Twitter */}
+                                        <div className="z-[200] lg:z-10 hover:scale-110 active:scale-90
+                                                 -translate-y-[250%] group max-w-[90px] max-h-[90px]
+                                                aspect-square h-[17%] sm:h-[20%] lg:h-[26%] w-auto rounded-full">
+                                            <p className="absolute gradient-text text-xl font-mainfont hidden group-hover:block -translate-y-[100%]">Twitter</p>
+                                            <ExternalCircularButton link={"https://x.com/devjunetrinh"} >
+                                                <Image
+                                                    src="/icons/twitter.avif"
+                                                    alt="github" fill
+                                                    className="object-fill"
+                                                    priority
+                                                    quality={30}
+                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                />
+                                            </ExternalCircularButton>
+                                        </div>
                                         {/* Seek */}
                                         <div className=" 
                                                 relative max-w-[90px] max-h-[90px]
