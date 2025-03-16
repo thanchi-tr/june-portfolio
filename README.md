@@ -1,5 +1,5 @@
 # june-portfolio
 
 <p align="center">
-    ![My Project Logo](https://raw.githubusercontent.com/thanchi-tr/june-portfolio/main/public/logo.png)
+    <img src="https://raw.githubusercontent.com/thanchi-tr/june-portfolio/main/public/logo.png" width="200">
 </p>
