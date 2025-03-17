@@ -64,7 +64,7 @@ const Commercialproject = () => {
                     hidden md:block
                     h-[150vh] lg:h-[158vh] 2xl:h-[134vh]
                     ml-[10%] z-50
-                    w-[84%] xl:w-[80%] 
+                    w-[84%] xl:w-[80%] 2xl:w-[70%] 
                     rounded-lg xl:rounded-xs 
                     -translate-y-[54%] 2xl:-translate-y-[35%]
                             `}>

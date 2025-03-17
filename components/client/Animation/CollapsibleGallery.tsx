@@ -24,7 +24,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                             h-full relative will-change-transform
                             ${index == selectedIndex ? "shadow-xl shadow-black rounded-xl border-[1px] border-b-white/15" : "rounded-md"}
                             ${index == selectedIndex ? "bg-transparent pointer-events-none" : "bg-gradient-to-t from-primary via-primary/50 border-t-[1.2vw] border-primary border-opacity-35 to-black/30 hover:cursor-pointer "}
-                            transition-all duration-[1.5s] ease-out
+                            transition-all duration-[0.4s] ease-out
                             `}
                         onClick={() => setSelectedIndex(index)}
                         initial={selectedIndex != index ? { translateY: "20%" } : { scaleX: "52%" }}
@@ -38,10 +38,10 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                             <motion.div
 
                                 className={`relative origin-top-right h-full w-full will-change-opacity
-                                    transition-all   ease-in-out ${index != selectedIndex ? "duration-75 opacity-0" : "duration-[390ms] delay-1000 opacity-100"}
+                                    transition-all   ease-in-out ${index != selectedIndex ? "duration-75 opacity-0" : "duration-75 delay-150 opacity-100"}
                                 `}
                                 animate={selectedIndex == index ? { opacity: [0, 1] } : { opacity: 0 }}
-                                transition={selectedIndex == index ? { duration: 0.2, delay: 0.1 * index + 0.5 } : { duration: 0 }}
+                                transition={selectedIndex == index ? { duration: 0.2, delay: 0.05 * index + 0.2 } : { duration: 0 }}
                             >
                                 {card}
                                 {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl scale-y-75"></div> */}
@@ -49,7 +49,7 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                         }
                         <div className={`
                             h-full w-full 
-                            transition-all duration-[0.32s] ease-in-out
+                            transition-all duration-[0.12s] ease-in-out
                             ${index == selectedIndex ? "rounded-xl" : "rounded-md backdrop-blur-2xl hover:bg-background"}
                             z-[100] `} />
                         {/* The index display*/}

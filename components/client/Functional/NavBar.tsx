@@ -23,8 +23,8 @@ const NavBar = ({ desRef, eduRef, expRef, skillRef, projectRef, contactRef }: { 
         <nav className="sticky top-0 lg:w-full h-4 bg-white z-[500]">
             <div className={`
                     absolute  group
-                    gap-1 lg:gap-3 lg:pt-8 flex flex-col
-                    top-0 left-0 w-auto h-auto bg-transparent text-white uppercase font-extrabold  p-3 text-lg group border-l-4 lg:hover:border-l-8 z-[500]`}>
+                    gap-1 lg:gap-3 lg:pt-8 flex flex-col 2xl:flex-row
+                    top-0 left-0 w-auto h-auto bg-transparent text-white uppercase font-extrabold  p-3 text-lg lg:text-sm group border-l-4 lg:hover:border-l-8 z-[500]`}>
                 <div
                     onClick={() => setNavShow(!navShow)}
                     className={`relative lg:hidden h-[7vw] w-[7vw] translate-y-[2vw] translate-x-[1vw] aspect-square mb-3 z-[500] hover:cursor-pointer opacity-100`}

@@ -35,10 +35,10 @@ const CompareNSave = () => {
                 </a>
 
             </div>
-            <div className="h-[16vh]"></div>
+            <div className="h-[16vh] 2xl:h-[12vh]"></div>
 
 
-            <div className="flex flex-col">
+            <div className="flex flex-col h-auto">
                 {/* Image and detail */}
 
                 <div className="flex gap-4 flex-shrink-0 justify-between px-[10%] xl:px-[18%] pb-5">
@@ -96,7 +96,7 @@ const CompareNSave = () => {
 
 
                 {/* Solution */}
-                <div className={"px-[3%] xl:px-[12%]"}>
+                <div className={"px-[3%] xl:px-[12%] text-sm"}>
                     <h1 className="text-xl font-semibold font-mainfont pb-4">Achievements & Trade-offs:</h1>
                     <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
                         <li>Reduced

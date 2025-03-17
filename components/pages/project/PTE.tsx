@@ -102,7 +102,7 @@ const PTE = () => {
 
 
                 {/* Solution */}
-                <div className={"px-[3%] xl:px-[12%]"}>
+                <div className={"px-[3%] xl:px-[12%] text-sm"}>
                     <h1 className="text-xl font-semibold font-mainfont pb-4">Achievements & Trade-offs:</h1>
                     <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
                         <li>Built a .NET Core Microservices API with Load Balancer,

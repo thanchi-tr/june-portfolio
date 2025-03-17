@@ -127,7 +127,7 @@ const Avata = () => {
                         >
 
                             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-60 2xl:opacity-30 blur-3xl"></div>
-
+                            <p className="text-start text-lg uppercase text-gray-400">Available for hire</p>
                             <h1> FULLSTACK ENGINEER</h1>
                             <h2 className="text-gray-400 text-2xl">
                                 DOTNET | ANGULAR | NEXT.JS
@@ -139,7 +139,7 @@ const Avata = () => {
 
                                 <p>Let&#39;s Build The Experience</p>
                             </motion.div>
-                            <p className="text-start text-lg uppercase text-green-400/50">Available for hire</p>
+
                         </motion.div>
                     </motion.div>
                 </a>
@@ -156,7 +156,7 @@ const Avata = () => {
                     >
 
                         <div>
-
+                            <p className=" text-lg uppercase text-gray-400">Available for hire</p>
                             <h1> FULLSTACK ENGINEER</h1>
                             <h2 className="text-gray-400 text-2xl">
                                 DOTNET | ANGULAR | NEXT.JS |
@@ -165,10 +165,10 @@ const Avata = () => {
                             <p
                                 className="
                                     text-white underline 
-                                    text-2xl w-full h-full text-end
+                                    text-2xl w-full h-full
                                     bg-gradient-to-r from-[#ff8c00] to-violet-700 lg:to-[#8a2be2] 
                                      2xl:opacity-30 ">Let&#39;s Build The Experience</p>
-                            <p className="text-center text-lg uppercase text-green-400/50">Available for hire</p>
+
                         </div>
 
                     </div>

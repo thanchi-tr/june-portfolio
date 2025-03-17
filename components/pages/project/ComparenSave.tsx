@@ -2,7 +2,7 @@
 import Image from "next/image";
 const ComparenSave = () => {
     return (
-        <div className="p-[5vw] bg-gradient-to-b from-background -black/20 text-white shadow-inner shadow-primary border-black  text-sm md:text-lg lg:text-xl gap-4">
+        <div className="p-[5vw] bg-gradient-to-b from-background -black/20 text-white shadow-inner shadow-primary border-black  text-sm md:text-lg lg:text-lg gap-4">
             <a className="absolute bottom-0 right-0 p-2 z-50" href="https://www.jungtalents.com/" target="_blank">
                 <div className="h-[11vw] aspect-square opacity-30 -translate-y-[40%] -translate-x-[40%] hover:opacity-100 z-50" >
                     <Image src={"/icons/external-link.png"} alt={""} fill />
@@ -35,7 +35,7 @@ const ComparenSave = () => {
                 </a>
 
             </div>
-            <div className="h-[16vh]"></div>
+            <div className="h-[16vh] 2xl:h-[12vh]"></div>
 
 
             <div className="flex flex-col">
@@ -98,13 +98,13 @@ const ComparenSave = () => {
             </div>
             <div className="h-[12vh]"></div>
 
-            <div>
+            <div className="h-auto">
 
 
                 {/* Solution */}
-                <div className={"px-[3%] xl:px-[10%]"}>
+                <div className={"px-[3%] xl:px-[10%] h-auto text-sm"}>
                     <h1 className="text-xl font-semibold font-mainfont pb-4">Achievements & Trade-offs:</h1>
-                    <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
+                    <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2 h-auto">
                         <li> Migrated to GraphQL, reducing
                             <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:shadow-pink-300">
                                 no-show rates by 16%
