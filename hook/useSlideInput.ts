@@ -1,54 +1,71 @@
 "use client";
 
-import { useState, useEffect, RefObject, useCallback } from "react";
+import { useState, useEffect, RefObject } from "react";
+
+type ScrollDirection = "up" | "down" | null;
 
 const useSlideInput = (
   container: RefObject<HTMLDivElement>,
   toRightHandler: () => void,
   toLeftHandler: () => void
 ) => {
-  const [downX, setDownX] = useState<number | null>(null);
+  const [startX, setStartX] = useState<number | null>(null);
+  const [startY, setStartY] = useState<number | null>(null);
+  const [scrollDirection, setScrollDirection] = useState<ScrollDirection>(null);
 
   useEffect(() => {
     const element = container.current;
     if (!element) return;
 
-    const handleMouseDown = (e: MouseEvent) => setDownX(e.clientX);
+    const handleMouseDown = (e: MouseEvent) => {
+      setStartX(e.clientX);
+      setStartY(e.clientY);
+    };
 
     const handleMouseUp = (e: MouseEvent) => {
-      if (downX === null || !element) return;
+      if (startX === null || startY === null || !element) return;
 
-      const deltaX = downX - e.clientX;
+      const deltaX = startX - e.clientX;
+      const deltaY = startY - e.clientY;
       const threshold = element.clientWidth / 5;
 
-      if (deltaX > threshold) toRightHandler();
-      if (deltaX < -threshold) toLeftHandler();
+      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > threshold) {
+        if (deltaX > 0) toRightHandler();
+        else toLeftHandler();
+      } else if (Math.abs(deltaY) > 5) {
+        setScrollDirection(deltaY > 0 ? "up" : "down");
+      }
 
-      setDownX(null);
+      setStartX(null);
+      setStartY(null);
     };
 
     const handleTouchStart = (e: TouchEvent) => {
-      setDownX(e.touches[0].clientX);
-      e.preventDefault(); // Prevents unwanted scrolling during swipes
+      setStartX(e.touches[0].clientX);
+      setStartY(e.touches[0].clientY);
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
-      if (downX === null || !element) return;
+      if (startX === null || startY === null || !element) return;
 
-      const deltaX = downX - e.changedTouches[0].clientX;
+      const deltaX = startX - e.changedTouches[0].clientX;
+      const deltaY = startY - e.changedTouches[0].clientY;
       const threshold = element.clientWidth / 5;
 
-      if (deltaX > threshold) toRightHandler();
-      if (deltaX < -threshold) toLeftHandler();
+      if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > threshold) {
+        if (deltaX > 0) toRightHandler();
+        else toLeftHandler();
+      } else if (Math.abs(deltaY) > 5) {
+        setScrollDirection(deltaY > 0 ? "up" : "down");
+      }
 
-      setDownX(null);
+      setStartX(null);
+      setStartY(null);
     };
 
     element.addEventListener("mousedown", handleMouseDown);
     document.addEventListener("mouseup", handleMouseUp);
-    element.addEventListener("touchstart", handleTouchStart, {
-      passive: false,
-    });
+    element.addEventListener("touchstart", handleTouchStart);
     document.addEventListener("touchend", handleTouchEnd);
 
     return () => {
@@ -59,7 +76,7 @@ const useSlideInput = (
     };
   }, [container, toRightHandler, toLeftHandler]);
 
-  return { downX };
+  return { scrollDirection };
 };
 
 export default useSlideInput;
