@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, RefObject } from "react";
+import { useState, useEffect, RefObject, useCallback } from "react";
 
 const useSlideInput = (
   container: RefObject<HTMLDivElement>,
@@ -10,51 +10,54 @@ const useSlideInput = (
   const [downX, setDownX] = useState<number | null>(null);
 
   useEffect(() => {
-    if (!container.current) return;
-
-    const downLog = (e: MouseEvent) => {
-      setDownX(e.clientX);
-    };
-
-    const upLog = (e: MouseEvent) => {
-      if (downX === null) return;
-
-      if (downX - e.clientX > 150) {
-        toRightHandler();
-      }
-      if (downX - e.clientX < -150) {
-        toLeftHandler();
-      }
-      setDownX(null);
-    };
-    const tdownLog = (e: TouchEvent) => {
-      setDownX(e.touches[0].clientX);
-    };
-
-    const tupLog = (e: TouchEvent) => {
-      if (downX === null) return;
-
-      if (downX - e.changedTouches[0].clientX > 150) {
-        toRightHandler();
-      }
-      if (downX - e.changedTouches[0].clientX < -150) {
-        toLeftHandler();
-      }
-      setDownX(null);
-    };
-
     const element = container.current;
-    element.addEventListener("mousedown", downLog);
-    document.addEventListener("mouseup", upLog); // `mouseup` should still be on `document`
-    element.addEventListener("touchstart", tdownLog);
-    document.addEventListener("touchend", tupLog); // `mouseup` should still be on `document`
-    return () => {
-      element.removeEventListener("mousedown", downLog);
-      document.removeEventListener("mouseup", upLog);
-      element.removeEventListener("touchstart", tdownLog);
-      document.removeEventListener("touchend", tupLog);
+    if (!element) return;
+
+    const handleMouseDown = (e: MouseEvent) => setDownX(e.clientX);
+
+    const handleMouseUp = (e: MouseEvent) => {
+      if (downX === null || !element) return;
+
+      const deltaX = downX - e.clientX;
+      const threshold = element.clientWidth / 5;
+
+      if (deltaX > threshold) toRightHandler();
+      if (deltaX < -threshold) toLeftHandler();
+
+      setDownX(null);
     };
-  }, [downX, container, toRightHandler, toLeftHandler]);
+
+    const handleTouchStart = (e: TouchEvent) => {
+      setDownX(e.touches[0].clientX);
+      e.preventDefault(); // Prevents unwanted scrolling during swipes
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (downX === null || !element) return;
+
+      const deltaX = downX - e.changedTouches[0].clientX;
+      const threshold = element.clientWidth / 5;
+
+      if (deltaX > threshold) toRightHandler();
+      if (deltaX < -threshold) toLeftHandler();
+
+      setDownX(null);
+    };
+
+    element.addEventListener("mousedown", handleMouseDown);
+    document.addEventListener("mouseup", handleMouseUp);
+    element.addEventListener("touchstart", handleTouchStart, {
+      passive: false,
+    });
+    document.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      element.removeEventListener("mousedown", handleMouseDown);
+      document.removeEventListener("mouseup", handleMouseUp);
+      element.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [container, toRightHandler, toLeftHandler]);
 
   return { downX };
 };
