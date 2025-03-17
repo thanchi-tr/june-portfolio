@@ -1,18 +1,26 @@
 "use client";
+import useSlideInput from "@/hook/useSlideInput";
 import { motion } from "framer-motion";
-import { ReactNode, useState } from "react";
+import { ReactNode, useRef, useState } from "react";
 
 interface CollapsibleGalleryConfig {
     cards: ReactNode[]
 }
 const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const containerRef = useRef<HTMLDivElement>(null);
+    useSlideInput(containerRef,
+        () => { setSelectedIndex(prev => prev == cards.length - 1 ? cards.length - 1 : prev + 1) },
+        () => { setSelectedIndex(prev => prev == 0 ? 0 : prev - 1) });
     return (
         <div className={`
             relative z-[80]
+            pointer-events-auto
             flex flex-row justify-evenly
             h-full w-full 
-        `}>
+        `}
+            ref={containerRef}
+        >
             {cards.map(
                 (card, index) => (
 
