@@ -309,7 +309,7 @@ const Experience = () => {
                                         </motion.div>
                                         <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
                                             initial={{ opacity: 0 }}
-                                            whileInView={{ opacity: [0, 0.8] }}
+                                            whileInView={{ opacity: 0.8 }}
                                             transition={{ duration: 0.7, delay: 0.22, ease: "anticipate" }}
                                             viewport={{ once: true }}
 

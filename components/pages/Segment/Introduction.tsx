@@ -219,15 +219,6 @@ const Introduction = () => {
                             `}
                         >
 
-                            {/* I am a passionate
-                            {<span className="font-extrabold underline text-white mx-1">FULL-STACK DEVELOPER</span>}
-                            with <span className="font-extrabold underline text-white ">over 3 years of experience</span> in building high-quality applications using
-                            {<span className="ml-1 font-extrabold underline text-white"> .NET </span>}and
-                            {<span className="font-extrabold underline text-white"> Next.js</span>},
-                            My expertise lies in designing scalable architectures, optimizing performance, and ensuring seamless user experiences. I thrive in fast-paced environments, solving complex problems with an
-                            {<span className="font-extrabold underline text-white mx-1">innovative, solution-oriented approach</span>}
-                            If you&#39;re looking for a developer who delivers
-                            {<span className="font-extrabold underline text-white mx-1">on time, with precision, and a keen eye for detail Let me know how I can help you.</span>} */}
                             Hi, I&#39;m
                             <span className="font-extrabold underline text-white mx-1"> June</span>, a passionate
                             <strong className="font-extrabold underline text-white mx-1"> Full Stack Developer</strong>, who build
@@ -243,7 +234,7 @@ const Introduction = () => {
                     </motion.div>
                     {/* blur screen */}
                     <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}><div className="
-                            absolute group 
+                            relative lg:absolute group 
                             top-0 z-[100]
                             h-full w-full
                              lg:border-l-[10vw] 
@@ -256,9 +247,9 @@ const Introduction = () => {
 
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-25 blur-3xl hover:bg-transparent"></div>
 
-                        <div className="absolute top-0 h-full w-full backdrop-blur-sm opacity-100  lg:opacity-100
+                        <div className="lg:absolute top-0 h-[250px] w-full lg:h-full lg:w-full backdrop-blur-sm opacity-100  lg:opacity-100
                                 transition-all group-hover:duration-300 ease-in-out
-                                -translate-y-[100%] lg:translate-y-0
+                               lg:translate-y-0
                         ">
 
                             <div className="
