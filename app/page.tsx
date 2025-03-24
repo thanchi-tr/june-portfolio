@@ -110,7 +110,7 @@ const Page = () => {
 
             {/* 200vh for Skill */}
             <div className="
-                    h-[280vh] sm:h-[220vh] md:h-[180vh] lg:h-[170vh] 2xl:h-[150vh] w-full 
+                    h-[280vh] sm:h-[220vh] md:h-[180vh] lg:h-[185vh] 2xl:h-[150vh] w-full 
             "
                 ref={skillRef}
             >

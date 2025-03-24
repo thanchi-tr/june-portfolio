@@ -94,8 +94,9 @@ const Experience = () => {
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "
                         initial={{ x: "-148%" }}
-                        animate={(AnimationProgress.get() < 0.10) ? { x: -148 + AnimationProgress.get() * 840 + "%" } : { x: -80 + 0.245 * 390 + "%" }}
+                        animate={{ x: -80 + 0.245 * 390 + "%" }}
                         transition={{ duration: 0.1, ease: "easeInOut" }}
+                        viewport={{ once: true }}
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-35 2xl:scale-x-125 blur-3xl scale-y-125"></div>
 
@@ -178,7 +179,7 @@ const Experience = () => {
                         <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]"
 
                             initial={{ translate: "105%)" }}
-                            animate={(AnimationProgress.get() < 0.2) ? { translate: 105 - AnimationProgress.get() * 500 + "%" } : { translate: "5%" }}
+                            whileInView={{ translate: "5%" }}
                             transition={{ duration: 0.3, delay: 0, ease: "easeInOut" }}
                             viewport={{ once: true }}
                         >
@@ -215,7 +216,7 @@ const Experience = () => {
                                         shadow-2xl shadow-black/30
                                 "
                                     initial={{ opacity: 0 }}
-                                    whileInView={AnimationProgress.get() > 0.18 ? { opacity: [0, 1] } : {}}
+                                    whileInView={{ opacity: 1 }}
                                     transition={{ duration: 0.8, delay: 0.25, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
@@ -234,7 +235,7 @@ const Experience = () => {
                                             className="text-2xl translate-x-[6%] pr-1 font-bold text-white lg:hidden will-change-[opacity]"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
-                                            whileInView={AnimationProgress.get() > 0.18 ? { opacity: [0, 0.3, 1] } : {}}
+                                            whileInView={{ opacity: [0, 0.3, 1] }}
                                             transition={{ delay: 0.6, duration: 0.25, ease: easeIn }}
                                         >
                                             Full-Stack Engineer
@@ -242,7 +243,7 @@ const Experience = () => {
                                         <motion.div className="relative will-change-[transform,opacity] flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] text-white"
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
-                                            whileInView={AnimationProgress.get() > 0.18 ? { opacity: 1, scale: [1.8, 1.5, 1] } : {}}
+                                            whileInView={{ opacity: 1, scale: [1.8, 1.5, 1] }}
                                             transition={{ delay: 0.3, duration: 0.36, ease: "anticipate" }}
                                         >
                                             <span className="
@@ -253,7 +254,7 @@ const Experience = () => {
                                         </motion.div>
                                         <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
                                             initial={{ opacity: 0 }}
-                                            whileInView={AnimationProgress.get() > 0.18 ? { opacity: [0, 0.8] } : {}}
+                                            whileInView={{ opacity: [0, 0.8] }}
                                             transition={{ duration: 1.2, delay: 0.38, ease: "anticipate" }}
                                             viewport={{ once: true }}
 
@@ -329,9 +330,6 @@ const Experience = () => {
                                     list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 
                                     
                                     "
-                                initial={{ translate: "300%" }}
-                                animate={(AnimationProgress.get() < 0.2) ? { translate: 100 - AnimationProgress.get() * 400 + "%" } : { translate: "0%" }}
-                                transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
 
                             >
 

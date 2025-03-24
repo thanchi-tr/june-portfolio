@@ -18,7 +18,7 @@ const Skill = () => {
             y: ["6px", "0"],
             opacity: [0, 1],
             transition: {
-                duration: 0.7,
+                duration: 0.45,
             }
         },
     };
@@ -240,7 +240,7 @@ const Skill = () => {
                 </div>
                 <motion.div className="
                         relative flex-col z-10
-                        h-auto md:h-[60%] w-[94%] md:w-2/3 pb-[8%]
+                        h-auto md:h-[60%] lg:h-[60%] w-[94%] md:w-2/3 lg:w-[90%] pb-[8%]
                         -translate-y-[20%] md:translate-y-0
                         md:ml-3  shadow-xl shadow-black/70 will-change-transform
                         bg-gradient-to-b from-primary to-background 2xl:bg-transparent
@@ -263,7 +263,7 @@ const Skill = () => {
                         " >
 
                             <span className="opacity-100 2xl:opacity-100 absolute bottom-0 text-center -translate-x-[50%]
-                                    underline lg:pr-[20%] box-border lg:border-r-8 border-white/40
+                                    underline lg:pr-[8%] box-border lg:border-r-8 border-white/40
                             ">Tech-stacks</span>
                         </div>
 
@@ -274,11 +274,12 @@ const Skill = () => {
                     <motion.div className="
                             lg:flex flex-row hidden 
                             flex-wrap flex-shrink-0 flex-grow-0 
-                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-4 md:gap-y-[6vh] 2xl:gap-y-6
+                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-4 md:gap-y-[6vh] lg:gap-y-[2vh] 2xl:gap-y-6
                             justify-evenly text-white
                             h-auto font-bold 
                             w-4/5 md:w-[65%] 2xl:w-[58%]
-                            mx-[15%] 2xl:mx-[13%] 2xl:pl-[2%]
+                            mx-[15%] 
+                            2xl:mx-[13%] 2xl:pl-[2%]
                             pt-[5%] md:pt-[10%]
                         "
                         variants={containerVariants}
