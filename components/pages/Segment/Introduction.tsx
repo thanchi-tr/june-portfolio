@@ -246,7 +246,7 @@ const Introduction = () => {
                             absolute group 
                             top-0 z-[100]
                             h-full w-full
-                            lg:hover:border-l-0 lg:border-l-[10vw] 
+                             lg:border-l-[10vw] 
                             border-l-0 border-violet-950/65
                             hover:cursor-pointer 
                             shadow-inner shadow-black group-hover:overflow-hidden
@@ -263,7 +263,7 @@ const Introduction = () => {
 
                             <div className="
                                 absolute w-full top-0 left-0 h-[9vh] translate-x-[-21%] sm:translate-x-[-25%] md:translate-x-[-27%] rounded-2xl overflow-clip 
-                                lg:group-hover:scale-[210%]  2lg:group-hover:left-[5vw] lg:group-hover:top-[4vh]
+                               
                                 transition-all duration-100 ease-in-out
                                 " >
                                 <Image
@@ -277,9 +277,9 @@ const Introduction = () => {
                             </div>
                             <div className="
                                     lg:hidden h-full w-full z-10 relative
-                                    translate-y-[5%] lg:group-hover:-translate-y-[10%]
+                                    translate-y-[5%]
                                     rounded-3xl
-                                    overflow-clip lg:border-x-2 lg:border-b-2 lg:group-hover:scale-125 lg:group-hover:border-0">
+                                    overflow-clip lg:border-x-2 lg:border-b-2 ">
 
                                 <Image
                                     src="/ava3.png"
@@ -294,17 +294,10 @@ const Introduction = () => {
                             </div>
                             <div className="
                                     hidden lg:block h-full w-full z-10 relative
-                                    translate-y-[5%] lg:group-hover:-translate-y-[10%]
+                                    translate-y-[5%]
                                     rounded-3xl transition-all duration-75
-                                    overflow-clip lg:border-x-2 lg:border-b-2 lg:group-hover:scale-125 lg:group-hover:border-0">
-                                <Image
-                                    src="/animatedAva.png"
-                                    alt="Mid-level Full Stack Developer specializing in .NET, Next.js, and Angular, based in Melbourne, Australia."
-                                    className="object-contain translate-x-[42%] lg:group-hover:translate-x-[27%] scale-[150%] lg:group-hover:scale-[100%] -translate-y-[4%]" fill
-                                    quality={80}
+                                    overflow-clip lg:border-x-2 lg:border-b-2">
 
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                />
                                 <Image
                                     src="/ava3.png"
                                     alt="Mid-level Full Stack Developer specializing in .NET, Next.js, and Angular, based in Melbourne, Australia."

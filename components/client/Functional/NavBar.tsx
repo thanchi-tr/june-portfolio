@@ -20,7 +20,7 @@ const NavBar = ({ desRef, eduRef, expRef, skillRef, projectRef, contactRef }: { 
     }, []);
 
     return (
-        <nav className="sticky top-0 lg:w-full h-4 bg-white z-[500]">
+        <nav className="sticky top-0 lg:w-full h-0 bg-white z-[500]">
             <div className={`
                     absolute  group
                     gap-1 lg:gap-3 lg:pt-8 flex flex-col 2xl:flex-row

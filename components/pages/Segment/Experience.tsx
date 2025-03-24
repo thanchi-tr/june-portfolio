@@ -97,13 +97,13 @@ const Experience = () => {
                         animate={(AnimationProgress.get() < 0.10) ? { x: -148 + AnimationProgress.get() * 840 + "%" } : { x: -80 + 0.245 * 390 + "%" }}
                         transition={{ duration: 0.1, ease: "easeInOut" }}
                     >
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-45 2xl:scale-x-125 blur-3xl scale-y-125"></div>
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-35 2xl:scale-x-125 blur-3xl scale-y-125"></div>
 
                         <div className="flex flex-col h-full md:h-2/6 w-full ">
                             <div className="
                                 hidden lg:block ml-[10%] 2xl:ml-[2%]
                                 w-3/5 2xl:w-4/5 
-                                text-2xl 2xl:text-3xl 3xl:text-4xl font-bold text-center 
+                                text-3xl 2xl:text-5xl 3xl:text-4xl font-bold text-center 
                                 text-white
                                 ">FullStack Engineer</div>
                             <span className="md:border-t-8 border-black/20 w-4/5" />
@@ -192,10 +192,6 @@ const Experience = () => {
                                         -translate-y-[15%]
                                         shadow-lg shadow-black/70"
 
-                                    initial={{ x: "0" }}
-                                    whileInView={AnimationProgress.get() > 0.18 ? { x: ["0", "50vw", "0vw"] } : {}}
-                                    transition={{ duration: 0.4, delay: 0.3, ease: "anticipate" }}
-                                    viewport={{ once: true }}
                                 >
                                     <motion.div className="h-full w-full"
                                         animate={{ scale: ["100%", "110%", "100%"] }}
