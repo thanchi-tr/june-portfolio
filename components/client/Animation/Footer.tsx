@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="relative h-full w-full z-20">
             <div className="lg:absolute flex flex-col h-[80%] translate-y-[-35%] w-full bottom-0 text-end z-20 text-black justify-between">
                 <div />
-                <div className=" font-secondaryfont scale-y-[70%] font-extrabold shadow-md shadow-black bg-secondary">
+                <div className=" font-secondaryfont font-extrabold shadow-md shadow-black bg-secondary">
                     <div className="flex flex-row justify-evenly text-xs md:text-sm lg:text-lg 2xl:text-xl uppercase gradient-text will-change-[transform,opacity]"
 
                     >

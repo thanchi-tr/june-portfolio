@@ -226,13 +226,7 @@ const MobileExperience = () => {
                             </ul>
 
                         </motion.div>
-                        <div className="h-[100px] w-full">
-
-
-                        </div>
-
                     </div>
-
                 </div>
             </div >
         </div >

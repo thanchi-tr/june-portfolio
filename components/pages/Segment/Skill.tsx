@@ -23,7 +23,7 @@ const Skill = () => {
         },
     };
     return (
-        <div className="relative-screen bg-background select-none">
+        <div className="relative-screen bg-background select-none mb-[8vh]  ">
             <div className="flex items-center justify-center h-0 w-full"
             >
                 <motion.div className="

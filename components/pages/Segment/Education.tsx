@@ -4,15 +4,12 @@ import Image from "next/image";
 const Education = () => {
     return (
         <>
-            <div className="
+            <h1 className="
                         w-full h-[30%]  text-center
-                        uppercase  2xl:-translate-y-[40%]
-                        mt-[20%] md:mt-0 z-10
-                        text-5xl md:text-6xl text-white font-bold
-                        tracking-[0.2em] font-mainfont
-                        text-shadow-lg shadow-black/70
-                ">education</div>
-            <div id="edu" className="w-full h-[6%]  text-center font-extrabold text-white/80 z-10 translate-y-1/4">2018-2023 </div>
+                        uppercase mt-[20%] md:mt-0 z-10 text-white
+                        tracking-[0.2em] text-shadow-lg shadow-black/70
+                ">education</h1>
+            <p id="edu" className="w-full h-[6%]  text-center font-extrabold text-white/80 z-10 translate-y-1/4">2018-2023 </p>
             <motion.div className="
                         w-full h-[20%] md:h-[16.5%] font-mainfont
                         text-center text-5xl z-10 will-change-transform
@@ -24,7 +21,7 @@ const Education = () => {
                 transition={{ duration: 0.24, delay: 0.08, ease: "easeIn" }}
                 viewport={{ once: true }}
             >
-                <motion.div
+                <motion.h3
 
                     className="will-change-transform hidden lg:block"
                     animate={{
@@ -36,13 +33,13 @@ const Education = () => {
                 >
                     University of Melbourne
                     <p className="text-2xl text-white">BcS-Computing and software system</p>
-                </motion.div>
-                <div
+                </motion.h3>
+                <h1
                     className="will-change-transform lg:hidden"
                 >
                     University of Melbourne
-                    <p className="text-xl text-white">BcS-Computing and software system</p>
-                </div>
+                    <p className="text-lg text-white">BcS-Computing and software system</p>
+                </h1>
             </motion.div>
             <div className="
                         flex flex-row justify-evenly

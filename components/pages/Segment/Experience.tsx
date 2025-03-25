@@ -2,8 +2,7 @@
 import ExternalCircularButton from "@/components/client/Functional/ExternalCircularButton";
 import PopUp from "@/components/client/Functional/PopUp";
 import Image from "next/image";
-import { easeIn, motion, useMotionValue, useMotionValueEvent, useScroll } from "framer-motion";
-import { useRef, useState } from "react";
+import { easeIn, motion } from "framer-motion";
 
 const Experience = () => {
     const containerVariants = {
@@ -27,39 +26,17 @@ const Experience = () => {
             }
         },
     };
-    const selfRef = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({ target: selfRef });
-    const [refresh, setRefresh] = useState(false);
-    const AnimationProgress = useMotionValue(0);
-
-    useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-
-        // Additional logic based on scroll progress
-        if (refresh) {
-            AnimationProgress.set(latest)
-            setRefresh(false);
-        };
-        setTimeout(() => {
-            setRefresh(true);
-        }, 200);
-    });
 
     return (
-        <div className="
-                    overflow-hidden
-                    h-full w-full
-                    "
-
-            ref={selfRef}
+        <div
+            className="overflow-hidden relative-screen my-[20vh]"
         >
 
             <div className={`
-                        flex items-end 
-                        h-[40vh] w-full text-center tracking-widest`}>
-                <motion.span
+                        flex items-end w-full text-center tracking-widest`}>
+                <motion.h2
                     className="
-                        text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl tracking-wider font-bold 
-                        text-white w-full uppercase font-mainfont z-50
+                        tracking-wider text-white w-full uppercase z-50
                         text-shadow-lg shadow-black/70
                        "
                     initial={{ x: "-100%", scale: 1.1, y: "50%" }}
@@ -67,13 +44,13 @@ const Experience = () => {
                     transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
                     viewport={{ once: true }}
 
-                >Experiences</motion.span>
+                >Experiences</motion.h2>
 
             </div>
 
             <div className="
-                        relative flex flex-col-reverse md:flex-row
-                        h-[220vh] sm:h-[200vh] md:h-[200vh] 
+                        relative flex-standard md:flex-row
+                        h-[90%] pb-[20%]
                         shadow-inner md:shadow-none
                         shadow-black/60 overflow-clip
                         w-[82%] md:w-full mx-[8%] md:mx-0
@@ -81,13 +58,12 @@ const Experience = () => {
             ">
 
                 <div className="
-                            h-full w-full md:w-[27%]
-                            md:ml-[8%] z-10
+                            relative-screen md:w-[27%] ml-[8%] z-10
                            ">
                     <motion.div className="
                             flex flex-col will-change-[transform,opacity]
                             opacity-0 md:opacity-100
-                            md:p-0 md:justify-evenly 
+                            justify-center 
                             w-full md:w-[80%] md:ml-[20.8%] md:rounded-l-2xl
                             h-full bg-gradient-to-b from-secondary via-secondary to-transparent 
                             2xl:from-transparent
@@ -98,67 +74,63 @@ const Experience = () => {
                         transition={{ duration: 0.1, ease: "easeInOut" }}
                         viewport={{ once: true }}
                     >
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 md:opacity-20 2xl:opacity-35 2xl:scale-x-125 blur-3xl scale-y-125"></div>
+                        <div className="absolute-0 gradient-bg opacity-30 md:opacity-20 2xl:opacity-35 2xl:scale-x-125 scale-y-125"></div>
 
-                        <div className="flex flex-col h-full md:h-2/6 w-full ">
-                            <div className="
+                        <div className="flex flex-col h-2/6 w-full ">
+                            <h6 className="
                                 hidden lg:block ml-[10%] 2xl:ml-[2%]
-                                w-3/5 2xl:w-4/5 
-                                text-3xl 2xl:text-5xl 3xl:text-4xl font-bold text-center 
-                                text-white
-                                ">FullStack Engineer</div>
+                                w-3/5 2xl:w-4/5 text-center text-white
+                                ">FullStack Engineer</h6>
                             <span className="md:border-t-8 border-black/20 w-4/5" />
                         </div>
-                        <div className="hidden lg:block h-12 md:h-[4.2%] w-full">
+                        <div className="hidden lg:block h-[4.2%] w-full ">
                             <motion.div className="
-                                        flex flex-row justify-evenly text-white will-change-transform
-                                        h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-4 2xl:gap-y-6 gap-x-1
-                                        -translate-y-[8vh] sm:-translate-y-[29vh] xl:-translate-y-[32vh]  md:-translate-y-[76vh] lg:-translate-y-[58vh]  2xl:-translate-y-[42vh]
-                                        ml-[8%]"
+                                        flex flex-row text-white will-change-transform
+                                        h-full w-[85%] flex-grow-0 flex-shrink-0 flex-wrap gap-y-4 2xl:gap-y-6 gap-x-1 ml-[8%]"
                                 variants={containerVariants}
                                 animate="playout"
                             >
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                <motion.div className="h-full circle-h bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/dotnetCore.png"} >.Net Core</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                <motion.div className="h-full circle-h bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/nextjs.png"} >NextJs</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                <motion.div className="h-full circle-h bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/docker.png"} >Docker</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                <motion.div className="h-full circle-h bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/efCore.png"} >EFCore</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                <motion.div className="h-full circle-h bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/postgres.png"} >posgres</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                <motion.div className="h-full circle-h bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/graphQl.png"} >graphQl</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                <motion.div className="h-full circle-h bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/serilog.png"} >Serilog</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                <motion.div className="h-full circle-h bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/Auth0.jpg"} >Auth0</PopUp>
                                 </motion.div>
-                                <motion.div className="h-full rounded-full aspect-square bg-black will-change-transform"
+                                <motion.div className="h-full circle-h bg-black will-change-transform"
                                     variants={itemVariants}
                                 >
                                     <PopUp img={"/icons/signalR.png"} >SignalR</PopUp>
@@ -170,12 +142,9 @@ const Experience = () => {
                     </motion.div>
 
                 </div>
-                <div className="
-                            h-full md:w-2/3
-                            md:ml-3
-                           ">
+                <div className="h-full md:w-2/3 md:ml-3">
                     <div className="
-                            relative flex flex-col justify-evenly w-full h-full z-10">
+                            relative-screen flex flex-col mt-[45vh] z-10">
                         <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]"
 
                             initial={{ translate: "105%)" }}
@@ -187,14 +156,11 @@ const Experience = () => {
 
                                 <motion.div
                                     className="
-                                        h-5/6 block z-[80] will-change-[transform,opacity]
-                                        scale-[170%] md:scale-[125%] 2xl:scale-[115%] 
-                                        aspect-square bg-white rounded-full 
-                                        -translate-y-[15%]
-                                        shadow-lg shadow-black/70"
-
+                                        h-[100px] xl:h-[120px] z-[80] will-change-[transform,opacity]
+                                        scale-[125%] 2xl:scale-[115%] circle-h
+                                        -translate-y-[15%] shadow-lg shadow-black/70"
                                 >
-                                    <motion.div className="h-full w-full"
+                                    <motion.div className="relative-screen"
                                         animate={{ scale: ["100%", "110%", "100%"] }}
                                         transition={{ duration: 5, ease: "linear", repeat: Infinity }}
                                     >
@@ -210,8 +176,8 @@ const Experience = () => {
 
                                 <motion.div className="
                                         hidden lg:flex md:w-9/12
-                                        2xl:w-8/12 h-3/5  rounded-full
-                                        md:bg-primary text-center 
+                                        2xl:w-8/12 h-[120px]  rounded
+                                        bg-gradient-to-l from-primary via-primary to-transparent  text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
                                 "
@@ -220,39 +186,37 @@ const Experience = () => {
                                     transition={{ duration: 0.8, delay: 0.25, ease: "anticipate" }}
                                     viewport={{ once: true }}
                                 >
-                                    <motion.div className="h-full w-full -translate-y-2/3  will-change-[opacity]">
-                                        <motion.div
-                                            className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
+                                    <motion.div className="relative-screen -translate-y-2/3  will-change-[opacity]">
+                                        <motion.p
+                                            className="h-3/5 text-gray-400 tracking-tight md:text-lg"
                                             initial={{ opacity: 0 }}
-                                            whileInView={AnimationProgress.get() > 0.18 ? { opacity: 1 } : {}}
+                                            whileInView={{ opacity: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: 0.55, duration: 0.22, ease: easeIn }}
                                         >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
 
 
-                                        </motion.div>
-                                        <motion.div
-                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white lg:hidden will-change-[opacity]"
+                                        </motion.p>
+                                        <motion.h6
+                                            className="translate-x-[6%] pr-1 text-white lg:hidden will-change-[opacity]"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
                                             whileInView={{ opacity: [0, 0.3, 1] }}
                                             transition={{ delay: 0.6, duration: 0.25, ease: easeIn }}
                                         >
                                             Full-Stack Engineer
-                                        </motion.div>
+                                        </motion.h6>
                                         <motion.div className="relative will-change-[transform,opacity] flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] text-white"
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
                                             whileInView={{ opacity: 1, scale: [1.8, 1.5, 1] }}
                                             transition={{ delay: 0.3, duration: 0.36, ease: "anticipate" }}
                                         >
-                                            <span className="
-                                                    text-4xl font-signaturefont  will-change-[opacity]
-                                                    text-primary md:text-white
-                                                    text-shadow-lg shadow-primary
-                                                    md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">JUNG</div> Talents</span>
+                                            <h2 className="flex flex-col
+                                                    will-change-[opacity] text-white text-shadow-lg shadow-primary
+                                                    "><strong className="shadow-primary text-shadow-none text-background">JUNG</strong> Talents</h2>
                                         </motion.div>
-                                        <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
+                                        <motion.div className="absolute-0 top-[25%] gradient-bg opacity-80 scale-y-50 z-[300]"
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: [0, 0.8] }}
                                             transition={{ duration: 1.2, delay: 0.38, ease: "anticipate" }}
@@ -265,8 +229,8 @@ const Experience = () => {
                                 </motion.div>
                                 <motion.div className="
                                         w-[85%] lg:hidden
-                                        2xl:w-8/12 h-3/5  rounded-full 
-                                        md:bg-primary text-center 
+                                        2xl:w-8/12 h-[120px]  rounded
+                                        md:bg-gradient-to-l from-primary via-primary to-transparent text-center 
                                         z-10 border-b-2 
                                         shadow-2xl shadow-black/30
                                 "
@@ -276,7 +240,7 @@ const Experience = () => {
                                     viewport={{ once: true }}
                                 >
                                     <motion.div className="h-full w-full -translate-y-2/3  will-change-[opacity]">
-                                        <motion.div
+                                        <motion.p
                                             className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 1 }}
@@ -285,29 +249,28 @@ const Experience = () => {
                                         >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
 
 
-                                        </motion.div>
-                                        <motion.div
-                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white lg:hidden will-change-[opacity]"
+                                        </motion.p>
+                                        <motion.h6
+                                            className="translate-x-[6%] pr-1 font-bold text-white lg:hidden will-change-[opacity]"
                                             initial={{ opacity: 0 }}
                                             viewport={{ once: true }}
                                             whileInView={{ opacity: [1] }}
                                             transition={{ delay: 0.6, duration: 0.25, ease: easeIn }}
                                         >
                                             Full-Stack Engineer
-                                        </motion.div>
+                                        </motion.h6>
                                         <motion.div className="relative will-change-[transform,opacity] flex items-center justify-end md:justify-center w-full md:w-[90%] h-[190%] text-white"
                                             initial={{ opacity: 0, scale: 1.5 }}
                                             viewport={{ once: true }}
                                             whileInView={{ opacity: 1, scale: [1.8, 1.5, 1] }}
                                             transition={{ delay: 0.3, duration: 0.36, ease: "anticipate" }}
                                         >
-                                            <span className="
-                                                    text-4xl font-signaturefont  will-change-[opacity]
-                                                    text-primary md:text-white
+                                            <h2 className="flex flex-col
+                                                    will-change-[opacity] text-white
                                                     text-shadow-lg shadow-primary
-                                                    md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">JUNG</div> Talents</span>
+                                                    md:text-6xl font-semibold md:font-mainfont"><strong className="shadow-primary text-shadow-none text-background">JUNG</strong> Talents</h2>
                                         </motion.div>
-                                        <motion.div className="absolute top-[25%] left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-80 blur-3xl scale-y-50 z-[300]"
+                                        <motion.div className="absolute-0 top-[25%] gradient-bg opacity-80 scale-y-50 z-[300]"
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 0.8 }}
                                             transition={{ duration: 0.7, delay: 0.22, ease: "anticipate" }}
@@ -318,7 +281,7 @@ const Experience = () => {
 
 
                                 </motion.div>
-                                <motion.div className="absolute will-change-[opacity] top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-30 blur-3xl scale-y-50 z-[300]"
+                                <motion.div className="will-change-[opacity] absolute-0 gradient-bg opacity-30 scale-y-50 z-[300]"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: [0, 0.3] }}
                                     transition={{ duration: 0.7, delay: 0.15, ease: "anticipate" }}
@@ -412,15 +375,11 @@ const Experience = () => {
                             </motion.ul>
 
                         </motion.div>
-                        <div className="h-[6%] w-full">
-
-
-                        </div>
 
                     </div>
 
                 </div>
-            </div>
+            </div >
         </div >
     )
 }

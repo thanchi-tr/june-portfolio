@@ -14,7 +14,7 @@ const ParticlesComponent = () => {
 
     return (
         <Particles
-            className="absolute top-0 left-0 w-full h-full -z-0"
+            className="absolute-0 w-full h-full -z-0"
             id="tsparticles"
             init={particlesInit}
             options={{

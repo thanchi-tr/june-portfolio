@@ -164,7 +164,7 @@ const Introduction = () => {
                             z-40
                         "
                     >
-                        <div className="absolute-0 gradient-bg  opacity-20 "></div>
+                        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 0.2 }} viewport={{ once: true }} transition={{ duration: 2, delay: 0.5 }} className="absolute-0 gradient-bg  opacity-20 " />
 
                         <div className={`
                                 p-6  lg:py-[10vh] lg:p-6 leading-5 2xl:mt-4

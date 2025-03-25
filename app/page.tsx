@@ -21,7 +21,6 @@ import NavBar from "@/components/client/Functional/NavBar";
 import ContactForm from "@/components/client/Functional/Form";
 import HeroSection from "@/components/UI/HeroSection";
 import Icon from "@/components/UI/ResponsiveIcon";
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Page = () => {
@@ -38,6 +37,7 @@ const Page = () => {
         if (!light.current) return;
         gsap.to(light.current, {
             width: "100%",
+            opacity: 0.3,
             scrollTrigger: {
                 trigger: container.current,
                 start: "2%",
@@ -46,12 +46,12 @@ const Page = () => {
             },
         });
         gsap.to(hero.current, {
-            transform: "translateX(-150%) ",
-            rotate: 35,
+            transform: "translateX(-250%) ",
+            rotate: 45,
             scrollTrigger: {
                 trigger: container.current,
-                start: "19%",
-                end: "84%",
+                start: "22%",
+                end: "250%",
                 scrub: true,
             },
         });
@@ -66,11 +66,21 @@ const Page = () => {
             },
         });
         gsap.to(logo.current, {
-            rotate: -35,
+            rotate: -45,
             scrollTrigger: {
                 trigger: container.current,
-                start: "19%",
-                end: "84%",
+                start: "22%",
+                end: "250%",
+                scrub: true,
+
+            },
+        });
+        gsap.to(document.querySelector("#lightsource1"), {
+            opacity: 0.5,
+            scrollTrigger: {
+                trigger: container.current,
+                start: "28%",
+                end: "120%",
                 scrub: true,
 
             },
@@ -80,12 +90,12 @@ const Page = () => {
         <div className="bg-background">
             <div ref={container} className="text-white h-[50vh] flex flex-col items-center justify-items-center gap-16 font-[family-name:var(--font-geist-sans)] select-none">
                 <section ref={hero} className="hero hero-section sticky top-0 z-[1000] bg-background  pb-[10vh] border-8 border-white/5">
-                    <h2 className="text-secondary1 animate-fade-in border-debug
-                    "> hello</h2>
+                    <h4 className="text-secondary1 animate-fade-in border-debug text-2xl
+                    "> hello</h4>
                     <HeroSection />
                     <div
                         ref={light}
-                        className="light absolute-0 gradient-bg w-0 opacity-30"
+                        className="light absolute-0 gradient-bg w-0 opacity-5"
                     />
                     <div ref={logo} className="flex justify-center scale-0"><Icon iconStr={"Logo"} href={""} />
                     </div>
@@ -158,20 +168,16 @@ const Page = () => {
                         "
                     id="experience"
                 >
-                    <div className=" h-[260vh] sm:h-[240vh] md:h-[240vh] w-full hidden lg:block">
+                    <div className=" h-[260vh] sm:h-[240vh] md:h-[240vh] w-full hidden md:block">
                         <Experience />
                     </div>
-                    <div className="h-auto w-full lg:hidden">
+                    <div className="h-auto w-full md:hidden">
                         <MobileExperience />
                     </div>
                 </div>
 
                 {/* 200vh for Skill */}
-                <div className="
-                    h-[280vh] sm:h-[220vh] md:h-[180vh] lg:h-[185vh] 2xl:h-[150vh] w-full 
-            "
-                >
-
+                <div className="h-auto w-full">
                     <Skill />
                 </div>
                 {/* Project */}
@@ -197,7 +203,7 @@ const Page = () => {
                 <div className="h-auto bg-black z-50" id="contact">
                     <ContactForm />
                 </div>
-                <div className="h-auto bg-gradient-to-t from-secondary to-background translate-y-[15%] scale-y-150 2xl:scale-y-100 z-30">
+                <div className="h-auto bg-gradient-to-t from-secondary to-background translate-y-[15%]  z-30">
                     <Footer />
                 </div>
 
@@ -211,7 +217,7 @@ const Page = () => {
 
 
 
-                    <div className="flex flex-row md:flex-row justify-evenly w-auto pb-2 text-background ">
+                    <div className="flex flex-row justify-evenly w-auto pb-2 text-background ">
 
                         <div className="hidden md:flex w-[35%]">www.junetrinh.dev</div>
                         <div className="">

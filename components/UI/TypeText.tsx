@@ -39,14 +39,14 @@ const TypedText = ({ options, className }: { options: string[], className: strin
                 <motion.h3
                     key={cIndex}
                     variants={items}
-                    className={`hidden whitespace-pre w-auto`}
+                    className={`hidden whitespace-pre w-auto text-2xl`}
                 >
                     {char === " " ? "\u00A0" : char} {/* handle spaces */}
                 </motion.h3>
 
             ))}
 
-            <h2 className="h-full  animate-pulse bg-white w-auto"> |</h2>
+            <h3 className="h-full  animate-pulse bg-white w-auto text-2xl"> |</h3>
         </motion.div>
     );
 }
