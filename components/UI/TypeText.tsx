@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const TypedText = ({ options, className }: { options: string[], className: string }) => {
     const [index, setIndex] = useState(0);
     useEffect(() => {
-        let timer = setTimeout(() => {
+        const timer = setTimeout(() => {
             setIndex((index + 1) % options.length);
         }, index < options.length - 1 ? 2000 : 5000);
         return () => clearTimeout(timer);

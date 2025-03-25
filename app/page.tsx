@@ -39,7 +39,6 @@ const Page = () => {
     const hero = useRef<HTMLDivElement>(null);
     const light = useRef<HTMLDivElement>(null);
     const logo = useRef<HTMLDivElement>(null);
-    const main = useRef<HTMLDivElement>(null);
     useGSAP(() => {
         if (!light.current) return;
 
