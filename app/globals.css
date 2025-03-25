@@ -17,8 +17,21 @@
       background-position: 200%;
     }
   }
+  .logo {
+    @apply relative w-20 rounded overflow-clip aspect-square;
+  }
 }
 
+.hero-section {
+  @apply h-[108vh] flex flex-col justify-evenly;
+}
+section {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .light {
 
   --color-background: #fefdfd;
