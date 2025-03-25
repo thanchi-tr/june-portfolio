@@ -109,8 +109,7 @@ const Page = () => {
                     <motion.div className="
                     
                     sticky  origin-center translate-x-[85vw] 2xl:translate-x-[90vw] translate-y-[80vh] 2xl:translate-y-[80vh]
-                    h-0 top-2 z-[200] text-2xl bg-black 
-                    font-signaturefont text-center"
+                    h-0 top-2 z-[200] text-2xl bg-black  text-center"
                     >
 
                         <div className="
@@ -120,7 +119,7 @@ const Page = () => {
                     ">
 
                             <motion.div className="
-                                relative 
+                                relative will-change-auto
                                 group flex flex-col 
                                 w-full aspect-square
                                 group-hover:border-t-8 group-hover:border-black
