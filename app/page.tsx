@@ -29,25 +29,19 @@ const Page = () => {
     useEffect(() => {
         setEmail(process.env.NEXT_EMAIL || "dev.xuan.trinh@outlook.com");
     }, []);
-    const desRef = useRef<HTMLDivElement>(null);
-    const expRef = useRef<HTMLDivElement>(null);
-    const skillRef = useRef<HTMLDivElement>(null);
-    const projectRef = useRef<HTMLDivElement>(null);
-    const eduRef = useRef<HTMLDivElement>(null);
-    const ContactRef = useRef<HTMLDivElement>(null);
+
     const container = useRef<HTMLDivElement>(null);
     const hero = useRef<HTMLDivElement>(null);
     const light = useRef<HTMLDivElement>(null);
     const logo = useRef<HTMLDivElement>(null);
     useGSAP(() => {
         if (!light.current) return;
-
         gsap.to(light.current, {
             width: "100%",
             scrollTrigger: {
                 trigger: container.current,
-                start: "7%",
-                end: "11%",
+                start: "2%",
+                end: "14%",
                 scrub: true,
             },
         });
@@ -57,19 +51,18 @@ const Page = () => {
             scrollTrigger: {
                 trigger: container.current,
                 start: "19%",
-                end: "74%",
+                end: "84%",
                 scrub: true,
             },
         });
         gsap.to(logo.current, {
-            transform: "scale(180%) translateY(-80%) ",
+            transform: "scale(220%) translateY(-80%) ",
 
             scrollTrigger: {
                 trigger: container.current,
                 start: "3%",
-                end: "21%",
+                end: "42%",
                 scrub: true,
-                markers: true, // ✅ debug
             },
         });
         gsap.to(logo.current, {
@@ -77,7 +70,7 @@ const Page = () => {
             scrollTrigger: {
                 trigger: container.current,
                 start: "19%",
-                end: "74%",
+                end: "84%",
                 scrub: true,
 
             },
@@ -85,16 +78,14 @@ const Page = () => {
     }, []);
     return (
         <div className="bg-background">
-            <div ref={container} className="text-white h-auto flex flex-col items-center justify-items-center gap-16 font-[family-name:var(--font-geist-sans)]">
-                <section ref={hero} className="hero hero-section sticky top-0 z-50 bg-background  pb-[10vh]">
+            <div ref={container} className="text-white h-[50vh] flex flex-col items-center justify-items-center gap-16 font-[family-name:var(--font-geist-sans)] select-none">
+                <section ref={hero} className="hero hero-section sticky top-0 z-[1000] bg-background  pb-[10vh] border-8 border-white/5">
                     <h2 className="text-secondary1 animate-fade-in border-debug
-                        text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold
-                    
                     "> hello</h2>
                     <HeroSection />
                     <div
                         ref={light}
-                        className="light absolute top-0 right-0 h-full w-[0%] bg-gradient-to-t from-[#ff8c00] to-[#8a2be2] opacity-30 blur-3xl z-10"
+                        className="light absolute-0 gradient-bg w-0 opacity-30"
                     />
                     <div ref={logo} className="flex justify-center scale-0"><Icon iconStr={"Logo"} href={""} />
                     </div>
@@ -103,7 +94,7 @@ const Page = () => {
             <div className="h-auto w-full box-border -z-[100] overflow-clip"
             >
 
-                <NavBar desRef={desRef} expRef={expRef} skillRef={skillRef} projectRef={projectRef} eduRef={eduRef} contactRef={ContactRef} />
+                <NavBar />
                 <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}>
                     <motion.div className="
                     
@@ -119,10 +110,10 @@ const Page = () => {
                     ">
 
                             <motion.div className="
-                            relative 
-                            group flex flex-col 
-                            w-full aspect-square
-                            group-hover:border-t-8 group-hover:border-black
+                                relative 
+                                group flex flex-col 
+                                w-full aspect-square
+                                group-hover:border-t-8 group-hover:border-black
                             "
                                 animate={{
                                     opacity: [0.2, 1, 1, 1, 0.2]
@@ -152,13 +143,9 @@ const Page = () => {
 
                 <div
                     className={`
-                relative
-                transition-all duration-150
-                h-auto max-full 
-                bg-background
-                
-                `}
-                    ref={desRef}
+                        relative transition-all duration-150
+                        h-auto max-full bg-background
+                    `}
                 >
                     <Introduction />
 
@@ -166,13 +153,12 @@ const Page = () => {
 
                 {/*200vh for experience */}
                 <div className="
-                            h-[260vh] sm:h-[240vh] md:h-[240vh] w-full
+                            w-full
                         bg-background -z-50
                         "
-                    ref={expRef}
-
+                    id="experience"
                 >
-                    <div className="h-full w-full hidden lg:block">
+                    <div className=" h-[260vh] sm:h-[240vh] md:h-[240vh] w-full hidden lg:block">
                         <Experience />
                     </div>
                     <div className="h-auto w-full lg:hidden">
@@ -184,19 +170,16 @@ const Page = () => {
                 <div className="
                     h-[280vh] sm:h-[220vh] md:h-[180vh] lg:h-[185vh] 2xl:h-[150vh] w-full 
             "
-                    ref={skillRef}
                 >
 
                     <Skill />
                 </div>
                 {/* Project */}
                 <div className="h-auto"
-                    ref={projectRef}
                 >
                     <Project />
                 </div>
                 <div className="h-auto"
-                    ref={projectRef}
                 >
                     <Commercialproject />
                 </div>
@@ -206,13 +189,12 @@ const Page = () => {
                     items-center h-[80vh] 
                     max-w-full bg-background
                     "
-                    ref={eduRef}
                 >
                     <Education />
                 </div>
                 <div className="absolute top-0 h-full w-full "><ParticlesComponent /></div>
 
-                <div className="h-auto bg-black z-50">
+                <div className="h-auto bg-black z-50" id="contact">
                     <ContactForm />
                 </div>
                 <div className="h-auto bg-gradient-to-t from-secondary to-background translate-y-[15%] scale-y-150 2xl:scale-y-100 z-30">
@@ -225,7 +207,6 @@ const Page = () => {
                     h-auto max-w-full 
                     bg-primary font-semibold 
                     tracking-wider z-50"
-                    ref={ContactRef}
                 >
 
 

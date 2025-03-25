@@ -12,7 +12,7 @@ const Education = () => {
                         tracking-[0.2em] font-mainfont
                         text-shadow-lg shadow-black/70
                 ">education</div>
-            <div className="w-full h-[6%]  text-center font-extrabold text-white/80 z-10 translate-y-1/4">2018-2023 </div>
+            <div id="edu" className="w-full h-[6%]  text-center font-extrabold text-white/80 z-10 translate-y-1/4">2018-2023 </div>
             <motion.div className="
                         w-full h-[20%] md:h-[16.5%] font-mainfont
                         text-center text-5xl z-10 will-change-transform
@@ -25,6 +25,7 @@ const Education = () => {
                 viewport={{ once: true }}
             >
                 <motion.div
+
                     className="will-change-transform hidden lg:block"
                     animate={{
                         y: ["0", "-0.6rem", "0.9rem", "-1.1rem", "0.6rem", "0"],

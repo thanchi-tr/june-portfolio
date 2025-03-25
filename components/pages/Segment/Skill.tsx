@@ -23,25 +23,23 @@ const Skill = () => {
         },
     };
     return (
-        <div className="h-full w-full bg-background">
+        <div className="relative-screen bg-background select-none">
             <div className="flex items-center justify-center h-0 w-full"
-
             >
                 <motion.div className="
-                                text-white uppercase z-50 
-                                text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl font-mainfont
-                                md:-translate-x-[8%] tracking-[0.8rem]
-                                will-change-transform font-black
-                                "
+                        text-white z-50 
+                        md:-translate-x-[8%] tracking-[0.8rem]
+                        will-change-transform"
 
                     initial={{ x: "-20vw" }}
                     whileInView={{ x: "0vw" }}
                     transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
                     viewport={{ once: true }}
                 >
-                    <div className="text-shadow-lg shadow-black md:shadow-transparent md:translate-y-[49%] md:text-primary md:scale-110">Skills</div>
-                    <div className="hidden md:block text-background  overflow-clip scale-110">
-                        <div className="-translate-y-[50%] scale-y-110">Skills</div></div>
+                    <h1 className="text-shadow-lg shadow-black md:shadow-transparent md:translate-y-[49%] md:text-primary ">SKILLS</h1>
+                    <div className="hidden md:block text-background  overflow-clip -translate-y-[15%] scale-y-90">
+                        <h1 className="-translate-y-[35%]">SKILLS</h1>
+                    </div>
                 </motion.div>
             </div>
             <div className="
@@ -53,32 +51,28 @@ const Skill = () => {
 
                 <div className="
                         flex flex-col z-10
-                        h-[30%] mt-[10%] md:mt-0 md:h-full w-full md:w-1/3
+                        h-auto  my-[10%] md:mt-0 md:h-full w-full md:w-1/3
                 ">
-                    <div className="h-[6%] ">
-                    </div>
-                    <div className="
-                            h-auto md:h-[14%] 2xl:h-[12%] text-center uppercase 
-                            font-bold underline md:no-underline
-                            text-xl md:text-2xl lg:text-3xl sm:text-3xl text-primary"> Frameworks</div>
+
+                    <h5 className="h-auto text-center 
+                            font-bold my-14 lg:my-24 text-2xl
+                            text-primary"> FRAMEWORKS</h5>
                     <div className="w-[60%] h-auto
-                            flex flex-col pt-[10%]
-                            gap-y-6 2xl:gap-y-3
-                            ml-[20%] 2xl:ml-[28%]
-                    "
+                            flex flex-col 
+                            gap-y-6  ml-[20%]"
                     >
                         <div className="
                                 flex flex-row justify-between flex-shrink-0 flex-grow-0
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
-                                mt-[15%] md:mt-[5%] text-lg md:text-xl
+                                mt-[15%] md:mt-[5%]
                                 max-h-[70px] lg:max-h-none
                         ">
 
-                            <motion.div className="
-                            
-                                hidden relative will-change-transform md:block lg:w-2/8 lg:h-auto 
-                                
-                                aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div
+                                className="
+                                    relative will-change-transform 
+                                    w-[70px] h-[70px] aspect-square 
+                                    rounded-full overflow-clip"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -89,34 +83,30 @@ const Skill = () => {
                                     alt={"Microsoft Dotnet Core icon"} fill
                                     quality={40}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    className="object-contain z-10" />
+                                    className="object-contain z-10 " />
                             </motion.div>
-                            <motion.div className="relative md:hidden w-[65px] h-[65px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 will-change-transform"
-                                initial={{ x: "0", opacity: 0 }}
-                                whileInView={{ x: ["0", "40vw", "0"], opacity: 1 }}
-                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
-                                viewport={{ once: true }}
-                            >
-                                <Image src={"/icons/dotnetCore.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
-                            </motion.div>
-                            <motion.div className="
-                                    flex flex-col justify-evenly
-                                    w-5/8 h-full gradient-text will-change-opacity
-                                    uppercase text-white/80  text-center font-bold
-                            "
+
+                            <motion.p
+                                className="
+                                    flex flex-col justify-evenly text-lg 
+                                    gradient-text will-change-opacity uppercase"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ duration: 0.55, delay: 0.55, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 .net core
-                            </motion.div>
+                            </motion.p>
                         </div>
                         <div className="flex flex-row justify-between
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
                                 max-h-[70px] lg:max-h-none
                         ">
-                            <motion.div className="relative hidden will-change-transform md:block w-2/8 max-w-[70px] max-h-[70px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div
+                                className="
+                                    relative will-change-transform 
+                                    w-[70px] h-[70px] aspect-square 
+                                    rounded-full overflow-clip"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -130,18 +120,10 @@ const Skill = () => {
                                     quality={40}
                                 />
                             </motion.div>
-                            <motion.div className=" md:hidden w-[70px] h-[70px] relative will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
-                                initial={{ x: "0" }}
-                                whileInView={{ x: ["0", "40vw", "0"] }}
-                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
-                                viewport={{ once: true }}
-                            >
-                                <Image src={"/icons/nextjs.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
-                            </motion.div>
-                            <motion.div className="
-                                    flex flex-col justify-evenly
-                                    w-5/8 h-full will-change-transform
-                                    uppercase text-center font-bold gradient-text
+
+                            <motion.p className="
+                                    flex flex-col justify-evenly text-lg 
+                                    gradient-text will-change-opacity uppercase
                             "
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
@@ -150,14 +132,18 @@ const Skill = () => {
                                 viewport={{ once: true }}
                             >
                                 next.js
-                            </motion.div>
+                            </motion.p>
 
                         </div>
                         <div className="flex flex-row justify-between
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
                                 max-h-[70px] lg:max-h-none
                         ">
-                            <motion.div className="relative hidden will-change-transform md:block w-2/8 max-w-[70px] max-h-[70px] aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div
+                                className="
+                                    relative will-change-transform 
+                                    w-[70px] h-[70px] aspect-square 
+                                    rounded-full overflow-clip"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -171,18 +157,10 @@ const Skill = () => {
                                     quality={40}
                                 />
                             </motion.div>
-                            <motion.div className="relative md:hidden w-[70px] h-[70px] will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
-                                initial={{ x: "0" }}
-                                whileInView={{ x: ["0", "40vw", "0"] }}
-                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
-                                viewport={{ once: true }}
-                            >
-                                <Image src={"/icons/express.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
-                            </motion.div>
-                            <motion.div className="
-                                    flex flex-col justify-evenly
-                                    w-5/8 h-full will-change-transform
-                                    uppercase text-center font-bold gradient-text
+
+                            <motion.p className="
+                                    flex flex-col justify-evenly text-lg 
+                                    gradient-text will-change-opacity uppercase
                             "
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
@@ -191,14 +169,17 @@ const Skill = () => {
                                 viewport={{ once: true }}
                             >
                                 express.js
-                            </motion.div>
+                            </motion.p>
 
                         </div>
                         <div className="flex flex-row justify-between
                                 w-[80%] 2xl:w-[70%] md:w-full h-auto md:h-[10vh] 
                                 max-h-[70px] lg:max-h-none
                         ">
-                            <motion.div className="hidden relative  will-change-transform md:block w-2/8 max-w-[70px] max-h-[70px]  aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100"
+                            <motion.div
+                                className="relative will-change-transform 
+                                    w-[70px] h-[70px] aspect-square 
+                                    rounded-full overflow-clip"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
                                 transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
@@ -212,27 +193,17 @@ const Skill = () => {
                                     quality={40}
                                 />
                             </motion.div>
-                            <motion.div className="md:hidden w-[70px] h-[70px] relative will-change-transform w-1/8 aspect-square rounded-full overflow-clip border-2 scale-150 md:scale-100 "
-                                initial={{ x: "0" }}
-                                whileInView={{ x: ["0", "40vw", "0"] }}
-                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
-                                viewport={{ once: true }}
-                            >
-                                <Image src={"/icons/angular.png"} alt={""} fill className="object-contain z-10" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"></Image>
-                            </motion.div>
-                            <motion.div className="
-                                    flex flex-col justify-evenly
-                                    w-5/8 h-full will-change-transform
-                                    uppercase text-center font-bold gradient-text
+                            <motion.p className="
+                                    flex flex-col justify-evenly text-lg 
+                                    gradient-text will-change-opacity uppercase
                             "
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                animate={{}}
                                 transition={{ duration: 0.55, delay: 0.55, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 Angular
-                            </motion.div>
+                            </motion.p>
 
                         </div>
                     </div>
@@ -240,174 +211,164 @@ const Skill = () => {
                 </div>
                 <motion.div className="
                         relative flex-col z-10
-                        h-auto md:h-[60%] lg:h-[60%] w-[94%] md:w-2/3 lg:w-[90%] pb-[8%]
+                        h-auto md:h-[70%] lg:h-[75%] w-[94%] md:w-2/3 lg:w-[90%] pb-[8%]
                         -translate-y-[20%] md:translate-y-0
-                        md:ml-3  shadow-xl shadow-black/70 will-change-transform
+                        md:ml-2  shadow-xl shadow-black/70 will-change-transform
                         bg-gradient-to-b from-primary to-background 2xl:bg-transparent
                         rounded-2xl md:rounded-none
                 "
+                    id="skill"
                     initial={{ x: "90%" }}
                     whileInView={{ x: "0%" }}
                     transition={{ duration: 0.3, delay: 0.02, ease: "easeInOut" }}
                     viewport={{ once: true }}
                 >
-                    <div className="h-[16%] "></div>
-                    <div className="
-                            relative h-[14%] text-center uppercase font-bold 
-                            text-xl md:text-2xl lg:text-3xl sm:text-3xl text-background 2xl:text-background
-                            
-                            underline md:no-underline
+
+                    <h5 className="
+                            relative text-center uppercase font-bold my-14 lg:my-24
+                            text-background 2xl:text-background
+                            text-2xl
                     ">
-                        <div className="absolute h-full w-full 2xl:bg-primary bottom-[72%] z-0
-                                rounded-bl-3xl
-                        " >
-
-                            <span className="opacity-100 2xl:opacity-100 absolute bottom-0 text-center -translate-x-[50%]
-                                    underline lg:pr-[8%] box-border lg:border-r-8 border-white/40
-                            ">Tech-stacks</span>
-                        </div>
-
-
-                    </div>
+                        Tech-stacks
+                    </h5>
 
                     {/* teck stack icon list */}
                     <motion.div className="
-                            lg:flex flex-row hidden 
+                            flex flex-row 
                             flex-wrap flex-shrink-0 flex-grow-0 
-                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-4 md:gap-y-[6vh] lg:gap-y-[2vh] 2xl:gap-y-6
+                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-3 md:gap-y-[4vh] lg:gap-y-4 2xl:gap-y-5
                             justify-evenly text-white
                             h-auto font-bold 
-                            w-4/5 md:w-[65%] 2xl:w-[58%]
+                            w-4/5 md:w-[75%]
                             mx-[15%] 
                             2xl:mx-[13%] 2xl:pl-[2%]
-                            pt-[5%] md:pt-[10%]
                         "
                         variants={containerVariants}
                         whileInView={"show"}
                         viewport={{ once: true }}
                     >
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl"></div>
+                        <div className="absolute-0 gradient-bg opacity-20 "></div>
 
 
                         <div className="flex flex-row w-full h-auto justify-between">
-                            <motion.div variants={itemVariants} className="w-[22vw] text-2xl font-extrabold uppercase  text-white">DB:</motion.div>
+                            <motion.h6 variants={itemVariants} className="w-[15vw]  text-white">DB:</motion.h6>
                             <div className="w-full h-full flex flex-row justify-end gap-4  flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     PostGresSQL
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     MsSQL
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     MongoDB
-                                </motion.div>
+                                </motion.p>
                             </div>
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white text-2xl">Back:</motion.div>
-                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                            <motion.h6 variants={itemVariants} className="w-[15vw] text-white">Back:</motion.h6>
+                            <div className="relative-screen flex flex-row justify-end gap-4 flex-wrap">
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     SignalR
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     ASP.Net
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     GraphQL
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     NodeJS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     RESTFul API
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     OpenAPI
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Serilog
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Redis
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     xUnit
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     EFCore
-                                </motion.div>
+                                </motion.p>
                             </div>
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
 
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white text-2xl">Front:</motion.div>
-                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                            <motion.h6 variants={itemVariants} className="w-[15vw] text-white">Front:</motion.h6>
+                            <div className="relative-screen flex flex-row justify-end gap-4 flex-wrap">
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     JestJS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Auth0
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     HTML & CSS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Javascript
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     JQuery
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     AJax
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Tailwind CSS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Typescript
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Framer Motion
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     React
-                                </motion.div>
+                                </motion.p>
                             </div>
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
 
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/80 text-2xl">Cloud:</motion.div>
+                            <motion.h6 variants={itemVariants} className="w-[15vw] text-white/80">Cloud:</motion.h6>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     EKS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Ec2
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     s3
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     RDS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     ELB
-                                </motion.div>
+                                </motion.p>
                             </div>
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/60 text-2xl">CI&CD:</motion.div>
-                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                            <motion.h6 variants={itemVariants} className="w-[15vw] text-white/60">CI&CD:</motion.h6>
+                            <div className="relative-screen flex flex-row justify-end gap-4 flex-wrap">
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Github
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
+                                </motion.p>
+                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Docker
-                                </motion.div>
+                                </motion.p>
 
                             </div>
 
@@ -423,147 +384,7 @@ const Skill = () => {
                     </motion.div>
 
 
-                    {/* Mobile without stagger animation */}
-                    <div className="
-                            flex flex-row lg:hidden
-                            flex-wrap flex-shrink-0 flex-grow-0 
-                            gap-[5%] 2xl:gap-[4%] md:gap-[8%] gap-y-6 md:gap-y-[3vh] 2xl:gap-y-5
-                            justify-evenly
-                            h-auto text-white
-                            w-4/5 md:w-[65%] 2xl:w-[58%]
-                            mx-[15%] 2xl:mx-[13%] 2xl:pl-[2%]
-                            pt-[5%]
-                        "
-                    >
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#ff8c00] to-[#8a2be2] opacity-20 blur-3xl"></div>
 
-                        <div className="flex flex-row w-full h-auto justify-between">
-                            <motion.div variants={itemVariants} className="w-[22vw] text-2xl font-extrabold uppercase  text-white">DB:</motion.div>
-                            <div className="w-full h-full flex flex-row justify-end gap-4  flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    PostGresSQL
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    MsSQL
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    MongoDB
-                                </motion.div>
-                            </div>
-
-                        </div>
-                        <div className="flex flex-row w-full h-auto">
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white text-2xl">Back:</motion.div>
-                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    SignalR
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    ASP.Net
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    GraphQL
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    NodeJS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    RESTFul API
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    OpenAPI
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Serilog
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Redis
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    xUnit
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    EFCore
-                                </motion.div>
-                            </div>
-
-                        </div>
-                        <div className="flex flex-row w-full h-auto">
-
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white text-2xl">Front:</motion.div>
-                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    JestJS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Auth0
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    HTML & CSS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Javascript
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    JQuery
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    AJax
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Tailwind CSS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Typescript
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Framer Motion
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    React
-                                </motion.div>
-                            </div>
-
-                        </div>
-                        <div className="flex flex-row w-full h-auto">
-
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/80 text-2xl">Cloud:</motion.div>
-                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    EKS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Ec2
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    s3
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    RDS
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    ELB
-                                </motion.div>
-                            </div>
-
-                        </div>
-                        <div className="flex flex-row w-full h-auto">
-                            <motion.div variants={itemVariants} className="w-[22vw] font-extrabold uppercase text-white/60 text-2xl">CI&CD:</motion.div>
-                            <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Github
-                                </motion.div>
-                                <motion.div variants={itemVariants} className="w-auto  rounded-xl bg-background p-1 border-2">
-                                    Docker
-                                </motion.div>
-
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
                 </motion.div>
             </div>
         </div >

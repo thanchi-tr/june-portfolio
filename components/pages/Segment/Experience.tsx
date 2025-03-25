@@ -328,9 +328,7 @@ const Experience = () => {
                             <motion.ul className="pl-[8%] pr-[10%] w-[95%] md:w-[90%] 2xl:w-[70%] translate-x-[10%]
                                     translate-y-[15%] md:translate-y-[15%] 2xl:translate-y-[25%] 
                                     list-disc text-lg md:text-sm lg:text-lg 2xl:text-xl text-white/80 
-                                    
                                     "
-
                             >
 
                                 <motion.li

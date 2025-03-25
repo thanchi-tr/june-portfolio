@@ -112,7 +112,7 @@ export default function RootLayout({
         </script>
       </head>
       <body
-        className={` ${geistSans.variable} ${geistMono.variable} ${Bestermind.variable} antialiased bg-foregound/35`}
+        className={` ${geistSans.variable} ${geistMono.variable} ${Bestermind.variable} antialiased bg-foregound/35 `}
       >
 
         {children}

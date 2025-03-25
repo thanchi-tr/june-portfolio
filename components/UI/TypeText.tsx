@@ -8,8 +8,7 @@ const TypedText = ({ options, className }: { options: string[], className: strin
             setIndex((index + 1) % options.length);
         }, index < options.length - 1 ? 2000 : 5000);
         return () => clearTimeout(timer);
-    }
-        , [index]);
+    }, [index]);
 
     const container = {
         hidden: {},
@@ -23,14 +22,13 @@ const TypedText = ({ options, className }: { options: string[], className: strin
     const items = {
         hidden: { opacity: 0, },
         show: { opacity: [0, 1, 1], display: "inline-block" },
-
     }
 
 
     return (
 
         <motion.div
-            className={`flex ${className}`}
+            className={`flex ${className} select-none`}
             variants={container}
             initial="hidden"
             animate="show"
@@ -38,17 +36,17 @@ const TypedText = ({ options, className }: { options: string[], className: strin
             key={index}>
             {options[index].split("").map((char, cIndex) => (
 
-                <motion.h2
+                <motion.h3
                     key={cIndex}
                     variants={items}
                     className={`hidden whitespace-pre w-auto`}
                 >
                     {char === " " ? "\u00A0" : char} {/* handle spaces */}
-                </motion.h2>
+                </motion.h3>
 
             ))}
 
-            <h2 className="h-full  animate-pulse bg-white w-[1ch]"> |</h2>
+            <h2 className="h-full  animate-pulse bg-white w-auto"> |</h2>
         </motion.div>
     );
 }
