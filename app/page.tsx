@@ -49,7 +49,7 @@ const Page = () => {
             },
         });
         gsap.to(hero.current, {
-            transform: "translateX(-255%) ",
+            transform: "translateX(-255%) translateY(80%)",
             rotate: 45,
             scrollTrigger: {
                 trigger: container.current,
