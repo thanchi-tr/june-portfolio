@@ -216,7 +216,7 @@ const Experience = () => {
                                                     will-change-[opacity] text-white text-shadow-lg shadow-primary
                                                     "><strong className="shadow-primary text-shadow-none text-background">JUNG</strong> Talents</h2>
                                         </motion.div>
-                                        <motion.div className="absolute-0 top-[25%] gradient-bg opacity-80 scale-y-50 z-[300]"
+                                        <motion.div className="absolute-0 top-[25%] gradient-bg opacity-40 scale-y-50"
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: [0, 0.8] }}
                                             transition={{ duration: 1.2, delay: 0.38, ease: "anticipate" }}
@@ -270,7 +270,7 @@ const Experience = () => {
                                                     text-shadow-lg shadow-primary
                                                     md:text-6xl font-semibold md:font-mainfont"><strong className="shadow-primary text-shadow-none text-background">JUNG</strong> Talents</h2>
                                         </motion.div>
-                                        <motion.div className="absolute-0 top-[25%] gradient-bg opacity-80 scale-y-50 z-[300]"
+                                        <motion.div className="absolute-0 top-[25%] gradient-bg opacity-40 scale-y-50"
                                             initial={{ opacity: 0 }}
                                             whileInView={{ opacity: 0.8 }}
                                             transition={{ duration: 0.7, delay: 0.22, ease: "anticipate" }}
