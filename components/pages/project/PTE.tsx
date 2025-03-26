@@ -4,8 +4,8 @@ const PTE = () => {
     return (
 
         <div className="p-[5vw] bg-gradient-to-b from-background -black/20 text-white shadow-inner shadow-primary border-black gap-4">
-            <a className="absolute bottom-0 right-0 p-2 z-50 pointer-events-auto" href="https://www.jungtalents.com/" target="_blank">
-                <div className="h-[100px] aspect-square opacity-30 -translate-y-[40%] -translate-x-[40%] hover:opacity-100 z-50" >
+            <a className="absolute bottom-5 right-5  z-50 pointer-events-auto" href="https://www.masterpte.com.au/" target="_blank">
+                <div className="h-[100px] aspect-square opacity-30  hover:opacity-100 z-50" >
                     <Image src={"/icons/external-link.png"} alt={""} fill />
                 </div>
             </a>

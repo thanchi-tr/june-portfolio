@@ -3,7 +3,7 @@ import Image from "next/image";
 const ComparenSave = () => {
     return (
         <div className="p-[5vw] bg-gradient-to-b from-background -black/20 text-white shadow-inner shadow-primary border-black  text-sm md:text-lg lg:text-lg gap-4">
-            <a className="absolute bottom-0 right-0 p-2 z-50 pointer-events-auto" href="https://www.jungtalents.com/" target="_blank">
+            <a className="absolute bottom-0 right-0 p-2 z-50 pointer-events-auto" href="https://comparensave.com.au/" target="_blank">
                 <div className="h-[100px] aspect-square opacity-30 -translate-y-[40%] -translate-x-[40%] hover:opacity-100 z-50" >
                     <Image src={"/icons/external-link.png"} alt={""} fill />
                 </div>

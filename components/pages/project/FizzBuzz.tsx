@@ -9,7 +9,7 @@ const FizzBuzz = () => {
             <div></div>
 
         </div>
-        <h4 className={`text-center p-4 text-white/95 gradient-text md:mb-[15%]`}>FizzBuzz RealTime Multi-player Game</h4>
+        <h4 className={`text-center p-4 text-white/95 gradient-text md:mb-[15%] select-none`}>FizzBuzz RealTime Multi-player Game</h4>
         <div className={`w-[90%] lg:w-full flex-standard md:flex-row flex-wrap xl:justify-evenly`}>
             <div className={`
                         flex flex-col md:flex-row items-center content-center
@@ -36,14 +36,14 @@ const FizzBuzz = () => {
                 <div className={`mt-[10%] ml-[5%] w-full pb-[18.5px] md:pb-[52px] `}>
 
                     <div className="flex flex-row flex-wrap w-full  justify-end text-center pb-2 z-[100] pointer-events-auto ">
-                        <a href="https://github.com/thanchi-tr/FooBooRealTime-front-next"><p className="pr-1 hover:cursor-pointer z-[100]">
+                        <a href="https://github.com/thanchi-tr/FooBooRealTime-front-next" className="pointer-events-auto"><p className="pr-1 hover:cursor-pointer z-[100]">
                             🔗Frontend(Next.js)
                         </p></a>
-                        <a href="https://github.com/thanchi-tr/FooBooRealTime-back-dotnet"><p className="pl-1 hover:cursor-pointer z-[100]">
+                        <a href="https://github.com/thanchi-tr/FooBooRealTime-back-dotnet" className="pointer-events-auto"><p className="pl-1 hover:cursor-pointer z-[100]">
                             🔗Backend(.NET)
                         </p></a>
                     </div>
-                    <div className="flex flex-col text-end">
+                    <div className="flex flex-col text-end select-none">
                         {/* Image and detail */}
 
                         <div className="flex flex-col gap-4 flex-shrink-0 justify-between">
@@ -96,7 +96,7 @@ const FizzBuzz = () => {
                 </div>
                 <div className={`
                     flex md:flex-col xl:flex-row h-auto
-                    w-full xl:ml-0 py-4 text-end
+                    w-full xl:ml-0 py-4 text-end select-none
                     justify-evenly`}>
                     <div>
                         <h5 >✔️ Features & Achievements:</h5>
@@ -106,11 +106,7 @@ const FizzBuzz = () => {
                                     network latency and enable real-time communication.
 
                                 </span>.</li>
-                            <li>Optimized server-side game state management, reducing
-                                <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:lg:lg:shadow-pink-300">
-                                    redundant API calls by 40%.
 
-                                </span>.</li>
                             <li>
                                 <span className="px-1 relative scale-105 inline text-primary gradient-text text-shadow-lg lg:lg:lg:shadow-pink-300">
                                     Developed a fully responsive UI
