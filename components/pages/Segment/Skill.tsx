@@ -2,26 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 const Skill = () => {
-    const containerVariants = {
-        hidden: {},
-        show: {
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.3, // Delay before children start animating
-            }
-        },
-    };
 
-    const itemVariants = {
-        hidden: {},
-        show: {
-            y: ["6px", "0"],
-            opacity: [0, 1],
-            transition: {
-                duration: 0.45,
-            }
-        },
-    };
     return (
         <div className="relative-screen bg-background select-none mb-[8vh]  ">
             <div className="flex items-center justify-center h-0 w-full"
@@ -33,7 +14,7 @@ const Skill = () => {
 
                     initial={{ x: "-20vw" }}
                     whileInView={{ x: "0vw" }}
-                    transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
+                    transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
                     viewport={{ once: true }}
                 >
                     <h1 className="text-shadow-lg shadow-black md:shadow-transparent md:translate-y-[49%] md:text-primary ">SKILLS</h1>
@@ -218,9 +199,9 @@ const Skill = () => {
                         rounded-2xl md:rounded-none
                 "
                     id="skill"
-                    initial={{ x: "90%" }}
+                    initial={{ x: "95%" }}
                     whileInView={{ x: "0%" }}
-                    transition={{ duration: 0.3, delay: 0.02, ease: "easeInOut" }}
+                    transition={{ duration: 0.8, delay: 0.02, ease: "easeInOut" }}
                     viewport={{ once: true }}
                 >
 
@@ -243,59 +224,57 @@ const Skill = () => {
                             mx-[15%] 
                             2xl:mx-[13%] 2xl:pl-[2%]
                         "
-                        variants={containerVariants}
-                        whileInView={"show"}
                         viewport={{ once: true }}
                     >
                         <div className="absolute-0 gradient-bg opacity-20 "></div>
 
 
                         <div className="flex flex-row w-full h-auto justify-between">
-                            <motion.h6 variants={itemVariants} className="w-[15vw]  text-white">DB:</motion.h6>
+                            <motion.h6 className="w-[15vw]  text-white">DB:</motion.h6>
                             <div className="w-full h-full flex flex-row justify-end gap-4  flex-wrap">
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     PostGresSQL
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     MsSQL
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     MongoDB
                                 </motion.p>
                             </div>
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
-                            <motion.h6 variants={itemVariants} className="w-[15vw] text-white">Back:</motion.h6>
+                            <motion.h6 className="w-[15vw] text-white">Back:</motion.h6>
                             <div className="relative-screen flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     SignalR
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     ASP.Net
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     GraphQL
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     NodeJS
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     RESTFul API
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     OpenAPI
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Serilog
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Redis
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     xUnit
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     EFCore
                                 </motion.p>
                             </div>
@@ -303,36 +282,36 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row w-full h-auto">
 
-                            <motion.h6 variants={itemVariants} className="w-[15vw] text-white">Front:</motion.h6>
+                            <motion.h6 className="w-[15vw] text-white">Front:</motion.h6>
                             <div className="relative-screen flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     JestJS
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Auth0
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     HTML & CSS
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Javascript
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     JQuery
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     AJax
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Tailwind CSS
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Typescript
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Framer Motion
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     React
                                 </motion.p>
                             </div>
@@ -340,33 +319,33 @@ const Skill = () => {
                         </div>
                         <div className="flex flex-row w-full h-auto">
 
-                            <motion.h6 variants={itemVariants} className="w-[15vw] text-white/80">Cloud:</motion.h6>
+                            <motion.h6 className="w-[15vw] text-white/80">Cloud:</motion.h6>
                             <div className="w-full h-full flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     EKS
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Ec2
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     s3
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     RDS
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     ELB
                                 </motion.p>
                             </div>
 
                         </div>
                         <div className="flex flex-row w-full h-auto">
-                            <motion.h6 variants={itemVariants} className="w-[15vw] text-white/60">CI&CD:</motion.h6>
+                            <motion.h6 className="w-[15vw] text-white/60">CI&CD:</motion.h6>
                             <div className="relative-screen flex flex-row justify-end gap-4 flex-wrap">
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Github
                                 </motion.p>
-                                <motion.p variants={itemVariants} className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     Docker
                                 </motion.p>
 

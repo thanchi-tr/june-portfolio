@@ -21,6 +21,7 @@ import NavBar from "@/components/client/Functional/NavBar";
 import ContactForm from "@/components/client/Functional/Form";
 import HeroSection from "@/components/UI/HeroSection";
 import Icon from "@/components/UI/ResponsiveIcon";
+import ScrollHint from "@/components/client/Animation/ScrollHint";
 gsap.registerPlugin(ScrollTrigger);
 
 const Page = () => {
@@ -48,22 +49,31 @@ const Page = () => {
             },
         });
         gsap.to(hero.current, {
-            transform: "translateX(-250vw) ",
+            transform: "translateX(-255%) ",
             rotate: 45,
             scrollTrigger: {
                 trigger: container.current,
-                start: "22%",
-                end: "250%",
+                start: "20%",
+                end: "220%",
+                scrub: true,
+            },
+        });
+        gsap.to(".hint", {
+            scale: 0,
+            scrollTrigger: {
+                trigger: container.current,
+                start: "5%",
+                end: "50%",
                 scrub: true,
             },
         });
         gsap.to(logo.current, {
-            transform: "scale(220%) translateY(-80%) ",
+            transform: "scale(210%) translateY(-80%) ",
 
             scrollTrigger: {
                 trigger: container.current,
-                start: "3%",
-                end: "42%",
+                start: "5%",
+                end: "50%",
                 scrub: true,
             },
         });
@@ -96,8 +106,10 @@ const Page = () => {
                         ref={light}
                         className="light absolute-0 gradient-bg w-0 opacity-5"
                     />
-                    <div ref={logo} className="flex justify-center scale-0"><Icon iconStr={"Logo"} href={""} />
+                    <div ref={logo} className="flex justify-center scale-0 z-10"><Icon iconStr={"Logo"} href={""} />
+
                     </div>
+                    <div className="absolute bottom-[25vh] h-auto w-auto z-0 hint"><ScrollHint /></div>
                 </section>
             </div>
             <div className="h-auto w-full box-border -z-[100] overflow-clip"

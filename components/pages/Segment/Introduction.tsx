@@ -128,7 +128,24 @@ const Introduction = () => {
                                                 />
                                             </ExternalCircularButton>
                                         </div>
-
+                                        {/* LinkedInIn */}
+                                        <div className=" 
+                                                relative
+                                                z-[200] lg:z-10 hover:scale-110  active:scale-90
+                                                 -translate-y-[250%] group circle-h
+                                                 h-[45px]">
+                                            <ExternalCircularButton link={"https://www.linkedin.com/in/june-trinh-792017358/"} >
+                                                <Image
+                                                    src="/icons/linkedin.png"
+                                                    alt="June's LinkedInLinkedIn" fill
+                                                    className="scale-75 object-contain"
+                                                    priority
+                                                    quality={20}
+                                                    sizes="(max-width: 768px) 20vw, (max-width: 1200px) 20vw, 33vw"
+                                                />
+                                            </ExternalCircularButton>
+                                            <p className="absolute gradient-text hidden group-hover:block">LinkedIn</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -167,10 +184,10 @@ const Introduction = () => {
                         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 0.2 }} viewport={{ once: true }} transition={{ duration: 2, delay: 0.5 }} className="absolute-0 gradient-bg  opacity-20 " />
 
                         <div className={`
-                                p-6  lg:py-[10vh] lg:p-6 leading-5 2xl:mt-4
+                                p-6  lg:py-[12vh] lg:p-6 leading-5 2xl:mt-4
                                 
                                  rounded-t-2xl rounded-br-lg
-                                lg:translate-y-[78%] lg:bg-gradient-to-b from-[#ff8c00]/40 to-[#8a2be2]/10
+                                lg:translate-y-[85%] lg:bg-gradient-to-b from-[#ff8c00]/40 to-[#8a2be2]/10
                                 h-auto rounded-b-3xl
                             `}
                         >
