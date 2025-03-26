@@ -33,6 +33,8 @@ const Page = () => {
     const hero = useRef<HTMLDivElement>(null);
     const light = useRef<HTMLDivElement>(null);
     const logo = useRef<HTMLDivElement>(null);
+
+
     useGSAP(() => {
         if (!light.current) return;
         gsap.to(light.current, {
@@ -46,25 +48,12 @@ const Page = () => {
             },
         });
         gsap.to(hero.current, {
-            transform: "translateX(-250%) ",
+            transform: "translateX(-250vw) ",
             rotate: 45,
             scrollTrigger: {
                 trigger: container.current,
                 start: "22%",
                 end: "250%",
-                scrub: true,
-            },
-        });
-        gsap.set(".project", {
-            opacity: 0
-        });
-        gsap.to(".project", {
-            opacity: 1,
-            rotate: 0,
-            scrollTrigger: {
-                trigger: ".main",
-                start: "38%",
-                end: "52%",
                 scrub: true,
             },
         });
@@ -77,6 +66,23 @@ const Page = () => {
                 end: "42%",
                 scrub: true,
             },
+        });
+        const mm = gsap.matchMedia();
+        mm.add("(min-width: 768px)", () => {
+            gsap.set(".project", {
+                opacity: 0
+            });
+
+            gsap.to(".project", {
+                opacity: 1,
+                rotate: 0,
+                scrollTrigger: {
+                    trigger: ".main",
+                    start: "38%",
+                    end: "52%",
+                    scrub: true,
+                },
+            });
         });
     }, []);
     return (
