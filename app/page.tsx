@@ -66,7 +66,6 @@ const Page = () => {
                 start: "38%",
                 end: "52%",
                 scrub: true,
-                markers: true,
             },
         });
         gsap.to(logo.current, {
