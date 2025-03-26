@@ -28,7 +28,7 @@ const Project = () => {
                         Personal Projects
 
                     </h1>
-                    <div className="h-auto w-full  project rotate-[110deg] origin-bottom-right  ">
+                    <div className="h-auto w-full  project rotate-[110deg] origin-bottom-right">
                         <FizzBuzz />
 
                     </div>

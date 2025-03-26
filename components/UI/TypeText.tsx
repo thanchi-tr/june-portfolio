@@ -6,7 +6,7 @@ const TypedText = ({ options, className }: { options: string[], className: strin
     useEffect(() => {
         const timer = setTimeout(() => {
             setIndex((index + 1) % options.length);
-        }, index < options.length - 1 ? 2000 : 5000);
+        }, index != 0 ? 2000 : 4000);
         return () => clearTimeout(timer);
     }, [index]);
 

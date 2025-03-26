@@ -55,11 +55,15 @@ const Page = () => {
                 scrub: true,
             },
         });
+        gsap.set(".project", {
+            opacity: 0
+        });
         gsap.to(".project", {
+            opacity: 1,
             rotate: 0,
             scrollTrigger: {
                 trigger: ".main",
-                start: "36%",
+                start: "38%",
                 end: "52%",
                 scrub: true,
                 markers: true,
