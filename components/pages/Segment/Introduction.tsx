@@ -49,9 +49,9 @@ const Introduction = () => {
 
                                 {/* Link holder */}
                                 <div className="
-                                        absolute-0 flex z-[300]
+                                        absolute-0 flex z-[300] gap-4
                                          2xl:-translate-y-5 2xl:translate-x-[45%]
-                                        w-[90%] lg:w-4/5 2xl:w-1/3
+                                        w-[95%] pr-[5%] md:pr-0  lg:w-4/5 2xl:w-1/3
                                         h-[80%] sm:h-[90%] lg:h-3/5
                                     ">
                                     <div className="h-full w-2/3 2xl:hidden" />
