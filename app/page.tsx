@@ -65,26 +65,6 @@ const Page = () => {
                 scrub: true,
             },
         });
-        gsap.to(logo.current, {
-            rotate: -45,
-            scrollTrigger: {
-                trigger: container.current,
-                start: "22%",
-                end: "250%",
-                scrub: true,
-
-            },
-        });
-        gsap.to(document.querySelector("#lightsource1"), {
-            opacity: 0.5,
-            scrollTrigger: {
-                trigger: container.current,
-                start: "28%",
-                end: "120%",
-                scrub: true,
-
-            },
-        });
     }, []);
     return (
         <div className="bg-background">

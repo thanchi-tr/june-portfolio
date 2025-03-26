@@ -40,7 +40,7 @@ const PTE = () => {
 
                 <div className="flex gap-4 flex-shrink-0 justify-between px-[10%] xl:px-[18%] pb-5">
                     <h6 className="uppercase">Frontend:</h6>
-                    <div className="flex gap-2 ">
+                    <div className="flex gap-2 flex-wrap">
                         <div className="
                                 w-[45px] h-[45px] 
                                 xl:w-[3.2vw] xl:h-[3.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">
@@ -64,7 +64,7 @@ const PTE = () => {
                 </div>
                 <div className="flex gap-1 flex-shrink-0 justify-between px-[10%] xl:px-[18%] pb-5">
                     <h6 className="uppercase">Backend:</h6>
-                    <div className="flex gap-1 ">
+                    <div className="flex gap-1 flex-wrap">
                         <div className="
                                 w-[45px] h-[45px] 
                                 xl:w-[3.2vw] xl:h-[3.2vw] aspect-square rounded-full relative overflow-clip flex-shrink-0">

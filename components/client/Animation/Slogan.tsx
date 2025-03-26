@@ -9,7 +9,7 @@ const Slogan = () => {
                     2xl:visible invisible text-white/60
                     text-shadow-lg shadow-black "
             >
-                <motion.div initial={{ opacity: 0, transform: "translateY(30vh)" }} whileInView={{ opacity: 0.6, transform: "translateY(0vh)" }} viewport={{ once: true }}
+                <motion.div initial={{ opacity: 0, transform: "translateY(30vh)" }} whileInView={{ opacity: 0.3, transform: "translateY(0vh)" }} viewport={{ once: true }}
                     transition={
                         { opacity: { duration: 1, delay: 0.5 } }
                     } className="absolute-0 gradient-bg to-white opacity-50 2xl:opacity-30 " />
@@ -23,10 +23,10 @@ const Slogan = () => {
                     text-background  md:text-shadow-lg shadow-black
                     "
             >
-                <div
-                    id="lightsource1"
-                    className="absolute-0 gradient-bg  opacity-0 flex gap-y-10" />
-
+                <motion.div initial={{ opacity: 0, transform: "translateY(30vh)" }} whileInView={{ opacity: 0.6, transform: "translateY(0vh)" }} viewport={{ once: true }}
+                    transition={
+                        { opacity: { duration: 1, delay: 0.5 } }
+                    } className="absolute-0 gradient-bg opacity-50 2xl:opacity-30 " />
                 <h5 className="text-start uppercase text-gray-400">AVAILABLE FOR HIRING</h5>
                 <h2 className="text-primary"> FULLSTACK ENGINEER</h2>
                 <h5 className="text-gray-400 ">

@@ -39,7 +39,7 @@ const CompareNSave = () => {
 
                 <div className="flex gap-4 flex-shrink-0 justify-between px-[10%] xl:px-[18%] pb-5">
                     <h6 className="uppercase">Frontend:</h6>
-                    <div className="flex gap-1 relative">
+                    <div className="flex gap-1 relative ">
                         <div className="w-[45px] h-[45px] aspect-square rounded-full relative overflow-clip flex-shrink-0">
                             <Image src="/icons/nextjs.png" className="object-cover" fill alt={""} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                         </div>
@@ -53,7 +53,7 @@ const CompareNSave = () => {
                 </div>
                 <div className="flex gap-1 flex-shrink-0 justify-between px-[10%] xl:px-[18%] pb-5">
                     <h6 className="uppercase">Backend:</h6>
-                    <div className="flex gap-1 ">
+                    <div className="flex gap-1 flex-wrap">
                         <div className="w-[45px] h-[45px] aspect-square rounded-full relative overflow-clip flex-shrink-0">
                             <Image src="/icons/dotnetCore.png" className="object-cover" fill alt={""}
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
