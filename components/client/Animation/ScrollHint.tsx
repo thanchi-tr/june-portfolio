@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const ScrollHint = () => {
     return (
         <motion.div
-            className="hint relative opacity-45 flex justify-evenly h-[68px] w-[40px] rounded-full bg-white overflow-clip will-change-contents"
+            className="hint relative opacity-45 flex justify-evenly h-[70px] w-[40px] rounded-full bg-white overflow-clip will-change-auto scale-90 md:scale-100 xl:scale-110"
             animate={{ opacity: [0, 0.3] }}
             transition={{ duration: 1.2, delay: 0.3 }}
         >
