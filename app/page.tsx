@@ -58,6 +58,15 @@ const Page = () => {
                 scrub: true,
             },
         });
+        gsap.to(logo.current, {
+            rotate: -45,
+            scrollTrigger: {
+                trigger: container.current,
+                start: "20%",
+                end: "220%",
+                scrub: true,
+            },
+        });
         gsap.to(".hint", {
             scale: 0,
             scrollTrigger: {
