@@ -107,7 +107,7 @@ const Page = () => {
     return (
         <div className="main bg-background">
             <div ref={container} className="text-white h-[50vh] flex flex-col items-center justify-items-center gap-16 font-[family-name:var(--font-geist-sans)] select-none">
-                <section ref={hero} className="hero hero-section sticky top-0 z-[1000] bg-background  pb-[10vh] shadow-2xl shadow-black overflow-clip">
+                <section ref={hero} className="hero hero-section sticky top-0 z-[1000] bg-background  pb-[10vh] shadow-2xl shadow-black">
                     <h4 className="text-secondary1 animate-fade-in border-debug text-2xl
                     "> hello</h4>
                     <HeroSection />
