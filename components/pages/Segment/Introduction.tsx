@@ -49,15 +49,15 @@ const Introduction = () => {
 
                                 {/* Link holder */}
                                 <div className="
-                                        absolute-0 flex z-[300] gap-4
+                                        absolute-0 flex z-[300]
                                          2xl:-translate-y-5 2xl:translate-x-[45%]
-                                        w-[95%] pr-[5%] md:pr-0  lg:w-4/5 2xl:w-1/3
+                                        w-[90%] lg:w-4/5 2xl:w-1/3
                                         h-[80%] sm:h-[90%] lg:h-3/5
                                     ">
                                     <div className="h-full w-2/3 2xl:hidden" />
                                     <div className=" 
                                             w-[110%] md:w-full pl-[5%] md:-translate-x-[8vw] lg:translate-x-0
-                                            flex justify-evenly ">
+                                            flex justify-between">
                                         {/* CV */}
                                         <div className=" 
                                                 relative
@@ -76,23 +76,7 @@ const Introduction = () => {
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text font-mainfont hidden group-hover:block">resume</p>
                                         </div>
-                                        {/* Twitter */}
-                                        <div className="relative
-                                                z-[200] lg:z-10 hover:scale-110  active:scale-90
-                                                 -translate-y-[250%] group circle-h
-                                                 h-[45px]">
-                                            <p className="absolute gradient-text font-mainfont hidden group-hover:block -translate-y-[100%]">Twitter</p>
-                                            <ExternalCircularButton link={"https://x.com/devjunetrinh"} >
-                                                <Image
-                                                    src="/icons/twitter.avif"
-                                                    alt="github" fill
-                                                    className="object-fill"
-                                                    priority
-                                                    quality={30}
-                                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                />
-                                            </ExternalCircularButton>
-                                        </div>
+
                                         {/* Seek */}
                                         <div className=" 
                                                 relative
