@@ -56,7 +56,7 @@ const Skill = () => {
                                     rounded-full overflow-clip"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
-                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
+                                transition={{ duration: 0.5, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image
@@ -73,7 +73,7 @@ const Skill = () => {
                                     gradient-text will-change-opacity uppercase"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                transition={{ duration: 0.55, delay: 0.55, ease: "anticipate" }}
+                                transition={{ duration: 0.5, delay: 0.5, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 .net core
@@ -90,7 +90,7 @@ const Skill = () => {
                                     rounded-full overflow-clip"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
-                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
+                                transition={{ duration: 0.5, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image
@@ -109,7 +109,7 @@ const Skill = () => {
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 animate={{}}
-                                transition={{ duration: 0.55, delay: 0.55, ease: "anticipate" }}
+                                transition={{ duration: 0.5, delay: 0.5, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 next.js
@@ -127,7 +127,7 @@ const Skill = () => {
                                     rounded-full overflow-clip"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
-                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
+                                transition={{ duration: 0.5, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image
@@ -146,7 +146,7 @@ const Skill = () => {
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 animate={{}}
-                                transition={{ duration: 0.55, delay: 0.55, ease: "anticipate" }}
+                                transition={{ duration: 0.55, delay: 0.5, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 express.js
@@ -163,7 +163,7 @@ const Skill = () => {
                                     rounded-full overflow-clip"
                                 initial={{ x: "0" }}
                                 whileInView={{ x: ["0", "250%", "0"] }}
-                                transition={{ duration: 0.55, delay: 0.3, ease: "anticipate" }}
+                                transition={{ duration: 0.5, delay: 0.3, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 <Image
@@ -180,7 +180,7 @@ const Skill = () => {
                             "
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                transition={{ duration: 0.55, delay: 0.55, ease: "anticipate" }}
+                                transition={{ duration: 0.55, delay: 0.5, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
                                 Angular
