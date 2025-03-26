@@ -68,7 +68,7 @@ const MobileExperience = () => {
                            ">
                     <div className="
                             relative flex flex-col justify-evenly w-full h-auto z-10 pt-[32vh]">
-                        <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]   bg-gradient-to-b from-secondary to-background md:from-transparent md:to-transparent"
+                        <motion.div className="flex flex-col justify-evenly md:justify-between h-2/6 w-full -translate-x-[5%] will-change-[transform,opacity]   bg-gradient-to-b from-transparent via-secondary to-background md:from-transparent md:to-transparent"
 
                             initial={{ translate: "105%)" }}
                             whileInView={{ translate: "5%" }}
