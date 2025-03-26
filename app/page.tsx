@@ -118,7 +118,7 @@ const Page = () => {
                     <div ref={logo} className="flex justify-center scale-0 z-10"><Icon iconStr={"Logo"} href={""} />
 
                     </div>
-                    <div className="absolute bottom-[25vh] h-auto w-auto z-0 hint"><ScrollHint /></div>
+                    <div className="absolute bottom-[21vh] h-auto w-auto z-0 hint"><ScrollHint /></div>
                 </section>
             </div>
             <div className="h-auto w-full box-border -z-[100] overflow-clip"
