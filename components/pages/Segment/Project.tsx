@@ -19,7 +19,7 @@ const Project = () => {
                 </div>
                 <div
                     id="project"
-                    className="h-auto w-full mb-4">
+                    className="h-auto w-full mb-4 ">
                     <h1 className="
                             md:-translate-x-1/4 -translate-y-1/2 
                             uppercase text-white 
@@ -28,7 +28,7 @@ const Project = () => {
                         Personal Projects
 
                     </h1>
-                    <div className="h-auto w-full ">
+                    <div className="h-auto w-full  project rotate-[110deg] origin-bottom-right  ">
                         <FizzBuzz />
 
                     </div>

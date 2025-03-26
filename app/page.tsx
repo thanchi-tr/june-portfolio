@@ -55,6 +55,16 @@ const Page = () => {
                 scrub: true,
             },
         });
+        gsap.to(".project", {
+            rotate: 0,
+            scrollTrigger: {
+                trigger: ".main",
+                start: "36%",
+                end: "52%",
+                scrub: true,
+                markers: true,
+            },
+        });
         gsap.to(logo.current, {
             transform: "scale(220%) translateY(-80%) ",
 
@@ -67,7 +77,7 @@ const Page = () => {
         });
     }, []);
     return (
-        <div className="bg-background">
+        <div className="main bg-background">
             <div ref={container} className="text-white h-[50vh] flex flex-col items-center justify-items-center gap-16 font-[family-name:var(--font-geist-sans)] select-none">
                 <section ref={hero} className="hero hero-section sticky top-0 z-[1000] bg-background  pb-[10vh] border-8 border-white/5">
                     <h4 className="text-secondary1 animate-fade-in border-debug text-2xl

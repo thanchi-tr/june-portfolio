@@ -31,7 +31,7 @@ const Introduction = () => {
                                 relative 
                                 flex flex-wrap 
                                 items-center
-                                h-[40vh] xl:h-[55vh] mt-[15vh]
+                                h-[40vh] min-h-[600px] xl:h-[55vh] mt-[15vh]
                                 w-full
                                 ">
 
@@ -191,7 +191,7 @@ const Introduction = () => {
                     {/* blur screen */}
                     <a href={`mailto:${email}?subject=${encodeURIComponent("Hiring Inquiry - June - Full Stack Developer")}&body=${"Hello June, ...."}`}><div className="
                             relative-screen lg:absolute-0 group z-[100]
-                             lg:border-l-[10vw] 
+                             lg:border-l-[10vw] origin-bottom-right
                              border-violet-950/65
                             hover:cursor-pointer 
                             shadow-inner shadow-black
@@ -227,7 +227,7 @@ const Introduction = () => {
                                 <Image
                                     src="/ava3.png"
                                     alt="Avatar of the Developer"
-                                    className="object-contain" fill
+                                    className="object-contain " fill
                                     priority
                                     quality={40}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -237,7 +237,7 @@ const Introduction = () => {
                             </div>
                             <div className="
                                     hidden lg:block  z-10 relative-screen
-                                    translate-y-[5%]
+                                    translate-y-[5%] 
                                     rounded-3xl transition-all duration-75
                                     overflow-clip lg:border-x-2 lg:border-b-2">
 
