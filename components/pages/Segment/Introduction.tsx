@@ -113,7 +113,7 @@ const Introduction = () => {
                                             </ExternalCircularButton>
                                         </div>
                                         {/* LinkedInIn */}
-                                        <div className=" 
+                                        {/* <div className=" 
                                                 relative
                                                 z-[200] lg:z-10 hover:scale-110  active:scale-90
                                                  -translate-y-[250%] group circle-h
@@ -129,7 +129,7 @@ const Introduction = () => {
                                                 />
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text hidden group-hover:block">LinkedIn</p>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
