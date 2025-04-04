@@ -113,12 +113,12 @@ const Introduction = () => {
                                             </ExternalCircularButton>
                                         </div>
                                         {/* LinkedInIn */}
-                                        {/* <div className=" 
+                                        <div className=" 
                                                 relative
                                                 z-[200] lg:z-10 hover:scale-110  active:scale-90
                                                  -translate-y-[250%] group circle-h
                                                  h-[45px]">
-                                            <ExternalCircularButton link={"https://www.linkedin.com/in/june-trinh-792017358/"} >
+                                            <ExternalCircularButton link={"https://www.linkedin.com/in/xuan-trinh-38769335a/"} >
                                                 <Image
                                                     src="/icons/linkedin.png"
                                                     alt="June's LinkedInLinkedIn" fill
@@ -129,7 +129,7 @@ const Introduction = () => {
                                                 />
                                             </ExternalCircularButton>
                                             <p className="absolute gradient-text hidden group-hover:block">LinkedIn</p>
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
