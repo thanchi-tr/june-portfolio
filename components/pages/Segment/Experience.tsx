@@ -65,7 +65,7 @@ const Experience = () => {
                             opacity-0 md:opacity-100
                             justify-center 
                             w-full md:w-[80%] md:ml-[20.8%] md:rounded-l-2xl
-                            h-full bg-transparent  border-r-4 
+                            h-full bg-transparent  border-r-4  border-gray-500
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "
                         initial={{ x: "-148%" }}
@@ -76,25 +76,63 @@ const Experience = () => {
                         <div className="absolute-0 gradient-bg opacity-30 md:opacity-20 2xl:opacity-35 2xl:scale-x-125 scale-y-125"></div>
 
                         <div className="flex flex-col h-2/6 w-full justify-evenly relative">
-                            <h6 className="
-                                hidden lg:block ml-[10%] 2xl:ml-[2%] relative
-                                w-[90%] 2xl:w-[98%] text-center text-white border-t-2 pt-4
-                                ">
-                                <span className="absolute top-0 right-0 h-[40px] aspect-square bg-primary rounded-full border-8 border-white translate-x-[50%] -translate-y-[50%]" />
-                                <p className="relative text-base text-primary">
+                            <motion.h6 className="overflow-l-clip
+                                hidden lg:block ml-[10%] 2xl:ml-[2%] relative origin-top-right
+                                w-[90%] 2xl:w-[98%] text-center text-white  border-t-2 pt-4
+                                "
+                                initial={{ borderTopWidth: 0, opacity: 0 }}
+                                whileInView={{ borderTopWidth: 2, opacity: 1 }}
+                                transition={{ duration: 0.2, delay: 1, ease: "easeIn" }}
+                                viewport={{ once: true }}
+                            >
+                                <motion.span className="absolute top-0 right-0 h-[40px] aspect-square bg-primary rounded-full border-8 border-white  will-change-transform"
+                                    initial={{ opacity: 1, transform: "translate(50%, -50%) scale(0%)" }}
+                                    whileInView={{ transform: "translate(50%, -50%) scale(100%)" }}
+                                    transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
+                                    viewport={{ once: true }}
+                                />
+                                <motion.div className="h-full w-full "
 
-                                    Jan 2023 - current</p>
-                                Fullstack Engineer</h6>
-                            <h6 className="
+                                    initial={{ opacity: 0, transform: "translate( -20%,0%)" }}
+                                    whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+                                    transition={{ duration: 0.2, delay: 1, ease: "easeIn" }}
+                                    viewport={{ once: true }}
+                                >
+                                    <p className="relative text-base text-primary">
+
+                                        Jan 2023 - current</p>
+                                    Fullstack Engineer
+                                </motion.div>
+
+                            </motion.h6>
+                            <motion.h6 className="
                                 hidden lg:block ml-[10%] 2xl:ml-[2%] relative
                                 w-[90%] 2xl:w-[98%] text-center text-gray-400 border-t-2 pt-4
-                                ">
-                                <span className="absolute top-0 right-0 h-[40px] aspect-square bg-white rounded-full translate-x-[50%] -translate-y-[50%]" />
-                                <p className="relative text-base ">
+                                "
+                                initial={{ borderTopWidth: 0, opacity: 0 }}
+                                whileInView={{ borderTopWidth: 2, opacity: 1 }}
+                                transition={{ duration: 0.2, delay: 0.8, ease: "easeIn" }}
+                                viewport={{ once: true }}
+                            >
+                                <motion.span className="absolute top-0 right-0 h-[40px] aspect-square bg-gray-400 border-8 border-white rounded-full "
+                                    initial={{ transform: "translate(50%, -50%) scale(0%)" }}
+                                    whileInView={{ transform: "translate(50%, -50%) scale(100%)" }}
+                                    transition={{ duration: 0.7, ease: "easeInOut", delay: 0 }}
+                                    viewport={{ once: true }}
+                                />
+                                <motion.div className="h-full w-full "
 
-                                    Feb 2022 - Jan 2023
-                                </p>
-                                Backend Developer</h6>
+                                    initial={{ opacity: 0, transform: "translate( -20%, 0%)" }}
+                                    whileInView={{ opacity: 1, transform: "translate(0%, 0%)" }}
+                                    transition={{ duration: 0.2, delay: 0.8, ease: "easeIn" }}
+                                    viewport={{ once: true }}
+                                >
+                                    <p className="relative text-base ">
+
+                                        Feb 2022 - Jan 2023
+                                    </p>
+                                    Backend Developer </motion.div>
+                            </motion.h6>
                         </div>
                         <div className="hidden lg:block h-[4.2%] w-full ">
                             <motion.div className="
