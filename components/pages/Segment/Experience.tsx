@@ -65,8 +65,7 @@ const Experience = () => {
                             opacity-0 md:opacity-100
                             justify-center 
                             w-full md:w-[80%] md:ml-[20.8%] md:rounded-l-2xl
-                            h-full bg-gradient-to-b from-secondary via-secondary to-transparent 
-                            2xl:from-transparent
+                            h-full bg-transparent  border-r-4 
                             shadow-xl 2xl:shadow-inner shadow-black 
                             "
                         initial={{ x: "-148%" }}
@@ -76,12 +75,26 @@ const Experience = () => {
                     >
                         <div className="absolute-0 gradient-bg opacity-30 md:opacity-20 2xl:opacity-35 2xl:scale-x-125 scale-y-125"></div>
 
-                        <div className="flex flex-col h-2/6 w-full ">
+                        <div className="flex flex-col h-2/6 w-full justify-evenly relative">
                             <h6 className="
-                                hidden lg:block ml-[10%] 2xl:ml-[2%]
-                                w-3/5 2xl:w-4/5 text-center text-white
-                                ">FullStack Engineer</h6>
-                            <span className="md:border-t-8 border-black/20 w-4/5" />
+                                hidden lg:block ml-[10%] 2xl:ml-[2%] relative
+                                w-[90%] 2xl:w-[98%] text-center text-white border-t-2 pt-4
+                                ">
+                                <span className="absolute top-0 right-0 h-[40px] aspect-square bg-primary rounded-full border-8 border-white translate-x-[50%] -translate-y-[50%]" />
+                                <p className="relative text-base text-primary">
+
+                                    Jan 2023 - current</p>
+                                Fullstack Engineer</h6>
+                            <h6 className="
+                                hidden lg:block ml-[10%] 2xl:ml-[2%] relative
+                                w-[90%] 2xl:w-[98%] text-center text-gray-400 border-t-2 pt-4
+                                ">
+                                <span className="absolute top-0 right-0 h-[40px] aspect-square bg-white rounded-full translate-x-[50%] -translate-y-[50%]" />
+                                <p className="relative text-base ">
+
+                                    Feb 2022 - Jan 2023
+                                </p>
+                                Backend Developer</h6>
                         </div>
                         <div className="hidden lg:block h-[4.2%] w-full ">
                             <motion.div className="
@@ -193,7 +206,7 @@ const Experience = () => {
                                             whileInView={{ opacity: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: 0.55, duration: 0.22, ease: easeIn }}
-                                        >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
+                                        >Feb 2022 - <span className="inline font-extrabold text-primary">Current</span>
 
 
                                         </motion.p>
@@ -246,7 +259,7 @@ const Experience = () => {
                                             whileInView={{ opacity: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: 0.35, duration: 0.26, ease: easeIn }}
-                                        >Jan 2023 - <span className="inline font-extrabold text-primary">Current</span>
+                                        >Feb 2022 - <span className="inline font-extrabold text-primary">Current</span>
 
 
                                         </motion.p>
@@ -373,6 +386,7 @@ const Experience = () => {
                                     className="h-[0.8vh] w-2/4 bg-white/60 mt-10 ml-[21%]"
                                 />
                             </motion.ul>
+
 
                         </motion.div>
 

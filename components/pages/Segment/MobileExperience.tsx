@@ -224,7 +224,97 @@ const MobileExperience = () => {
                                     and improving development efficiency.</li>
 
                             </ul>
+                            <div className="relative flex flex-row h-1/3 w-[90%] self-center md:w-full z-10 ">
+                                <motion.div
+                                    className="
+                                        max-w-[120px] max-h-[120px]
+                                        h-5/6 lg:hidden 
+                                        scale-[125%] will-change-transform
+                                        aspect-square bg-white rounded-full 
+                                        
+                                        z-[80] shadow-lg shadow-black/70"
 
+                                    initial={{ x: "30vw" }}
+                                    animate={{ x: ["30vw", "0vw"] }}
+                                    transition={{ duration: 0.55, delay: 0.2, ease: "anticipate" }}
+                                >
+                                    <motion.div className="h-full w-full"
+                                        animate={{ scale: ["100%", "110%", "100%"] }}
+                                        transition={{ duration: 5, ease: "linear", repeat: Infinity }}
+                                    >
+                                        <ExternalCircularButton link={"https://www.jungtalents.com/"} >
+                                            <Image
+                                                src="/icons/jungTalent.jpg"
+                                                alt="Jung Talents Logo" fill
+                                                className=" object-fill"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            />
+                                        </ExternalCircularButton>
+                                    </motion.div>
+
+                                </motion.div>
+
+
+
+                                <motion.div className="
+                                        w-[85%] h-3/5  rounded-r-full rounded-tl-full
+                                        md:bg-primary text-center my-[12vh]
+                                        z-10 
+                                "
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: [0, 1] }}
+                                    transition={{ duration: 1.2, delay: 0.3, ease: "anticipate" }}
+                                    viewport={{ once: true }}
+                                >
+                                    <motion.div className="relative-screen   will-change-[opacity]">
+                                        <motion.div
+                                            className="h-3/5 text-gray-400 tracking-tight text-xl md:text-lg"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ delay: 0.75, duration: 0.36, ease: easeIn }}
+                                        >Feb 2022 - Jan 2023
+
+
+                                        </motion.div>
+                                        <motion.div
+                                            className="text-2xl translate-x-[6%] pr-1 font-bold text-white lg:hidden will-change-[opacity]"
+                                            initial={{ opacity: 0 }}
+                                            viewport={{ once: true }}
+                                            whileInView={{ opacity: [1] }}
+                                            transition={{ delay: 0.8, duration: 0.42, ease: easeIn }}
+                                        >
+                                            Backend developer
+                                        </motion.div>
+                                        <motion.div className="relative will-change-[transform,opacity] flex items-center justify-end md:justify-center w-full md:w-[90%] h-[100%] text-white"
+                                            initial={{ opacity: 0, scale: 1.5 }}
+                                            viewport={{ once: true }}
+                                            whileInView={{ opacity: 1, scale: [1.8, 1.5, 1] }}
+                                            transition={{ delay: 0.5, duration: 0.72, ease: "anticipate" }}
+                                        >
+                                            <span className="
+                                                    text-4xl font-signaturefont  will-change-[opacity]
+                                                    text-primary md:text-white
+                                                    text-shadow-lg shadow-primary
+                                                    md:text-6xl font-semibold md:font-mainfont"><div className="shadow-primary md:text-shadow-none md:text-background">Jung</div> Talents</span>
+                                        </motion.div>
+                                        <motion.div className=" -translate-y-1/3 absolute-0 gradient-bg opacity-5 scale-y-50 z-[300]"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: [0, 0.5] }}
+                                            transition={{ duration: 1.2, delay: 0.38, ease: "anticipate" }}
+                                            viewport={{ once: true }}
+
+                                        ></motion.div>
+                                    </motion.div>
+
+                                </motion.div>
+                                <motion.div className="absolute-0 -translate-y-1/3 translate-x-1/3 will-change-[opacity] gradient-bg opacity-5 scale-50  z-[300]"
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: [0, 0.3] }}
+                                    transition={{ duration: 1.2, delay: 0.27, ease: "anticipate" }}
+                                    viewport={{ once: true }}
+                                ></motion.div>
+                            </div>
                         </motion.div>
                     </div>
                 </div>
