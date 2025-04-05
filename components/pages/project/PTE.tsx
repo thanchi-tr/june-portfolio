@@ -4,8 +4,8 @@ const PTE = () => {
     return (
 
         <div className="p-[5vw] bg-gradient-to-b from-background -black/20 text-white shadow-inner shadow-primary border-black gap-4">
-            <a className="absolute bottom-5 right-5  z-50 pointer-events-auto" href="https://www.masterpte.com.au/" target="_blank">
-                <div className="h-[100px] aspect-square opacity-30  hover:opacity-100 z-50" >
+            <a className="absolute bottom-4 right-10 p-2 z-50 pointer-events-auto" href="https://www.masterpte.com.au/" target="_blank">
+                <div className="w-[10vw] max-w-[80px] aspect-square opacity-30  hover:opacity-100 z-50" >
                     <Image src={"/icons/external-link.png"} alt={""} fill />
                 </div>
             </a>
@@ -98,7 +98,7 @@ const PTE = () => {
 
 
                 {/* Solution */}
-                <div className={"px-[3%] xl:px-[12%] text-sm"}>
+                <div className={"px-[3%] xl:px-[12%] text-sm 2xl:text-lg"}>
                     <h6 className="pb-4">Achievements & Trade-offs:</h6>
                     <ul className="flex flex-col list-disc list-inside px-4 md:px-8 gap-2">
                         <li>Built a .NET Core Microservices API with Load Balancer,

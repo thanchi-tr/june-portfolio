@@ -202,7 +202,7 @@ const Introduction = () => {
 
                         <div className="absolute-0 gradient-bg opacity-30 md:opacity-20 2xl:opacity-25 hover:bg-transparent"></div>
 
-                        <div className="lg:absolute-0 h-[250px] w-full lg:h-full backdrop-blur-sm opacity-100 
+                        <div className="lg:absolute-0 h-[325px] md:h-[250px] w-full lg:h-full backdrop-blur-sm opacity-100 
                                 transition-all group-hover:duration-300 ease-in-out
                         ">
 

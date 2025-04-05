@@ -30,8 +30,8 @@ const CollapsibleGallery = ({ cards }: CollapsibleGalleryConfig) => {
                         className={`
                              overflow-clip inline
                             h-full relative will-change-transform
-                            ${index == selectedIndex ? "shadow-xl shadow-black rounded-xl border-[1px] border-b-white/15" : "rounded-md"}
-                            ${index == selectedIndex ? "bg-transparent pointer-events-none" : "bg-gradient-to-t from-primary via-primary/50 border-t-[1.2vw] border-primary border-opacity-35 to-black/30 hover:cursor-pointer "}
+                            ${index == selectedIndex ? "shadow-xl shadow-black rounded-xl border-[1px] border-b-white/15" : "rounded-md xl:rounded-2xl"}
+                            ${index == selectedIndex ? "bg-transparent pointer-events-none" : "bg-gradient-to-t from-transparent via-primary border-2 xl:border-4 border-black/20 to-transparent border-opacity-35  hover:cursor-pointer "}
                             transition-all duration-[0.4s] ease-out
                             `}
                         onClick={() => setSelectedIndex(index)}

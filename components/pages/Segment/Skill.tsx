@@ -76,7 +76,7 @@ const Skill = () => {
                                 transition={{ duration: 0.5, delay: 0.5, ease: "anticipate" }}
                                 viewport={{ once: true }}
                             >
-                                .net core
+                                .net core 6/7/8/9
                             </motion.p>
                         </div>
                         <div className="flex flex-row justify-between
@@ -251,7 +251,13 @@ const Skill = () => {
                                     SignalR
                                 </motion.p>
                                 <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
-                                    ASP.Net
+                                    MVVM.Net Core
+                                </motion.p>
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                    WebAPI.Net
+                                </motion.p>
+                                <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
+                                    MVC.Net Core
                                 </motion.p>
                                 <motion.p className="w-auto  rounded-xl bg-background p-0.5 border-[1px]">
                                     GraphQL
